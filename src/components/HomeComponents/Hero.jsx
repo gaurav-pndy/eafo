@@ -21,7 +21,7 @@ const Hero = () => {
           {t("hero.title")}
         </h1>
         <p className="text-lg md:text-3xl mb-4">{t("hero.subtitle")}</p>
-        <p className="text-sm md:text-xl mb-2">J{t("hero.dates")}</p>
+        <p className="text-sm md:text-xl mb-2">{t("hero.dates")}</p>
         <p className="text-sm md:text-xl mb-8">{t("hero.location")}</p>
         <div className="flex justify-center gap-4 flex-wrap">
           <Link

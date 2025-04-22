@@ -27,7 +27,56 @@
       "attendee_2": "Medical students and residents",
       "attendee_3": "Medical industry professionals",
       "attendee_4": "Pathologists and cytopathologists"
+    },
+    "course_content":{
+      "courseOverview": "Course Overview",
+      "clinicalOncology": "Clinical Oncology",
+      "clinicalOncologyDesc": "Advanced diagnostic techniques and treatment protocols.",
+      "molecularDiagnosis": "Molecular-Genetic Diagnosis",
+      "molecularDiagnosisDesc": "Latest advances in genetic testing and molecular diagnostics.",
+      "oncohematology": "Oncohematology",
+      "oncohematologyDesc": "Comprehensive study of blood cancers and treatments.",
+      "boneTumors": "Bone Tumors",
+      "boneTumorsDesc": "Specialized focus on skeletal oncology.",
+      "radiologicalDiagnostics": "Radiological Diagnostics",
+      "radiologicalDiagnosticsDesc": "Advanced imaging techniques and interpretation.",
+      "clinicalDemonstrations": "Clinical Demonstrations",
+      "clinicalDemonstrationsDesc": "Hands-on experience and practical training.",
+      "cancerBiology": "Cancer Biology",
+      "cancerBiologyDesc": "Advanced understanding of cancer development and progression.",
+      "hematology": "Hematology",
+      "hematologyDesc": "Specialized course for non-hematologists.",
+      "careerDevelopment": "Career Development",
+      "careerDevelopmentDesc": "Biostatistics, grant writing, and networking skills."
+    },
+    "whyUs": {
+      "title": "Why Us ?",
+      "reason1": "International Experts",
+      "reason1Desc": "Learn from leading speacialists worldwide.",
+      "reason2": "Hands-on Experience",
+      "reason2Desc": "Practical clinical training and lab work.",
+      "reason3": "Residency opportunities",
+      "reason3Desc": "Grants and stipends for continued education."
+    },
+    "prizes": {
+      "title": "Prizes & Awards",
+      "prize1": "First Prize",
+      "prize1Desc": "Fully funded international residency",
+      "prize2": "Second Prize",
+      "prize2Desc": "Career advancement program",
+      "prize3": "Team Awards",
+      "prize3Desc": "Special recognition and benefits"
+    },
+    "outcome": {
+      "title": "Outcome",
+      "outcome1": "Cancer Biology",
+      "outcome1Desc": "Advanced understanding of cancer development and progression.",
+      "outcome2": "Hematology",
+      "outcome2Desc": "Specialized course for non-hematologists.",
+      "outcome3": "Career Development",
+      "outcome3Desc": "Biostatistics, grant writing, and networking skills."
     }
+    
    
     
   }
