@@ -72,7 +72,7 @@ const Header = () => {
 
           <div className="relative">
             <button
-              className="cursor-pointer border   font-semibold  md:text-base px-2 py-1 rounded-lg text-xs flex items-center gap-2"
+              className="cursor-pointer border   font-semibold  md:text-base px-2 py-1 rounded-lg  flex items-center gap-2"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               {languages.find((lang) => lang.code === selectedLang)?.name}
