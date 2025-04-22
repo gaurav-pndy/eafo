@@ -5,5 +5,29 @@
     "experts": "Experts & Committees",
     "Schedule": "Schedule & Program",
     "visa": "Visa",
-    "sponsors": "Sponsors"
+    "sponsors": "Sponsors",
+    "hero" :{
+      "title": "XI EAFO Basic Medical Courses",
+      "subtitle": "in Oncology and Oncopathology",
+      "dates": "July 23 - August 8, 2025",
+      "location": "Magas, Republic of Ingushetia, Russian Federation",
+      "register": "Register Now",
+      "course": "Pre-Courses"
+    },
+    "about_course": {
+      "organized_by": "Organized by",
+      "about_XI": "About XI Basic Medical course",
+      "program_highlights": "Program Highlights",
+      "highlight_1": "100+ hours of lectures and practical training",
+      "highlight_2": "50+ Russian and international experts",
+      "highlight_3": "Hands-on laboratory and clinical experience",
+      "highlight_4": "Bilingual instruction (Russian & English)",
+      "who_should_attend": "Who Should Attend",
+      "attendee_1": "Physicians of non-oncological specialties",
+      "attendee_2": "Medical students and residents",
+      "attendee_3": "Medical industry professionals",
+      "attendee_4": "Pathologists and cytopathologists"
+    }
+   
+    
   }

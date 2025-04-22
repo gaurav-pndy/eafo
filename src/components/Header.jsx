@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import logo from "/EAFO.jpg";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { IoIosArrowDown } from "react-icons/io";
 import "../utils/i18n";
@@ -38,11 +39,11 @@ const Header = () => {
   };
   return (
     <header className="w-full border-b border-purple-200 shadow-sm">
-      <div className=" mx-auto flex items-center justify-between px-4 lg:px-20 py-3 lg:py-4">
+      <div className=" mx-auto flex items-center justify-between px-4 lg:px-20 h-20 lg:h-22 ">
         {/* Left: Logo & Slogan */}
         <div className="flex items-center ">
           <Link to="/">
-            <img src={logo} alt="EAFO Logo" className="h-12" />
+            <img src={logo} alt="EAFO Logo" className="h-8 lg:h-12" />
           </Link>
         </div>
 
@@ -101,25 +102,44 @@ const Header = () => {
               </ul>
             )}
           </div>
+
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden pl-4"
+          >
+            {isMenuOpen ? (
+              <X className="h-8 w-8" />
+            ) : (
+              <Menu className="h-8 w-8" />
+            )}
+          </button>
         </div>
       </div>
 
       {/* Mobile Nav */}
-      {isMenuOpen && (
-        <div className="lg:hidden px-4 pb-4">
-          <nav className="flex flex-col gap-2 text-sm text-gray-800 font-medium">
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.path}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="lg:hidden absolute w-full  top-20 z-20 left-0 bg-white px-4 py-4"
+          >
+            <nav className="flex flex-col gap-6 text-gray-800 font-medium">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

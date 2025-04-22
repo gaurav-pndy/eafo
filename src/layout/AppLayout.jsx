@@ -14,7 +14,7 @@ const AppLayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="pt-24">
+      <main className="">
         <Outlet />
       </main>
       <Footer />
