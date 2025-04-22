@@ -48,14 +48,16 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-10  text-gray-800 font-medium ">
+        <nav
+          className={`hidden lg:flex   text-gray-800 font-medium ${
+            selectedLang === "ru" ? "text-sm gap-8" : "text-base gap-10"
+          }`}
+        >
           {navItems.map((item) => (
             <Link
               key={item.label}
               to={item.path}
-              className={`hover:text-purple-600  ${
-                selectedLang === "ru" ? "text-sm" : "text-base"
-              }`}
+              className={`hover:text-purple-600  `}
             >
               {item.label}
             </Link>
@@ -63,7 +65,7 @@ const Header = () => {
         </nav>
 
         <div
-          className="relative md:ml-6 flex gap-1 md:gap-2 items-center"
+          className="relative  flex gap-1 md:gap-2 items-center"
           ref={dropdownRef}
         >
           <FaGlobe className="text-xl  text-gray-800" />

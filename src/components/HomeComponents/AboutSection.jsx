@@ -12,7 +12,7 @@ const AboutSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-12 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section className="bg-white py-12 px-4 md:px-6 lg:px-20 max-w-6xl mx-auto">
       <div className="text-center mb-6 lg:mb-10">
         {/* <p className="text-sm text-[#002379] font-semibold">
           {t("about_course.organized_by")}
