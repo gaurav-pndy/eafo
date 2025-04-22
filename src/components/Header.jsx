@@ -89,7 +89,7 @@ const Header = () => {
                 {languages.map((lang) => (
                   <li
                     key={lang.code}
-                    className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer text-xs md:text-base"
+                    className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer  md:text-base"
                     onClick={() => changeLanguage(lang.code)}
                   >
                     {" "}
