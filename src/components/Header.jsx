@@ -65,7 +65,7 @@ const Header = () => {
         </nav>
 
         <div
-          className="relative  flex gap-1 md:gap-2 items-center"
+          className="relative  flex gap-1 md:gap-2 items-center z-30"
           ref={dropdownRef}
         >
           <FaGlobe className="text-xl  text-gray-800" />
