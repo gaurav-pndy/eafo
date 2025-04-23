@@ -117,7 +117,35 @@
       "quote": "Winning the residency abroad was life-changing. The course opened doors I never thought possible."
     }
   },
-   "ourPartners": "Our Partners"
+   "ourPartners": "Our Partners",
+   "aboutEAFO": {
+    "title": "About EAFO",
+    "description": "The Eurasian Federation of Oncology is a unique international professional organization comprising of invited experts involved in the prevention, diagnosis, treatment of cancer, drug development, basic research and also representatives of patient organizations and cancer survivors.",
+    "features": {
+      "network": "International Network",
+      "research": "Research Excellence",
+      "patientCare": "Patient-Centered Approach"
+    }
+  },
+  "footer":{
+    "contactUs": "Contact Us",
+    "location": "Magas, Republic of Ingushetia",
+    "country": "Russian Federation",
+    "quickLinks": "Quick Links",
+    "applyNow": "Apply Now",
+    "program": "Program",
+    "schedule": "Schedule",
+    "faq": "FAQ",
+    "resources": "Resources",
+    "visaInfo": "Visa Information",
+    "documents": "Documents",
+    "partners": "Partners",
+    "support": "Support",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 EAFO Basic Medical Courses. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
     
     
    

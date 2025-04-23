@@ -9,6 +9,7 @@ import CourseSchedule from "../components/HomeComponents/CourseSchedule";
 import FaqSection from "../components/HomeComponents/FaqSection";
 import Testimonials from "../components/HomeComponents/Testimonials";
 import Partners from "../components/HomeComponents/Partners";
+import AboutEAFO from "../components/HomeComponents/AboutEAFO";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <Testimonials />
       <Partners />
       <Outcome />
+      <AboutEAFO />
     </div>
   );
 };
