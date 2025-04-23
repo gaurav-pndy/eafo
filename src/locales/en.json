@@ -75,7 +75,50 @@
       "outcome2Desc": "Specialized course for non-hematologists.",
       "outcome3": "Career Development",
       "outcome3Desc": "Biostatistics, grant writing, and networking skills."
+    },
+    
+      "schedule": {
+        "title": "Course Schedule",
+        "opening": "Course begins – Opening ceremony and introduction",
+        "lectureFree": "Lecture-free day",
+        "closing": "Final presentations and closing ceremony",
+        "date1": "July 23, 2025",
+    "date2": "July 28, 2025",
+    "date3": "August 3, 2025",
+    "date4": "August 8, 2025"
+      },
+      "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Who can attend?",
+    "a1": "Medical professionals, residents, and specialists interested in oncology.",
+    "q2": "Is partial participation possible?",
+    "a2": "Yes, flexible attendance options are available.",
+    "q3": "What are the language requirements?",
+    "a3": "Courses are conducted in Russian and English. ",
+    "q4": "How to register for the course?",
+    "a4": "You can register through our official website by filling out the registration form."
+  },
+
+  "testimonials": {
+    "title": "What Our Alumni Say",
+    "drPetrov": {
+      "name": "Dr. Alexander Petrov",
+      "title": "Oncologist, Moscow Clinical Hospital",
+      "quote": "The course provided invaluable hands-on experience and networking opportunities. It was a turning point in my career."
+    },
+    "drIvanova": {
+      "name": "Dr. Maria Ivanova",
+      "title": "Pathologist, St. Petersburg Medical Center",
+      "quote": "The international expertise and comprehensive program structure exceeded my expectations. Highly recommended!"
+    },
+    "drVolkov": {
+      "name": "Dr. Sergei Volkov",
+      "title": "Resident, European Oncology Institute",
+      "quote": "Winning the residency abroad was life-changing. The course opened doors I never thought possible."
     }
+  },
+   "ourPartners": "Our Partners"
+    
     
    
     

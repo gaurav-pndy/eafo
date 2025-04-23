@@ -1,0 +1,90 @@
+import Marquee from "react-fast-marquee";
+import { useTranslation } from "react-i18next";
+
+const partners = [
+  {
+    src: "/logos/EAFO.png",
+  },
+  {
+    src: "/logos/ECRC.png",
+  },
+  {
+    src: "/logos/HD.png",
+  },
+  {
+    src: "/logos/FIRMST.png",
+  },
+  {
+    src: "/logos/Pasovit.png",
+  },
+  {
+    src: "/logos/Pathologica.png",
+  },
+  {
+    src: "/logos/EACF.png",
+  },
+  {
+    src: "/logos/EASHNO.png",
+  },
+  {
+    src: "/logos/SK.png",
+  },
+  {
+    src: "/logos/SKBiomed.png",
+  },
+  {
+    src: "/logos/MAHO.jpg",
+  },
+  {
+    src: "/logos/Mark.png",
+  },
+  {
+    src: "/logos/Garant.png",
+  },
+  {
+    src: "/logos/Oncology.png",
+  },
+  {
+    src: "/logos/SPLAT.png",
+  },
+  {
+    src: "/logos/Анастасия.jpg",
+  },
+  {
+    src: "/logos/Здравствуй!.jpg",
+  },
+];
+
+const Partners = () => {
+  const { t } = useTranslation();
+
+  return (
+    <section className="w-full mt-10 lg:mt-5 py-12 bg-white ">
+      <div className="container mx-auto  md:px-8 lg:px-20">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
+          {t("ourPartners")}
+        </h2>
+
+        {/* Top Row */}
+        <div className="">
+          <Marquee speed={50} gradient={false} pauseOnHover={true}>
+            {partners.map((partner, index) => (
+              <div
+                key={`top-${index}`}
+                className="flex items-center justify-center mx-2 md:mx-8 max-w-80 md:h-32  px-4 py-2 "
+              >
+                <img
+                  src={partner.src}
+                  alt={partner.src}
+                  className="w-full h-12  md:h-16 object-contain "
+                />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Partners;
