@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { useEffect } from "react";
+import Experts from "./pages/Experts";
 
 function App() {
   // useEffect(() => {
@@ -16,6 +17,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/experts",
+          element: <Experts />,
         },
       ],
     },

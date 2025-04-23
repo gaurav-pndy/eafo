@@ -2,7 +2,7 @@
     "about": "About",
     "register": "Register Now",
     "submission": "Submission",
-    "experts": "Experts & Committees",
+    "expertsNav": "Experts & Committees",
     "Schedule": "Schedule & Program",
     "visa": "Visa",
     "sponsors": "Sponsors",
@@ -145,7 +145,80 @@
     "copyright": "© 2025 EAFO Basic Medical Courses. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
-  }
+  },
+  
+  
+    "experts": {
+      "title": "Our Distinguished Experts",
+      "subtitle": "Leading professionals from around the world bringing expertise in oncology, pathology and specialized medical fields.",
+      "description": "For over ten years. our team has been inviting the best lecturers and educators, creating a welcoming environment to ensure that the knowledge and connections gained by participants contribute to a solid foundation for delivering professional care to patients.",
+      "stats": {
+        "speakers": { "number": "50+", "label": "Expert Speakers" },
+        "countries": { "number": "15+", "label": "Countries" },
+        "hours": { "number": "100+", "label": "Hours of Content" },
+        "specializations": { "number": "10+", "label": "Specializations" }
+      },
+      "confirmedTitle": "Confirmed Speakers",
+      "speakers": {
+        "michael": {
+          "name": "Dr. Michael Chen",
+          "org": "Stanford Medical Center, USA",
+          "field": "Clinical Oncology",
+          "speciality": "Oncology Specialist"
+        },
+        "sarah": {
+          "name": "Dr. Sarah Williams",
+          "org": "Royal London Hospital, UK",
+          "field": "Molecular Pathology",
+          "speciality": "Pathology expert"
+        },
+        "andreas": {
+          "name": "Prof. Andreas Mueller",
+          "org": "Heidelberg University, Germany",
+          "field": "Molecular Genetics",
+          "speciality": "Research Director"
+        }
+      },
+      "invitedTitle": "Invited Experts",
+      "invitedDesc": "Experts are added gradually as their participation is confirmed.",
+      "invited": {
+        "oncology": {
+          "title": "Clinical Oncology",
+          "desc": "Leading specialists in cancer treatment and patient care",
+          "count": "4 experts invited"
+        },
+        "pathology": {
+          "title": "Pathology",
+          "desc": "Experts in diagnostic and molecular pathology",
+          "count": "3 experts invited"
+        },
+        "biology": {
+          "title": "Molecular Biology",
+          "desc": "Specialists in genetic and molecular research",
+          "count": "5 experts invited"
+        }
+      },
+      "ctaTitle": "Interested in Joining Our Faculty?",
+      "ctaSubtitle": "We're always looking for experienced professionals to join our distinguished team of educators.",
+      "ctaButton": "Contact Us to Participate",
+      "testimonialTitle": "What Our Experts Say",
+      "testimonials": {
+        "robert": {
+          "quote": "The level of engagement and enthusiasm from participants makes teachjng here a truly rewarding experience.",
+          "name": "Dr. Robert Smith",
+          "position": "Oncology Department Head"
+        },
+        "elena": {
+          "quote": "The collaborative environment and international perspective make this program uniquely valuable.",
+          "name": "Prof. Elena Petrova",
+          "position": "Molecular Biology Professor"
+        }
+      }
+    }
+  
+  
+  
+  
     
     
    
