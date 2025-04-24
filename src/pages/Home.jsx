@@ -10,6 +10,7 @@ import FaqSection from "../components/HomeComponents/FaqSection";
 import Testimonials from "../components/HomeComponents/Testimonials";
 import Partners from "../components/HomeComponents/Partners";
 import AboutEAFO from "../components/HomeComponents/AboutEAFO";
+import ForumExperts from "../components/HomeComponents/ForumExperts";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <AboutSection />
       <CourseContent />
       <CourseSchedule />
+      <ForumExperts />
       <WhyUs />
       <Prizes />
       <FaqSection />

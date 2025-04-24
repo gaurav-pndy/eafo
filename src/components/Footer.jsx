@@ -54,7 +54,7 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">{t("footer.resources")}</h3>
             <ul className="text-sm space-y-2">
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <a href="/visa" className="hover:text-blue-600">
                   {t("footer.visaInfo")}
                 </a>
               </li>
@@ -64,7 +64,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <a href="/partner" className="hover:text-blue-600">
                   {t("footer.partners")}
                 </a>
               </li>

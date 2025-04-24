@@ -20,11 +20,11 @@ const Header = () => {
   const navItems = [
     { label: t("about"), path: "/about" },
     { label: t("register"), path: "/register" },
-    { label: t("submission"), path: "/submission" },
+    { label: t("submission"), path: "/participation" },
     { label: t("expertsNav"), path: "/experts" },
-    { label: t("Schedule"), path: "/schedule" },
+    { label: t("Schedule"), path: "/courses" },
     { label: t("visa"), path: "/visa" },
-    { label: t("sponsors"), path: "/sponsors" },
+    { label: t("sponsorsNav"), path: "/sponsors" },
   ];
 
   const languages = [

@@ -5,7 +5,7 @@
     "expertsNav": "Experts & Committees",
     "Schedule": "Schedule & Program",
     "visa": "Visa",
-    "sponsors": "Sponsors",
+    "sponsorsNav": "Sponsors",
     "hero" :{
       "title": "XI EAFO Basic Medical Courses",
       "subtitle": "in Oncology and Oncopathology",
@@ -87,6 +87,58 @@
     "date3": "August 3, 2025",
     "date4": "August 8, 2025"
       },
+
+      
+        "forum": {
+          "title": "Forum Experts",
+          "expert1": {
+            "name": "DRUY Aleksandr",
+            "title": "Clinical Laboratory Specialist Moscow, Russian Federation"
+          },
+          "expert2": {
+            "name": "GIMRANOV Albert",
+            "title": "Surgeon, Oncologist Kazan, Russian Federation"
+          },
+          "expert3": {
+            "name": "GUPTA Richa, MBBS",
+            "title": "Professor, Pathologist Delhi, India"
+          },
+          "expert4": {
+            "name": "GUZ Aleksandr",
+            "title": "Surgeon, Oncologist Chelyabinsk, Russian Federation"
+          },
+          "expert5": {
+            "name": "KRISHNAMURTHY Arvind",
+            "title": "Professor, Surgical Oncologists Chennai, India"
+          },
+          "expert6": {
+            "name": "NOVIKOV Sergei",
+            "title": "Professor, Radiation Therapist, Oncologist St. Petersburg, Russian Federation"
+          },
+          "expert7": {
+            "name": "RANGARAJAN Venkatesh",
+            "title": "Professor, Radiologist Maharashtra, India"
+          },
+          "expert8": {
+            "name": "SNEGOVOY Anton",
+            "title": "Medical Oncologist Moscow, Russian Federation"
+          },
+          "expert9": {
+            "name": "SUBRAMANIAN Somasundaram",
+            "title": "Surgical Oncologist & OncoPlastic Surgeon Moscow, Russian Federation"
+          },
+          "expert10": {
+            "name": "TIMASHKOV Ivan",
+            "title": "Radiologist Moscow, Russian Federation"
+          },
+          "expert11": {
+            "name": "VALKOV Mikhail",
+            "title": "Professor, Radiation Therapist, Oncologist Arkhangelsk, Russian Federation"
+          }
+        }
+      ,
+      
+
       "faq": {
     "title": "Frequently Asked Questions",
     "q1": "Who can attend?",
@@ -214,7 +266,523 @@
           "position": "Molecular Biology Professor"
         }
       }
+    },
+    "contactUs": {
+  "contactTitle": "Contact Us",
+  "contactSubtitle": "Get in touch with our team for any queries about the event",
+  "getInTouch": "Get in Touch",
+  "phone": "Phone",
+  "email": "Email",
+  "socialMedia": "Social Media",
+  "sendMessage": "Send Message",
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message"
+  },
+  "officesTitle": "Our Offices"
+
+},
+
+"partners": {
+  "heroTitle": "Our Collaborators",
+  "heroSubtitle": "Together we deliver exceptional medical education and patient care",
+  "introText": "Our partnership with collaborators play a vital role in the success of our events, enabling us to deliver seamless and exceptional experiences for all involved. Each partnership we forge is dedicated to elevating the quality of care provided to patients, ensuring they receive the utmost attention and support.",
+  "sections": {
+    "organizers": "Organizers",
+    "scientific": "Scientific & Educational Partners",
+    "medical": "Medical Partners",
+    "corporate": "Corporate Partners",
+    "social": "Social Partners",
+    "technical": "Information & Technical Partners"
+  },
+  "cta": {
+    "title": "Interested in Collaboration?",
+    "subtitle": "Join our network of partners and help shape the future of medical education",
+    "button": "Contact Us for Partnership"
+  }
+},
+
+"courses" :{
+  "heroTitle": "45th EAFO OncoPathology Course",
+  "heroSubtitle": "HematoLymphoid Tumors",
+
+  "overviewTitle": "The Course",
+  "overviewContent1": "Join us for the 45th EAFO OncoPathology Course on \"HematoLymphoid Tumors\" hosted by the Eurasian Federation of Oncology (EAFO) in Moscow, Russian Federation.",
+  "overviewContent2": "This global event brings together leading experts, distinguished faculty, and enthusiastic participants from around the globe to discuss the latest advancements in hematolymphoid pathology.",
+
+  "stats": [
+    { "value": "5 Days", "label": "Duration" },
+    { "value": "2 Languages", "label": "Russian & English" },
+    { "value": "WHO Experts", "label": "Leading Lecturers" },
+    { "value": "Certified", "label": "EAFO Certificate" }
+  ],
+
+  "features": [
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Expert Workshops",
+      "desc": "Carefully prepared by world experts, designed for both beginners and specialists in pathology."
+    },
+    {
+      "icon": "fa-microscope",
+      "title": "Clinical Cases",
+      "desc": "Access to prepared clinical and morphological observations with detailed diagnostic explanations."
+    },
+    {
+      "icon": "fa-users",
+      "title": "Networking",
+      "desc": "Opportunity to interact with experts in informal settings throughout the course."
+    },
+    {
+      "icon": "fa-landmark",
+      "title": "Cultural Experience",
+      "desc": "Visit architectural and cultural landmarks of the Russian Federation's capital."
     }
+  ],
+
+  "structureTitle": "Course Structure",
+  "programTitle": "Program Components",
+  "programItems": [
+    "Lectures",
+    "MultiDisciplinary Panels",
+    "Practical Slide Seminars",
+    "OncoCytological diagnostics"
+  ],
+  "certTitle": "Certification",
+  "certItems": [
+    "EAFO Certificate (All participants)",
+    "University Certificate with Academic Hours (Russian Federation participants)"
+  ],
+
+  "ctaTitle": "Ready to Join the Course?",
+  "ctaDesc": "Apply now for the 45th EAFO OncoPathology Course and enhance your expertise in hematolymphoid pathology.",
+  "applyBtn": "Apply Now"
+}
+,
+
+
+ 
+  "evisa": {
+   "title": "E-Visa Eligible Countries",
+   "countries": {
+     "austria": "Austria",
+     "belgium": "Belgium",
+     "china": "China",
+     "denmark": "Denmark"
+   },
+   "viewAll": "View Complete List"
+ },
+
+
+
+
+ "faqVisa": {
+   "title": "Frequently Asked Questions",
+   "questions": [
+     {
+       "question": "How long does the visa process take?",
+       "answer": "The processing time typically takes 10-20 business days, but it can vary depending on your country of residence."
+     },
+     {
+       "question": "What if my visa application is rejected?",
+       "answer": "In case of rejection, you can reapply after addressing the reasons for rejection. Our team can help review your application."
+     },
+     {
+       "question": "Can I apply for a visa extension while in Russia?",
+       "answer": "Extensions are possible in exceptional circumstances and require approval from the local migration authorities."
+     }
+   ]
+ },
+
+
+ 
+   "visaFree": {
+     "title": "Visa-Free Countries",
+     "stay90Days": "90-Day Stay",
+     "stay30Days": "30-Day Stay",
+     "stay14Days": "14-Day Stay",
+     "countries90": {
+       "argentina": "Argentina",
+       "brazil": "Brazil",
+       "chile": "Chile"
+     },
+     "countries30": {
+       "bosnia": "Bosnia and Herzegovina",
+       "macedonia": "Macedonia",
+       "montenegro": "Montenegro"
+     },
+     "countries14": {
+       "maldives": "Maldives",
+       "nepal": "Nepal",
+       "bhutan": "Bhutan"
+     },
+     "seeMore": "See More",
+     "close": "Close",
+     "moreInfoPlaceholder": "More details about the visa-free policy will appear here.",
+     "moreInfoPoints": [
+   "Abkhazia - Visa not required for period of stay up to 90 days.",
+   "Argentina (for visits of up to 90 days in any 180-day period (starting from the day of first entry)). Applicants planning to stay for more than 90 days in any 180-day period require a visa if they are going to Russia to conduct commercial or work-related activities. Diplomatic or Official passport holders require a visa for the whole period of their stay.",
+   "Armenia - Visa not required for period of stay up to 90 days.",
+   "Azerbaijan",
+   "Belarus",
+   "Bolivia (for visits of up to 90 days) ",
+   "Bosnia and Herzegovina (up to 30 days for tourists and up to 90 days for other visitors). Tourist documents or the original invitation, as appropriate, must be presented to the Russian Immigration authorities ",
+   "Brazil (for visits of up to 90 days in any 180-day period) - for tourists, private visits or transit purposes only. In all other cases, a visa is required",
+   "Brunei (up to 14 days) – Diplomatic, Service and ordinary passport holders (except work, profit activities and study).",
+   "Chile (for visits of up to 90 days in any 180-day period) – the visa-free regime does not apply to work- and business-related visits and Diplomatic and Service passport holders ",
+   "Columbia (for visits of up to 90 days in any 180-day period) ",
+   "Cuba ",
+   "Ecuador (up to 90 days in 180 days period). Except work, study and commercial business",
+   "El Salvador (up to 90 days). Except work, study and commercial business.",
+   "Fiji (up to 90 days in 180 days period except work, study and residence).",
+   "Guatemala (up to 90 days in 180 days period except work, study and residence)",
+   "Honduras (up to 90 days in 180 days period). Except work, study and commercial business.",
+   "Hong Kong (for visits of up to 14 days)",
+   "Israel (for visits of up to 90 days). Tourist documents or the original invitation, as appropriate, must be presented to the Russian Immigration authorities. The visa-free regime does not apply to Diplomatic and Service passport holders",
+   "Kazakhstan",
+   "Kirghiz Republic",
+   "Republic of Korea - Diplomatic passports holders up to 90 days. Holders of ordinary passports up to 60 days, except for work, study and residence",
+   "Democratic Republic of Laos (up to 90 days in 180 days period except work, study and residence).",
+   "Macedonia (up to 30 days for tourists and up to 90 days for other visitors). Tourist documents or the original invitation, as appropriate, must be presented to the Russian Immigration authorities",
+   "Macao (up to 30 days of stay). Except work, study and commercial business.",
+   "Mauritius (up to 60 days except work and study).",
+   "Moldova",
+   "Mongolia (up to 30 days) for the holders of diplomatic, official and foreign passports. In case of consequent trips, total amount of days spent in Russia cannot exceed 90 days in a period of 180 days from the date of first entrance. Except work, study and commercial business.",
+   "Montenegro (for visits of up to 30 days). The visa-free regime does not apply to Diplomatic and Service passport holders",
+   "Nauru (up to 14 days)",
+   "Nicaragua (for visits of up to 90 days)",
+   "Panama (up to 90 days in 180 days period except work, study and residence)",
+   "Paraguay (up to 90 days in 180 days period except work, study and residence)",
+   "Peru (for visits of up to 90 days in any 180-day period). The visa-free regime does not apply to work- and business-related visits and Diplomatic and Service passport holders",
+   "Seychelles (up to 30 days). Except work, study and commercial business.",
+   "Serbia - Citizens with biometric passports obtained after 9 April 2008 can stay in Russia for up to 30 days. Diplomatic or Official passport holders without accreditation in Russia can stay for up to 90 days. Serbian nationals with temporary and permanent resident permits can stay without time limits. In all other cases, a visa is required. The visa-free regime does not apply to Yugoslavian passport holders",
+   "The Republic of South Africa (for visits of up to 90 days)",
+   "Tajikistan",
+   "Ukraine - Citizens will be able to enter only either through the border point at 'Ludonka' near City of Pskov, or at Sheremetyevo International Airport (SVO, Moscow).",
+   "United Arab Emirates (up to 90 days)",
+   "Uruguay (up to 90 days in any 180-day period)",
+   "Uzbekistan",
+   "Vanuatu (up to 90 days). Except work, study and commercial business.",
+   "Venezuela (for visits of up to 90 days). The visa-free regime does not apply to Diplomatic and Service passport holders"
+
+
+
+ ]
+   },
+ 
+ 
+
+
+ "visaHelp": {
+   "title": "Need Help with Your Visa?",
+   "description": "Our team is here to assist you with the visa application process",
+   "contactSupport": "Contact Support"
+ },
+
+
+ "visaHero": {
+   "title": "Visa Information",
+   "subtitle": "Essential information for international participants traveling to the Russian Federation"
+ },
+
+ "visaOptions": {
+   "title": "Entry Options for International Participants",
+   "visaFree": {
+     "title": "Visa-Free Travel",
+     "description": "Available for citizens of specific countries with bilateral agreements"
+   },
+   "eVisa": {
+     "title": "E-Visa",
+     "description": "Electronic visa application for eligible nationalities"
+   },
+   "physicalVisa": {
+     "title": "Physical Visa",
+     "description": "Traditional visa stamped in passport at Russian Embassy"
+   }
+ },
+
+
+ "visaRequirements": {
+   "title": "Visa Application Requirements",
+   "documentsTitle": "Required Documents",
+   "documents": {
+     "passport": {
+       "title": "Valid Passport",
+       "desc": "Minimum 6 months validity and 2 blank pages"
+     },
+     "form": {
+       "title": "Visa Application Form",
+       "desc": "Completed form from visa.kdmid.ru"
+     },
+     "photo": {
+       "title": "Passport Photo",
+       "desc": "35mm x 45mm, white background, taken within 6 months"
+     },
+     "invitation": {
+       "title": "Letter of Invitation",
+       "desc": "Provided after payment confirmation"
+     },
+     "insurance": {
+       "title": "Travel Insurance",
+       "desc": "Valid for entire stay in Russia"
+     }
+   },
+   "embassies": {
+     "title": "Russian Embassies & Consulates",
+     "description": "Participants of the EAFO OncoPathology Courses in Russian Federation can find further information on the Russian visa application process on the official website of the Russian Embassy or Consulate in their respective countries.",
+     "item1": {
+       "title": "Russian Embassy and Consulates Worldwide",
+       "linkText": "Visit Website"
+     },
+     "item2": {
+       "title": "Ministry of Foreign Affairs of the Russian Federation",
+       "linkText": "Visit Website"
+     }
+   },
+   "note": "Participants are strongly advised to visit these official websites to obtain specific information on visa requirements, application procedures, and guidelines for their respective countries when planning their trip to Russia for the course. It is crucial to carefully review the instructions provided by the Russian authorities to ensure a smooth and successful visa application process."
+ },
+
+
+
+
+
+
+ "participation": {
+   "learnMore": "Learn More",
+   "hero": {
+     "title": "Participation Options",
+     "subtitle": "Choose the learning format that best suits your needs"
+   },
+   "options": [
+     {
+       "id": "onsite-accommodation",
+       "icon": "fa-hotel",
+       "title": "On-Site with Accommodation",
+       "description": "Experience full immersion with accommodation at the modern hotel \"Korston\" and the Republican Clinical Oncological Dispensary.",
+       "features": [
+         "Modern hotel accommodation",
+         "Steps away from all sessions",
+         "Enhanced networking opportunities",
+         "Full immersive experience"
+       ]
+     },
+     {
+       "id": "onsite-option",
+       "icon": "fa-building-user",
+       "title": "On-Site without Accommodation",
+       "description": "Opt for the on-site without accommodation participation option for a flexible and enriching learning journey.",
+       "features": [
+         "Full access to all course sessions and workshops",
+         "Interactive activities on campus",
+         "Flexible commuting options",
+         "Direct networking opportunities"
+       ]
+     },
+     {
+       "id": "online-option",
+       "icon": "fa-laptop",
+       "title": "Online Participation",
+       "description": "Join from anywhere in the world through our comprehensive online learning platform.",
+       "features": [
+         "Live-streamed sessions and workshops",
+         "Real-time Q&A participation",
+         "Virtual networking opportunities",
+         "Flexible learning schedule"
+       ]
+     }
+   ],
+   "comparison": {
+     "title": "Compare Benefits",
+     "features": [
+       {
+         "name": "Course Materials Access",
+         "onsiteAccommodation": true,
+         "onsite": true,
+         "online": true
+       },
+       {
+         "name": "Live Interaction with Faculty",
+         "onsiteAccommodation": true,
+         "onsite": true,
+         "online": true
+       },
+       {
+         "name": "Hands-on Workshops",
+         "onsiteAccommodation": true,
+         "onsite": true,
+         "online": false
+       },
+       {
+         "name": "Networking Events",
+         "onsiteAccommodation": "Enhanced Access",
+         "onsite": true,
+         "online": "Virtual Only"
+       },
+       {
+         "name": "Accommodation Included",
+         "onsiteAccommodation": true,
+         "onsite": false,
+         "online": false
+       }
+     ]
+   },
+   "cta": {
+     "title": "Ready to Join?",
+     "subtitle": "Choose your preferred participation option and start your journey with EAFO.",
+     "buttons": [
+       {
+         "text": "Apply with Accommodation",
+         "variant": "primary"
+       },
+       {
+         "text": "Apply without Accommodation",
+         "variant": "primary"
+       },
+       {
+         "text": "Apply for Online",
+         "variant": "secondary"
+       }
+     ]
+   }
+ },
+
+
+
+
+ "sponsors": {
+   "hero": {
+     "title": "Supporting Excellence in Medical Education",
+     "subtitle": "Join our mission to advance oncology education and research worldwide",
+     "buttons": {
+       "becomeSponsor": "Become a Sponsor",
+       "learnMore": "Learn More"
+     }
+   },
+   "categories": {
+     "title": "Sponsorship Levels",
+     "items": [
+       {
+         "id": "platinum",
+         "title": "Platinum",
+         "description": "Premium visibility and maximum impact",
+         "button": "Learn More",
+         "icon": "crown"
+       },
+       {
+         "id": "gold",
+         "title": "Gold",
+         "description": "Enhanced visibility and recognition",
+         "button": "Learn More",
+         "icon": "star"
+       },
+       {
+         "id": "silver",
+         "title": "Silver",
+         "description": "Prominent brand positioning",
+         "button": "Learn More",
+         "icon": "medal"
+       },
+       {
+         "id": "bronze",
+         "title": "Bronze",
+         "description": "Essential brand exposure",
+         "button": "Learn More",
+         "icon": "award"
+       }
+     ]
+   },
+   "currentSponsors": {
+     "title": "Our Current Sponsors",
+     "featured": {
+       "name": "Cancer Survivors, Relatives and Friends",
+       "type": "Primary Support Community",
+       "description": "This event is supported by unlimited financial and technical support from a group of cancer survivors (including Dr. Soma), their relatives and friends who are dedicated to advancing oncology education.",
+       "quote": "\"Together we can make a difference in cancer care and education through knowledge sharing and community support.\""
+     },
+     "stats": [
+       {
+         "value": "100+",
+         "label": "Cancer Survivors Supporting"
+       },
+       {
+         "value": "200+",
+         "label": "Community Members"
+       },
+       {
+         "value": "30+",
+         "label": "Countries Represented"
+       },
+       {
+         "value": "∞",
+         "label": "Unlimited Support"
+       }
+     ]
+   },
+   "cta": {
+     "title": "Ready to Make an Impact?",
+     "subtitle": "Download our comprehensive sponsorship package and join our mission to advance medical education.",
+     "buttons": {
+       "download": "Download Package",
+       "contact": "Contact Us"
+     }
+   }
+ },
+
+
+
+
+ "aboutHero": {
+   "title": "About EAFO",
+   "subtitle": "Uniting Continents in Fighting Cancer"
+ },
+ "mission": {
+   "title": "Our Mission",
+   "paragraph1": "EAFO's mission is reflected in its motto \"Uniting Continents in Fighting Cancer\", which emphasizes the need for global cooperation in combating cancer. The core purpose of the organization is to provide and facilitate cancer education by making knowledge accessible to all sections of the society.",
+   "paragraph2": "Though the name of the organization denotes a confined region, its activities and outreach are not restricted to the Eurasian continent, making it an inclusive organization open to collaborations and partnerships from all parts of the world."
+ },
+ "aboutDetails": {
+   "title": "About EAFO",
+   "paragraph1": "Eurasian Federation of Oncology (EAFO) is an autonomous professional organization uniting oncologists, other healthcare professionals, anti-cancer & anti-tobacco advocates, patients, survivors, journalists, policy makers, oncology & anti-cancer organizations and others interested in combating cancer from all parts of Asia, Europe and beyond.",
+   "paragraph2": "The organization focuses on long-term initiatives dedicated to the health and well-being of cancer patients, survivors, and healthy individuals through education, innovation, and collaboration.",
+   "global": "Global Network",
+   "education": "Educational Focus",
+   "collaboration": "Professional Collaboration",
+   "patient": "Patient Care"
+ },
+ "whatWeDo": {
+   "title": "What We Do",
+   "items": [
+     { "icon": "fa-users-rectangle", "title": "Multidisciplinary Forums", "desc": "Interactive sessions bringing together experts from various medical specialties." },
+     { "icon": "fa-microscope", "title": "OncoPathology Seminars", "desc": "Comprehensive practical sessions in pathology diagnostics and research." },
+     { "icon": "fa-user-doctor", "title": "Live OncoSurgery Classes", "desc": "Real-time surgical demonstrations and masterclasses by leading experts." },
+     { "icon": "fa-radiation", "title": "Radiotherapy Training", "desc": "Advanced seminars and practical sessions in radiation oncology." },
+     { "icon": "fa-flask", "title": "Clinical Research", "desc": "Coordination of pre-clinical, clinical, and epidemiological studies." },
+     { "icon": "fa-x-ray", "title": "OncoImaging Seminars", "desc": "Advanced imaging techniques and interpretation workshops." },
+     { "icon": "fa-people-group", "title": "ECRC Research Meetings", "desc": "Collaborative research initiatives and knowledge sharing sessions." },
+     { "icon": "fa-hand-holding-medical", "title": "Patient Support", "desc": "Educational seminars and support programs for cancer patients." },
+     { "icon": "fa-user-nurse", "title": "Oncology Nursing", "desc": "Specialized training and development for oncology nursing professionals." }
+   ]
+ },
+ "video": {
+   "title": "Learn More About Us"
+ },
+ "teams": {
+   "title": "Our Multidisciplinary Team",
+   "description": "Our team includes Medical, Surgical & Radiation Oncologists, Diagnostic & Interventional Radiologists, Pathologists, Geneticists, Researchers, Family Physicians, Advocates, Patients, Survivors, Policy Makers and more.",
+   "tags": ["Medical Oncologists", "Radiologists", "Pathologists", "Researchers"]
+ },
+ "contact": {
+   "title": "Join Our Mission",
+   "subtitle": "Be part of our global initiative to combat cancer through education and collaboration",
+   "button": "Get Involved"
+ }
+
+
+
+ 
   
   
   
