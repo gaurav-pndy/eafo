@@ -7,6 +7,7 @@ import {
   FaQuoteLeft,
   FaMicroscope,
   FaChalkboardTeacher,
+  FaHeartbeat,
 } from "react-icons/fa";
 
 const Experts = () => {
@@ -88,28 +89,34 @@ const Experts = () => {
       </div>
 
       {/* Invited Experts */}
-      <div className="bg-gray-100 py-10 px-4 md:px-12">
-        <h3 className="text-2xl font-semibold text-center mb-4">
+      <div className="bg-gray-100 py-16 px-4 md:px-12">
+        <h3 className="text-2xl md:text-4xl font-bold text-center mb-4">
           {t("experts.invitedTitle")}
         </h3>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center md:text-lg text-gray-600 mb-12">
           {t("experts.invitedDesc")}
         </p>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {["oncology", "pathology", "biology"].map((id, idx) => (
             <div key={id} className="bg-white p-6 rounded-lg shadow">
               <div className="flex items-center mb-3">
-                {idx === 0 && <FaUserMd className="text-blue-700 mr-2" />}
-                {idx === 1 && <FaFlask className="text-blue-700 mr-2" />}
-                {idx === 2 && <FaDna className="text-blue-700 mr-2" />}
-                <h4 className="font-semibold">
+                {idx === 0 && (
+                  <FaHeartbeat className="text-[#1e3a8f] mr-2 text-2xl" />
+                )}
+                {idx === 1 && (
+                  <FaMicroscope className="text-[#1e3a8f] mr-2 text-2xl" />
+                )}
+                {idx === 2 && (
+                  <FaDna className="text-[#1e3a8f] mr-2 text-2xl" />
+                )}
+                <h4 className="font-semibold text-xl">
                   {t(`experts.invited.${id}.title`)}
                 </h4>
               </div>
-              <p className="text-sm text-gray-600">
+              <p className=" text-gray-600">
                 {t(`experts.invited.${id}.desc`)}
               </p>
-              <p className="text-xs mt-2 text-gray-500">
+              <p className="text-sm mt-2 text-blue-800">
                 {t(`experts.invited.${id}.count`)}
               </p>
             </div>
@@ -118,36 +125,45 @@ const Experts = () => {
       </div>
 
       {/* CTA */}
-      <div className="bg-blue-800 text-white py-12 px-4 text-center">
-        <h3 className="text-xl font-semibold mb-2">{t("experts.ctaTitle")}</h3>
-        <p className="mb-6">{t("experts.ctaSubtitle")}</p>
-        <button className="bg-white text-blue-800 font-medium px-6 py-2 rounded-full hover:bg-gray-200 transition">
+      <div className="bg-[#1e3a8f] text-white py-16 px-4 text-center">
+        <h3 className="text-2xl md:text-4xl font-semibold mb-6">
+          {t("experts.ctaTitle")}
+        </h3>
+        <p className="mb-6 md:text-xl">{t("experts.ctaSubtitle")}</p>
+        <button className="bg-white text-[#1e3a8f] font-medium px-8 py-3.5 rounded-full hover:bg-gray-200 transition">
           {t("experts.ctaButton")}
         </button>
       </div>
 
       {/* Testimonials */}
-      <div className="py-10 px-4 md:px-12">
-        <h3 className="text-2xl font-semibold text-center mb-6">
+      <div className="py-16 px-4 md:px-12">
+        <h3 className="text-2xl md:text-4xl font-bold text-center mb-12">
           {t("experts.testimonialTitle")}
         </h3>
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {["robert", "elena"].map((id) => (
-            <div key={id} className="bg-white p-6 rounded-lg shadow">
-              <div className="flex items-start">
-                <FaQuoteLeft className="text-blue-700 text-xl mr-3 mt-1" />
+        <div className="grid md:grid-cols-2 gap-16 max-w-5xl px-5 mx-auto">
+          {["robert", "elena"].map((id, index) => (
+            <div
+              key={id}
+              className="bg-white p-6 rounded-xl shadow flex flex-col gap-4"
+            >
+              <div className="flex items-center gap-4">
+                <img
+                  src={`/testimonials/alumni${index + 1}.jpg`}
+                  alt={t(`experts.testimonials.${id}.name`)}
+                  className="w-14 h-14 rounded-full object-cover"
+                />
                 <div>
-                  <p className="text-sm italic">
-                    {t(`experts.testimonials.${id}.quote`)}
-                  </p>
-                  <p className="mt-4 font-semibold">
+                  <p className="font-semibold text-lg">
                     {t(`experts.testimonials.${id}.name`)}
                   </p>
-                  <p className="text-xs text-gray-500">
+                  <p className=" text-gray-500">
                     {t(`experts.testimonials.${id}.position`)}
                   </p>
                 </div>
               </div>
+              <p className=" italic text-gray-700">
+                "{t(`experts.testimonials.${id}.quote`)}"
+              </p>
             </div>
           ))}
         </div>
