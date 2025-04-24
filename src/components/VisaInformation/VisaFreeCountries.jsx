@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
-import { IoClose } from "react-icons/io5";
+import { IoArrowForwardCircle, IoClose } from "react-icons/io5";
 
 const FadeInOnView = ({ children, delay = 0 }) => {
   const ref = useRef(null);
@@ -71,7 +71,10 @@ const VisaFreeCountries = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* 90-Day Stay */}
             <FadeInOnView delay={0.2}>
-              <div className="bg-gray-50 p-6 rounded-xl">
+              <div
+                onClick={() => openModal(t("visaFree.heading"))}
+                className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
+              >
                 <h3 className="text-xl font-bold mb-4">
                   {t("visaFree.stay90Days")}
                 </h3>
@@ -80,45 +83,48 @@ const VisaFreeCountries = () => {
                 </ul>
                 <button
                   onClick={() => openModal(t("visaFree.stay90Days"))}
-                  className="mt-4 text-blue-700 hover:underline"
+                  className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer"
                 >
-                  {t("seeMore")}
+                  {t("visaFree.seeMore")}{" "}
+                  <IoArrowForwardCircle className="text-lg" />
                 </button>
               </div>
             </FadeInOnView>
 
             {/* 30-Day Stay */}
             <FadeInOnView delay={0.4}>
-              <div className="bg-gray-50 p-6 rounded-xl">
+              <div
+                onClick={() => openModal(t("visaFree.heading"))}
+                className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
+              >
                 <h3 className="text-xl font-bold mb-4">
                   {t("visaFree.stay30Days")}
                 </h3>
                 <ul className="space-y-2">
                   {renderCountryList(countries30Days, "visaFree.countries30")}
                 </ul>
-                <button
-                  onClick={() => openModal(t("visaFree.stay30Days"))}
-                  className="mt-4 text-blue-700 hover:underline"
-                >
-                  {t("seeMore")}
+                <button className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer">
+                  {t("visaFree.seeMore")}
+                  <IoArrowForwardCircle className="text-lg" />
                 </button>
               </div>
             </FadeInOnView>
 
             {/* 14-Day Stay */}
             <FadeInOnView delay={0.6}>
-              <div className="bg-gray-50 p-6 rounded-xl">
+              <div
+                onClick={() => openModal(t("visaFree.heading"))}
+                className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
+              >
                 <h3 className="text-xl font-bold mb-4">
                   {t("visaFree.stay14Days")}
                 </h3>
                 <ul className="space-y-2">
                   {renderCountryList(countries14Days, "visaFree.countries14")}
                 </ul>
-                <button
-                  onClick={() => openModal(t("visaFree.stay14Days"))}
-                  className="mt-4 text-blue-700 hover:underline"
-                >
-                  {t("seeMore")}
+                <button className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer">
+                  {t("visaFree.seeMore")}
+                  <IoArrowForwardCircle className="text-lg" />
                 </button>
               </div>
             </FadeInOnView>

@@ -32,9 +32,9 @@ const OptionsGrid = () => {
                 </li>
               ))}
             </ul>
-            <button className="mt-8 bg-blue-900 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition duration-300">
+            {/* <button className="mt-8 bg-blue-900 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition duration-300">
               {t("participation.learnMore")}
-            </button>
+            </button> */}
           </div>
         </div>
       ))}

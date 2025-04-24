@@ -201,7 +201,7 @@
   
   
     "experts": {
-      "title": "Our Distinguished Experts",
+      "title": "Our Experts",
       "subtitle": "Leading professionals from around the world bringing expertise in oncology, pathology and specialized medical fields.",
       "description": "For over ten years. our team has been inviting the best lecturers and educators, creating a welcoming environment to ensure that the knowledge and connections gained by participants contribute to a solid foundation for delivering professional care to patients.",
       "stats": {
@@ -210,7 +210,7 @@
         "hours": { "number": "100+", "label": "Hours of Content" },
         "specializations": { "number": "10+", "label": "Specializations" }
       },
-      "confirmedTitle": "Confirmed Speakers",
+      "confirmedTitle": "Invited Experts",
       "speakers": {
         "michael": {
           "name": "Dr. Michael Chen",
@@ -252,7 +252,7 @@
       },
       "ctaTitle": "Interested in Joining Our Faculty?",
       "ctaSubtitle": "We're always looking for experienced professionals to join our distinguished team of educators.",
-      "ctaButton": "Contact Us to Participate",
+      "ctaButton": "Join Us",
       "testimonialTitle": "What Our Experts Say",
       "testimonials": {
         "robert": {
@@ -306,15 +306,15 @@
 },
 
 "courses" :{
-  "heroTitle": "45th EAFO OncoPathology Course",
-  "heroSubtitle": "HematoLymphoid Tumors",
+  "heroTitle": "XI EAFO Basic Medical Courses",
+  "heroSubtitle": "in Oncology and Oncopathology",
 
   "overviewTitle": "The Course",
-  "overviewContent1": "Join us for the 45th EAFO OncoPathology Course on \"HematoLymphoid Tumors\" hosted by the Eurasian Federation of Oncology (EAFO) in Moscow, Russian Federation.",
-  "overviewContent2": "This global event brings together leading experts, distinguished faculty, and enthusiastic participants from around the globe to discuss the latest advancements in hematolymphoid pathology.",
+  "overviewContent1": "Join us for the XI EAFO Basic Medical Courses hosted by the Eurasian Federation of Oncology (EAFO) in Magas, Republic of Ingushetia, Russian Federation.",
+  "overviewContent2": "This global event brings together leading experts, distinguished faculty, and enthusiastic participants from around the globe to teach the Basic in Oncology and Oncopathology.",
 
   "stats": [
-    { "value": "5 Days", "label": "Duration" },
+    { "value": "14 Days", "label": "Duration" },
     { "value": "2 Languages", "label": "Russian & English" },
     { "value": "WHO Experts", "label": "Leading Lecturers" },
     { "value": "Certified", "label": "EAFO Certificate" }
@@ -401,6 +401,7 @@
  
    "visaFree": {
      "title": "Visa-Free Countries",
+     "heading": "List of Visa-Free Countries to enter Russian Federation",
      "stay90Days": "90-Day Stay",
      "stay30Days": "30-Day Stay",
      "stay14Days": "14-Day Stay",
@@ -419,7 +420,7 @@
        "nepal": "Nepal",
        "bhutan": "Bhutan"
      },
-     "seeMore": "See More",
+     "seeMore": "Learn More",
      "close": "Close",
      "moreInfoPlaceholder": "More details about the visa-free policy will appear here.",
      "moreInfoPoints": [
@@ -553,7 +554,7 @@
  "participation": {
    "learnMore": "Learn More",
    "hero": {
-     "title": "Participation Options",
+     "title": "Participation Variants",
      "subtitle": "Choose the learning format that best suits your needs"
    },
    "options": [
@@ -634,17 +635,10 @@
      "subtitle": "Choose your preferred participation option and start your journey with EAFO.",
      "buttons": [
        {
-         "text": "Apply with Accommodation",
+         "text": "Register Now",
          "variant": "primary"
-       },
-       {
-         "text": "Apply without Accommodation",
-         "variant": "primary"
-       },
-       {
-         "text": "Apply for Online",
-         "variant": "secondary"
        }
+       
      ]
    }
  },

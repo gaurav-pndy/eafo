@@ -94,13 +94,13 @@ const SponsorCategories = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
                 <p className="text-gray-600 mb-6">{category.description}</p>
-                <button
+                {/* <button
                   className={`${getButtonColor(
                     category.id
                   )} text-white px-6 py-3 rounded-lg transition duration-300`}
                 >
                   {category.button}
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
