@@ -1,12 +1,20 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const { i18n, t } = useTranslation();
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
       className="relative   w-full h-[60vh] lg:h-[calc(100vh-5.5rem)] flex items-center justify-center text-white text-center bg-cover bg-center"
       style={{
         backgroundImage: `url(https://storage.googleapis.com/uxpilot-auth.appspot.com/dfdeaff2e4-f8782245060f665759be.png)`,
@@ -38,7 +46,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

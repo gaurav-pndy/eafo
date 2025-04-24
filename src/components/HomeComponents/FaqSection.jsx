@@ -19,7 +19,16 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="py-16">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="py-16"
+    >
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
           {t("faq.title")}
@@ -58,7 +67,7 @@ const FaqSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

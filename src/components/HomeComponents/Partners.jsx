@@ -1,5 +1,6 @@
 import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const partners = [
   {
@@ -59,7 +60,16 @@ const Partners = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full mt-10 lg:mt-5 py-12 bg-white ">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="w-full mt-10 lg:mt-5 py-12 bg-white "
+    >
       <div className="container mx-auto  md:px-8 lg:px-20">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
           {t("ourPartners")}
@@ -83,7 +93,7 @@ const Partners = () => {
           </Marquee>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

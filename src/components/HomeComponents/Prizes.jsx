@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import { FaGlobe, FaGraduationCap, FaMedal, FaTrophy } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 import { FaHandsHolding } from "react-icons/fa6";
 import { SlBadge } from "react-icons/sl";
 const courseItems = [
@@ -26,7 +26,16 @@ const Prizes = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 bg-[#1e3a8a]">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="py-16 bg-[#1e3a8a]"
+    >
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl text-white md:text-4xl font-bold text-center mb-10">
           {t("prizes.title")}
@@ -44,7 +53,7 @@ const Prizes = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

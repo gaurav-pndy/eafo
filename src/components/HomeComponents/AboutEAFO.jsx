@@ -2,12 +2,22 @@ import { useTranslation } from "react-i18next";
 import { Globe, Microscope, HeartHandshake } from "lucide-react";
 import { FaGlobe, FaMicroscope } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const AboutEAFO = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-20 text-white">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="relative py-20 text-white"
+    >
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -51,7 +61,7 @@ const AboutEAFO = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

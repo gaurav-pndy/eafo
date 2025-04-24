@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Quote } from "lucide-react";
 import { FaQuoteLeft } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -27,7 +28,16 @@ const Testimonials = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 bg-white">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="py-16 bg-white"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
           {t("testimonials.title")}
@@ -58,7 +68,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

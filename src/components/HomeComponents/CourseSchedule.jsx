@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const scheduleItems = [
   {
@@ -23,7 +24,16 @@ const CourseSchedule = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 bg-gray-50">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="py-16 bg-gray-50"
+    >
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
           {t("schedule.title")}
@@ -38,7 +48,7 @@ const CourseSchedule = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

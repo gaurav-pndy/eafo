@@ -7,9 +7,9 @@ import { useEffect } from "react";
 import Experts from "./pages/Experts";
 
 function App() {
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const router = createBrowserRouter([
     {
       element: <AppLayout />,

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FaGlobe, FaGraduationCap } from "react-icons/fa";
 
 import { FaHandsHolding } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const courseItems = [
   {
@@ -26,7 +27,16 @@ const WhyUs = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 bg-gray-50">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="py-16 bg-gray-50"
+    >
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
           {t("whyUs.title")}
@@ -44,7 +54,7 @@ const WhyUs = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -7,12 +7,22 @@ import {
   FaBriefcaseMedical,
   FaMicroscope,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-12 px-4 md:px-6 lg:px-10 max-w-6xl mx-auto">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      className="bg-white py-12 px-4 md:px-6 lg:px-10 max-w-6xl mx-auto"
+    >
       <div className="text-center mb-6 lg:mb-10">
         {/* <p className="text-sm text-[#002379] font-semibold">
           {t("about_course.organized_by")}
@@ -73,7 +83,7 @@ const AboutSection = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
