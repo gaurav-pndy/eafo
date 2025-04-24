@@ -1,11 +1,31 @@
 {
-    "about": "О конференции",
-    "register": "Регистрация",
-    "submission": "Подать заявку",
-    "expertsNav": "Эксперты и комитеты",
-    "Schedule": "Программа мероприятия",
-    "visa": "Виза",
-    "sponsorsNav": "Спонсоры",
+    "header": {
+      "about": "О курсах",
+  "courseDescription": "О курсе",
+  "venue": "Место проведения",
+  "organizations": "Партнеры",
+  "contact": "Контакт",
+  "whyUs": "Почему мы?",
+  "awards": "Награды",
+  "galleryArchive": "Галерея и архив",
+  "reviews": "Отзывы",
+  "eafo": "EAFO",
+  "participationTerms": "Условия участия",
+  "participationVariants": "Форматы участия",
+  "competitiveParticipation": "Льготное участие",
+  "pricing": "Стоимость участия",
+  "visa": "Виза",
+  "submission": "Подать заявки",
+  "howDoIRegister": "Как зарегистрироваться?",
+  "registerNow": "Подача заявки",
+  "expertsAndCommittees": "Эксперты и комитеты",
+  "scheduleAndProgram": "Программа",
+  "sponsors": "Спонсоры",
+  "faq": "FAQ"
+  
+  
+ 
+    },
     "hero": {
       "title": "XI EAFO Базовые медицинские курсы",
       "subtitle": "по онкологии и онкопатологии",
@@ -139,7 +159,7 @@
     }
   },
 
-  "faqVisa": {
+  "faq": {
     "title": "Часто задаваемые вопросы",
     "q1": "Кто может участвовать?",
     "a1": "Медицинские работники, ординаторы и специалисты, интересующиеся онкологией.",
@@ -194,7 +214,7 @@
     "partners": "Партнеры",
     "support": "Поддержка",
     "followUs": "Подписаться",
-    "copyright": "© 2025 ЕАФО Базовые медицинские курсы. Все права защищены.",
+    "copyright": "© 2010 - 2025 Евразийская Федерация Онкологии | АНО ЕАФО | Pasovit Technologies. Все права защищены.",
     "privacyPolicy": "Политика конфиденциальности",
     "termsOfService": "Условия использования"
   },
@@ -392,7 +412,7 @@
   
   
   
-      "faq": {
+      "faqVisa": {
       "title": "Часто задаваемые вопросы",
       "questions": [
         {

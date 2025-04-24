@@ -2,9 +2,35 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaLinkedinIn, FaTelegram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (item) => {
+    if (item.path) {
+      navigate(item.path);
+    } else if (item.sectionId) {
+      if (location.pathname === "/") {
+        scrollToSection(item.sectionId);
+      } else {
+        navigate("/", { state: { scrollTo: item.sectionId } });
+      }
+    }
+  };
+
+  const scrollToSection = (id, offset = 80) => {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100); // slight delay for DOM readiness
+  };
 
   return (
     <footer className="bg-white text-gray-700 py-8 border-t border-gray-200">
@@ -15,8 +41,8 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">{t("footer.contactUs")}</h3>
             <address className="not-italic text-sm leading-relaxed">
-              <p>{t("footer.location")}</p>
-              <p>{t("footer.country")}</p>
+              {/* <p>{t("footer.location")}</p> */}
+              {/* <p>{t("footer.country")}</p> */}
               <p className="mt-2">info@eafo.info</p>
               <p>+7 (800) 555-0123</p>
             </address>
@@ -27,24 +53,40 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">{t("footer.quickLinks")}</h3>
             <ul className="text-sm space-y-2">
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <button
+                  onClick={() => handleNavClick({ path: "/" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
                   {t("footer.applyNow")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <button
+                  onClick={() =>
+                    handleNavClick({ path: "/schedule-and-program" })
+                  }
+                  className="hover:text-blue-600 cursor-pointer"
+                >
                   {t("footer.program")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <button
+                  onClick={() =>
+                    handleNavClick({ path: "/schedule-and-program" })
+                  }
+                  className="hover:text-blue-600 cursor-pointer"
+                >
                   {t("footer.schedule")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <button
+                  onClick={() => handleNavClick({ sectionId: "faq" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
                   {t("footer.faq")}
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -54,24 +96,36 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">{t("footer.resources")}</h3>
             <ul className="text-sm space-y-2">
               <li>
-                <a href="/visa" className="hover:text-blue-600">
+                <button
+                  onClick={() => handleNavClick({ path: "/visa" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
                   {t("footer.visaInfo")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
+                <button
+                  onClick={() => handleNavClick({ path: "/" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
                   {t("footer.documents")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="/partner" className="hover:text-blue-600">
+                <button
+                  onClick={() => handleNavClick({ path: "/partner" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
                   {t("footer.partners")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-600">
-                  {t("support")}
-                </a>
+                <button
+                  onClick={() => handleNavClick({ path: "/" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
+                  {t("footer.support")}
+                </button>
               </li>
             </ul>
           </div>
@@ -114,10 +168,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-4 border-t border-gray-200 flex flex-col md:flex-row justify-between text-sm text-gray-600">
-          <div className="mb-2 md:mb-0 mx-auto md:mx-0">
+          <div className="mb-2 md:mb-0 mx-auto text-center md:mx-0">
             {t("footer.copyright")}
           </div>
-          <div className="flex justify-center md:justify-normal flex-wrap gap-4">
+          <div className="flex justify-center md:justify-normal flex-wrap gap-4 text-blue-600 underline">
             <a
               href="https://www.eafo.info/privacy-policy"
               target="_blank"

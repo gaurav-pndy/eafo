@@ -11,6 +11,12 @@ import ContactUsPage from "./pages/ContactUsPage";
 import CoursesPage from "./pages/CoursesPage";
 import ParticipationPage from "./pages/ParticipationPage";
 import SponsorsPage from "./pages/SponsorsPage";
+import Awards from "./pages/Awards";
+import CompetitiveParticipation from "./pages/CompetitiveParticipation";
+import GalleryAndArchive from "./pages/GalleryAndArchive";
+import ScheduleAndProgram from "./pages/ScheduleAndProgram";
+import Venue from "./pages/Venue";
+import Pricing from "./pages/Pricing";
 
 function App() {
   useEffect(() => {
@@ -45,12 +51,36 @@ function App() {
           element: <CoursesPage />,
         },
         {
-          path: "/participation",
+          path: "/participation-variants",
           element: <ParticipationPage />,
         },
         {
           path: "/sponsors",
           element: <SponsorsPage />,
+        },
+        {
+          path: "/awards",
+          element: <Awards />,
+        },
+        {
+          path: "/competitive-participation",
+          element: <CompetitiveParticipation />,
+        },
+        {
+          path: "/pricing",
+          element: <Pricing />,
+        },
+        {
+          path: "/gallery-and-archive",
+          element: <GalleryAndArchive />,
+        },
+        {
+          path: "/schedule-and-program",
+          element: <ScheduleAndProgram />,
+        },
+        {
+          path: "/venue",
+          element: <Venue />,
         },
       ],
     },

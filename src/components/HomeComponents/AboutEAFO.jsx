@@ -9,6 +9,7 @@ const AboutEAFO = () => {
 
   return (
     <motion.section
+      id="about"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ amount: 0.3, once: true }}
