@@ -25,7 +25,7 @@ const Experts = () => {
     <section className="text-gray-800 bg-white">
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -44,7 +44,7 @@ const Experts = () => {
 
       {/* Overview */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -76,7 +76,7 @@ const Experts = () => {
 
       {/* Confirmed Speakers */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -125,7 +125,7 @@ const Experts = () => {
 
       {/* Invited Experts */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -170,7 +170,7 @@ const Experts = () => {
 
       {/* CTA */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -190,7 +190,7 @@ const Experts = () => {
 
       {/* Testimonials */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{

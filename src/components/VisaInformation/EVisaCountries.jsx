@@ -11,7 +11,7 @@ const sectionVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 50 },
   visible: (index) => ({
     opacity: 1,
     y: 0,

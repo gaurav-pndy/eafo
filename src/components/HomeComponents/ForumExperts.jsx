@@ -72,7 +72,7 @@ const ForumExperts = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ amount: 0.3, once: true }}
       transition={{
@@ -81,7 +81,7 @@ const ForumExperts = () => {
       }}
       className="py-16 bg-gradient-to-b from-white via-[#f9f9f9] to-white overflow-hidden"
     >
-      <div className="max-w-6xl relative mx-auto px-4">
+      <div className="max-w-7xl relative mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-16">
           {t("forum.title")}
         </h2>
@@ -95,7 +95,7 @@ const ForumExperts = () => {
           navigation={false} // Disable default navigation
           modules={[Autoplay, Navigation]} // Include the Navigation module
           loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           breakpoints={{
             640: {
               slidesPerView: 2,
