@@ -17,6 +17,8 @@ import GalleryAndArchive from "./pages/GalleryAndArchive";
 import ScheduleAndProgram from "./pages/ScheduleAndProgram";
 import Venue from "./pages/Venue";
 import Pricing from "./pages/Pricing";
+import HowToRegister from "./pages/HowToRegister";
+import RegisterNow from "./pages/RegisterNow";
 
 function App() {
   useEffect(() => {
@@ -81,6 +83,14 @@ function App() {
         {
           path: "/venue",
           element: <Venue />,
+        },
+        {
+          path: "/how-to-register",
+          element: <HowToRegister />,
+        },
+        {
+          path: "/register",
+          element: <RegisterNow />,
         },
       ],
     },

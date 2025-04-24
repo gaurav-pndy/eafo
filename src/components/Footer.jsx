@@ -54,7 +54,7 @@ const Footer = () => {
             <ul className="text-sm space-y-2">
               <li>
                 <button
-                  onClick={() => handleNavClick({ path: "/" })}
+                  onClick={() => handleNavClick({ path: "/register" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
                   {t("footer.applyNow")}

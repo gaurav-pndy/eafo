@@ -66,7 +66,7 @@ const Header = () => {
           label: t("header.competitiveParticipation"),
           path: "/competitive-participation",
         },
-        { label: t("header.registerNow"), path: "/register-now" },
+        { label: t("header.registerNow"), path: "/register" },
       ],
     },
     { label: t("header.expertsAndCommittees"), path: "/experts" },
