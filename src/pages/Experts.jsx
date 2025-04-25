@@ -25,26 +25,38 @@ const Experts = () => {
     <section className="text-gray-800 bg-white">
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="bg-[#1e3a8f] text-white text-center py-32 px-4"
+        className="bg-[#1e3a8f] relative text-white h-[400px] py-32 px-4"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-8">
-          {t("experts.title")}
-        </h2>
-        <p className="max-w-4xl text-lg md:text-xl mx-auto">
-          {t("experts.subtitle")}
-        </p>
+        <div className="absolute inset-0">
+          <img
+            className="w-full h-full object-cover"
+            src="https://static.wixstatic.com/media/df6cc5_dc61e86141bf4b2a8f0d9c110703f9fc~mv2.jpg"
+            alt="Experts Hero Image"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/90" />
+        </div>
+        <div className="relative  max-w-6xl mx-auto">
+          <div className="max-w-4xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              {t("experts.title")}
+            </h2>
+            <p className=" text-lg md:text-xl mx-auto">
+              {t("experts.subtitle")}
+            </p>
+          </div>
+        </div>
       </motion.div>
 
       {/* Overview */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -63,7 +75,7 @@ const Experts = () => {
                     t(`experts.stats.${key}.number`).replace(/\D/g, "")
                   )}
                   suffix="+"
-                  duration={4}
+                  duration={3}
                 />
               </p>
               <p className="text-lg text-gray-600">
@@ -76,7 +88,7 @@ const Experts = () => {
 
       {/* Confirmed Speakers */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -125,7 +137,7 @@ const Experts = () => {
 
       {/* Invited Experts */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -170,7 +182,7 @@ const Experts = () => {
 
       {/* CTA */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{
@@ -190,7 +202,7 @@ const Experts = () => {
 
       {/* Testimonials */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.3, once: true }}
         transition={{

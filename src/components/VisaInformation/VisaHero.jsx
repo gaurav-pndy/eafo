@@ -22,23 +22,23 @@ const VisaHero = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      id="visa-hero"
-      className="pt-32 pb-16 bg-gradient-to-r from-blue-900 to-blue-800"
-    >
-      <div className="container mx-auto px-4">
-        <div className="text-center text-white">
-          <FadeInOnView>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t("visaHero.title")}
-            </h1>
-          </FadeInOnView>
+    <section id="awards-hero" className="relative h-[400px] overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          className="w-full h-full object-cover"
+          src="https://static.wixstatic.com/media/df6cc5_755f2f7f3c2a44a7b66b19a3ccf73461~mv2.jpg"
+          alt="Visa Information Hero Image"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/90" />
+      </div>
 
-          <FadeInOnView delay={0.2}>
-            <p className="text-xl max-w-3xl mx-auto">
-              {t("visaHero.subtitle")}
-            </p>
-          </FadeInOnView>
+      <div className="relative container mx-auto px-4 h-full flex items-center max-w-6xl">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            {" "}
+            {t("visaHero.title")}
+          </h1>
+          <p className="text-xl text-blue-100">{t("visaHero.subtitle")}</p>
         </div>
       </div>
     </section>
