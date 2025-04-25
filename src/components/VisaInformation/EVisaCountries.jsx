@@ -69,7 +69,7 @@ const EVisaCountries = () => {
                     <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                   </button>
                 </DialogTrigger>
-                <DialogContent className="md:w-[60vw] !max-w-none">
+                <DialogContent className="md:w-[60vw] !max-w-none border-2 border-blue-700">
                   <DialogHeader>
                     <DialogTitle className="text-center text-xl font-bold">
                       {t(

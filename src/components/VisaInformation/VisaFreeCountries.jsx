@@ -134,7 +134,7 @@ const VisaFreeCountries = () => {
 
       {/* Modal using shadcn Dialog */}
       <Dialog open={!!modalContent} onOpenChange={() => setModalContent("")}>
-        <DialogContent className="md:w-[60vw] !max-w-none">
+        <DialogContent className="md:w-[60vw] !max-w-none border-2 border-blue-700">
           <DialogHeader>
             <DialogTitle className="text-center text-xl font-bold">
               {modalContent}
