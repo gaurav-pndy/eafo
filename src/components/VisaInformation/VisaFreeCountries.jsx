@@ -84,7 +84,7 @@ const VisaFreeCountries = () => {
                 <ul className="space-y-2">
                   {renderCountryList(countries90Days, "visaFree.countries90")}
                 </ul>
-                <button className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer w-full justify-between">
+                <button className="mt-4 text-[#1b3995] flex items-center gap-2 cursor-pointer w-full justify-between">
                   {t("visaFree.seeMore")}
                   <IoArrowForwardCircle className="text-3xl" />
                 </button>
@@ -103,7 +103,7 @@ const VisaFreeCountries = () => {
                 <ul className="space-y-2">
                   {renderCountryList(countries30Days, "visaFree.countries30")}
                 </ul>
-                <button className="mt-4 text-blue-700 flex items-center w-full gap-2 justify-between   cursor-pointer">
+                <button className="mt-4 text-[#1b3995] flex items-center w-full gap-2 justify-between   cursor-pointer">
                   {t("visaFree.seeMore")}
                   <IoArrowForwardCircle className="text-3xl" />
                 </button>
@@ -122,7 +122,7 @@ const VisaFreeCountries = () => {
                 <ul className="space-y-2">
                   {renderCountryList(countries14Days, "visaFree.countries14")}
                 </ul>
-                <button className="mt-4 text-blue-700 flex items-center w-full justify-between gap-2 cursor-pointer">
+                <button className="mt-4 text-[#1b3995] flex items-center w-full justify-between gap-2 cursor-pointer">
                   {t("visaFree.seeMore")}
                   <IoArrowForwardCircle className="text-3xl" />
                 </button>
