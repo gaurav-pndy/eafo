@@ -36,7 +36,7 @@
   "contactUs": "Contact Us",
   "personalAccount": "Personal Account"
    },
-    "hero" :{
+    "heroSection" :{
       "title": "XI EAFO BASIC MEDICAL COURSES IN ONCOLOGY and ONCOPATHOLOGY",
       "subtitle": "Academy of Digital Development",
       "dates": "July 23 - August 8, 2025",
@@ -809,8 +809,182 @@
    "title": "Join Our Mission",
    "subtitle": "Be part of our global initiative to combat cancer through education and collaboration",
    "button": "Get Involved"
- }
+ },
 
+ "Program" : {
+  "hero": {
+    "title": "Program & Schedule",
+    "subtitle": "XI EAFO Basic Medical Courses in Oncology and Oncopathology",
+    "date": "July 23 - August 8, 2025 • Magas, Republic of Ingushetia"
+  },
+  "overview": {
+    "title": "Course Overview",
+    "description": "We are excited to invite you to the XI EAFO Basic Medical Courses...",
+    "download": "Download Program PDF"
+  },
+  "modules": [
+    {
+      "title": "Clinical Oncology",
+      "icon": "microscope",
+      "items": ["Diagnostic approaches", "Treatment strategies", "Case studies"]
+    },
+    {
+      "title": "Molecular Diagnosis",
+      "icon": "dna",
+      "items": ["Cytology", "Histology", "Genetic testing"]
+    },
+    {
+      "title": "Specialized Topics",
+      "icon": "vial",
+      "items": ["Breast cancer", "GI tumors", "Neuroendocrine tumors"]
+    },
+    {
+      "title": "Diagnostics",
+      "icon": "x-ray",
+      "items": ["Radiological methods", "Lab demonstrations", "Clinical practice"]
+    }
+  ],
+  "timeline": {
+    "title": "Course Timeline",
+    "events": [
+      {
+        "icon": "calendar-days",
+        "title": "July 23 - August 8, 2025",
+        "description": "Main course duration"
+      },
+      {
+        "icon": "ban",
+        "title": "Lecture-free Days",
+        "description": "July 28 and August 3"
+      },
+      {
+        "icon": "graduation-cap",
+        "title": "Final Project Defense",
+        "description": "August 8, 2025"
+      }
+    ]
+  },
+  "additional": {
+    "language": {
+      "title": "Language",
+      "description": "Courses are conducted in Russian and English",
+      "icon": "language"
+    },
+    "format": {
+      "title": "Format",
+      "description": "Interactive lectures, group work, and practical sessions",
+      "icon": "chalkboard-user"
+    }
+  }
+},
+
+
+"Subsidized": {
+    "hero": {
+      "title": "Extra Subsidized Participation",
+      "subtitle": "Competitive Participation Program",
+      "tagline": "Making quality medical education accessible"
+    },
+    "overview": {
+      "title": "Program Overview",
+      "description": "Extra Subsidized participation for the XI EAFO Basic Medical Courses...",
+      "button": "Apply Now"
+    },
+    "eligibilityTitle": "Eligibility Criteria",
+    "eligibility": [
+      [
+        { "icon": "user", "title": "Age Requirement", "description": "Not more than 40 years..." },
+        { "icon": "file-lines", "title": "Resume/CV", "description": "Detailed professional background" }
+      ],
+      [
+        { "icon": "pen", "title": "Motivation Letter", "description": "Personal statement..." },
+        { "icon": "envelope", "title": "Recommendation", "description": "Letter of recommendation (Optional)" }
+      ],
+      [
+        { "icon": "pen-to-square", "title": "Online Test", "description": "Mandatory test participation" },
+        { "icon": "check-circle", "title": "Test Link", "description": "Will be sent via email" }
+      ]
+    ],
+    "conditionsTitle": "Important Conditions",
+    "conditions": [
+      { "icon": "star", "text": "Priority for Abstract...", "color": "yellow" },
+      { "icon": "plane-slash", "text": "No travel support", "color": "red" },
+      { "icon": "globe", "text": "Priority for LMIC residents", "color": "green" },
+      { "icon": "clipboard-list", "text": "Complete information required", "color": "blue" }
+    ],
+    "benefitsTitle": "Participation Benefits",
+    "benefits": [
+      { "icon": "chalkboard-user", "title": "Full Access", "description": "To all lectures and sessions" },
+      { "icon": "users", "title": "Interactive Panels", "description": "Group discussions and activities" },
+      { "icon": "utensils", "title": "Catering", "description": "Included in the program" }
+    ],
+    "cta": {
+      "title": "Ready to Apply?",
+      "description": "Take the first step towards advancing your medical career...",
+      "primary": "Submit Application",
+      "secondary": "Learn More"
+    }
+  },
+
+  "hero": {
+    "title": "Gallery & Archive",
+    "subtitle": "Memories and Resources from Past Events",
+    "alt": "medical conference hall with gallery displays"
+  },
+  "archives": {
+    "title": "Program Archives"
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "button": "View All Photos"
+  },
+
+
+  "Awards" :{
+    "hero": {
+    "title": "Awards & Recognition",
+    "subtitle": "Celebrating Excellence in Medical Education",
+    "alt": "medical award ceremony with trophies"
+  },
+  "grand": {
+    "title": "Grand Prize",
+    "subtitle": "For the Overall Winner in Individual Competition",
+    "cards": [
+      {
+        "title": "Residency Grant",
+        "desc": "Free residency in any specialty with monthly scholarship of ₽40,000-120,000"
+      },
+      {
+        "title": "Short Internship",
+        "desc": "1 week to 2 months internship or conference attendance with full coverage"
+      },
+      {
+        "title": "Long Internship",
+        "desc": "2-12 months internship with partial expenses covered"
+      }
+    ]
+  },
+  "runner": {
+    "title": "2nd and 3rd Place Awards",
+    "cards": [
+      {
+        "title": "Priority Internship Assistance",
+        "desc": "Preferential arrangement for thematic internships in Russia and abroad"
+      },
+      {
+        "title": "Scholarship Preferences",
+        "desc": "Enhanced chances in EAFO/FIRMST scholarship residency competition"
+      },
+      {
+        "title": "Special Event Access",
+        "desc": "Exclusive conditions for participation in EAFO, FIRMST, and partner events"
+      }
+    ]
+  },
+  "cta": {
+    "button": "Apply Now for the Competition"
+  }
+  }
 
 
  

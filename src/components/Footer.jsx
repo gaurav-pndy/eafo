@@ -62,9 +62,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() =>
-                    handleNavClick({ path: "/schedule-and-program" })
-                  }
+                  onClick={() => handleNavClick({ path: "/program" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
                   {t("footer.program")}
@@ -72,9 +70,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() =>
-                    handleNavClick({ path: "/schedule-and-program" })
-                  }
+                  onClick={() => handleNavClick({ path: "/program" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
                   {t("footer.schedule")}

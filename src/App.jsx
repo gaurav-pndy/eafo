@@ -11,15 +11,16 @@ import ContactUsPage from "./pages/ContactUsPage";
 import CoursesPage from "./pages/CoursesPage";
 import ParticipationPage from "./pages/ParticipationPage";
 import SponsorsPage from "./pages/SponsorsPage";
-import Awards from "./pages/Awards";
 import CompetitiveParticipation from "./pages/CompetitiveParticipation";
-import GalleryAndArchive from "./pages/GalleryAndArchive";
 import ScheduleAndProgram from "./pages/ScheduleAndProgram";
 import Venue from "./pages/Venue";
 import Pricing from "./pages/Pricing";
 import HowToRegister from "./pages/HowToRegister";
 import RegisterNow from "./pages/RegisterNow";
 import Organizations from "./pages/Organizations";
+import GalleryPage from "./pages/GalleryPage";
+import AwardsPage from "./pages/AwardsPage";
+import ProgramPage from "./pages/ProgramPage";
 
 function App() {
   useEffect(() => {
@@ -63,7 +64,7 @@ function App() {
         },
         {
           path: "/awards",
-          element: <Awards />,
+          element: <AwardsPage />,
         },
         {
           path: "/competitive-selection",
@@ -75,11 +76,15 @@ function App() {
         },
         {
           path: "/gallery-and-archive",
-          element: <GalleryAndArchive />,
+          element: <GalleryPage />,
         },
         {
           path: "/schedule-and-program",
           element: <ScheduleAndProgram />,
+        },
+        {
+          path: "/program",
+          element: <ProgramPage />,
         },
         {
           path: "/venue",

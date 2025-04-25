@@ -26,26 +26,26 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 px-4 max-w-7xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:leading-20">
-          {t("hero.title")}
+          {t("heroSection.title")}
         </h1>
         <p className="text-2xl md:text-4xl font-semibold text-gray-300  mb-8">
-          {t("hero.subtitle")}
+          {t("heroSection.subtitle")}
         </p>
 
-        <p className="text-xl md:text-3xl mb-2">{t("hero.location")}</p>
-        <p className="text-xl md:text-3xl mb-8">{t("hero.dates")}</p>
+        <p className="text-xl md:text-3xl mb-2">{t("heroSection.location")}</p>
+        <p className="text-xl md:text-3xl mb-8">{t("heroSection.dates")}</p>
         <div className="flex justify-center gap-4 flex-wrap">
           <Link
             to="/register"
             className="bg-[#70ad47] text-white px-8 hover:bg-[#4f8c2a]  border border-[#70ad47] md:text-xl  py-3 rounded-full font-semibold transition-all duration-300"
           >
-            {t("hero.button")}
+            {t("heroSection.button")}
           </Link>
           {/* <Link
             to="/about"
             className="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#002379] transition-all duration-300"
           >
-            {t("hero.course")}
+            {t("heroSection.course")}
           </Link> */}
         </div>
       </div>

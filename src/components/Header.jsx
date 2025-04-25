@@ -72,7 +72,7 @@ const Header = () => {
         { sectionId: "reviews", label: t("header.reviews") }, // <- section
       ],
     },
-    { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
+    { label: t("header.scheduleAndProgram"), path: "/program" },
     {
       label: t("header.participationTerms"),
       // path: "/",
@@ -175,7 +175,7 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav
           className={`hidden xl:flex text-gray-800 font-medium ${
-            selectedLang === "ru" ? "text-sm gap-5" : "text-[0.95rem] gap-5"
+            selectedLang === "ru" ? "text-base gap-6" : "text-lg gap-6"
           }`}
         >
           {navItems.map((item, idx) => (
