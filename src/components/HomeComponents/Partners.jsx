@@ -61,7 +61,7 @@ const Partners = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ amount: 0.3, once: true }}
       transition={{
@@ -81,12 +81,12 @@ const Partners = () => {
             {partners.map((partner, index) => (
               <div
                 key={`top-${index}`}
-                className="flex items-center justify-center mx-2 md:mx-8 max-w-80 md:h-32  px-4 py-2 "
+                className="flex items-center justify-center mx-2 md:mx-8 w-auto px-4 py-2 max-w-80"
               >
                 <img
                   src={partner.src}
                   alt={partner.src}
-                  className="w-full h-12  md:h-16 object-contain "
+                  className="h-12 md:h-16 object-contain"
                 />
               </div>
             ))}
