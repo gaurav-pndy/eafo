@@ -42,7 +42,7 @@ function App() {
           element: <VisaInformationPage />,
         },
         {
-          path: "/partner",
+          path: "/partners",
           element: <PartnerPage />,
         },
         {

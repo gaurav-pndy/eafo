@@ -113,7 +113,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick({ path: "/partner" })}
+                  onClick={() => handleNavClick({ path: "/partners" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
                   {t("footer.partners")}

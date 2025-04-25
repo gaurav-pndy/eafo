@@ -36,12 +36,13 @@
   "contactUs": "Contact Us"
    },
     "hero" :{
-      "title": "XI EAFO Basic Medical Courses",
-      "subtitle": "in Oncology and Oncopathology",
+      "title": "XI EAFO BASIC MEDICAL COURSES IN ONCOLOGY and ONCOPATHOLOGY",
+      "subtitle": "Academy of Digital Development",
       "dates": "July 23 - August 8, 2025",
       "location": "Magas, Republic of Ingushetia, Russian Federation",
       "register": "Register Now",
-      "course": "Pre-Courses"
+      "course": "Pre-Courses",
+      "button": "SUBMIT YOUR APPLICATION"
     },
     "about_course": {
       "organized_by": "Organized by",
@@ -170,14 +171,20 @@
 
       "faq": {
     "title": "Frequently Asked Questions",
-    "q1": "Who can attend?",
-    "a1": "Medical professionals, residents, and specialists interested in oncology.",
-    "q2": "Is partial participation possible?",
-    "a2": "Yes, flexible attendance options are available.",
-    "q3": "What are the language requirements?",
-    "a3": "Courses are conducted in Russian and English. ",
-    "q4": "How to register for the course?",
-    "a4": "You can register through our official website by filling out the registration form."
+   "q1": "Who are the Basic Medical Courses suitable for?",
+  "a1": "",
+  "q2": "How long does the course last, and can I attend only part of the program?",
+  "a2": "",
+  "q3": "What certification documents will I receive after completing the Basic Course?",
+  "a3": "",
+  "q4": "Is knowledge of English mandatory?",
+  "a4": "",
+  "q5": "Can I attend the Basic Medical Course without accommodation if I live nearby?",
+  "a5": "",
+  "q6": "Is remote participation possible?",
+  "a6": "",
+  "q7": "Is it possible to pay in installments?",
+  "a7": ""
   },
 
   "testimonials": {

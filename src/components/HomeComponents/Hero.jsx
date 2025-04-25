@@ -24,19 +24,22 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[#002379]/70 z-0" />
 
       {/* Content */}
-      <div className="relative z-10 px-4 max-w-6xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-8">
+      <div className="relative z-10 px-4 max-w-7xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:leading-20">
           {t("hero.title")}
         </h1>
-        <p className="text-lg md:text-3xl mb-4">{t("hero.subtitle")}</p>
-        <p className="text-sm md:text-xl mb-2">{t("hero.dates")}</p>
-        <p className="text-sm md:text-xl mb-8">{t("hero.location")}</p>
+        <p className="text-2xl md:text-4xl font-semibold text-gray-300  mb-8">
+          {t("hero.subtitle")}
+        </p>
+
+        <p className="text-xl md:text-3xl mb-2">{t("hero.location")}</p>
+        <p className="text-xl md:text-3xl mb-8">{t("hero.dates")}</p>
         <div className="flex justify-center gap-4 flex-wrap">
           <Link
             to="/register"
-            className="bg-white text-[#002379] px-8 hover:bg-transparent hover:text-white border border-white  py-3 rounded-full font-semibold transition-all duration-300"
+            className="bg-[#70ad47] text-white px-8 hover:bg-[#4f8c2a]  border border-[#70ad47] md:text-xl  py-3 rounded-full font-semibold transition-all duration-300"
           >
-            {t("hero.register")}
+            {t("hero.button")}
           </Link>
           {/* <Link
             to="/about"

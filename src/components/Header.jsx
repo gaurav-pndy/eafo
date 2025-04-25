@@ -25,7 +25,11 @@ const Header = () => {
       // path: "/",
       subItems: [
         { label: t("header.basicCourses"), path: "/courses" },
-        { label: t("header.preCourses"), path: "/" },
+        {
+          label: t("header.preCourses"),
+          path: "http://basic.eafo.info",
+          external: true,
+        },
       ],
     },
     {
@@ -77,7 +81,7 @@ const Header = () => {
       ],
     },
     { sectionId: "faq", label: t("header.faq") },
-    { label: t("header.organizations"), path: "/organizations" },
+    { label: t("header.organizations"), path: "/partners" },
 
     { label: t("header.contactUs"), path: "/contact-us" },
     // <- section
@@ -87,7 +91,10 @@ const Header = () => {
   const location = useLocation();
 
   const handleNavClick = (item) => {
-    if (item.path) {
+    if (item.external) {
+      // Open external link in new tab
+      window.open(item.path, "_blank");
+    } else if (item.path) {
       navigate(item.path);
     } else if (item.sectionId) {
       if (location.pathname === "/") {
@@ -137,7 +144,7 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav
-          className={`hidden lg:flex text-gray-800 font-medium ${
+          className={`hidden xl:flex text-gray-800 font-medium ${
             selectedLang === "ru" ? "text-sm gap-8" : "text-base gap-8"
           }`}
         >
@@ -227,7 +234,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden pl-4"
+            className="xl:hidden pl-4"
           >
             {isMenuOpen ? (
               <X className="h-8 w-8" />
@@ -246,7 +253,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="lg:hidden absolute w-full top-20 z-20 left-0 bg-white px-4 py-4"
+            className="xl:hidden absolute w-full top-20 z-20 left-0 bg-white px-4 py-4"
           >
             <nav className="flex flex-col gap-4 text-gray-800 font-medium">
               {navItems.map((item) => (
