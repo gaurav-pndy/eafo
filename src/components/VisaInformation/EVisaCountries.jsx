@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { IoClose } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -21,8 +27,6 @@ const cardVariants = {
 
 const EVisaCountries = () => {
   const { t } = useTranslation();
-  const [showModal, setShowModal] = useState(false);
-
   const countryCodes = ["austria", "belgium", "china", "denmark"];
 
   const eVisaFullList = `Austria, Andorra, Bahrain, Belgium, Bulgaria, Vatican City, Hungary, Germany, Greece, Denmark, India, Indonesia, Iran, Ireland, Iceland, Spain, Italy, Cyprus, China (including Taiwan), Democratic People's Republic of Korea, Kuwait, Latvia, Lithuania, Liechtenstein, Luxembourg, Malaysia, Malta, Mexico, Monaco, Netherlands, Norway, Oman, Poland, Portugal, Romania, San Marino, Saudi Arabia, North Macedonia, Serbia, Singapore, Slovakia, Slovenia, Turkey, Philippines, Finland, France, Croatia, Czech Republic, Switzerland, Sweden, Estonia, Japan.`;
@@ -58,40 +62,31 @@ const EVisaCountries = () => {
             </div>
 
             <div className="mt-8 text-center">
-              <span
-                onClick={() => setShowModal(true)}
-                className="text-blue-900 hover:text-blue-700 font-bold cursor-pointer inline-flex items-center"
-              >
-                {t("evisa.viewAll")}{" "}
-                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-              </span>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="text-blue-900 hover:text-blue-700 font-bold cursor-pointer inline-flex items-center">
+                    {t("evisa.viewAll")}{" "}
+                    <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="md:w-[60vw] !max-w-none">
+                  <DialogHeader>
+                    <DialogTitle className="text-center text-xl font-bold">
+                      {t(
+                        "evisa.modalTitle",
+                        "List of Countries, where Citizens can visit Russian Federation with an E-Visa"
+                      )}
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="text-lg max-h-[60vh] text-gray-700 leading-relaxed mt-4 whitespace-pre-wrap">
+                    {eVisaFullList}
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
       </motion.section>
-
-      {showModal && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center px-4">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl w-full relative">
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-2xl"
-              aria-label="Close"
-            >
-              <IoClose />
-            </button>
-            <h3 className="text-xl font-bold mb-4 mt-5 text-center">
-              {t(
-                "evisa.modalTitle",
-                "List of Countries, where Citizens can visit Russian Federation with an E-Visa"
-              )}
-            </h3>
-            <div className="max-h-64 overflow-y-auto text-sm text-gray-700 leading-relaxed">
-              {eVisaFullList}
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };

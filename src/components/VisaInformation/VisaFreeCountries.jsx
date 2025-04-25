@@ -1,12 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
-import { IoArrowForwardCircle, IoClose } from "react-icons/io5";
+import { IoArrowForwardCircle } from "react-icons/io5";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const FadeInOnView = ({ children, delay = 0 }) => {
-  const ref = useRef(null);
+  const ref = React.useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
@@ -23,7 +29,7 @@ const FadeInOnView = ({ children, delay = 0 }) => {
 
 const VisaFreeCountries = () => {
   const { t } = useTranslation();
-  const [modalContent, setModalContent] = useState(null);
+  const [modalContent, setModalContent] = useState("");
 
   const countries90Days = [
     { key: "argentina" },
@@ -40,9 +46,6 @@ const VisaFreeCountries = () => {
     { key: "nepal" },
     { key: "bhutan" },
   ];
-
-  const openModal = (title) => setModalContent(title);
-  const closeModal = () => setModalContent(null);
 
   const renderCountryList = (countries, baseKey) =>
     countries.map((country, index) => (
@@ -72,7 +75,7 @@ const VisaFreeCountries = () => {
             {/* 90-Day Stay */}
             <FadeInOnView delay={0.2}>
               <div
-                onClick={() => openModal(t("visaFree.heading"))}
+                onClick={() => setModalContent(t("visaFree.stay90Days"))}
                 className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-4">
@@ -81,12 +84,9 @@ const VisaFreeCountries = () => {
                 <ul className="space-y-2">
                   {renderCountryList(countries90Days, "visaFree.countries90")}
                 </ul>
-                <button
-                  onClick={() => openModal(t("visaFree.stay90Days"))}
-                  className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer"
-                >
-                  {t("visaFree.seeMore")}{" "}
-                  <IoArrowForwardCircle className="text-lg" />
+                <button className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer w-full justify-between">
+                  {t("visaFree.seeMore")}
+                  <IoArrowForwardCircle className="text-3xl" />
                 </button>
               </div>
             </FadeInOnView>
@@ -94,7 +94,7 @@ const VisaFreeCountries = () => {
             {/* 30-Day Stay */}
             <FadeInOnView delay={0.4}>
               <div
-                onClick={() => openModal(t("visaFree.heading"))}
+                onClick={() => setModalContent(t("visaFree.stay30Days"))}
                 className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-4">
@@ -103,9 +103,9 @@ const VisaFreeCountries = () => {
                 <ul className="space-y-2">
                   {renderCountryList(countries30Days, "visaFree.countries30")}
                 </ul>
-                <button className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer">
+                <button className="mt-4 text-blue-700 flex items-center w-full gap-2 justify-between   cursor-pointer">
                   {t("visaFree.seeMore")}
-                  <IoArrowForwardCircle className="text-lg" />
+                  <IoArrowForwardCircle className="text-3xl" />
                 </button>
               </div>
             </FadeInOnView>
@@ -113,7 +113,7 @@ const VisaFreeCountries = () => {
             {/* 14-Day Stay */}
             <FadeInOnView delay={0.6}>
               <div
-                onClick={() => openModal(t("visaFree.heading"))}
+                onClick={() => setModalContent(t("visaFree.stay14Days"))}
                 className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-4">
@@ -122,9 +122,9 @@ const VisaFreeCountries = () => {
                 <ul className="space-y-2">
                   {renderCountryList(countries14Days, "visaFree.countries14")}
                 </ul>
-                <button className="mt-4 text-blue-700 flex items-center gap-2 cursor-pointer">
+                <button className="mt-4 text-blue-700 flex items-center w-full justify-between gap-2 cursor-pointer">
                   {t("visaFree.seeMore")}
-                  <IoArrowForwardCircle className="text-lg" />
+                  <IoArrowForwardCircle className="text-3xl" />
                 </button>
               </div>
             </FadeInOnView>
@@ -132,32 +132,26 @@ const VisaFreeCountries = () => {
         </div>
       </div>
 
-      {/* Modal */}
-      {modalContent && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative">
-            {/* Close Icon Button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl"
-              aria-label="Close"
-            >
-              <IoClose />
-            </button>
-
-            <h4 className="text-xl font-bold mb-4 text-center">
+      {/* Modal using shadcn Dialog */}
+      <Dialog open={!!modalContent} onOpenChange={() => setModalContent("")}>
+        <DialogContent className="md:w-[60vw] !max-w-none">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl font-bold">
               {modalContent}
-            </h4>
-            <ul className="text-sm text-gray-700 text-left list-disc list-inside mb-4 space-y-1 max-h-80 overflow-y-auto pr-2">
-              {t("visaFree.moreInfoPoints", { returnObjects: true }).map(
-                (point, index) => (
-                  <li key={index}>{point}</li>
-                )
-              )}
-            </ul>
-          </div>
-        </div>
-      )}
+            </DialogTitle>
+          </DialogHeader>
+          <ul className=" w-full text-gray-700 text-left list-disc list-inside space-y-1 max-h-[60vh] overflow-y-auto pr-2 mt-4">
+            {t("visaFree.moreInfoPoints", { returnObjects: true }).map(
+              (point, index) => (
+                <li
+                  dangerouslySetInnerHTML={{ __html: point }}
+                  key={index}
+                ></li>
+              )
+            )}
+          </ul>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
