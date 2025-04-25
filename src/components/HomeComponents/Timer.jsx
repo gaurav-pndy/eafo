@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Timer = () => {
+  const { t } = useTranslation(); // Initialize translation function
   const targetDate = new Date("2025-07-23T08:00:00+03:00"); // 8 AM 23rd July, Russian Time (MSK)
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
 
@@ -38,7 +40,9 @@ const Timer = () => {
 
   return (
     <div className="flex flex-col justify-center max-w-xl mx-auto items-center     mt-10">
-      <p className="text-lg md:text-2xl font-semibold mb-5">Time Left:</p>
+      <p className="text-lg md:text-2xl font-semibold mb-5">
+        {t("timer.title")}
+      </p>
       {timeLeft && (
         <div className="w-full flex justify-center">
           <p className="text-2xl flex items-center text-white md:text-5xl leading-10 font-bold mx-auto">
@@ -46,7 +50,7 @@ const Timer = () => {
               <span className="bg-[#1e3a8a] px-3 py-3 md:py-6  rounded-lg shadow-lg">
                 {timeLeft.days}
               </span>
-              <span className="text-[#1e3a8a] text-sm">Days</span>
+              <span className="text-[#1e3a8a] text-sm">{t("timer.days")}</span>
             </div>
 
             <span className="text-[#1e3a8a] h-full    md:pb-6 text-5xl md:text-7xl mx-2">
@@ -57,7 +61,7 @@ const Timer = () => {
               <span className="bg-[#1e3a8a] px-3 py-3 md:py-6 rounded-lg shadow-lg">
                 {timeLeft.hours}
               </span>
-              <span className="text-[#1e3a8a] text-sm">Hours</span>
+              <span className="text-[#1e3a8a] text-sm">{t("timer.hours")}</span>
             </div>
 
             <span className="text-[#1e3a8a] h-full    md:pb-6 text-5xl md:text-7xl mx-2">
@@ -67,7 +71,9 @@ const Timer = () => {
               <span className="bg-[#1e3a8a] px-3 py-3 md:py-6  rounded-lg shadow-lg">
                 {timeLeft.minutes}
               </span>
-              <span className="text-[#1e3a8a] text-sm">Minutes</span>
+              <span className="text-[#1e3a8a] text-sm">
+                {t("timer.minutes")}
+              </span>
             </div>
 
             <span className="text-[#1e3a8a] h-full    md:pb-6 text-5xl md:text-7xl mx-2">
@@ -77,7 +83,9 @@ const Timer = () => {
               <span className="bg-[#1e3a8a] px-3 py-3 md:py-6 rounded-lg shadow-lg">
                 {timeLeft.seconds}
               </span>
-              <span className="text-[#1e3a8a] text-sm">Seconds</span>
+              <span className="text-[#1e3a8a] text-sm">
+                {t("timer.seconds")}
+              </span>
             </div>
           </p>
         </div>

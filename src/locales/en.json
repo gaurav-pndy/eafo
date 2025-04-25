@@ -45,6 +45,13 @@
       "course": "Pre-Courses",
       "button": "SUBMIT YOUR APPLICATION"
     },
+    "timer": {
+      "title": "Time Left",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
     "about_course": {
       "organized_by": "Organized by",
       "about_XI": "About XI Basic Medical course",
@@ -249,24 +256,60 @@
       },
       "confirmedTitle": "Invited Experts",
       "speakers": {
-        "michael": {
-          "name": "Dr. Michael Chen",
-          "org": "Stanford Medical Center, USA",
-          "field": "Clinical Oncology",
-          "speciality": "Oncology Specialist"
-        },
-        "sarah": {
-          "name": "Dr. Sarah Williams",
-          "org": "Royal London Hospital, UK",
-          "field": "Molecular Pathology",
-          "speciality": "Pathology expert"
-        },
-        "andreas": {
-          "name": "Prof. Andreas Mueller",
-          "org": "Heidelberg University, Germany",
-          "field": "Molecular Genetics",
-          "speciality": "Research Director"
-        }
+       "expert1": {
+            "name": "DRUY Aleksandr",
+            "title": "Clinical Laboratory Specialist Moscow, Russian Federation"
+          },
+          "expert2": {
+            "name": "GIMRANOV Albert",
+            "title": "Surgeon, Oncologist Kazan",
+            "location": "Russian Federation"
+          },
+          "expert3": {
+            "name": "GUPTA Richa, MBBS",
+            "title": "Professor, Pathologist",
+            "location": "Delhi, India"
+          },
+          "expert4": {
+            "name": "GUZ Aleksandr",
+            "title": "Surgeon, Oncologist",
+            "location": "Chelyabinsk, Russian Federation"
+          },
+          "expert5": {
+            "name": "KRISHNAMURTHY Arvind",
+            "title": "Professor, Surgical Oncologists",
+            "location": "Chennai, India"
+          },
+          "expert6": {
+            "name": "NOVIKOV Sergei",
+            "title": "Professor, Radiation Therapist, Oncologist",
+            "location": "St. Petersburg, Russian Federation"
+          },
+          "expert7": {
+            "name": "RANGARAJAN Venkatesh",
+            "title": "Professor, Radiologist",
+            "location": "Maharashtra, India"
+          },
+          "expert8": {
+            "name": "SNEGOVOY Anton",
+            "title": "Medical Oncologist",
+            "location": "Moscow, Russian Federation"
+          },
+          "expert9": {
+            "name": "SUBRAMANIAN Somasundaram",
+            "title": "Surgical Oncologist & OncoPlastic Surgeon",
+            "location": "Moscow, Russian Federation"
+          },
+          "expert10": {
+            "name": "TIMASHKOV Ivan",
+            "title": "Radiologist",
+            "location": "Moscow, Russian Federation"
+          },
+          "expert11": {
+            "name": "VALKOV Mikhail",
+            "title": "Professor, Radiation Therapist, Oncologist",
+            "location": "Arkhangelsk, Russian Federation"
+          }
       },
       "invitedTitle": "Invited Experts",
       "invitedDesc": "Experts are added gradually as their participation is confirmed.",

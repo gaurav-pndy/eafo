@@ -18,6 +18,75 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper/modules";
 // import { Autoplay, Pagination } from "swiper";
 
+const experts = [
+  {
+    image: "/forum/expert1.jpg",
+    nameKey: "experts.speakers.expert1.name",
+    titleKey: "experts.speakers.expert1.title",
+    locationKey: "experts.speakers.expert1.location",
+  },
+  {
+    image: "/forum/expert2.jpg",
+    nameKey: "experts.speakers.expert2.name",
+    titleKey: "experts.speakers.expert2.title",
+    locationKey: "experts.speakers.expert2.location",
+  },
+  {
+    image: "/forum/expert3.jpg",
+    nameKey: "experts.speakers.expert3.name",
+    titleKey: "experts.speakers.expert3.title",
+    locationKey: "experts.speakers.expert3.location",
+  },
+  {
+    image: "/forum/expert4.jpg",
+    nameKey: "experts.speakers.expert4.name",
+    titleKey: "experts.speakers.expert4.title",
+    locationKey: "experts.speakers.expert4.location",
+  },
+  {
+    image: "/forum/expert5.jpg",
+    nameKey: "experts.speakers.expert5.name",
+    titleKey: "experts.speakers.expert5.title",
+    locationKey: "experts.speakers.expert5.location",
+  },
+  {
+    image: "/forum/expert6.jpg",
+    nameKey: "experts.speakers.expert6.name",
+    titleKey: "experts.speakers.expert6.title",
+    locationKey: "experts.speakers.expert6.location",
+  },
+  {
+    image: "/forum/expert7.jpg",
+    nameKey: "experts.speakers.expert7.name",
+    titleKey: "experts.speakers.expert7.title",
+    locationKey: "experts.speakers.expert7.location",
+  },
+  {
+    image: "/forum/expert8.png",
+    nameKey: "experts.speakers.expert8.name",
+    titleKey: "experts.speakers.expert8.title",
+    locationKey: "experts.speakers.expert8.location",
+  },
+  {
+    image: "/forum/expert9.jpg",
+    nameKey: "experts.speakers.expert9.name",
+    titleKey: "experts.speakers.expert9.title",
+    locationKey: "experts.speakers.expert9.location",
+  },
+  {
+    image: "/forum/expert10.jpg",
+    nameKey: "experts.speakers.expert10.name",
+    titleKey: "experts.speakers.expert10.title",
+    locationKey: "experts.speakers.expert10.location",
+  },
+  {
+    image: "/forum/expert11.jpg",
+    nameKey: "experts.speakers.expert11.name",
+    titleKey: "experts.speakers.expert11.title",
+    locationKey: "experts.speakers.expert11.location",
+  },
+];
+
 const Experts = () => {
   const { t } = useTranslation();
 
@@ -106,35 +175,31 @@ const Experts = () => {
         <h3 className="text-2xl md:text-4xl font-bold text-center mb-12">
           {t("experts.confirmedTitle")}
         </h3>
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {["michael", "sarah", "andreas"].map((id, idx) => (
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {experts.map((expert, idx) => (
             <div
-              key={id}
+              key={idx}
               className="bg-white shadow rounded-lg overflow-hidden"
             >
               <div className="relative">
                 <img
-                  src={`/testimonials/alumni${idx + 1}.jpg`}
-                  alt={t(`experts.speakers.${id}.name`)}
-                  className="w-full h-60 object-cover"
+                  src={expert.image}
+                  alt={t(expert.nameKey)}
+                  className="w-full h-72 object-cover"
                 />
-                <div className="absolute bottom-0 left-0 p-4 text-white bg-gradient-to-t  from-black/70 to-transparent w-full">
+                <div className="absolute bottom-0 left-0 p-4 text-white bg-gradient-to-t h-28 pt-6 from-black/90 to-transparent w-full">
                   <h4 className="text-2xl font-semibold">
-                    {t(`experts.speakers.${id}.name`)}
+                    {t(expert.nameKey)}
                   </h4>
-                  <p className="text-sm opacity-90">
-                    {t(`experts.speakers.${id}.speciality`)}
-                  </p>
+                  <p className="text-sm opacity-90">{t(expert.titleKey)}</p>
                 </div>
               </div>
               <div className="p-4">
-                <p className="text-gray-800 mb-2">
-                  {t(`experts.speakers.${id}.org`)}
-                </p>
-                <div className="flex items-center text-sm text-gray-600">
+                <p className="text-gray-800 mb-2">{t(expert.locationKey)}</p>
+                {/* <div className="flex items-center text-sm text-gray-600">
                   {speakerIcons[idx]}
                   {t(`experts.speakers.${id}.field`)}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

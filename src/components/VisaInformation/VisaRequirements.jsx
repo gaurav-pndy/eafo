@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const FadeInOnView = ({ children, delay = 0 }) => {
   const ref = useRef(null);
@@ -110,11 +111,11 @@ const VisaRequirements = () => {
                         <h4 className="font-bold">{item.title}</h4>
                         <a
                           href={item.url}
-                          className="text-blue-600 hover:underline"
+                          className="text-blue-600 hover:underline flex items-center gap-2"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {item.text}
+                          {item.text} <FaExternalLinkAlt size={14} />
                         </a>
                       </div>
                     </div>
