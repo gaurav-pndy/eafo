@@ -12,7 +12,7 @@ const PartnerPage = () => {
       <SectionHero />
       <SectionIntro />
 
-      <section className="py-16 bg-gray-50 space-y-20">
+      <section className="py-16 bg-gray-50 space-y-24">
         {partnerSections.map(({ id, titleKey, logos }) => (
           <PartnerGrid key={id} id={id} titleKey={titleKey} logos={logos} />
         ))}
