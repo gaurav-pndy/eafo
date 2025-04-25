@@ -1,27 +1,35 @@
 {
     "header": {
-      "about": "О курсах",
+      "about": "О КУРСАХ",
+      "basicCourses": "Базовые курсы",
+"preCourses": "Подготовительные курсы",
   "courseDescription": "О курсе",
   "venue": "Место проведения",
-  "organizations": "Партнеры",
+  "organizations": "ПАРТНЕРЫ",
   "contact": "Контакт",
-  "whyUs": "Почему мы?",
-  "awards": "Награды",
+  "whyUs": "ПОЧЕМУ МЫ?",
+  "awards": "Призы",
   "galleryArchive": "Галерея и архив",
   "reviews": "Отзывы",
   "eafo": "EAFO",
-  "participationTerms": "Условия участия",
+  "participationTerms": "УСЛОВИЯ УЧАСТИЯ",
+  "participationOptions": "Варианты участия",
   "participationVariants": "Форматы участия",
-  "competitiveParticipation": "Льготное участие",
+  "competitiveSelection": "Конкурсный отбор",
+  "registrationFee": "Регистрационный взнос",
   "pricing": "Стоимость участия",
   "visa": "Виза",
-  "submission": "Подать заявки",
+  "submission": "ПОДАТЬ ЗАЯВКИ",
   "howDoIRegister": "Как зарегистрироваться?",
   "registerNow": "Подача заявки",
   "expertsAndCommittees": "Эксперты и комитеты",
-  "scheduleAndProgram": "Программа",
+  "scheduleAndProgram": "ПРОГРАММА",
   "sponsors": "Спонсоры",
-  "faq": "FAQ"
+  "faq": "FAQ",
+  "invitedExperts": "Приглашенные эксперты",
+  "successStories": "Истории успеха",
+  "contactUs": "СВЯЗАТЬСЯ С НАМИ"
+
   
   
  

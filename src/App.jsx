@@ -19,6 +19,7 @@ import Venue from "./pages/Venue";
 import Pricing from "./pages/Pricing";
 import HowToRegister from "./pages/HowToRegister";
 import RegisterNow from "./pages/RegisterNow";
+import Organizations from "./pages/Organizations";
 
 function App() {
   useEffect(() => {
@@ -65,7 +66,7 @@ function App() {
           element: <Awards />,
         },
         {
-          path: "/competitive-participation",
+          path: "/competitive-selection",
           element: <CompetitiveParticipation />,
         },
         {
@@ -91,6 +92,10 @@ function App() {
         {
           path: "/register",
           element: <RegisterNow />,
+        },
+        {
+          path: "/organizations",
+          element: <Organizations />,
         },
       ],
     },

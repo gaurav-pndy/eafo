@@ -22,57 +22,65 @@ const Header = () => {
   const navItems = [
     {
       label: t("header.about"),
-      path: "/",
+      // path: "/",
       subItems: [
-        { label: t("header.courseDescription"), path: "/courses" },
-        { label: t("header.venue"), path: "/venue" },
-        { label: t("header.organizations"), path: "/partner" },
-        { label: t("header.contact"), path: "/contact-us" },
+        { label: t("header.basicCourses"), path: "/courses" },
+        { label: t("header.preCourses"), path: "/" },
       ],
     },
     {
       label: t("header.whyUs"),
-      path: "/",
+      // path: "/",
       subItems: [
+        { label: t("header.invitedExperts"), path: "/experts" },
         { label: t("header.awards"), path: "/awards" },
-        { label: t("header.galleryArchive"), path: "/gallery-and-archive" },
+        { label: t("header.successStories"), path: "/success-stories" },
         { sectionId: "reviews", label: t("header.reviews") }, // <- section
-        { sectionId: "about", label: t("header.eafo") }, // <- section
-        { label: t("header.contact"), path: "/contact-us" },
       ],
     },
+    { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
     {
       label: t("header.participationTerms"),
-      path: "/",
+      // path: "/",
       subItems: [
+        {
+          label: t("header.participationOptions"),
+          path: "/participation-variants",
+        },
         {
           label: t("header.participationVariants"),
           path: "/participation-variants",
         },
-        {
-          label: t("header.competitiveParticipation"),
-          path: "/competitive-participation",
-        },
+        // {
+        //   label: t("header.competitiveParticipation"),
+        //   path: "/competitive-participation",
+        // },
         { label: t("header.pricing"), path: "/pricing" },
         { label: t("header.visa"), path: "/visa" },
       ],
     },
     {
       label: t("header.submission"),
-      path: "/",
+      // path: "/",
       subItems: [
         { label: t("header.howDoIRegister"), path: "/how-to-register" },
         {
-          label: t("header.competitiveParticipation"),
-          path: "/competitive-participation",
+          label: t("header.participationOptions"),
+          path: "/participation",
         },
+        {
+          label: t("header.competitiveSelection"),
+          path: "/competitive-selection",
+        },
+        { label: t("header.registrationFee"), path: "/register" },
         { label: t("header.registerNow"), path: "/register" },
       ],
     },
-    { label: t("header.expertsAndCommittees"), path: "/experts" },
-    { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
-    { label: t("header.sponsors"), path: "/sponsors" },
-    { sectionId: "faq", label: t("header.faq") }, // <- section
+    { sectionId: "faq", label: t("header.faq") },
+    { label: t("header.organizations"), path: "/organizations" },
+
+    { label: t("header.contactUs"), path: "/contact-us" },
+    // <- section
   ];
 
   const navigate = useNavigate();

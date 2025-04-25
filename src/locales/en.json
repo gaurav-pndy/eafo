@@ -1,6 +1,8 @@
 {
    "header": {
-"about": "About",
+"about": "About Courses",
+"basicCourses": "Basic Courses",
+"preCourses": "Pre-Courses",
   "courseDescription": "Course Description",
   "venue": "Venue",
   "organizations": "Organizations",
@@ -11,8 +13,11 @@
   "reviews": "Reviews",
   "eafo": "EAFO",
   "participationTerms": "Participation Terms",
+  "participationOptions": "Participation Options",
+
   "participationVariants": "Participation Variants",
-  "competitiveParticipation": "Competitive Participation",
+  "competitiveSelection": "Competitive Selection",
+  "registrationFee": "Registration Fee",
   "pricing": "Pricing",
   "visa": "Visa",
   "howToRegister": "How do I register?",
@@ -25,7 +30,10 @@
   "howDoIRegister": "How do I register?",
   "expertsAndCommittees": "Experts & Committees",
   "scheduleAndProgram": "Schedule & Program",
-  "sponsors": "Sponsors"
+  "sponsors": "Sponsors",
+  "invitedExperts": "Invited Experts",
+  "successStories": "Success Stories",
+  "contactUs": "Contact Us"
    },
     "hero" :{
       "title": "XI EAFO Basic Medical Courses",

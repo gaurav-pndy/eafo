@@ -38,12 +38,12 @@ const Hero = () => {
           >
             {t("hero.register")}
           </Link>
-          <Link
+          {/* <Link
             to="/about"
             className="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#002379] transition-all duration-300"
           >
             {t("hero.course")}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </motion.section>
