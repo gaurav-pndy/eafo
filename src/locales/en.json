@@ -33,7 +33,8 @@
   "sponsors": "Sponsors",
   "invitedExperts": "Invited Experts",
   "successStories": "Success Stories",
-  "contactUs": "Contact Us"
+  "contactUs": "Contact Us",
+  "personalAccount": "Personal Account"
    },
     "hero" :{
       "title": "XI EAFO BASIC MEDICAL COURSES IN ONCOLOGY and ONCOPATHOLOGY",
@@ -409,7 +410,9 @@
      "china": "China",
      "denmark": "Denmark"
    },
-   "viewAll": "View Complete List"
+   "viewAll": "View Complete List",
+   "dialogHeading": "List of Countries, where Citizens can visit Russian Federation with an E-Visa",
+   "eVisaFullList" : "Austria, Andorra, Bahrain, Belgium, Bulgaria, Vatican City, Hungary, Germany, Greece, Denmark, India, Indonesia, Iran, Ireland, Iceland, Spain, Italy, Cyprus, China (including Taiwan), Democratic People's Republic of Korea, Kuwait, Latvia, Lithuania, Liechtenstein, Luxembourg, Malaysia, Malta, Mexico, Monaco, Netherlands, Norway, Oman, Poland, Portugal, Romania, San Marino, Saudi Arabia, North Macedonia, Serbia, Singapore, Slovakia, Slovenia, Turkey, Philippines, Finland, France, Croatia, Czech Republic, Switzerland, Sweden, Estonia, Japan."
  },
 
 

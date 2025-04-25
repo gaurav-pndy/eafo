@@ -75,7 +75,7 @@ const VisaFreeCountries = () => {
             {/* 90-Day Stay */}
             <FadeInOnView delay={0.2}>
               <div
-                onClick={() => setModalContent(t("visaFree.stay90Days"))}
+                onClick={() => setModalContent(t("visaFree.heading"))}
                 className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-4">
@@ -94,7 +94,7 @@ const VisaFreeCountries = () => {
             {/* 30-Day Stay */}
             <FadeInOnView delay={0.4}>
               <div
-                onClick={() => setModalContent(t("visaFree.stay30Days"))}
+                onClick={() => setModalContent(t("visaFree.heading"))}
                 className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-4">
@@ -113,7 +113,7 @@ const VisaFreeCountries = () => {
             {/* 14-Day Stay */}
             <FadeInOnView delay={0.6}>
               <div
-                onClick={() => setModalContent(t("visaFree.stay14Days"))}
+                onClick={() => setModalContent(t("visaFree.heading"))}
                 className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
               >
                 <h3 className="text-xl font-bold mb-4">

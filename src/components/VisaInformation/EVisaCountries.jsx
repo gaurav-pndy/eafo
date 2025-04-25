@@ -72,14 +72,11 @@ const EVisaCountries = () => {
                 <DialogContent className="md:w-[60vw] !max-w-none border-2 border-blue-700">
                   <DialogHeader>
                     <DialogTitle className="text-center text-xl font-bold">
-                      {t(
-                        "evisa.modalTitle",
-                        "List of Countries, where Citizens can visit Russian Federation with an E-Visa"
-                      )}
+                      {t("evisa.dialogHeading")}
                     </DialogTitle>
                   </DialogHeader>
                   <div className="text-lg max-h-[60vh] text-gray-700 leading-relaxed mt-4 whitespace-pre-wrap">
-                    {eVisaFullList}
+                    {t("evisa.eVisaFullList")}
                   </div>
                 </DialogContent>
               </Dialog>

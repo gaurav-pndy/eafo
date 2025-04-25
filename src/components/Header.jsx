@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import logo from "/EAFO.jpg";
@@ -6,7 +6,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import "../utils/i18n";
-import { FaGlobe } from "react-icons/fa";
+import { FaGlobe, FaUserCircle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -17,6 +17,36 @@ const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+
+  // Refs
+  const langDropdownRef = useRef(null);
+  const userDropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Close language dropdown
+      if (
+        langDropdownRef.current &&
+        !langDropdownRef.current.contains(event.target)
+      ) {
+        setDropdownOpen(false);
+      }
+
+      // Close user dropdown
+      if (
+        userDropdownRef.current &&
+        !userDropdownRef.current.contains(event.target)
+      ) {
+        setUserDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   // New navigation items with subitems
   const navItems = [
@@ -134,18 +164,18 @@ const Header = () => {
 
   return (
     <header className="w-full fixed top-0 left-0 z-20 bg-white border-b border-purple-200 shadow-sm">
-      <div className="mx-auto flex items-center justify-between px-4 lg:px-10 h-20 lg:h-22">
+      <div className="mx-auto flex items-center justify-between px-4 lg:px-10 xl:px-16 h-20 lg:h-22">
         {/* Left: Logo & Slogan */}
         <div className="flex items-center">
           <Link to="/">
-            <img src={logo} alt="EAFO Logo" className="h-8 lg:h-12" />
+            <img src={logo} alt="EAFO Logo" className="h-10 lg:h-11" />
           </Link>
         </div>
 
         {/* Desktop Nav */}
         <nav
           className={`hidden xl:flex text-gray-800 font-medium ${
-            selectedLang === "ru" ? "text-sm gap-8" : "text-base gap-8"
+            selectedLang === "ru" ? "text-sm gap-5" : "text-[0.95rem] gap-5"
           }`}
         >
           {navItems.map((item, idx) => (
@@ -192,54 +222,83 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Language Dropdown */}
-        <div
-          className="relative flex gap-1 md:gap-2 items-center z-30"
-          ref={dropdownRef}
-        >
-          <FaGlobe className="text-xl text-gray-800" />
-          <div className="relative">
+        <div className="flex items-center gap-2 md:gap-8 ">
+          <div className="relative" ref={userDropdownRef}>
             <button
-              className="cursor-pointer border font-semibold md:text-base px-2 py-1 rounded-lg flex items-center gap-2"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
+              onClick={() => setUserDropdownOpen(!userDropdownOpen)}
+              className="p-1 rounded-full hover:bg-gray-200 transition"
             >
-              {languages.find((lang) => lang.code === selectedLang)?.name}
-              <img
-                src={languages.find((lang) => lang.code === selectedLang)?.flag}
-                alt="Flag"
-                className="w-3 md:w-4 h-3 "
-              />
-              <IoIosArrowDown className="text-sm" />
+              <FaUserCircle className=" cursor-pointer text-[2.5rem] lg:text-4xl text-gray-800" />
             </button>
 
-            {dropdownOpen && (
-              <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
-                {languages.map((lang) => (
-                  <li
-                    key={lang.code}
-                    className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer md:text-base"
-                    onClick={() => changeLanguage(lang.code)}
-                  >
-                    {lang.name}
-                    <img
-                      src={lang.flag}
-                      className="w-3 md:w-4 h-3 "
-                      alt={`${lang.name} Flag`}
-                    />
-                  </li>
-                ))}
-              </ul>
+            {userDropdownOpen && (
+              <div className="absolute left-[50%] translate-x-[-50%] pt-3 w-40 lg:w-48 bg-transparet z-20">
+                <a
+                  href="http://ui.eafo.info"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="w-full px-4 py-2 text-white font-semibold  rounded-lg bg-blue-600 hover:bg-blue-800 transition-all duration-300 cursor-pointer lg:text-lg">
+                    {t("header.personalAccount")}
+                  </button>
+                </a>
+              </div>
             )}
+          </div>
+
+          {/* Language Dropdown */}
+          <div
+            className="relative  hidden md:flex gap-1 md:gap-2 items-center z-30"
+            ref={dropdownRef}
+          >
+            <FaGlobe className="md:text-3xl text-gray-800" />
+            <div
+              className="relative border border-gray-800 rounded-lg "
+              ref={langDropdownRef}
+            >
+              <button
+                className="cursor-pointer border font-semibold md:text-xl xl:text-base px-2 py-1 rounded-lg flex items-center gap-2"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                {languages.find((lang) => lang.code === selectedLang)?.name}
+                <img
+                  src={
+                    languages.find((lang) => lang.code === selectedLang)?.flag
+                  }
+                  alt="Flag"
+                  className="w-3 md:w-4 h-3 "
+                />
+                <IoIosArrowDown className="text-sm" />
+              </button>
+              {dropdownOpen && (
+                <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
+                  {languages.map((lang) => (
+                    <li
+                      key={lang.code}
+                      className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer md:text-base"
+                      onClick={() => changeLanguage(lang.code)}
+                    >
+                      {lang.name}
+                      <img
+                        src={lang.flag}
+                        className="w-3 md:w-4 h-3 "
+                        alt={`${lang.name} Flag`}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="xl:hidden pl-4"
+            className="xl:hidden pl-4 md:pl-0"
           >
             {isMenuOpen ? (
-              <X className="h-8 w-8" />
+              <X className="h-10 w-10" />
             ) : (
-              <Menu className="h-8 w-8" />
+              <Menu className="h-10 w-10" />
             )}
           </button>
         </div>
@@ -253,9 +312,50 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="xl:hidden absolute w-full top-20 z-20 left-0 bg-white px-4 py-4"
+            className="xl:hidden absolute w-full top-18 md:top-20 z-20 left-0 bg-white px-4 py-4"
           >
-            <nav className="flex flex-col gap-4 text-gray-800 font-medium">
+            <nav className="flex text-lg flex-col gap-6 text-gray-800 font-medium">
+              <div
+                className="relative mb-5 md:hidden flex justify-end items-center z-30"
+                ref={dropdownRef}
+              >
+                <FaGlobe className="text-xl text-gray-800" />
+                <div className="relative" ref={langDropdownRef}>
+                  <button
+                    className="cursor-pointer border font-semibold text-lg  px-2 py-1 rounded-lg flex items-center gap-2"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
+                    {languages.find((lang) => lang.code === selectedLang)?.name}
+                    <img
+                      src={
+                        languages.find((lang) => lang.code === selectedLang)
+                          ?.flag
+                      }
+                      alt="Flag"
+                      className="w-4 h-3 "
+                    />
+                    <IoIosArrowDown className="text-sm" />
+                  </button>
+                  {dropdownOpen && (
+                    <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
+                      {languages.map((lang) => (
+                        <li
+                          key={lang.code}
+                          className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer md:text-base"
+                          onClick={() => changeLanguage(lang.code)}
+                        >
+                          {lang.name}
+                          <img
+                            src={lang.flag}
+                            className="w-4 h-3 "
+                            alt={`${lang.name} Flag`}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
               {navItems.map((item) => (
                 <div key={item.label}>
                   <button
@@ -271,7 +371,7 @@ const Header = () => {
                     <span>{item.label}</span>
                     {item.subItems && (
                       <span
-                        className={`transition-transform duration-200 ${
+                        className={`transition-transform duration-200 text-lg ${
                           openMenu === item.label ? "rotate-180" : ""
                         }`}
                       >
