@@ -68,7 +68,7 @@ const Partners = () => {
         duration: 0.8,
         ease: "easeInOut",
       }}
-      className="w-full mt-10 lg:mt-5 py-12 bg-white "
+      className="w-full  lg:mt-5 py-12 bg-white "
     >
       <div className="container mx-auto  md:px-8 lg:px-20">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">

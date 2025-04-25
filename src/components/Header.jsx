@@ -222,7 +222,7 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 md:gap-8 ">
+        <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
           <div className="relative" ref={userDropdownRef}>
             <button
               onClick={() => setUserDropdownOpen(!userDropdownOpen)}
