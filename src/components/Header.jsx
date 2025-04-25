@@ -175,7 +175,7 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav
           className={`hidden xl:flex text-gray-800 font-medium ${
-            selectedLang === "ru" ? "text-base gap-6" : "text-lg gap-6"
+            selectedLang === "ru" ? "text-sm gap-5" : "text-[0.95rem] gap-5"
           }`}
         >
           {navItems.map((item, idx) => (
