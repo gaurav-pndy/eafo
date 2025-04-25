@@ -232,7 +232,7 @@ const Header = () => {
             </button>
 
             {userDropdownOpen && (
-              <div className="absolute left-[50%] translate-x-[-50%] pt-3 w-40 lg:w-48 bg-transparet z-20">
+              <div className="absolute left-[50%] translate-x-[-50%] pt-3 w-44 lg:w-48 bg-transparet z-20">
                 <a
                   href="http://ui.eafo.info"
                   target="_blank"
