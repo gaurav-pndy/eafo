@@ -13,6 +13,7 @@ import AboutEAFO from "../components/HomeComponents/AboutEAFO";
 import ForumExperts from "../components/HomeComponents/ForumExperts";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Timer from "@/components/HomeComponents/Timer";
 const Home = () => {
   const location = useLocation();
 
@@ -31,6 +32,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <Timer />
       <AboutSection />
       <CourseContent />
       <CourseSchedule />

@@ -11,6 +11,12 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination } from "swiper/modules";
+// import { Autoplay, Pagination } from "swiper";
 
 const Experts = () => {
   const { t } = useTranslation();
@@ -214,7 +220,45 @@ const Experts = () => {
         <h3 className="text-2xl md:text-4xl font-bold text-center mb-12">
           {t("experts.testimonialTitle")}
         </h3>
-        <div className="grid md:grid-cols-2 gap-16 max-w-5xl px-5 mx-auto">
+
+        {/* Swiper for smaller screens */}
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          modules={[Autoplay, Pagination]}
+          loop={true}
+          className="md:!hidden border border-black"
+        >
+          {["robert", "elena"].map((id, index) => (
+            <SwiperSlide key={id}>
+              <div className="bg-white p-6 rounded-xl shadow flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={`/testimonials/alumni${index + 1}.jpg`}
+                    alt={t(`experts.testimonials.${id}.name`)}
+                    className="w-14 h-14 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="font-semibold text-lg">
+                      {t(`experts.testimonials.${id}.name`)}
+                    </p>
+                    <p className="text-gray-500">
+                      {t(`experts.testimonials.${id}.position`)}
+                    </p>
+                  </div>
+                </div>
+                <p className="italic text-gray-700">
+                  "{t(`experts.testimonials.${id}.quote`)}"
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Grid for larger screens */}
+        <div className=" md:grid-cols-2 gap-16 max-w-5xl px-5 mx-auto hidden md:grid">
           {["robert", "elena"].map((id, index) => (
             <div
               key={id}
@@ -230,12 +274,12 @@ const Experts = () => {
                   <p className="font-semibold text-lg">
                     {t(`experts.testimonials.${id}.name`)}
                   </p>
-                  <p className=" text-gray-500">
+                  <p className="text-gray-500">
                     {t(`experts.testimonials.${id}.position`)}
                   </p>
                 </div>
               </div>
-              <p className=" italic text-gray-700">
+              <p className="italic text-gray-700">
                 "{t(`experts.testimonials.${id}.quote`)}"
               </p>
             </div>
