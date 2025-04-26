@@ -238,7 +238,7 @@ const Experts = () => {
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           modules={[Autoplay, Pagination]}
           loop={true}
-          className="md:!hidden border border-black"
+          className="md:!hidden "
         >
           {["robert", "elena"].map((id, index) => (
             <SwiperSlide key={id}>

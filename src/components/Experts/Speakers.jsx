@@ -144,12 +144,12 @@ const Speakers = () => {
       {/* Modal using shadcn */}
       <Dialog open={open} onOpenChange={setOpen}>
         {selectedExpert && (
-          <DialogContent className="sm:max-w-2xl ">
-            <div className="w-full  flex relative flex-col items-center gap-6">
+          <DialogContent className="sm:max-w-2xl w-[90vw] max-h-[90vh] overflow-y-auto p-6">
+            <div className="w-full flex relative flex-col items-center gap-6">
               <img
                 src={selectedExpert.image}
                 alt={t(selectedExpert.nameKey)}
-                className="w-48 md:w-80 h-48 md:h-80 rounded-full object-cover shadow-md"
+                className="w-32 md:w-80 h-32 md:h-80 rounded-full object-cover shadow-md"
               />
               <h4 className="text-2xl md:text-4xl font-bold text-center">
                 {t(selectedExpert.nameKey)}
@@ -157,23 +157,20 @@ const Speakers = () => {
               <p className="text-gray-700 md:text-xl text-center">
                 {t(selectedExpert.fullKey)}
               </p>
-              <p className="md:text-xl">{t(selectedExpert.locationKey)}</p>
+              <p className="md:text-xl text-center">
+                {t(selectedExpert.locationKey)}
+              </p>
 
               {/* Navigation Buttons */}
-              <div className="flex absolute top-[50%] translate-y-[-50%] justify-between w-[120%] md:w-full">
-                {/* <Button variant="outline" onClick={handlePrev}> */}
+              <div className="flex absolute top-[50%] translate-y-[-50%] justify-between w-full px-4">
                 <IoChevronBack
                   onClick={handlePrev}
-                  className="text-5xl cursor-pointer"
+                  className="text-4xl absolute -left-5 md:text-5xl cursor-pointer"
                 />
-
-                {/* </Button> */}
-                {/* <Button variant="outline" size="icon" onClick={handleNext}> */}
                 <IoChevronForward
                   onClick={handleNext}
-                  className="text-5xl cursor-pointer"
+                  className="text-4xl absolute -right-5 md:text-5xl cursor-pointer"
                 />
-                {/* </Button> */}
               </div>
             </div>
           </DialogContent>
