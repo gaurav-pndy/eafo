@@ -132,6 +132,7 @@
           "expert1": {
             "name": "DRUY Aleksandr",
             "title": "Clinical Laboratory Specialist Moscow, Russian Federation"
+         
           },
           "expert2": {
             "name": "GIMRANOV Albert",
@@ -258,59 +259,80 @@
       "speakers": {
        "expert1": {
             "name": "DRUY Aleksandr",
-            "title": "Clinical Laboratory Specialist Moscow, Russian Federation"
+            "title": "Clinical Laboratory Specialist",
+            "location": "Moscow, Russian Federation",
+            "full": "Clinical Laboratory Specialist, Head, Laboratory of Molecular Oncology, Dmitry Rogachev National Medical Research Center for Pediatric Hematology, Oncology and Immunology."
+
           },
           "expert2": {
             "name": "GIMRANOV Albert",
             "title": "Surgeon, Oncologist Kazan",
-            "location": "Russian Federation"
+            "location": "Kazan, Russian Federation",
+            "full": "Surgeon, Oncologist, Head, Department of Oncology №4 (Department of Mammology and Plastic Surgery), Republican Clinical Oncology Center."
           },
           "expert3": {
-            "name": "GUPTA Richa, MBBS",
+            "name": "GUPTA Richa",
             "title": "Professor, Pathologist",
-            "location": "Delhi, India"
+            "location": "Delhi, India",
+            "full": "Pathologist, Director Professor, Department of Pathology, University College of Medical Sciences and Guru Teg Bahadur Hospital."
           },
           "expert4": {
             "name": "GUZ Aleksandr",
             "title": "Surgeon, Oncologist",
-            "location": "Chelyabinsk, Russian Federation"
+            "location": "Chelyabinsk, Russian Federation",
+            "full": "Surgeon, Oncologist, Deputy Chief Medical Officer, Chelyabinsk Regional Clinical Center for Oncology and Nuclear Medicine."
           },
           "expert5": {
             "name": "KRISHNAMURTHY Arvind",
             "title": "Professor, Surgical Oncologists",
-            "location": "Chennai, India"
+            "location": "Chennai, India",
+            "full": "Professor and Head, Department of Surgical Oncology, Cancer Institute (Women's Indian Association, WIA) Adyar."
           },
           "expert6": {
             "name": "NOVIKOV Sergei",
             "title": "Professor, Radiation Therapist, Oncologist",
-            "location": "St. Petersburg, Russian Federation"
+            "location": "St. Petersburg, Russian Federation",
+            "full": "Professor, Radiation Therapist, Oncologist, Head, Department of Radiotherapy; Leading Researcher & Head of Science Department, N. N. Petrov National Medical Research Center for Oncology."
           },
           "expert7": {
             "name": "RANGARAJAN Venkatesh",
             "title": "Professor, Radiologist",
-            "location": "Maharashtra, India"
+            "location": "Maharashtra, India",
+            "full": "Professor, Radiologist, Head, Department of Nuclear Medicine & Molecular Imaging, Tata Memorial Hospital."
           },
           "expert8": {
             "name": "SNEGOVOY Anton",
             "title": "Medical Oncologist",
-            "location": "Moscow, Russian Federation"
+            "location": "Moscow, Russian Federation",
+            "full": "Medical Oncologist, Head, Department of Medical Oncology, N.A. Lopatkin National Research Institute for Urology and Interventional Radiology;  Chair, Russian Association of Supportive Care in Cancer."
           },
           "expert9": {
             "name": "SUBRAMANIAN Somasundaram",
             "title": "Surgical Oncologist & OncoPlastic Surgeon",
-            "location": "Moscow, Russian Federation"
+            "location": "Moscow, Russian Federation",
+            "full": "Surgical Oncologist & OncoPlastic Surgeon, Founder & CEO, Eurasian Federation of Oncology (EAFO) & EAFO Educational and Research Center (EAFO ERC); /n Chair, Board of Directors, Eurasian Cancer Research Council (ECRC)."
           },
           "expert10": {
             "name": "TIMASHKOV Ivan",
             "title": "Radiologist",
-            "location": "Moscow, Russian Federation"
+            "location": "Moscow, Russian Federation",
+            "full": "Radiologist, Chief Radiologist, «SM-Clinica» Medical Center."
           },
           "expert11": {
             "name": "VALKOV Mikhail",
             "title": "Professor, Radiation Therapist, Oncologist",
-            "location": "Arkhangelsk, Russian Federation"
+            "location": "Arkhangelsk, Russian Federation",
+            "full": "Professor, Radiation Therapist, Oncologist, Head, Department of Radiology, Radiation Therapy and Oncology, Northern State Medical University."
           }
       },
+      "founderSection": {
+    "title": "EAFO Founder & CEO",
+    "name": "SUBRAMANIAN Somasundaram, MD",
+    "shortTitle": "Surgical Oncologist & OncoPlastic Surgeon",
+    "location": "Moscow, Russian Federation",
+    "readMore": "Read more",
+    "fullInfo": "Surgical Oncologist & OncoPlastic Surgeon,\nFounder & CEO, Eurasian Federation of Oncology (EAFO) &\nEAFO Educational and Research Center (EAFO ERC);\nChair, Board of Directors,\nEurasian Cancer Research Council (ECRC)."
+  },
       "invitedTitle": "Invited Experts",
       "invitedDesc": "Experts are added gradually as their participation is confirmed.",
       "invited": {

@@ -16,76 +16,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper/modules";
+import Speakers from "@/components/Experts/Speakers";
 // import { Autoplay, Pagination } from "swiper";
-
-const experts = [
-  {
-    image: "/forum/expert1.jpg",
-    nameKey: "experts.speakers.expert1.name",
-    titleKey: "experts.speakers.expert1.title",
-    locationKey: "experts.speakers.expert1.location",
-  },
-  {
-    image: "/forum/expert2.jpg",
-    nameKey: "experts.speakers.expert2.name",
-    titleKey: "experts.speakers.expert2.title",
-    locationKey: "experts.speakers.expert2.location",
-  },
-  {
-    image: "/forum/expert3.jpg",
-    nameKey: "experts.speakers.expert3.name",
-    titleKey: "experts.speakers.expert3.title",
-    locationKey: "experts.speakers.expert3.location",
-  },
-  {
-    image: "/forum/expert4.jpg",
-    nameKey: "experts.speakers.expert4.name",
-    titleKey: "experts.speakers.expert4.title",
-    locationKey: "experts.speakers.expert4.location",
-  },
-  {
-    image: "/forum/expert5.jpg",
-    nameKey: "experts.speakers.expert5.name",
-    titleKey: "experts.speakers.expert5.title",
-    locationKey: "experts.speakers.expert5.location",
-  },
-  {
-    image: "/forum/expert6.jpg",
-    nameKey: "experts.speakers.expert6.name",
-    titleKey: "experts.speakers.expert6.title",
-    locationKey: "experts.speakers.expert6.location",
-  },
-  {
-    image: "/forum/expert7.jpg",
-    nameKey: "experts.speakers.expert7.name",
-    titleKey: "experts.speakers.expert7.title",
-    locationKey: "experts.speakers.expert7.location",
-  },
-  {
-    image: "/forum/expert8.png",
-    nameKey: "experts.speakers.expert8.name",
-    titleKey: "experts.speakers.expert8.title",
-    locationKey: "experts.speakers.expert8.location",
-  },
-  {
-    image: "/forum/expert9.jpg",
-    nameKey: "experts.speakers.expert9.name",
-    titleKey: "experts.speakers.expert9.title",
-    locationKey: "experts.speakers.expert9.location",
-  },
-  {
-    image: "/forum/expert10.jpg",
-    nameKey: "experts.speakers.expert10.name",
-    titleKey: "experts.speakers.expert10.title",
-    locationKey: "experts.speakers.expert10.location",
-  },
-  {
-    image: "/forum/expert11.jpg",
-    nameKey: "experts.speakers.expert11.name",
-    titleKey: "experts.speakers.expert11.title",
-    locationKey: "experts.speakers.expert11.location",
-  },
-];
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Experts = () => {
   const { t } = useTranslation();
@@ -162,49 +95,60 @@ const Experts = () => {
       </motion.div>
 
       {/* Confirmed Speakers */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.3, once: true }}
-        transition={{
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="py-16 bg-gray-50 px-4 md:px-12"
-      >
-        <h3 className="text-2xl md:text-4xl font-bold text-center mb-12">
-          {t("experts.confirmedTitle")}
-        </h3>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {experts.map((expert, idx) => (
-            <div
-              key={idx}
-              className="bg-white shadow rounded-lg overflow-hidden"
-            >
-              <div className="relative">
-                <img
-                  src={expert.image}
-                  alt={t(expert.nameKey)}
-                  className="w-full h-72 object-cover"
-                />
-                <div className="absolute bottom-0 left-0 p-4 text-white bg-gradient-to-t h-28 pt-6 from-black/90 to-transparent w-full">
-                  <h4 className="text-2xl font-semibold">
-                    {t(expert.nameKey)}
-                  </h4>
-                  <p className="text-sm opacity-90">{t(expert.titleKey)}</p>
+      <Speakers />
+
+      <div className="flex flex-col items-center text-center p-6 py-16">
+        <h2 className="text-2xl md:text-4xl font-bold ">
+          {t("experts.founderSection.title")}
+        </h2>
+
+        <div className="border rounded-lg overflow-hidden w-sm shadow-md mt-12">
+          <img
+            src="/Dr soma.avif" // replace with your image path
+            alt={t("experts.founderSection.name")}
+            className="w-full h-full object-cover"
+          />
+          <div className="p-4">
+            <h3 className="font-bold text-2xl">
+              {t("experts.founderSection.name")}
+            </h3>
+            <p className="text-lg text-gray-600 mt-1">
+              {t("experts.founderSection.shortTitle")}
+            </p>
+            <p className=" text-gray-600">
+              {t("experts.founderSection.location")}
+            </p>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="mt-4 cursor-pointer text-lg font-semibold text-primary hover:underline">
+                  {t("experts.founderSection.readMore")}
+                </button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-2xl ">
+                <div className="w-full  flex relative flex-col items-center gap-6">
+                  <img
+                    src="/Dr soma.avif"
+                    alt={t("experts.founderSection.name")}
+                    className="w-48 md:w-80 h-48 md:h-80 rounded-full object-cover shadow-md"
+                  />
+                  <div className="flex flex-col gap-4 text-center">
+                    <h3 className="text-2xl md:text-4xl font-bold">
+                      {t("experts.founderSection.name")}
+                    </h3>
+                    <p className="text-gray-700 md:text-xl text-center ">
+                      {t("experts.founderSection.fullInfo")}
+                    </p>
+                    <p className="md:text-xl">
+                      {t("experts.founderSection.location")}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="p-4">
-                <p className="text-gray-800 mb-2">{t(expert.locationKey)}</p>
-                {/* <div className="flex items-center text-sm text-gray-600">
-                  {speakerIcons[idx]}
-                  {t(`experts.speakers.${id}.field`)}
-                </div> */}
-              </div>
-            </div>
-          ))}
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Invited Experts */}
       <motion.div
