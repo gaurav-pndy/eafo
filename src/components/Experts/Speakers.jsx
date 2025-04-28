@@ -156,7 +156,7 @@ const Speakers = () => {
               <img
                 src={selectedExpert.image}
                 alt={t(selectedExpert.nameKey)}
-                className="w-48 md:w-80 h-48 md:h-80 rounded-full object-cover shadow-md"
+                className="w-48 md:w-80 h-48 md:h-80 rounded-full object-cover object-top shadow-md"
               />
               <h4 className="text-2xl md:text-4xl font-bold text-center">
                 {t(selectedExpert.nameKey)}
