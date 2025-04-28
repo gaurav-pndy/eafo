@@ -43,7 +43,7 @@ const Footer = () => {
             <address className="not-italic text-sm leading-relaxed">
               {/* <p>{t("footer.location")}</p> */}
               {/* <p>{t("footer.country")}</p> */}
-              <p className="mt-2">info@eafo.info</p>
+              <p className="mt-2">basic@eafo.info</p>
               <p>+7 (800) 555-0123</p>
             </address>
           </div>

@@ -5,14 +5,14 @@ const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="awards-hero" className="relative h-[400px] overflow-hidden">
+    <section id="awards-hero" className="relative py-16 overflow-hidden">
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
           src="https://static.wixstatic.com/media/df6cc5_ca7133cb3a3c405698a5e836c9607e5f~mv2.jpg"
           alt="Participation Hero Image"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-800/70" />
       </div>
 
       <div className="relative container mx-auto px-4 h-full flex items-center max-w-6xl">

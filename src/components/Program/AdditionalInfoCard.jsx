@@ -1,5 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLanguage, faChalkboardUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLanguage,
+  faChalkboardUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 const icons = {
   language: faLanguage,

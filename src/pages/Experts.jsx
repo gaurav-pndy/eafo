@@ -40,7 +40,7 @@ const Experts = () => {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="bg-[#1e3a8f] relative text-white h-[400px] py-32 px-4"
+        className="bg-[#1e3a8f] relative text-white  py-16 px-4"
       >
         <div className="absolute inset-0">
           <img
@@ -48,7 +48,7 @@ const Experts = () => {
             src="https://static.wixstatic.com/media/df6cc5_dc61e86141bf4b2a8f0d9c110703f9fc~mv2.jpg"
             alt="Experts Hero Image"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-800/70" />
         </div>
         <div className="relative  max-w-6xl mx-auto">
           <div className="max-w-4xl">

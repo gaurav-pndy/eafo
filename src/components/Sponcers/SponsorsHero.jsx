@@ -5,14 +5,14 @@ const SponsorsHero = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="sponsors-hero" className="relative h-[600px] overflow-hidden">
+    <section id="sponsors-hero" className="relative py-16 overflow-hidden">
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
           src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3d2ba7dcae-858cbb3ff94bdb0c4860.png"
           alt="medical conference hall with modern architecture, blue tint, professional setting"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-800/70"></div>
       </div>
       <div className="relative container mx-auto px-4 h-full flex items-center max-w-6xl">
         <div className="max-w-4xl">

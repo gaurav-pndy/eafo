@@ -1,11 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faMicroscope, faDna, faVial, faXRay } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faMicroscope,
+  faDna,
+  faVial,
+  faXRay,
+  faChartLine,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 
 const icons = {
-  microscope: faMicroscope,
-  dna: faDna,
-  vial: faVial,
-  "x-ray": faXRay,
+  graph: faChartLine,
+  users: faUsers,
 };
 
 const CourseModuleCard = ({ title, items, icon }) => (

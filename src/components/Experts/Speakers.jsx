@@ -9,14 +9,14 @@ import { IoIosArrowBack } from "react-icons/io";
 
 const experts = [
   {
-    image: "/speakers/ДРУЙ Александр Евгеньевич.jpg",
+    image: "/speakers/ДРУЙ Александр Евгеньевич2.jpg",
     nameKey: "experts.speakers.expert1.name",
     titleKey: "experts.speakers.expert1.title",
     locationKey: "experts.speakers.expert1.location",
     fullKey: "experts.speakers.expert1.full",
   },
   {
-    image: "/speakers/ГИМРАНОВ Альберт Минусагитович.jpg",
+    image: "/speakers/ГИМРАНОВ Альберт Минусагитович2.jpg",
     nameKey: "experts.speakers.expert2.name",
     titleKey: "experts.speakers.expert2.title",
     locationKey: "experts.speakers.expert2.location",
@@ -37,7 +37,7 @@ const experts = [
     fullKey: "experts.speakers.expert4.full",
   },
   {
-    image: "/speakers/IMG_8661.jpg",
+    image: "/speakers/IMG_86612.jpg",
     nameKey: "experts.speakers.expert5.name",
     titleKey: "experts.speakers.expert5.title",
     locationKey: "experts.speakers.expert5.location",
@@ -66,7 +66,7 @@ const experts = [
     fullKey: "experts.speakers.expert10.full",
   },
   {
-    image: "/forum/expert11.jpg",
+    image: "/speakers/expert112.jpg",
     nameKey: "experts.speakers.expert11.name",
     titleKey: "experts.speakers.expert11.title",
     locationKey: "experts.speakers.expert11.location",
@@ -134,7 +134,7 @@ const Speakers = () => {
               <img
                 src={expert.image}
                 alt={t(expert.nameKey)}
-                className="w-full h-80 object-cover"
+                className="w-full h-90  object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 p-4 text-white bg-gradient-to-t h-28 pt-6 from-black/90 to-transparent w-full">
                 <h4 className="text-2xl font-semibold">{t(expert.nameKey)}</h4>

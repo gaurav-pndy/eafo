@@ -884,51 +884,67 @@
   },
   "overview": {
     "title": "Course Overview",
-    "description": "We are excited to invite you to the XI EAFO Basic Medical Courses...",
+    "description": "We are pleased to invite you to the XI EAFO Basic Medical Courses in Oncology and Oncopathology in Magas, Republic of Ingushetia, Russian Federation. This comprehensive program offers over 100 hours of specialized content across various fields of oncology.",
     "download": "Download Program PDF"
   },
-  "modules": [
-    {
-      "title": "Clinical Oncology",
-      "icon": "microscope",
-      "items": ["Diagnostic approaches", "Treatment strategies", "Case studies"]
-    },
-    {
-      "title": "Molecular Diagnosis",
-      "icon": "dna",
-      "items": ["Cytology", "Histology", "Genetic testing"]
-    },
-    {
-      "title": "Specialized Topics",
-      "icon": "vial",
-      "items": ["Breast cancer", "GI tumors", "Neuroendocrine tumors"]
-    },
-    {
-      "title": "Diagnostics",
-      "icon": "x-ray",
-      "items": ["Radiological methods", "Lab demonstrations", "Clinical practice"]
-    }
-  ],
-  "timeline": {
-    "title": "Course Timeline",
-    "events": [
-      {
-        "icon": "calendar-days",
-        "title": "July 23 - August 8, 2025",
-        "description": "Main course duration"
-      },
-      {
-        "icon": "ban",
-        "title": "Lecture-free Days",
-        "description": "July 28 and August 3"
-      },
-      {
-        "icon": "graduation-cap",
-        "title": "Final Project Defense",
-        "description": "August 8, 2025"
-      }
+"modules": [
+  {
+    "title": "Development in the Scientific Environment",
+    "icon": "graph",
+    "items": [
+      "Basics of Biostatistics",
+      "Educational Resources",
+      "Obtaining Grants and Internships",
+      "Professional Contacts"
     ]
   },
+  {
+    "title": "Teamwork and Awards",
+    "icon": "users",
+    "items": [
+      "Group Projects",
+      "Daily Knowledge Checks",
+      "Project Defense",
+      "Award Ceremony"
+    ]
+  }
+]
+,
+"timeline": {
+  "title": "Detailed Schedule",
+  "events": [
+    {
+      "icon": "flag",
+      "color": "green",
+      "title": "Opening Day — July 23, 2025",
+      "description": "From 14:00 – Registration, Welcome Lectures"
+    },
+    {
+      "icon": "calendar",
+      "color": "blue",
+      "title": "Free Days",
+      "description": "July 28 and August 3 are lecture-free days"
+    },
+    {
+      "icon": "trophy",
+      "color": "red",
+      "title": "Closing Day — August 8, 2025",
+      "description": "Until 13:00 – Closing Ceremony, Awards, Departure"
+    },
+    {
+      "icon": "translate",
+      "color": "yellow",
+      "title": "Language Requirements",
+      "description": "The Basic Medical Courses traditionally include lectures in both Russian and English. Proficiency in both languages is required, including:",
+      "points": [
+        "Listening comprehension",
+        "Ability to complete written tests",
+        "Participation in discussions"
+      ]
+    }
+  ]
+}
+,
   "additional": {
     "language": {
       "title": "Language",
@@ -1007,45 +1023,46 @@
 
   "Awards" :{
     "hero": {
-    "title": "Awards & Recognition",
-    "subtitle": "Celebrating Excellence in Medical Education",
+    "title": "Awards",
+    "subtitle": "Winners of the Basic Medical Courses can compete for one of the valuable prizes",
     "alt": "medical award ceremony with trophies"
   },
   "grand": {
     "title": "Grand Prize",
-    "subtitle": "For the Overall Winner in Individual Competition",
+    "subtitle": "For the absolute winner in the individual competition based on test results",
     "cards": [
       {
         "title": "Residency Grant",
-        "desc": "Free residency in any specialty with monthly scholarship of ₽40,000-120,000"
+        "desc": "Free enrollment in the first, second, or third residency program with a scholarship ranging from 40,000₽ to 120,000₽ per month"
       },
       {
         "title": "Short Internship",
-        "desc": "1 week to 2 months internship or conference attendance with full coverage"
+        "desc": "1–2 months of internship or participation in a conference with full expense coverage under the \"FIRMST-Study Abroad\" program"
       },
       {
         "title": "Long Internship",
-        "desc": "2-12 months internship with partial expenses covered"
+        "desc": "2–12 months of internship with partial expense coverage under the \"FIRMST-Study Abroad\" program"
       }
     ]
   },
   "runner": {
-    "title": "2nd and 3rd Place Awards",
-    "cards": [
-      {
-        "title": "Priority Internship Assistance",
-        "desc": "Preferential arrangement for thematic internships in Russia and abroad"
-      },
-      {
-        "title": "Scholarship Preferences",
-        "desc": "Enhanced chances in EAFO/FIRMST scholarship residency competition"
-      },
-      {
-        "title": "Special Event Access",
-        "desc": "Exclusive conditions for participation in EAFO, FIRMST, and partner events"
-      }
-    ]
-  },
+  "title": "Prizes for 2nd and 3rd Places",
+  "cards": [
+    {
+      "title": "Priority Assistance",
+      "desc": "Priority assistance in securing thematic internships in Russia and abroad under the FIRMST-Study Abroad program"
+    },
+    {
+      "title": "Preferences",
+      "desc": "Preferences when applying for scholarship residencies offered by EAFO/FIRMST"
+    },
+    {
+      "title": "Special Conditions",
+      "desc": "Special conditions for participation in scientific and educational events organized by EAFO, FIRMST, and partner organizations"
+    }
+  ]
+}
+,
   "cta": {
     "button": "Apply Now for the Competition"
   }
