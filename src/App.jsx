@@ -14,13 +14,14 @@ import SponsorsPage from "./pages/SponsorsPage";
 import CompetitiveParticipation from "./pages/CompetitiveParticipation";
 import ScheduleAndProgram from "./pages/ScheduleAndProgram";
 import Venue from "./pages/Venue";
-import Pricing from "./pages/Pricing";
+// import Pricing from "./pages/Pricing";
 import HowToRegister from "./pages/HowToRegister";
 import RegisterNow from "./pages/RegisterNow";
 import Organizations from "./pages/Organizations";
 import GalleryPage from "./pages/GalleryPage";
 import AwardsPage from "./pages/AwardsPage";
 import ProgramPage from "./pages/ProgramPage";
+import PricePage from "./pages/PricePage";
 
 function App() {
   useEffect(() => {
@@ -72,7 +73,7 @@ function App() {
         },
         {
           path: "/pricing",
-          element: <Pricing />,
+          element: <PricePage />,
         },
         {
           path: "/gallery-and-archive",

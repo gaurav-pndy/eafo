@@ -1069,7 +1069,426 @@
   }
 
 
- 
+ ,
+ "pricing": {
+    
+    "pricingOptions": {
+      "subtitle": "Participation options include four categories with different conditions and benefits.",
+      "cards": [
+        {
+          "badge": "Competitive selection",
+          "title": "Competitive Participation (Onsite)",
+          "price": "19,500 ₽",
+          "details": ["Full course access", "Shared room accommodation", "Meals included", "Visa support"],
+          "button": "Apply now"
+        },
+        {
+          "title": "Discounted Non-Competitive Participation (Onsite)",
+          "price": "35,000 ₽",
+          "details": ["Full course access", "Lunches and coffee breaks", "Course materials", "Certificate"],
+          "button": "Register"
+        },
+        {
+          "title": "Sponsored Non-Competitive Participation (Onsite)",
+          "price": "45,000 ₽",
+          "details": ["All discounted options", "5 nights accommodation", "Full meals", "VIP networking"],
+          "button": "Register"
+        },
+        {
+          "badge": "Online option",
+          "title": "Non-Competitive Module Participation",
+          "price": "15,000 ₽",
+          "details": ["Select thematic modules", "Online access", "Digital materials", "Electronic certificate"],
+          "button": "Choose modules"
+        }
+      ]
+    },
+    "faq": [
+      { "question": "Is there a payment plan available?" },
+      { "question": "Are there any scholarships available?" },
+      { "question": "What's included in the course materials?" }
+    ],
+    "cta": {
+      "title": "Ready to start your oncology journey?",
+      "subtitle": "Join our comprehensive medical education program and advance your career in oncology.",
+      "apply": "Apply Now",
+      "contact": "Contact Us"
+    }
+    },
+  
+  
+    "pricingHero": {
+      "title": "Course Pricing & Participation",
+      "subtitle": "Choose the participation format that best suits your needs and career goals."
+    },
+    "pricingOptions": {
+      "subtitle": "Participation options in the program include four categories with different conditions and benefits. EAFO reserves the right to stop accepting applications for any category without prior notice.",
+      "cards": [
+        {
+          "badge": "Competitive selection",
+          "title": "Competitive Participation<br>Starting from",
+          "subtitles": ["Best for beginners", "Includes basic features"],
+          "price": "19,500 ₽",
+          "details": [
+            "Full course access",
+            "Shared room accommodation",
+            "Meals included",
+            "Visa support"
+          ],
+          "button": "Apply now",
+          "tableData": {
+    "title": "Competition Participation",
+    "price": "19,500 ₽",
+    "headings": [
+      "Participation Category",
+      "“Rate 1” <br/>May 31",
+      "“Rate 2” <br/>June 30",
+      "“Rate 3” <br/>From July 1"
+    ],
+    "rows": [
+      {
+        "col1": "<b>“Package 1”</b> <br/> Registration without accommodation",
+        "col2": "39,900.00 ₽",
+        "col3": "49,900.00 ₽",
+        "col4": "59,900.00 ₽"
+      },
+      {
+        "col1": "<b>“Package 2”</b> <br/> Registration with accommodation <br/> with other participant(s) in four-bed rooms",
+        "col2": "49,900.00 ₽",
+        "col3": "59,900.00 ₽",
+        "col4": "69,900.00 ₽"
+      },
+      {
+        "col1": "<b>“Package 3”</b> <br/> Registration with accommodation <br/> with other participant(s) in twin rooms",
+        "col2": "89,800.00 ₽",
+        "col3": "99,800.00 ₽",
+        "col4": "109,800.00 ₽"
+      },
+      {
+        "col1": "<b>“Package 4”</b> <br/> Registration with accommodation in a single room",
+        "col2": "119,800.00 ₽",
+        "col3": "129,800.00 ₽",
+        "col4": "139,800.00 ₽"
+      },
+      {
+        "col1": "<b>“Package 5”</b> <br/> Registration with accommodation <br/> in twin/double rooms with an accompanying person",
+        "col2": "129,800.00 ₽",
+        "col3": "139,800.00 ₽",
+        "col4": "149,800.00 ₽"
+      },
+      {
+        "col1": "<b>“Package 6”</b> <br/> Online participation",
+        "col2": "39,900.00 ₽",
+        "col3": "49,900.00 ₽",
+        "col4": "59,900.00 ₽"
+      }
+    ],
+    "button": "Register"
+  }
+          
+        },
+        {
+          "title": "Discounted Non-Competitive Participation<br>Starting from",
+          "price": "35,000 ₽",
+          "details": [
+            "Full course access",
+            "Lunches and coffee breaks",
+            "Course materials",
+            "Certificate"
+          ],
+          "button": "Register",
+          "tableData": {
+            "title": "Preferential Non-Competition Participation",
+            "price": "19,500 ₽",
+            "headings": [
+              "Participation Category",
+              "“Rate 1” <br/>May 31",
+              "“Rate 2” <br/>June 30",
+              "“Rate 3” <br/>From July 1"
+            ],
+            "rows": [
+              {
+                "col1": "<b>“Package 1”</b> <br/> Registration without accommodation",
+                "col2": "89,900.00 ₽",
+                "col3": "109,900.00 ₽",
+                "col4": "129,900.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 2”</b> <br/> Registration with accommodation <br/> with other participant(s) in four-bed rooms",
+                "col2": "99,900.00 ₽",
+                "col3": "119,900.00 ₽",
+                "col4": "139,900.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 3”</b> <br/> Registration with accommodation <br/> with other participant(s) in twin rooms",
+                "col2": "139,800.00 ₽",
+                "col3": "159,800.00 ₽",
+                "col4": "179,800.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 4”</b> <br/> Registration with accommodation in a single room",
+                "col2": "169,800.00 ₽",
+                "col3": "189,800.00 ₽",
+                "col4": "209,800.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 5”</b> <br/> Registration with accommodation <br/> in twin/double rooms with an accompanying person",
+                "col2": "179,800.00 ₽",
+                "col3": "199,800.00 ₽",
+                "col4": "219,800.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 6”</b> <br/> Online participation",
+                "col2": "59,900.00 ₽",
+                "col3": "69,900.00 ₽",
+                "col4": "79,900.00 ₽"
+              }
+            ],
+            "button": "Register"
+          }
+          
+
+        },
+        {
+          "title": "Sponsored Non-Competitive Participation<br>Starting from",
+          "price": "45,000 ₽",
+          "details": [
+            "All discounted options",
+            "5 nights accommodation",
+            "Full meals",
+            "VIP networking"
+          ],
+          "button": "Register",
+          "tableData": {
+            "title": "Sponsored Non-Competition Participation",
+            "price": "19,500 ₽",
+            "headings": [
+              "Participation Category",
+              "“Rate 1” <br/>May 31",
+              "“Rate 2” <br/>June 30",
+              "“Rate 3” <br/>From July 1"
+            ],
+            "rows": [
+              {
+                "col1": "<b>“Package 1”</b> <br/> Registration without accommodation",
+                "col2": "139,900.00 ₽",
+                "col3": "159,900.00 ₽",
+                "col4": "179,900.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 2”</b> <br/> Registration with accommodation <br/> with other participant(s) in four-bed rooms",
+                "col2": "149,900.00 ₽",
+                "col3": "169,900.00 ₽",
+                "col4": "189,900.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 3”</b> <br/> Registration with accommodation <br/> with other participant(s) in twin rooms",
+                "col2": "189,800.00 ₽",
+                "col3": "209,800.00 ₽",
+                "col4": "229,800.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 4”</b> <br/> Registration with accommodation in a single room",
+                "col2": "219,800.00 ₽",
+                "col3": "239,800.00 ₽",
+                "col4": "259,800.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 5”</b> <br/> Registration with accommodation <br/> in twin/double rooms with an accompanying person",
+                "col2": "229,800.00 ₽",
+                "col3": "249,800.00 ₽",
+                "col4": "269,800.00 ₽"
+              },
+              {
+                "col1": "<b>“Package 6”</b> <br/> Online participation",
+                "col2": "59,900.00 ₽",
+                "col3": "69,900.00 ₽",
+                "col4": "79,900.00 ₽"
+              }
+            ],
+            "button": "Register"
+          }
+          
+        },
+        {
+          "badge": "Online option",
+          "title": "Non-Competitive Module Participation<br>Starting from",
+          "price": "15,000 ₽",
+          "details": [
+            "Select thematic modules",
+            "Online access",
+            "Digital materials",
+            "Electronic certificate"
+          ],
+          "button": "Choose modules",
+          "tableData": {
+    "title": "Competition Participation",
+    "price": "19,500 ₽",
+    "headings": [
+      "Participation Category",
+      "Per Day"
+    ],
+    "rows": [
+      {
+        "col1": "<b>“Package 1”</b> <br/> Registration without accommodation (on-site)",
+        "col2": "14,900.00 ₽"
+      },
+      {
+        "col1": "<b>“Package 2”</b> <br/> Registration without accommodation (online)",
+        "col2": "6,900.00 ₽"
+      }
+    ],
+    "button": "Register"
+  }
+          
+        }
+      ]
+    },
+  
+    "participation2": {
+      "title": "Competition Requirements",
+  "subtitle": "To participate in the competition, you must:",
+  "requirements": [
+    "Complete the entrance test on the website",
+    "Submit your resume",
+    "Write a motivation letter",
+    "Provide your academic GPA",
+    "Attach documents confirming foreign language proficiency"
+  ],
+      "stages": [
+        { "number": "1", "title": "First Stage", "deadline": "until May 30", "seats": "10 competitive seats" },
+        { "number": "2", "title": "Second Stage", "deadline": "until June 30", "seats": "7 competitive seats" },
+        { "number": "3", "title": "Third Stage", "deadline": "from July 1", "seats": "7 competitive seats" }
+      ]
+    },
+  
+    "requiredDocuments": {
+      "title": "Required Documents",
+      "importantDeadlines": "Important Deadlines",
+      "deadlines": [
+        "First stage: until May 30, 2025, 23:59 (MSK)",
+        "Second stage: until June 30, 2025, 23:59 (MSK)",
+        "Third stage: until July 22, 2025, 23:59 (MSK)"
+      ],
+      "warnings": [
+        "EAFO reserves the right to stop accepting applications in any category without prior notice",
+        "Online participants will only have access to theoretical parts of the course",
+        "Organizing committee may adjust prices based on updated accommodation costs"
+      ],
+     "enrollmentTitle": "For Course Enrollment",
+  "enrollment": [
+    "Passport copy submitted via the registration form",
+    "For students: a copy of the student ID or a certificate from the institution",
+    "Signed Course Attendance Rules and Commitment Agreement",
+    "Payment from the participant, either as an individual or from the participant's institution"
+  ],
+  "certificateTitle": "For Certificate Issuance",
+  "certificate": [
+    "Passport copy (pages with photo and registration)",
+    "Copy of SNILS (Individual Insurance Account Number)",
+    "Copy of Education Diploma"
+  ]
+    },
+  
+   "included": {
+  "title": "What's Included in Registration",
+  "features": [
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Course Access",
+      "description": "Access to all theoretical and practical sessions with translation"
+    },
+    {
+      "icon": "fa-book",
+      "title": "Materials",
+      "description": "Study materials, badge, program, and printed handouts"
+    },
+    {
+      "icon": "fa-certificate",
+      "title": "Certification",
+      "description": "Course completion and CME certificates"
+    },
+    {
+      "icon": "fa-passport",
+      "title": "Visa Support",
+      "description": "Visa invitation letter in accordance with Russian regulations"
+    },
+    {
+      "icon": "fa-utensils",
+      "title": "Meals",
+      "description": "Coffee breaks, lunches, and dinners"
+    }
+  ]
+}
+,
+    "paymentInfo": {
+  "title": "Participation Information",
+  "participations": [
+    {
+      "title": "Preferential Competitive Participation",
+      "description": "Based on the competition results, a ranking will be formed among the applicants. Enrollment is conducted in three stages with a limited number of seats:",
+      "points": [
+        "Stage 1 (until May 30) — 10 seats",
+        "Stage 2 (until June 30) — 7 seats",
+        "Stage 3 (from July 1) — 7 seats"
+      ]
+    },
+    {
+      "title": "Preferential Non-Competitive Participation",
+      "description": "Available for participants who did not pass the competitive selection. A total of 30 seats available, without stage limitations:",
+      "points": [
+        "Stage 1 — until May 30",
+        "Stage 2 — until June 30",
+        "Stage 3 — from July 1"
+      ]
+    },
+    {
+      "title": "Non-Competitive Participation",
+      "description": "For participants sponsored by industry or employers, representatives of pharmaceutical companies, and the medical industry. A total of 15 seats available, without stage limitations:",
+      "points": [
+        "Stage 1 — until May 30",
+        "Stage 2 — until June 30",
+        "Stage 3 — from July 1"
+      ]
+    }
+  ]
+}
+,
+  
+    "travelReimbursement": {
+      "title": "Travel Expense Reimbursement",
+      "description": "Participants with accepted Abstracts, Pathology Cases or Research Proposals may receive:",
+      "points": [
+        "20–75% of ticket price reimbursement (max ₹20,000)",
+        "Deadline: September 30, 2024 (23:59 Moscow time)",
+        "Submit ticket copy to travel@eafo.info"
+      ]
+    },
+  
+  "importantNotes": {
+  "title": "Important Information",
+  "accommodationTitle": "Accommodation and Meals",
+  "accommodation": [
+    "During training days, hotel guests are provided with three meals a day and coffee breaks.",
+    "On weekends, only breakfast is provided for hotel guests.",
+    "Additional accommodation options in Magas are available at an extra cost."
+  ],
+  "warningsTitle": "Cancellation Policy",
+  "warnings": [
+    "If you cancel before May 20, you will receive a 90% refund.",
+    "If you cancel before June 20, you will receive a 50% refund.",
+    "If you cancel after July 20, no refund will be provided."
+  ]
+}
+,
+  
+   "cta": {
+  "title": "Ready to Start Your Journey in Oncology?",
+  "subtitle": "Join our comprehensive medical education program and advance your career in oncology.",
+  "apply": "Apply Now",
+  "contact": "Contact Us"
+}
+
   
   
   
