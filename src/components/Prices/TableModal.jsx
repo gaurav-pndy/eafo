@@ -25,7 +25,7 @@ export function TableModal({ isOpen, onClose, tableData, title }) {
         </DialogHeader>
 
         {/* Table */}
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto mt-4 md:mt-0">
           <table className="min-w-full border border-gray-300 text-sm md:text-base table-fixed">
             <thead className="bg-[#1e3b8b] text-white">
               <tr>
