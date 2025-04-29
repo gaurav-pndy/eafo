@@ -1125,17 +1125,20 @@
       "subtitle": "Participation options in the program include four categories with different conditions and benefits. EAFO reserves the right to stop accepting applications for any category without prior notice.",
       "cards": [
         {
-          "badge": "Competitive selection",
-          "title": "Competitive Participation<br>Starting from",
-          "subtitles": ["Best for beginners", "Includes basic features"],
+          "badge": "Competitive Selection",
+          "title": "Competitive <br>Participation<br>Starting from",
           "price": "19,500 ₽",
           "details": [
-            "Full course access",
-            "Shared room accommodation",
-            "Meals included",
-            "Visa support"
+            "Registration without accommodation",
+            {
+              "main": "Shared room accommodation",
+              "sub": ["in four-bed rooms", "in twin rooms", "in single rooms", "with an accompanying person"]
+            },
+            "Online participation"
           ],
-          "button": "Apply now",
+          "button": "Apply",
+          "type": "regular"
+,    
           "tableData": {
     "title": "Competition Participation",
     "price": "19,500 ₽",
@@ -1188,15 +1191,18 @@
           
         },
         {
-          "title": "Discounted Non-Competitive Participation<br>Starting from",
+          "title": "Preferential Non-Competitive Participation<br>Starting from",
           "price": "35,000 ₽",
           "details": [
-            "Full course access",
-            "Lunches and coffee breaks",
-            "Course materials",
-            "Certificate"
+            "Registration without accommodation",
+            {
+              "main": "Shared room accommodation",
+              "sub": ["in four-bed rooms", "in twin rooms", "in single rooms", "with an accompanying person"]
+            },
+            "Online participation"
           ],
           "button": "Register",
+          "type": "special",
           "tableData": {
             "title": "Preferential Non-Competition Participation",
             "price": "19,500 ₽",
@@ -1253,12 +1259,16 @@
           "title": "Sponsored Non-Competitive Participation<br>Starting from",
           "price": "45,000 ₽",
           "details": [
-            "All discounted options",
-            "5 nights accommodation",
-            "Full meals",
-            "VIP networking"
+            "Registration without accommodation",
+            "Registration without accommodation",
+            {
+              "main": "Registration with accommodation",
+              "sub": ["in double/triple rooms", "in twin rooms", "in single rooms", "with an accompanying person"]
+            },
+            "Online participation"
           ],
-          "button": "Register",
+          "button": "Register"
+,    
           "tableData": {
             "title": "Sponsored Non-Competition Participation",
             "price": "19,500 ₽",
@@ -1311,16 +1321,17 @@
           
         },
         {
-          "badge": "Online option",
-          "title": "Non-Competitive Module Participation<br>Starting from",
+          "badge": "Online Format",
+          "title": "Participation in Modules without Competition<br>Starting from",
           "price": "15,000 ₽",
           "details": [
-            "Select thematic modules",
-            "Online access",
-            "Digital materials",
-            "Electronic certificate"
+            {
+              "main": "Registration without accommodation",
+              "sub": ["On-site", "Online"]
+            }
           ],
-          "button": "Choose modules",
+          "button": "Choose Modules"
+,    
           "tableData": {
     "title": "Competition Participation",
     "price": "19,500 ₽",
