@@ -1136,7 +1136,7 @@
             },
             "Online participation"
           ],
-          "button": "Apply",
+          "button": "Learn More",
           "type": "regular"
 ,    
           "tableData": {
@@ -1201,7 +1201,7 @@
             },
             "Online participation"
           ],
-          "button": "Register",
+          "button": "Learn More",
           "type": "special",
           "tableData": {
             "title": "Preferential Non-Competition Participation",
@@ -1267,7 +1267,7 @@
             },
             "Online participation"
           ],
-          "button": "Register"
+          "button": "Learn More"
 ,    
           "tableData": {
             "title": "Sponsored Non-Competition Participation",
@@ -1321,7 +1321,7 @@
           
         },
         {
-          "badge": "Online Format",
+    
           "title": "Participation in Modules without Competition<br>Starting from",
           "price": "15,000 ₽",
           "details": [
@@ -1330,7 +1330,7 @@
               "sub": ["On-site", "Online"]
             }
           ],
-          "button": "Choose Modules"
+          "button": "Learn More"
 ,    
           "tableData": {
     "title": "Competition Participation",
