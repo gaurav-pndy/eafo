@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { TableModal } from "./TableModal";
+import { t } from "i18next";
 
 const PricingCard = ({ badge, title, price, details, button, tableData }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -57,6 +58,7 @@ const PricingCard = ({ badge, title, price, details, button, tableData }) => {
           className="text-xl font-bold mb-2"
           dangerouslySetInnerHTML={{ __html: title }}
         ></h3>
+        <p className="text-sm">{t("pricingOptions.startingFrom")}</p>
         <div className="text-3xl font-bold text-blue-900">{price}</div>
       </div>
 
