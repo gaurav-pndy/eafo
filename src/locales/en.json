@@ -1124,6 +1124,7 @@
     "pricingOptions": {
       "subtitle": "Participation options in the program include four categories with different conditions and benefits. EAFO reserves the right to stop accepting applications for any category without prior notice.",
       "startingFrom": "Starting from",
+      "button": "Download Pricing PDF",
       "cards": [
         {
           "badge": "Competitive Selection",
@@ -1141,7 +1142,7 @@
           "type": "regular"
 ,    
           "tableData": {
-    "title": "Competition Participation",
+    "title": "Competitive Participation",
     "price": "19,500 ₽",
     "headings": [
       "Participation Category",
@@ -1205,7 +1206,7 @@
           "button": "Learn More",
           "type": "special",
           "tableData": {
-            "title": "Preferential Non-Competition Participation",
+            "title": "Subsidized Non-Competitive Participation",
             "price": "19,500 ₽",
             "headings": [
               "Participation Category",
@@ -1334,7 +1335,7 @@
           "button": "Learn More"
 ,    
           "tableData": {
-    "title": "Competition Participation",
+    "title": "Participation in Modules without Competition",
     "price": "19,500 ₽",
     "headings": [
       "Participation Category",

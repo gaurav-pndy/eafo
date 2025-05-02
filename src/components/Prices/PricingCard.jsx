@@ -3,9 +3,17 @@ import { FaCheck } from "react-icons/fa";
 import { TableModal } from "./TableModal";
 import { t } from "i18next";
 
-const PricingCard = ({ badge, title, price, details, button, tableData }) => {
-  const [openModal, setOpenModal] = useState(false);
-
+const PricingCard = ({
+  cards,
+  index,
+  badge,
+  title,
+  price,
+  details,
+  button,
+  tableData,
+  onOpenModal,
+}) => {
   const renderDetail = (item, idx) => {
     if (typeof item === "string") {
       return (
@@ -34,9 +42,8 @@ const PricingCard = ({ badge, title, price, details, button, tableData }) => {
   };
 
   const handleOpenModal = () => {
-    console.log("Table Data:", tableData);
     if (tableData) {
-      setOpenModal(true);
+      onOpenModal(index); // trigger parent function
     }
   };
 
@@ -75,14 +82,16 @@ const PricingCard = ({ badge, title, price, details, button, tableData }) => {
         {button}
       </button>
 
-      {tableData && (
+      {/* {tableData && (
         <TableModal
           isOpen={openModal}
           onClose={handleCloseModal}
-          tableData={tableData}
+     
+          tableList={cards.filter((card) => card.tableData)}
           title={title}
+          initialIndex={selectedTableIndex}
         />
-      )}
+      )} */}
     </div>
   );
 };
