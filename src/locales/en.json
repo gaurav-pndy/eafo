@@ -1205,7 +1205,7 @@
             "Online participation"
           ],
           "button": "Learn More",
-          "button2": "Register",
+          "button2": "Apply Now",
           "type": "special",
           "tableData": {
             "title": "Subsidized Non-Competitive Participation",
@@ -1254,7 +1254,7 @@
                 "col4": "79,900.00 ₽"
               }
             ],
-            "button": "Register"
+            "button": "Apply Now"
           }
           
 
@@ -1272,7 +1272,7 @@
             "Online participation"
           ],
           "button": "Learn More",
-          "button2": "Register",
+          "button2": "Apply Now",
   
           "tableData": {
             "title": "Sponsored Non-Competition Participation",
@@ -1336,7 +1336,7 @@
             }
           ],
           "button": "Learn More",
-          "button2":"Register"
+          "button2":"Apply Now"
 ,    
           "tableData": {
     "title": "Participation in Modules without Competition",
