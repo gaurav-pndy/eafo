@@ -143,6 +143,9 @@ const Speakers = () => {
             </div>
             <div className="p-4">
               <p className="text-gray-800 mb-2">{t(expert.locationKey)}</p>
+              <button className=" cursor-pointer text-lg font-semibold text-primary hover:underline">
+                {t("experts.founderSection.readMore")}
+              </button>
             </div>
           </motion.div>
         ))}

@@ -22,6 +22,7 @@ import GalleryPage from "./pages/GalleryPage";
 import AwardsPage from "./pages/AwardsPage";
 import ProgramPage from "./pages/ProgramPage";
 import PricePage from "./pages/PricePage";
+import SubsidizedPage from "./pages/SubsidizedPage";
 
 function App() {
   useEffect(() => {
@@ -69,7 +70,7 @@ function App() {
         },
         {
           path: "/competitive-participation",
-          element: <CompetitiveParticipation />,
+          element: <SubsidizedPage />,
         },
         {
           path: "/pricing",
@@ -101,7 +102,7 @@ function App() {
         },
         {
           path: "/organizations",
-          element: <Organizations />,
+          element: <PartnerPage />,
         },
       ],
     },

@@ -7,7 +7,7 @@ import SubsidizedOverview from "@/components/Subsidized/SubsidizedOverview";
 
 const SubsidizedPage = () => {
   return (
-    < div className="bg-white">
+    <div className="bg-white ">
       <SubsidizedHero />
       <SubsidizedOverview />
       <EligibilityCriteria />

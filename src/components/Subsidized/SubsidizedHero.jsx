@@ -4,7 +4,7 @@ const SubsidizedHero = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="subsidized-hero" className="relative h-16 overflow-hidden">
+    <section id="subsidized-hero" className="relative py-16 overflow-hidden">
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"

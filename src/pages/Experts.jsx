@@ -97,57 +97,56 @@ const Experts = () => {
       {/* Confirmed Speakers */}
       <Speakers />
 
-      <div className="flex flex-col items-center text-center p-6 py-16">
+      <div className="flex  flex-col items-center text-center p-6 py-16">
         <h2 className="text-2xl md:text-4xl font-bold ">
           {t("experts.founderSection.title")}
         </h2>
 
-        <div className="border rounded-lg overflow-hidden w-sm shadow-md mt-12">
-          <img
-            src="/Dr soma.avif" // replace with your image path
-            alt={t("experts.founderSection.name")}
-            className="w-full h-full object-cover"
-          />
-          <div className="p-4">
-            <h3 className="font-bold text-2xl">
-              {t("experts.founderSection.name")}
-            </h3>
-            <p className="text-lg text-gray-600 mt-1">
-              {t("experts.founderSection.shortTitle")}
-            </p>
-            <p className=" text-gray-600">
-              {t("experts.founderSection.location")}
-            </p>
-
-            <Dialog>
-              <DialogTrigger asChild>
+        <Dialog>
+          <DialogTrigger asChild>
+            <div className="border rounded-lg overflow-hidden w-sm shadow-md mt-12">
+              <img
+                src="/Dr soma.avif" // replace with your image path
+                alt={t("experts.founderSection.name")}
+                className="w-full h-full object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-bold text-2xl">
+                  {t("experts.founderSection.name")}
+                </h3>
+                <p className="text-lg text-gray-600 mt-1">
+                  {t("experts.founderSection.shortTitle")}
+                </p>
+                <p className=" text-gray-600">
+                  {t("experts.founderSection.location")}
+                </p>
                 <button className="mt-4 cursor-pointer text-lg font-semibold text-primary hover:underline">
                   {t("experts.founderSection.readMore")}
                 </button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-2xl ">
-                <div className="w-full  flex relative flex-col items-center gap-6">
-                  <img
-                    src="/Dr soma.avif"
-                    alt={t("experts.founderSection.name")}
-                    className="w-48 md:w-80 h-48 md:h-80 rounded-full object-cover shadow-md"
-                  />
-                  <div className="flex flex-col gap-4 text-center">
-                    <h3 className="text-2xl md:text-4xl font-bold">
-                      {t("experts.founderSection.name")}
-                    </h3>
-                    <p className="text-gray-700 md:text-xl text-center ">
-                      {t("experts.founderSection.fullInfo")}
-                    </p>
-                    <p className="md:text-xl">
-                      {t("experts.founderSection.location")}
-                    </p>
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-        </div>
+              </div>
+            </div>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-2xl ">
+            <div className="w-full  flex relative flex-col items-center gap-6">
+              <img
+                src="/Dr soma.avif"
+                alt={t("experts.founderSection.name")}
+                className="w-48 md:w-80 h-48 md:h-80 rounded-full object-cover shadow-md"
+              />
+              <div className="flex flex-col gap-4 text-center">
+                <h3 className="text-2xl md:text-4xl font-bold">
+                  {t("experts.founderSection.name")}
+                </h3>
+                <p className="text-gray-700 md:text-xl text-center ">
+                  {t("experts.founderSection.fullInfo")}
+                </p>
+                <p className="md:text-xl">
+                  {t("experts.founderSection.location")}
+                </p>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
 
       {/* Invited Experts */}
