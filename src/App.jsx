@@ -68,7 +68,7 @@ function App() {
           element: <AwardsPage />,
         },
         {
-          path: "/competitive-selection",
+          path: "/competitive-participation",
           element: <CompetitiveParticipation />,
         },
         {
@@ -76,12 +76,12 @@ function App() {
           element: <PricePage />,
         },
         {
-          path: "/gallery-and-archive",
+          path: "/gallery",
           element: <GalleryPage />,
         },
         {
           path: "/schedule-and-program",
-          element: <ScheduleAndProgram />,
+          element: <ProgramPage />,
         },
         {
           path: "/program",

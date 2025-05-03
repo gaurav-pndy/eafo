@@ -66,29 +66,28 @@ const Header = () => {
       label: t("header.whyUs"),
       // path: "/",
       subItems: [
-        { label: t("header.invitedExperts"), path: "/experts" },
+        // { label: t("header.invitedExperts"), path: "/experts" },
         { label: t("header.awards"), path: "/awards" },
-        { label: t("header.successStories"), path: "/success-stories" },
-        { sectionId: "reviews", label: t("header.reviews") }, // <- section
+        { label: t("header.gallery"), path: "/gallery" },
+        { sectionId: "reviews", label: t("header.reviews") },
+        { label: t("header.organizations"), path: "/organizations" },
+        { label: t("header.eafo"), path: "/" },
+        { sectionId: "faq", label: t("header.faq") },
       ],
     },
-    { label: t("header.scheduleAndProgram"), path: "/program" },
+
     {
       label: t("header.participationTerms"),
       // path: "/",
       subItems: [
         {
-          label: t("header.participationOptions"),
-          path: "/participation-variants",
-        },
-        {
           label: t("header.participationVariants"),
           path: "/participation-variants",
         },
-        // {
-        //   label: t("header.competitiveParticipation"),
-        //   path: "/competitive-participation",
-        // },
+        {
+          label: t("header.competitiveParticipation"),
+          path: "/competitive-participation",
+        },
         { label: t("header.pricing"), path: "/pricing" },
         { label: t("header.visa"), path: "/visa" },
       ],
@@ -98,22 +97,15 @@ const Header = () => {
       // path: "/",
       subItems: [
         { label: t("header.howDoIRegister"), path: "/how-to-register" },
-        {
-          label: t("header.participationOptions"),
-          path: "/participation",
-        },
-        {
-          label: t("header.competitiveSelection"),
-          path: "/competitive-selection",
-        },
-        { label: t("header.registrationFee"), path: "/register" },
+
         { label: t("header.registerNow"), path: "/register" },
       ],
     },
-    { sectionId: "faq", label: t("header.faq") },
-    { label: t("header.organizations"), path: "/partners" },
+    { label: t("header.expertsAndCommittees"), path: "/experts" },
+    { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
+    { label: t("header.sponsors"), path: "/sponsors" },
 
-    { label: t("header.contactUs"), path: "/contact-us" },
+    { label: t("header.contact"), path: "/contact-us" },
     // <- section
   ];
 
@@ -175,7 +167,9 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav
           className={`hidden xl:flex text-gray-800 font-medium ${
-            selectedLang === "ru" ? "text-sm gap-5" : "text-[0.95rem] gap-5"
+            selectedLang === "ru"
+              ? "text-[0.85rem] gap-5"
+              : "text-[0.95rem] gap-5"
           }`}
         >
           {navItems.map((item, idx) => (
