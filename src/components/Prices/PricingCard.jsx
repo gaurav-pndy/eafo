@@ -15,6 +15,7 @@ const PricingCard = ({
   button2,
   tableData,
   onOpenModal,
+  setShowForm,
 }) => {
   const renderDetail = (item, idx) => {
     if (typeof item === "string") {
@@ -83,14 +84,13 @@ const PricingCard = ({
       >
         {button}
       </button>
-      <Link to="/register">
-        <button
-          // onClick={handleOpenModal}
-          className="w-full mt-2 bg-blue-950 text-white py-2.5 rounded-full hover:bg-blue-900 transition duration-300 text-sm"
-        >
-          {button2}
-        </button>
-      </Link>
+
+      <button
+        onClick={() => setShowForm(true)}
+        className="w-full mt-2 bg-blue-950 text-white py-2.5 rounded-full hover:bg-blue-900 transition duration-300 text-sm"
+      >
+        {button2}
+      </button>
 
       {/* {tableData && (
         <TableModal

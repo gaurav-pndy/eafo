@@ -1321,7 +1321,7 @@
                 "col4": "79,900.00 ₽"
               }
             ],
-            "button": "Register"
+            "button": "Apply Now"
           }
           
         },
@@ -1336,7 +1336,7 @@
             }
           ],
           "button": "Learn More",
-          "button2":"Apply Now"
+          "button2":"Register"
 ,    
           "tableData": {
     "title": "Participation in Modules without Competition",
@@ -1505,7 +1505,21 @@
   "apply": "Apply Now",
   "contact": "Contact Us"
 }
+,
 
+"preRegister": "Pre-Registration for the XI EAFO Basic Medical Courses",
+  "firstName": "First Name",
+  "middleName": "Middle Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "phone": "Phone",
+  "agreement": "I agree with the Terms of the Agreement and the Privacy Policy",
+  "personalData": "I give my Consent to the processing of my personal data",
+  "promotions": "I give my Consent to receive promotional materials",
+  "submit": "Submit",
+  "pleaseAgree": "Please agree to the required terms before submitting.",
+  "formError": "Error submitting form",
+  "registerSuccess": "Successfully registered"
   
   
   

@@ -2,10 +2,12 @@ import { useTranslation } from "react-i18next";
 import PricingCard from "./PricingCard";
 import { useState } from "react";
 import { TableModal } from "./TableModal";
+import PreRegisterForm from "../PreRegisterForm";
 
 const PricingOptions = () => {
   const { t } = useTranslation();
   const cards = t("pricingOptions.cards", { returnObjects: true });
+  const [showForm, setShowForm] = useState(false);
 
   const [openModal, setOpenModal] = useState(false);
   const [selectedTableIndex, setSelectedTableIndex] = useState(0);
@@ -32,6 +34,7 @@ const PricingOptions = () => {
               key={index}
               index={index}
               onOpenModal={handleOpenModal}
+              setShowForm={setShowForm}
               cards={cards}
               {...card}
             />
@@ -43,6 +46,13 @@ const PricingOptions = () => {
             tableList={cards.filter((card) => card.tableData)}
             initialIndex={selectedTableIndex}
           />
+
+          {showForm && (
+            <PreRegisterForm
+              courseId="67fb8bc722a71bd3d19d580d"
+              onClose={() => setShowForm(false)}
+            />
+          )}
         </div>
         <div className="flex justify-center mt-8">
           <a
