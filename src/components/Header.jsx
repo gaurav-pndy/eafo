@@ -306,7 +306,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="xl:hidden absolute w-full top-18 md:top-20 z-20 left-0 bg-white px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto"
+            className="xl:hidden absolute w-full top-18 md:top-20 z-20 left-0 bg-white px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl pb-10"
           >
             <nav className="flex text-lg flex-col gap-6 text-gray-800 font-medium">
               <div
