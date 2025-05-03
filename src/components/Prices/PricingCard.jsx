@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { TableModal } from "./TableModal";
 import { t } from "i18next";
+import { Link } from "react-router-dom";
 
 const PricingCard = ({
   cards,
@@ -11,6 +12,7 @@ const PricingCard = ({
   price,
   details,
   button,
+  button2,
   tableData,
   onOpenModal,
 }) => {
@@ -81,6 +83,14 @@ const PricingCard = ({
       >
         {button}
       </button>
+      <Link to="/register">
+        <button
+          // onClick={handleOpenModal}
+          className="w-full mt-2 bg-blue-950 text-white py-2.5 rounded-full hover:bg-blue-900 transition duration-300 text-sm"
+        >
+          {button2}
+        </button>
+      </Link>
 
       {/* {tableData && (
         <TableModal
