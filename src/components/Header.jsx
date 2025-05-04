@@ -73,6 +73,7 @@ const Header = () => {
         { label: t("header.organizations"), path: "/organizations" },
         { label: t("header.eafo"), path: "/" },
         { sectionId: "faq", label: t("header.faq") },
+        { label: t("header.contact"), path: "/contact-us" },
       ],
     },
 
@@ -105,7 +106,6 @@ const Header = () => {
     { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
     { label: t("header.sponsors"), path: "/sponsors" },
 
-    { label: t("header.contact"), path: "/contact-us" },
     // <- section
   ];
 
@@ -156,7 +156,7 @@ const Header = () => {
 
   return (
     <header className="w-full fixed top-0 left-0 z-20 bg-white border-b border-purple-200 shadow-sm">
-      <div className="mx-auto flex items-center justify-between px-4 lg:px-10 xl:px-16 h-20 lg:h-22">
+      <div className="mx-auto flex items-center justify-between px-4 lg:px-10 xl:px-12 h-20 lg:h-22">
         {/* Left: Logo & Slogan */}
         <div className="flex items-center">
           <Link to="/">
@@ -171,10 +171,10 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav
-          className={`hidden xl:flex text-gray-800 font-medium ${
+          className={`hidden  xl:flex text-gray-800 font-medium ${
             selectedLang === "ru"
-              ? "text-[0.85rem] gap-5"
-              : "text-[0.95rem] gap-5"
+              ? "text-[0.85rem] gap-5 nav-class-ru"
+              : "text-[0.95rem] gap-5 nav-class"
           }`}
         >
           {navItems.map((item, idx) => (
@@ -222,29 +222,6 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
-          <div className="relative" ref={userDropdownRef}>
-            <button
-              onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-              className="p-1 rounded-full hover:bg-gray-200 transition"
-            >
-              <FaUserCircle className=" cursor-pointer text-[2.5rem] lg:text-4xl text-gray-800" />
-            </button>
-
-            {userDropdownOpen && (
-              <div className="absolute left-[50%] translate-x-[-50%] pt-3 w-44 lg:w-48 bg-transparet z-20">
-                <a
-                  href="http://ui.eafo.info"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="w-full px-4 py-2 text-white font-semibold  rounded-lg bg-blue-600 hover:bg-blue-800 transition-all duration-300 cursor-pointer lg:text-lg">
-                    {t("header.personalAccount")}
-                  </button>
-                </a>
-              </div>
-            )}
-          </div>
-
           {/* Language Dropdown */}
           <div
             className="relative  hidden md:flex gap-1 md:gap-2 items-center z-30"
@@ -288,6 +265,32 @@ const Header = () => {
                 </ul>
               )}
             </div>
+          </div>
+
+          <div className="relative" ref={userDropdownRef}>
+            <button
+              onClick={() => setUserDropdownOpen(!userDropdownOpen)}
+              className="p-1 rounded-full hover:bg-gray-200 transition"
+            >
+              <FaUserCircle className=" cursor-pointer text-[2.5rem] lg:text-4xl text-gray-800" />
+            </button>
+
+            {userDropdownOpen && (
+              <div className="absolute right-[50%] translate-x-[50%] xl:-right-10 xl:translate-x-0  pt-3 w-44 lg:w-48 bg-transparet z-20">
+                <a
+                  href="http://ui.eafo.info"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button
+                    className="w-full px-4 py-2 text-white font-semibold  rounded-lg bg-blue-600 hover:bg-blue-800 transition-all duration-300 cursor-pointer lg:text-lg"
+                    dangerouslySetInnerHTML={{
+                      __html: t("header.personalAccount"),
+                    }}
+                  ></button>
+                </a>
+              </div>
+            )}
           </div>
 
           <button
