@@ -147,7 +147,7 @@ export default function PreRegisterForm({ courseId, onClose }) {
                 <span className="required"> *</span>
               </label>
               <PhoneInput
-                country={"us"}
+                country={"ru"}
                 value={formData.phone}
                 onChange={handlePhoneChange}
                 inputProps={{ name: "phone", required: true }}
@@ -195,7 +195,15 @@ export default function PreRegisterForm({ courseId, onClose }) {
             </label>
           </div>
 
-          <button type="submit">{t("submit")}</button>
+          <button
+            className="cursor-pointer"
+            type="submit"
+            disabled={
+              !(agreements.terms && agreements.data && agreements.promotions)
+            }
+          >
+            {t("submit")}
+          </button>
         </form>
         <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       </div>

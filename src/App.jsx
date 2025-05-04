@@ -23,6 +23,7 @@ import AwardsPage from "./pages/AwardsPage";
 import ProgramPage from "./pages/ProgramPage";
 import PricePage from "./pages/PricePage";
 import SubsidizedPage from "./pages/SubsidizedPage";
+import Accomodation from "./pages/Accomodation";
 
 function App() {
   useEffect(() => {
@@ -91,6 +92,10 @@ function App() {
         {
           path: "/venue",
           element: <Venue />,
+        },
+        {
+          path: "/accomodation",
+          element: <Accomodation />,
         },
         {
           path: "/how-to-register",

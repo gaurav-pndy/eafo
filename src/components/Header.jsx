@@ -74,6 +74,9 @@ const Header = () => {
         { label: t("header.eafo"), path: "/" },
         { sectionId: "faq", label: t("header.faq") },
         { label: t("header.contact"), path: "/contact-us" },
+        { label: t("header.contact"), path: "/contact-us" },
+        { label: t("header.venue"), path: "/convenue" },
+        { label: t("header.accomodation"), path: "/conaccomodation" },
       ],
     },
 
@@ -173,7 +176,7 @@ const Header = () => {
         <nav
           className={`hidden  xl:flex text-gray-800 font-medium ${
             selectedLang === "ru"
-              ? "text-[0.85rem] gap-5 nav-class-ru"
+              ? "text-[0.84rem] gap-4.5 nav-class-ru"
               : "text-[0.95rem] gap-5 nav-class"
           }`}
         >
