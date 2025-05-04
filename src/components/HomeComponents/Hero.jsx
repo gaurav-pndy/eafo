@@ -17,7 +17,7 @@ const Hero = () => {
         duration: 0.8,
         ease: "easeInOut",
       }}
-      className="relative   w-full h-[60vh] lg:h-[calc(100vh-5.5rem)] flex items-center justify-center text-white text-center bg-cover bg-center"
+      className="relative less-than-400  w-full h-[60vh] lg:h-[calc(100vh-5.5rem)] flex items-center justify-center text-white text-center bg-cover bg-center"
       style={{
         backgroundImage: `url(https://storage.googleapis.com/uxpilot-auth.appspot.com/dfdeaff2e4-f8782245060f665759be.png)`,
       }}

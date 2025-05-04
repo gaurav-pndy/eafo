@@ -1509,6 +1509,8 @@
 ,
 
 "preRegister": "Pre-Registration for the XI EAFO Basic Medical Courses",
+"langCode": "en",
+"name": "Name",
   "firstName": "First Name",
   "middleName": "Middle Name",
   "lastName": "Last Name",

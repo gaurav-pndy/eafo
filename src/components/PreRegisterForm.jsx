@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -13,6 +13,8 @@ const baseUrl = "http://localhost:4000";
 
 export default function PreRegisterForm({ courseId, onClose }) {
   const { t } = useTranslation();
+  const modalRef = useRef(null);
+
   const [formData, setFormData] = useState({
     firstName: "",
     middleName: "",
@@ -76,33 +78,91 @@ export default function PreRegisterForm({ courseId, onClose }) {
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="precourse-modal">
+    <div
+      onClick={(e) => {
+        if (modalRef.current && !modalRef.current.contains(e.target)) {
+          onClose();
+        }
+      }}
+      className="modal-overlay text-black text-left"
+    >
+      <div className="precourse-modal" ref={modalRef}>
         <button className="close-btn" onClick={onClose}>
           <AiOutlineClose size={24} />
         </button>
         <h2>{t("preRegister")}</h2>
         <form onSubmit={handleSubmit}>
-          {["firstName", "middleName", "lastName", "email"].map((field) => (
-            <input
-              key={field}
-              name={field}
-              type={field === "email" ? "email" : "text"}
-              placeholder={t(field)}
-              value={formData[field]}
-              onChange={handleChange}
-              required={field !== "middleName"}
-            />
-          ))}
+          <div className="name-fields">
+            <label className="field-label">{t("name")}</label>
+            <div className="name-inputs">
+              {(t("langCode") === "ru"
+                ? ["lastName", "firstName", "middleName"]
+                : ["firstName", "middleName", "lastName"]
+              ).map((field) => (
+                <div key={field} className="input-group">
+                  <input
+                    id={field}
+                    name={field}
+                    type="text"
+                    // placeholder={t(field)}
+                    value={formData[field]}
+                    onChange={handleChange}
+                    required={field !== "middleName"}
+                  />
+                  <label
+                    className="name-label text-sm text-gray-600"
+                    htmlFor={field}
+                  >
+                    {t(field)}
+                    {field !== "middleName" && (
+                      <span className="required"> *</span>
+                    )}
+                  </label>
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <div className="phone-input-wrapper">
-            <PhoneInput
-              country={"us"}
-              value={formData.phone}
-              onChange={handlePhoneChange}
-              inputProps={{ name: "phone", required: true }}
-              inputStyle={{ width: "100%" }}
-            />
+          <div className="contact-fields">
+            <div className="input-group">
+              <label htmlFor="email">
+                {t("email")}
+                <span className="required"> *</span>
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                // placeholder={t("email")}
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="input-group phone-input-wrapper">
+              <label htmlFor="phone">
+                {t("phone")}
+                <span className="required"> *</span>
+              </label>
+              <PhoneInput
+                country={"us"}
+                value={formData.phone}
+                onChange={handlePhoneChange}
+                inputProps={{ name: "phone", required: true }}
+                inputStyle={{
+                  width: "100%",
+                  height: "50px",
+                  paddingLeft: "48px",
+                  fontSize: "16px",
+                }}
+                buttonStyle={{
+                  border: "none",
+                  background: "transparent",
+                }}
+              />
+            </div>
           </div>
 
           <div className="checkboxes">

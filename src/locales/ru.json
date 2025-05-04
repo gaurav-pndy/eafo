@@ -1503,6 +1503,8 @@
   ,
 
   "preRegister": "Пре-Регистрация на XI EAFO Базовые медицинские курсы ",
+  "name": "Имя",
+  "langCode": "ru",
     "firstName": "Имя",
     "middleName": "Отчество",
     "lastName": "Фамилия",

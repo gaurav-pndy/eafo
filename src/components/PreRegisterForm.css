@@ -12,11 +12,14 @@
   }
   
   .precourse-modal {
+    overflow-y: scroll;
     background: #ffffff;
-    padding: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
     border-radius: 1rem;
-    width: 90%;
-    max-width: 500px;
+    width: 95%;
+    max-height: 95vh;
+    max-width: 900px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     position: relative;
     animation: slide-in 0.3s ease-in-out;
@@ -51,6 +54,10 @@
     font-size: 1rem;
     transition: border-color 0.3s ease;
   }
+
+  .name-inputs input{
+    margin-bottom: 2px;
+  }
   
   .precourse-modal input:focus,
   .precourse-modal .PhoneInput input:focus {
@@ -65,16 +72,18 @@
   
   .precourse-modal .checkboxes {
     margin-bottom: 1.5rem;
-    width: 100%;
+    width: 100%; 
+  
   }
   
   .precourse-modal .checkboxes label {
+   
     display: flex;
-    align-items: flex-start; /* Align items to the top */
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.7rem;
     font-size: 0.95rem;
     color: #374151;
-    line-height: 1.4;
+    line-height: 1.5;
     width: 100%;
     cursor: pointer;
     padding-left: 0; /* Remove any padding if present */
@@ -89,7 +98,7 @@
   }
   
   .precourse-modal button[type="submit"] {
-    background-color: #2563eb;
+    background-color: #1e3a8a;
     color: #fff;
     border: none;
     padding: 0.75rem;
@@ -119,3 +128,85 @@
   .close-btn:hover {
     color: #111827;
 }
+
+.name-fields {
+  margin-bottom: 1rem;
+}
+
+.field-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.name-inputs {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+@media (min-width: 768px) {
+
+  .precourse-modal {
+    padding: 2rem;
+  }
+  .name-inputs {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .input-group {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .precourse-modal input,
+  .precourse-modal .PhoneInput input,
+  .precourse-modal .country-select {
+   
+    margin-bottom: 0;
+    
+  }
+}
+
+
+.contact-fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 1rem;
+
+}
+
+@media (min-width: 768px) {
+  .contact-fields {
+    flex-direction: row;
+
+  }
+
+  .contact-fields .input-group {
+    flex: 1;
+  }
+}
+
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
