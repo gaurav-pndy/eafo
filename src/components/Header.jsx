@@ -160,7 +160,12 @@ const Header = () => {
         {/* Left: Logo & Slogan */}
         <div className="flex items-center">
           <Link to="/">
-            <img src={logo} alt="EAFO Logo" className="h-10 lg:h-11" />
+            <img
+              onClick={() => setIsMenuOpen(false)}
+              src={logo}
+              alt="EAFO Logo"
+              className="h-10 lg:h-11"
+            />
           </Link>
         </div>
 

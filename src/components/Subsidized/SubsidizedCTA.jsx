@@ -1,17 +1,27 @@
 import { useTranslation } from "react-i18next";
 import { FaPaperPlane, FaQuestion } from "react-icons/fa";
+import PreRegisterForm from "../PreRegisterForm";
+import { useState } from "react";
 
 const SubsidizedCTA = () => {
   const { t } = useTranslation();
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">{t("Subsidized.cta.title")}</h2>
-          <p className="text-gray-700 mb-8">{t("Subsidized.cta.description")}</p>
+          <h2 className="text-3xl font-bold text-blue-900 mb-6">
+            {t("Subsidized.cta.title")}
+          </h2>
+          <p className="text-gray-700 mb-8">
+            {t("Subsidized.cta.description")}
+          </p>
           <div className="flex justify-center gap-4">
-            <button className="bg-blue-900 text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition duration-300 flex items-center justify-center">
+            <button
+              onClick={() => setShowForm(true)}
+              className="bg-blue-900 text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition duration-300 flex items-center justify-center"
+            >
               <FaPaperPlane className="mr-2" />
               {t("Subsidized.cta.primary")}
             </button>
@@ -21,6 +31,12 @@ const SubsidizedCTA = () => {
             </button>
           </div>
         </div>
+        {showForm && (
+          <PreRegisterForm
+            courseId="67fb8bc722a71bd3d19d580d"
+            onClose={() => setShowForm(false)}
+          />
+        )}
       </div>
     </section>
   );

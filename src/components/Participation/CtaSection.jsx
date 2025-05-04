@@ -1,9 +1,11 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import PreRegisterForm from "../PreRegisterForm";
 
 const CtaSection = () => {
   const { t } = useTranslation();
-  const ctaData = t('participation.cta', { returnObjects: true });
+  const ctaData = t("participation.cta", { returnObjects: true });
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <section id="participation-cta" className="py-16 bg-gray-50">
@@ -14,11 +16,12 @@ const CtaSection = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {ctaData.buttons.map((button, index) => (
               <button
+                onClick={() => setShowForm(true)}
                 key={index}
                 className={`px-8 py-4 rounded-full transition duration-300 ${
-                  button.variant === 'primary'
-                    ? 'bg-blue-900 text-white hover:bg-blue-800'
-                    : 'bg-white text-blue-900 border-2 border-blue-900 hover:bg-blue-50'
+                  button.variant === "primary"
+                    ? "bg-blue-900 text-white hover:bg-blue-800"
+                    : "bg-white text-blue-900 border-2 border-blue-900 hover:bg-blue-50"
                 }`}
               >
                 {button.text}
@@ -26,6 +29,12 @@ const CtaSection = () => {
             ))}
           </div>
         </div>
+        {showForm && (
+          <PreRegisterForm
+            courseId="67fb8bc722a71bd3d19d580d"
+            onClose={() => setShowForm(false)}
+          />
+        )}
       </div>
     </section>
   );

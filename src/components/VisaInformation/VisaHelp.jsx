@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Reusable fade-in animation component
 const FadeInOnView = ({ children, delay = 0 }) => {
@@ -35,9 +36,11 @@ const VisaHelp = () => {
           </FadeInOnView>
 
           <FadeInOnView delay={0.4}>
-            <button className="bg-white text-blue-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-100 transition duration-300">
-              {t("visaHelp.contactSupport")}
-            </button>
+            <Link to={"/contact-us"}>
+              <button className="bg-white text-blue-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-100 transition duration-300">
+                {t("visaHelp.contactSupport")}
+              </button>
+            </Link>
           </FadeInOnView>
         </div>
       </div>

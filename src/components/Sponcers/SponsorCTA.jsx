@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const SponsorCTA = () => {
   const { t } = useTranslation();
@@ -22,10 +23,12 @@ const SponsorCTA = () => {
               <FontAwesomeIcon icon={faDownload} className="mr-2" />
               {buttons.download}
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-              {buttons.contact}
-            </button>
+            <Link to="/contact-us">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
+                <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                {buttons.contact}
+              </button>
+            </Link>
           </div>
         </div>
       </div>

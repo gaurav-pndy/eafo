@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import PreRegisterForm from "../PreRegisterForm";
 
 const Hero = () => {
   const { i18n, t } = useTranslation();
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <motion.section
@@ -35,12 +37,13 @@ const Hero = () => {
         <p className="text-xl md:text-3xl mb-2">{t("heroSection.location")}</p>
         <p className="text-xl md:text-3xl mb-8">{t("heroSection.dates")}</p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <Link
-            to="/register"
+          <button
+            onClick={() => setShowForm(true)}
+            // to="/register"
             className="bg-[#70ad47] text-white px-8 hover:bg-[#4f8c2a]  border border-[#70ad47] md:text-xl  py-3 rounded-full font-semibold transition-all duration-300"
           >
             {t("heroSection.button")}
-          </Link>
+          </button>
           {/* <Link
             to="/about"
             className="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#002379] transition-all duration-300"
@@ -49,6 +52,13 @@ const Hero = () => {
           </Link> */}
         </div>
       </div>
+
+      {showForm && (
+        <PreRegisterForm
+          courseId="67fb8bc722a71bd3d19d580d"
+          onClose={() => setShowForm(false)}
+        />
+      )}
     </motion.section>
   );
 };
