@@ -5,6 +5,7 @@
 "preCourses": "Pre-Course",
   "courseDescription": "Course Description",
   "venue": "Venue",
+  "accommodation": "Accommodation",
   
   "contact": "Contact",
   "whyUs": "Why Us?",
@@ -1526,7 +1527,33 @@
   
   
   
-  
+  ,
+  "venue": {
+    "title": "Venue",
+    "subtitle": "Artis Plaza",
+    "facilities": {
+  "conference": {
+    "title": "Conference Hall",
+    "desc": "The Artis Plaza conference hall in the heart of Magas is a spacious venue that can accommodate up to 200 guests. It is equipped with modern audiovisual equipment to ensure the success of your event. With on-site catering services, we provide comfortable conditions for both organizers and participants."
+  },
+  "vip": {
+    "title": "VIP Hall",
+    "desc": "The VIP hall at the Artis Plaza Hotel is a unique place where you can host any event in luxurious conditions, with a clean and spacious interior and top-level equipment. Our team of professionals is ready to offer a full range of services, including catering, video projection, sound equipment, and much more."
+  },
+  "restaurant": {
+    "title": "Restaurant",
+    "desc": "The Artis Plaza Restaurant is an exquisite venue in the heart of Magas where culinary mastery meets elegant ambiance. Located on the sixth floor of the hotel, the restaurant offers national and European cuisine prepared with special attention to detail. Guests can enjoy breakfast, lunch, and dinner in a cozy setting with views of the city."
+  },
+  "features": {
+    "wifi": "Free Wi-Fi",
+    "service": "Professional Service",
+    "environment": "Comfortable Learning Environment"
+  }
+},
+"howToFind": "How to Find",
+"address": "Magas, Idris Zayzikov Avenue, building 6"
+
+  }
     
     
    

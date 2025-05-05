@@ -72,11 +72,10 @@ const Header = () => {
         { sectionId: "reviews", label: t("header.reviews") },
         { label: t("header.organizations"), path: "/organizations" },
         { label: t("header.eafo"), path: "/about" },
+        { label: t("header.venue"), path: "/venue" },
+        { label: t("header.accommodation"), path: "/accomodation" },
         { sectionId: "faq", label: t("header.faq") },
         { label: t("header.contact"), path: "/contact-us" },
-        { label: t("header.contact"), path: "/contact-us" },
-        { label: t("header.venue"), path: "/convenue" },
-        { label: t("header.accomodation"), path: "/conaccomodation" },
       ],
     },
 
