@@ -132,12 +132,12 @@
 
 @media (min-width: 1280px) and (max-width: 1380px) {
   .nav-class-ru {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     gap: 1rem;
     /* add any other custom styles here */
   }
   .nav-class {
-    font-size: 0.87rem;
+    font-size: 0.9rem;
     gap: 1rem;
     /* add any other custom styles here */
   }

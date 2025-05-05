@@ -175,8 +175,8 @@ const Header = () => {
         <nav
           className={`hidden  xl:flex text-gray-800 font-medium ${
             selectedLang === "ru"
-              ? "text-[0.84rem] gap-4.5 nav-class-ru"
-              : "text-[0.95rem] gap-5 nav-class"
+              ? "text-[0.84rem] gap-7 nav-class-ru"
+              : "text-[0.95rem] gap-8 nav-class"
           }`}
         >
           {navItems.map((item, idx) => (
@@ -229,44 +229,25 @@ const Header = () => {
             className="relative  hidden md:flex gap-1 md:gap-2 items-center z-30"
             ref={dropdownRef}
           >
-            <FaGlobe className="md:text-3xl text-gray-800" />
-            <div
-              className="relative border border-gray-800 rounded-lg "
-              ref={langDropdownRef}
+            {/* <FaGlobe className="md:text-3xl text-gray-800" /> */}
+            <button
+              className="cursor-pointer border border-gray-800 font-semibold md:text-xl xl:text-base px-3 py-1 rounded-lg flex items-center gap-2"
+              onClick={() =>
+                changeLanguage(selectedLang === "ru" ? "en" : "ru")
+              }
             >
-              <button
-                className="cursor-pointer border font-semibold md:text-xl xl:text-base px-2 py-1 rounded-lg flex items-center gap-2"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-              >
-                {languages.find((lang) => lang.code === selectedLang)?.name}
-                <img
-                  src={
-                    languages.find((lang) => lang.code === selectedLang)?.flag
-                  }
-                  alt="Flag"
-                  className="w-3 md:w-4 h-3 "
-                />
-                <IoIosArrowDown className="text-sm" />
-              </button>
-              {dropdownOpen && (
-                <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
-                  {languages.map((lang) => (
-                    <li
-                      key={lang.code}
-                      className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer md:text-base"
-                      onClick={() => changeLanguage(lang.code)}
-                    >
-                      {lang.name}
-                      <img
-                        src={lang.flag}
-                        className="w-3 md:w-4 h-3 "
-                        alt={`${lang.name} Flag`}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+              {selectedLang === "ru" ? "English" : "Русский"}
+              <img
+                src={
+                  languages.find(
+                    (lang) =>
+                      lang.code === (selectedLang === "ru" ? "en" : "ru")
+                  )?.flag
+                }
+                alt="Flag"
+                className="w-4 h-3"
+              />
+            </button>
           </div>
 
           <div className="relative" ref={userDropdownRef}>
@@ -323,42 +304,25 @@ const Header = () => {
                 className="relative mb-5 md:hidden flex justify-end items-center z-30"
                 ref={dropdownRef}
               >
-                <FaGlobe className="text-xl text-gray-800" />
-                <div className="relative" ref={langDropdownRef}>
-                  <button
-                    className="cursor-pointer border font-semibold text-lg  px-2 py-1 rounded-lg flex items-center gap-2"
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                  >
-                    {languages.find((lang) => lang.code === selectedLang)?.name}
-                    <img
-                      src={
-                        languages.find((lang) => lang.code === selectedLang)
-                          ?.flag
-                      }
-                      alt="Flag"
-                      className="w-4 h-3 "
-                    />
-                    <IoIosArrowDown className="text-sm" />
-                  </button>
-                  {dropdownOpen && (
-                    <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
-                      {languages.map((lang) => (
-                        <li
-                          key={lang.code}
-                          className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer md:text-base"
-                          onClick={() => changeLanguage(lang.code)}
-                        >
-                          {lang.name}
-                          <img
-                            src={lang.flag}
-                            className="w-4 h-3 "
-                            alt={`${lang.name} Flag`}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
+                {/* <FaGlobe className="text-xl text-gray-800" /> */}
+                <button
+                  className="cursor-pointer border border-gray-800 font-semibold md:text-xl xl:text-base px-3 py-1 rounded-lg flex items-center gap-2"
+                  onClick={() =>
+                    changeLanguage(selectedLang === "ru" ? "en" : "ru")
+                  }
+                >
+                  {selectedLang === "ru" ? "English" : "Русский"}
+                  <img
+                    src={
+                      languages.find(
+                        (lang) =>
+                          lang.code === (selectedLang === "ru" ? "en" : "ru")
+                      )?.flag
+                    }
+                    alt="Flag"
+                    className="w-4 h-3"
+                  />
+                </button>
               </div>
               {navItems.map((item) => (
                 <div key={item.label}>
