@@ -1554,7 +1554,42 @@
 "address": "Magas, Idris Zayzikov Avenue, building 6"
 
   }
-    
+    ,
+
+    "accommodation": {
+      "hero": "Accommodation",
+    "smartHotel": {
+    "title": "Smart Hotel",
+    "description": "Smart Hotel 'Magas' offers a stylish and tech-savvy approach to accommodation. The hotel is ideal for both individual guests and groups, including students and youth delegations. The rooms are designed in a modern style and equipped with everything needed for a comfortable stay. The hotel also offers convenient workspaces, a hammam, and a lounge area.",
+    "features": {
+      "cozy": "Cozy rooms and studios",
+      "modern": "Modern design",
+      "wifi": "Free Wi-Fi",
+      "spa": "Hammam and lounge"
+    },
+    "tabs": {
+      "standard": "Standard double",
+      "twin": "Standard twin",
+      "studio": "Studio \"Campus\""
+    }
+  },
+  "businessHotel": {
+    "title": "Business Hotel",
+    "description": "Business Hotel 'Magas' is a modern four-star hotel offering a high level of comfort and service. The hotel offers rooms of various categories — from standard to luxury. Amenities include a restaurant with diverse cuisine, a fitness center, sauna, and conference rooms.",
+    "features": {
+      "spacious": "Spacious rooms",
+      "wifi": "Free Wi-Fi",
+      "breakfast": "Breakfast and restaurant"
+    },
+    "tabs": {
+      "standard": "Standard",
+      "semiSuite": "Semi-Suite",
+      "luxury": "Luxury",
+      "apartment": "Apartments"
+    }
+  },
+  "location": "Location"
+    }
     
    
     
