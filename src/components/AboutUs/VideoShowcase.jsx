@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const VideoShowcase = () => {
   const { t } = useTranslation();
@@ -8,12 +8,12 @@ const VideoShowcase = () => {
   const [sliderStart, setSliderStart] = useState(0); // For sliding effect
 
   const videos = [
-    { id: 'dQw4w9WgXcQ', title: t('video.title1') },
-    { id: 'VIDEO_ID_2', title: t('video.title2') },
-    { id: 'VIDEO_ID_3', title: t('video.title3') },
-    { id: 'VIDEO_ID_4', title: t('video.title4') },
-    { id: 'VIDEO_ID_5', title: t('video.title5') },
-    { id: 'VIDEO_ID_6', title: t('video.title6') },
+    { id: "qZo1EijVMxY", title: t("video.title1") },
+    { id: "UoHnhj7Gzf4", title: t("video.title2") },
+    { id: "hwZi2iLTlu0", title: t("video.title3") },
+    { id: "c_4SK4thQ3w", title: t("video.title4") },
+    { id: "o1AHhQyC-0A", title: t("video.title5") },
+    { id: "wQe390RRLMs", title: t("video.title6") },
   ];
 
   const visibleCount = 3; // Thumbnails to show at once
@@ -21,16 +21,16 @@ const VideoShowcase = () => {
   const handleSlide = (direction) => {
     const total = videos.length;
     const nextIndex =
-      direction === 'next'
+      direction === "next"
         ? (activeIndex + 1) % total
         : (activeIndex - 1 + total) % total;
 
     setActiveIndex(nextIndex);
 
     // Update slider window if necessary
-    if (direction === 'next' && nextIndex >= sliderStart + visibleCount) {
+    if (direction === "next" && nextIndex >= sliderStart + visibleCount) {
       setSliderStart((prev) => (prev + 1) % total);
-    } else if (direction === 'prev' && nextIndex < sliderStart) {
+    } else if (direction === "prev" && nextIndex < sliderStart) {
       setSliderStart((prev) => (prev - 1 + total) % total);
     }
   };
@@ -38,7 +38,9 @@ const VideoShowcase = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">{t('video.title')}</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          {t("video.title")}
+        </h2>
 
         {/* Main Video */}
         <div className="aspect-video rounded-xl overflow-hidden shadow-lg mb-8 bg-gray-100">
@@ -59,7 +61,7 @@ const VideoShowcase = () => {
         <div className="relative">
           {/* Left Arrow */}
           <button
-            onClick={() => handleSlide('prev')}
+            onClick={() => handleSlide("prev")}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-blue-100"
           >
             <FiChevronLeft className="w-6 h-6 text-gray-700" />
@@ -70,7 +72,9 @@ const VideoShowcase = () => {
             <div
               className="flex transition-transform duration-500 gap-4"
               style={{
-                transform: `translateX(-${sliderStart * (100 / visibleCount)}%)`,
+                transform: `translateX(-${
+                  sliderStart * (100 / visibleCount)
+                }%)`,
                 width: `${(videos.length * 100) / visibleCount}%`,
               }}
             >
@@ -80,8 +84,8 @@ const VideoShowcase = () => {
                   onClick={() => setActiveIndex(index)}
                   className={`w-full max-w-[calc(100%/${visibleCount})] cursor-pointer group transition-all ${
                     index === activeIndex
-                      ? 'scale-105  pt-2 bg-white'
-                      : 'opacity-80 hover:opacity-100'
+                      ? "scale-105  pt-2 bg-white"
+                      : "opacity-80 hover:opacity-100"
                   } rounded-lg`}
                 >
                   <div className="aspect-video overflow-hidden rounded-lg shadow-sm relative">
@@ -109,8 +113,8 @@ const VideoShowcase = () => {
                   <p
                     className={`mt-2 text-sm text-center ${
                       index === activeIndex
-                        ? 'font-semibold text-blue-600'
-                        : 'text-gray-700'
+                        ? "font-semibold text-blue-600"
+                        : "text-gray-700"
                     }`}
                   >
                     {video.title}
@@ -122,7 +126,7 @@ const VideoShowcase = () => {
 
           {/* Right Arrow */}
           <button
-            onClick={() => handleSlide('next')}
+            onClick={() => handleSlide("next")}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-blue-100"
           >
             <FiChevronRight className="w-6 h-6 text-gray-700" />
