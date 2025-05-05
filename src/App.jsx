@@ -24,6 +24,7 @@ import ProgramPage from "./pages/ProgramPage";
 import PricePage from "./pages/PricePage";
 import SubsidizedPage from "./pages/SubsidizedPage";
 import Accomodation from "./pages/Accomodation";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   useEffect(() => {
@@ -36,6 +37,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
         },
         {
           path: "/experts",

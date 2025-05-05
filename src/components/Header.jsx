@@ -71,7 +71,7 @@ const Header = () => {
         { label: t("header.gallery"), path: "/gallery" },
         { sectionId: "reviews", label: t("header.reviews") },
         { label: t("header.organizations"), path: "/organizations" },
-        { label: t("header.eafo"), path: "/" },
+        { label: t("header.eafo"), path: "/about" },
         { sectionId: "faq", label: t("header.faq") },
         { label: t("header.contact"), path: "/contact-us" },
         { label: t("header.contact"), path: "/contact-us" },
