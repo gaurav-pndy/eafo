@@ -1509,7 +1509,7 @@
 }
 ,
 
-"preRegister": "Pre-Registration for the XI EAFO Basic Medical Courses",
+"preRegister": "Registration for the XI EAFO Basic Medical Courses",
 "langCode": "en",
 "name": "Name",
   "firstName": "First Name",
@@ -1517,9 +1517,9 @@
   "lastName": "Last Name",
   "email": "Email",
   "phone": "Phone",
-  "agreement": "I agree with the <a class='text-blue-700 hover:underline' href='https://workdrive.zohopublic.in/file/j8suq7fb67d6834534b84b03fb2b4a3b6d98b' target='_blank'> Terms of the Agreement </a> and the <a class='text-blue-700 hover:underline' href='https://workdrive.zohopublic.in/file/j8suq1a82cf79da1e4b42bc88d552385241bc' target='_blank'> Privacy Policy </a>",
-  "personalData": "I give my <a class='text-blue-700 hover:underline' href='https://workdrive.zoho.in/file/j8suq0952ad6e6ae6448f9da5bff9942273fc' target='_blank'> Consent </a> to the processing of my personal data",
-  "promotions": "I give my <a class='text-blue-700 hover:underline' href='https://workdrive.zohopublic.in/file/j8suq7b0818332ca84edeb20fc5ea14d00a23' target='_blank'> Consent </a> to receive promotional materials",
+  "agreement": "I agree with the <a class='text-blue-700 hover:underline' href='https://workdrive.zohopublic.in/file/u89yj18678a8fa5034857ab19d7b87e95aa1e' target='_blank'> Terms of the Agreement </a> and the <a class='text-blue-700 hover:underline' href='https://workdrive.zohopublic.in/file/u89yj99187d9c61fb40638c9f06322df0698c' target='_blank'> Privacy Policy </a>",
+  "personalData": "I give my <a class='text-blue-700 hover:underline' href='https://workdrive.zohopublic.in/file/u89yj270d1f43f0c14b6c969ef4b20f0aa61a' target='_blank'> Consent </a> to the processing of my personal data",
+  "promotions": "I give my <a class='text-blue-700 hover:underline' href='https://workdrive.zohopublic.in/file/u89yjc4c658f548c0406c8dac6387b9b907d8' target='_blank'> Consent </a> to receive promotional materials",
   "submit": "Submit",
   "pleaseAgree": "Please agree to the required terms before submitting.",
   "formError": "Error submitting form",
