@@ -246,7 +246,7 @@ const PhotoGallery = ({ onImageClick }) => {
             <img
               src={img.src}
               alt={img.alt}
-              className="w-full h-64 object-cover rounded-lg"
+              className="w-full h-40 md:h-64 object-cover rounded-lg"
             />
             <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/50 transition-all duration-300 rounded-lg flex items-center justify-center">
               <i className="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-2xl"></i>
