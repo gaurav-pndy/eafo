@@ -110,19 +110,132 @@ const photos = [
     src: "/gallery/photo27.jpg",
     alt: "photo27",
   },
+  {
+    src: "/gallery/photo28.jpg",
+    alt: "photo28",
+  },
+  {
+    src: "/gallery/photo29.jpg",
+    alt: "photo29",
+  },
+  {
+    src: "/gallery/photo30.jpg",
+    alt: "photo30",
+  },
+  {
+    src: "/gallery/photo31.jpg",
+    alt: "photo31",
+  },
+  {
+    src: "/gallery/photo32.jpg",
+    alt: "photo32",
+  },
+  {
+    src: "/gallery/photo33.jpg",
+    alt: "photo33",
+  },
+  {
+    src: "/gallery/photo34.jpg",
+    alt: "photo34",
+  },
+  {
+    src: "/gallery/photo35.jpg",
+    alt: "photo35",
+  },
+  {
+    src: "/gallery/photo36.jpg",
+    alt: "photo36",
+  },
+  {
+    src: "/gallery/photo37.jpg",
+    alt: "photo37",
+  },
+  {
+    src: "/gallery/photo38.jpg",
+    alt: "photo38",
+  },
+  {
+    src: "/gallery/photo39.jpg",
+    alt: "photo39",
+  },
+  {
+    src: "/gallery/photo40.jpg",
+    alt: "photo40",
+  },
+  {
+    src: "/gallery/photo41.jpg",
+    alt: "photo41",
+  },
+  {
+    src: "/gallery/photo42.jpg",
+    alt: "photo42",
+  },
+  {
+    src: "/gallery/photo43.jpg",
+    alt: "photo43",
+  },
+  {
+    src: "/gallery/photo44.jpg",
+    alt: "photo44",
+  },
+  {
+    src: "/gallery/photo45.jpg",
+    alt: "photo45",
+  },
+  {
+    src: "/gallery/photo46.jpg",
+    alt: "photo46",
+  },
+  {
+    src: "/gallery/photo47.jpg",
+    alt: "photo47",
+  },
+  {
+    src: "/gallery/photo48.jpg",
+    alt: "photo48",
+  },
+  {
+    src: "/gallery/photo49.jpg",
+    alt: "photo49",
+  },
+  {
+    src: "/gallery/photo50.jpg",
+    alt: "photo50",
+  },
+  {
+    src: "/gallery/photo51.jpg",
+    alt: "photo51",
+  },
+  {
+    src: "/gallery/photo52.jpg",
+    alt: "photo52",
+  },
+  {
+    src: "/gallery/photo53.jpg",
+    alt: "photo53",
+  },
+  {
+    src: "/gallery/photo54.jpg",
+    alt: "photo54",
+  },
+  {
+    src: "/gallery/photo55.jpg",
+    alt: "photo55",
+  },
 ];
 
 const PhotoGallery = ({ onImageClick }) => {
   const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
 
-  const visiblePhotos = showAll ? photos : photos.slice(0, 4);
+  const visiblePhotos = showAll ? photos : photos.slice(0, 8);
 
   return (
     <div id="photo-gallery" className="mb-16">
       <h2 className="text-3xl font-bold text-blue-900 mb-8">
         {t("gallery.title")}
       </h2>
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {visiblePhotos.map((img, idx) => (
           <div
@@ -141,17 +254,20 @@ const PhotoGallery = ({ onImageClick }) => {
           </div>
         ))}
       </div>
-      {!showAll && (
-        <div className="text-center mt-8">
-          <button
-            onClick={() => setShowAll(true)}
-            className="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition duration-300"
-          >
-            <i className="fa-solid fa-images mr-2"></i>
-            {t("gallery.button")}
-          </button>
-        </div>
-      )}
+
+      <div className="text-center mt-8">
+        <button
+          onClick={() => setShowAll((prev) => !prev)}
+          className="bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition duration-300"
+        >
+          <i
+            className={`fa-solid ${
+              showAll ? "fa-chevron-up" : "fa-images"
+            } mr-2`}
+          />
+          {showAll ? t("gallery.showLess") : t("gallery.button")}
+        </button>
+      </div>
     </div>
   );
 };

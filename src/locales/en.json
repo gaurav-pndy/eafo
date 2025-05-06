@@ -1019,7 +1019,8 @@
   },
   "gallery": {
     "title": "Photo Gallery",
-    "button": "View All Photos"
+    "button": "View All Photos",
+     "showLess": "Show Less"
   },
 
 
