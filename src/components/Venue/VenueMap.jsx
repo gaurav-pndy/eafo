@@ -11,13 +11,20 @@ const VenueMap = () => {
         </h2>
         <p className="text-gray-600 mt-1">{t("venue.address")}</p>
       </div>
-      <div className="w-full h-[400px] rounded-xl shadow-lg overflow-hidden">
+      <div className="w-full hidden md:block h-[400px] rounded-xl shadow-lg overflow-hidden">
         <iframe
-          src="https://yandex.com/map-widget/v1/?ll=44.805307%2C43.172402&z=16.6&oid=136974690080"
-          width="100%"
+          src="https://yandex.com/map-widget/v1/?um=constructor%3A64bb7ff6a17cb7a39367f1452beab1d109e0b192c78b87c4dd18a6fa23ffddf4&amp;source=constructor"
+          width="1080"
           height="400"
           frameborder="0"
-          allowfullscreen
+        ></iframe>
+      </div>
+      <div className="w-full md:hidden h-[400px] rounded-xl shadow-lg overflow-hidden">
+        <iframe
+          src="https://yandex.com/map-widget/v1/?um=constructor%3A64bb7ff6a17cb7a39367f1452beab1d109e0b192c78b87c4dd18a6fa23ffddf4&amp;source=constructor"
+          width="394"
+          height="397"
+          frameborder="0"
         ></iframe>
       </div>
     </section>
