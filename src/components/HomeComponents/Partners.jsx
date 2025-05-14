@@ -70,12 +70,11 @@ const Partners = () => {
       }}
       className="w-full  lg:mt-5 py-12 bg-white "
     >
-      <div className="container mx-auto  md:px-8 lg:px-20">
+      <div className="container mx-auto  ">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
           {t("ourPartners")}
         </h2>
 
-        {/* Top Row */}
         <div className="">
           <Marquee speed={50} gradient={false} pauseOnHover={true}>
             {partners.map((partner, index) => (

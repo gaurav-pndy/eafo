@@ -1,90 +1,86 @@
+import React, { useState } from "react";
+import { PiStudentBold } from "react-icons/pi";
+import { FaBookBookmark } from "react-icons/fa6";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
-
-import { FaBone, FaDna, FaMicroscope, FaUsers, FaXRay } from "react-icons/fa";
-import { PiTestTubeFill } from "react-icons/pi";
-import { FaHospital, FaChartLine } from "react-icons/fa6";
-import { motion } from "framer-motion";
-
-const courseItems = [
-  {
-    icon: <FaMicroscope />,
-    title: "course_content.clinicalOncology",
-    description: "course_content.clinicalOncologyDesc",
-  },
-  {
-    icon: <FaDna />,
-    title: "course_content.molecularDiagnosis",
-    description: "course_content.molecularDiagnosisDesc",
-  },
-  {
-    icon: <FaHospital />,
-    title: "course_content.oncohematology",
-    description: "course_content.oncohematologyDesc",
-  },
-  {
-    icon: <FaBone />,
-    title: "course_content.boneTumors",
-    description: "course_content.boneTumorsDesc",
-  },
-  {
-    icon: <FaXRay />,
-    title: "course_content.radiologicalDiagnostics",
-    description: "course_content.radiologicalDiagnosticsDesc",
-  },
-  {
-    icon: <FaUsers />,
-    title: "course_content.clinicalDemonstrations",
-    description: "course_content.clinicalDemonstrationsDesc",
-  },
-  {
-    icon: <FaDna />,
-    title: "course_content.cancerBiology",
-    description: "course_content.cancerBiologyDesc",
-  },
-  {
-    icon: <PiTestTubeFill />,
-    title: "course_content.hematology",
-    description: "course_content.hematologyDesc",
-  },
-  {
-    icon: <FaChartLine />,
-    title: "course_content.careerDevelopment",
-    description: "course_content.careerDevelopmentDesc",
-  },
-];
 
 const CourseContent = () => {
   const { t } = useTranslation();
 
+  const [open, setOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState([]);
+  const [courseTitle, setCourseTitle] = useState("");
+
+  const oncoTopics = t("course_content.list", { returnObjects: true });
+
+  const handleOpenDialog = (course, title) => {
+    setSelectedCourse(course);
+    setCourseTitle(title);
+    setOpen(true);
+  };
+
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ amount: 0.3, once: true }}
-      transition={{
-        duration: 0.8,
-        ease: "easeInOut",
-      }}
-      className="py-16 bg-gray-50"
-    >
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
-          {t("course_content.courseOverview")}
+    <div className="bg-gray-100 p-10 py-16 rounded-xl">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl mb-10 font-bold">
+          {t("course_content.heading")}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-10">
-          {courseItems.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-md transition"
-            >
-              <div className="mb-2 text-[#1e3a8a] text-4xl">{item.icon}</div>
-              <h3 className="font-semibold text-lg mb-1">{t(item.title)}</h3>
-              <p className="text-sm text-gray-700">{t(item.description)}</p>
-            </div>
-          ))}
+
+        <div className="flex space-x-10 text-[#1e3a8a]">
+          {/* Oncology */}
+          <div
+            onClick={() =>
+              handleOpenDialog(oncoTopics, "По онкологии (клиническая)")
+            }
+            className="cursor-pointer flex items-center space-x-4 hover:bg-gray-200 p-4 rounded-lg"
+          >
+            <PiStudentBold className="text-3xl " />
+            <span className=" font-semibold ">
+              {t("course_content.button1")}
+            </span>
+          </div>
+
+          {/* Oncopathology */}
+          <div
+            onClick={() =>
+              handleOpenDialog(
+                oncoTopics,
+                "По онкопатологии (цито-, гисто- и молекулярно-генетические методы диагностики опухолей)"
+              )
+            }
+            className="cursor-pointer flex items-center space-x-4 hover:bg-gray-200 p-4 rounded-lg"
+          >
+            <FaBookBookmark className="text-3xl " />
+            <span className=" font-semibold ">
+              {t("course_content.button2")}
+            </span>
+          </div>
         </div>
+
+        {/* Modal */}
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogContent className="!max-w-4xl">
+            {/* <DialogHeader>
+              <DialogTitle>{courseTitle}</DialogTitle>
+            </DialogHeader> */}
+            <div className="text-lg text-gray-700 space-y-2 mt-4">
+              {selectedCourse?.map((topic, index) => (
+                <div key={index} className="flex items-start space-x-2">
+                  <span className=" font-bold"> Тема {index + 1}.</span>
+                  <span>{topic}</span>
+                </div>
+              ))}
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
-    </motion.section>
+    </div>
   );
 };
 

@@ -1,13 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-  FaCheckCircle,
-  FaUserMd,
-  FaUserGraduate,
-  FaBriefcaseMedical,
-  FaMicroscope,
-} from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaArrowUp, FaChartLine } from "react-icons/fa";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -17,13 +11,10 @@ const AboutSection = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ amount: 0.3, once: true }}
-      transition={{
-        duration: 0.8,
-        ease: "easeInOut",
-      }}
-      className="bg-white py-12 px-4 md:px-6 lg:px-10 max-w-6xl mx-auto"
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      className="py-16 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto"
     >
-      <div className="text-center mb-6 lg:mb-10">
+      <div className="text-center mb-10">
         {/* <p className="text-sm text-[#002379] font-semibold">
           {t("about_course.organized_by")}
         </p> */}
@@ -31,57 +22,94 @@ const AboutSection = () => {
           {t("about_course.about_XI")}
         </h2>
       </div>
+      {/* Grid with varying tile heights */}
+      <div className="grid grid-cols-2 md:grid-cols-4  items-end gap-4">
+        {/* Tile 1 - Short height */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="bg-[#e9f2f7] p-3 lg:p-6 rounded-3xl flex flex-col justify-between h-full md:h-52 lg:h-64"
+        >
+          <div>
+            <h3 className="text-5xl  lg:text-7xl font-bold text-gray-800 mb-2">
+              {t("about_course.stat_1.number")}
+            </h3>
+            <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-lg">
+              {t("about_course.stat_1.desc")}
+            </p>
+          </div>
+        </motion.div>
 
-      <div className="grid gap-10 md:grid-cols-2">
-        {/* Program Highlights */}
-        <div className="bg-gray-50 py-6 px-2 lg:px-4 rounded-lg shadow-sm">
-          <h3 className="text-xl lg:text-2xl font-semibold mb-4">
-            {t("about_course.program_highlights")}
-          </h3>
-          <ul className="space-y-5  text-gray-700 text-sm md:text-base">
-            <li className="flex items-start gap-2">
-              <FaCheckCircle className="text-[#002379] mt-1" />
-              {t("about_course.highlight_1")}
-            </li>
-            <li className="flex items-start gap-2">
-              <FaCheckCircle className="text-[#002379] mt-1" />
-              {t("about_course.highlight_2")}
-            </li>
-            <li className="flex items-start gap-2">
-              <FaCheckCircle className="text-[#002379] mt-1" />
-              {t("about_course.highlight_3")}
-            </li>
-            <li className="flex items-start gap-2">
-              <FaCheckCircle className="text-[#002379] mt-1" />
-              {t("about_course.highlight_4")}
-            </li>
-          </ul>
-        </div>
+        {/* Tile 2 - Medium height */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="bg-[#d5e7f4] p-3 lg:p-6 rounded-3xl md:h-44 lg:h-56"
+        >
+          <div>
+            <h3 className="text-5xl  lg:text-7xl font-bold text-gray-800 mb-2">
+              {t("about_course.stat_2.number")}
+            </h3>
+            <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-lg">
+              {t("about_course.stat_2.desc")}
+            </p>
+          </div>
+        </motion.div>
 
-        {/* Who Should Attend */}
-        <div className="bg-gray-50 py-6 px-2 lg:px-4 rounded-lg shadow-sm">
-          <h3 className="text-xl lg:text-2xl font-semibold mb-4">
-            {t("about_course.who_should_attend")}
-          </h3>
-          <ul className="space-y-5 text-gray-700 text-sm md:text-base">
-            <li className="flex items-start gap-2">
-              <FaUserMd className="text-[#002379] mt-1" />
-              {t("about_course.attendee_1")}
-            </li>
-            <li className="flex items-start gap-2">
-              <FaUserGraduate className="text-[#002379] mt-1" />
-              {t("about_course.attendee_2")}
-            </li>
-            <li className="flex items-start gap-2">
-              <FaBriefcaseMedical className="text-[#002379] mt-1" />
-              {t("about_course.attendee_3")}
-            </li>
-            <li className="flex items-start gap-2">
-              <FaMicroscope className="text-[#002379] mt-1" />
-              {t("about_course.attendee_4")}
-            </li>
-          </ul>
-        </div>
+        {/* Tile 3 - Medium height */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="bg-[#e7f3f5] p-3 lg:p-6 rounded-3xl flex flex-col  items-center h-full md:h-60 lg:h-72"
+        >
+          <div>
+            <h3 className="text-5xl  lg:text-7xl font-bold text-gray-800 mb-2">
+              {t("about_course.stat_3.number")}
+            </h3>
+            <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-lg">
+              {t("about_course.stat_3.desc")}
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Tile 4 - Tall height */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="bg-[#bddcee] p-3 lg:p-6 rounded-3xl md:h-72 lg:h-80"
+        >
+          <div className="flex flex-col h-full justify-between">
+            <div>
+              <div>
+                {/* <h3 className="text-3xl font-bold text-gray-800">+600</h3> */}
+                <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-lg mt-2 mb-2">
+                  {t("about_course.stat_4")}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 flex justify-end">
+              <div className="w-24 h-20 md:h-24 bg-white rounded-lg relative overflow-hidden shadow-md">
+                <div className="absolute inset-0 flex justify-center items-center">
+                  <img
+                    src="/api/placeholder/100/140"
+                    alt="Certificate"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 flex justify-center p-1">
+                  <div className="text-xs bg-white bg-opacity-80 px-2 py-0.5 rounded">
+                    ФОТО / Foto
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

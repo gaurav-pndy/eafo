@@ -3,14 +3,6 @@ import { useTranslation } from "react-i18next";
 
 const photos = [
   {
-    src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d33bf92459-b8611a49734dc1f87961.png",
-    alt: "photo1",
-  },
-  {
-    src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/bd3e178f31-7bc5fd64f55781ad5970.png",
-    alt: "photo2",
-  },
-  {
     src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d34bd49d02-9ab1808d660081c395e5.png",
     alt: "photo3",
   },

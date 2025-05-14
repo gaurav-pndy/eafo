@@ -172,7 +172,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <nav
+        {/* <nav
           className={`hidden  xl:flex text-gray-800 font-medium ${
             selectedLang === "ru"
               ? "text-[0.84rem] gap-7 nav-class-ru"
@@ -191,9 +191,7 @@ const Header = () => {
                 className="hover:text-purple-600 cursor-pointer flex items-center gap-1"
               >
                 {item.label}
-                {/* {item.subItems && (
-                  <ChevronDown className="w-4 h-4 transition-transform duration-200 ease-in-out transform" />
-                )} */}
+               
               </button>
 
               {item.subItems && (
@@ -221,15 +219,13 @@ const Header = () => {
               )}
             </div>
           ))}
-        </nav>
+        </nav> */}
 
         <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
-          {/* Language Dropdown */}
           <div
             className="relative  hidden md:flex gap-1 md:gap-2 items-center z-30"
             ref={dropdownRef}
           >
-            {/* <FaGlobe className="md:text-3xl text-gray-800" /> */}
             <button
               className="cursor-pointer border border-gray-800 font-semibold md:text-xl xl:text-base px-3 py-1 rounded-lg flex items-center gap-2"
               onClick={() =>
@@ -278,7 +274,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="xl:hidden pl-4 md:pl-0"
+            className="pl-4 md:pl-0"
           >
             {isMenuOpen ? (
               <X className="h-10 w-10" />
@@ -297,7 +293,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="xl:hidden absolute w-full top-18 md:top-20 z-20 left-0 bg-white px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl pb-10"
+            className=" absolute w-full top-18 md:top-20 z-20 left-0 bg-white px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl pb-10"
           >
             <nav className="flex text-lg flex-col gap-6 text-gray-800 font-medium">
               <div

@@ -14,6 +14,8 @@ import ForumExperts from "../components/HomeComponents/ForumExperts";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Timer from "@/components/HomeComponents/Timer";
+import WhatAwaitsYou from "@/components/HomeComponents/WhatAwaitsYou";
+import ForWhomCourse from "@/components/HomeComponents/ForWhomCourse";
 const Home = () => {
   const location = useLocation();
 
@@ -36,14 +38,17 @@ const Home = () => {
       <AboutSection />
       <CourseContent />
       <CourseSchedule />
-      <ForumExperts />
+      {/* <ForumExperts /> */}
       <WhyUs />
       <Prizes />
+      <WhatAwaitsYou />
+      <ForWhomCourse />
       <FaqSection />
       <Testimonials />
-      <Partners />
-      <Outcome />
+
+      {/* <Outcome /> */}
       <AboutEAFO />
+      <Partners />
     </div>
   );
 };
