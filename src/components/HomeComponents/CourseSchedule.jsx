@@ -7,7 +7,7 @@ const CourseSchedule = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full py-32 flex justify-center items-center mx-auto bg-gray-100   overflow-hidden">
+    <div className="w-full py-16 lg:py-32 flex justify-center items-center mx-auto bg-gray-100   overflow-hidden">
       <div className="p-4 lg:p-10 lg:pt-24 lg:w-[90%] xl:w-[70%] flex flex-col rounded-[10%] bg-white relative">
         {/* Calendar animation/image */}
         <div className="flex lg:absolute -top-25 -left-6  mx-auto">

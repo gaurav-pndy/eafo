@@ -26,13 +26,13 @@ const CourseContent = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-10 py-16 rounded-xl">
+    <div className="bg-gray-100 px-4 lg:px-10 py-16 rounded-xl">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl mb-10 font-bold">
+        <h2 className="text-2xl lg:text-4xl mb-10 font-bold">
           {t("course_content.heading")}
         </h2>
 
-        <div className="flex space-x-10 text-[#1e3a8a]">
+        <div className="flex flex-col lg:flex-row lg:space-x-10 text-[#1e3a8a]">
           {/* Oncology */}
           <div
             onClick={() =>
@@ -54,9 +54,9 @@ const CourseContent = () => {
                 "По онкопатологии (цито-, гисто- и молекулярно-генетические методы диагностики опухолей)"
               )
             }
-            className="cursor-pointer flex items-center space-x-4 hover:bg-gray-200 p-4 rounded-lg"
+            className="cursor-pointer flex items-start space-x-4 hover:bg-gray-200 p-4 rounded-lg"
           >
-            <FaBookBookmark className="text-3xl " />
+            <FaBookBookmark className="text-4xl " />
             <span className=" font-semibold ">
               {t("course_content.button2")}
             </span>
@@ -69,11 +69,10 @@ const CourseContent = () => {
             {/* <DialogHeader>
               <DialogTitle>{courseTitle}</DialogTitle>
             </DialogHeader> */}
-            <div className="text-lg text-gray-700 space-y-2 mt-4">
+            <div className="lg:text-lg text-gray-700  space-y-2 mt-4">
               {selectedCourse?.map((topic, index) => (
-                <div key={index} className="flex items-start space-x-2">
-                  <span className=" font-bold"> Тема {index + 1}.</span>
-                  <span>{topic}</span>
+                <div key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: topic }}></span>
                 </div>
               ))}
             </div>
