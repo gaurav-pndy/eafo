@@ -222,7 +222,7 @@ const Header = () => {
         </nav> */}
 
         <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
-          <div
+          {/* <div
             className="relative  hidden md:flex gap-1 md:gap-2 items-center z-30"
             ref={dropdownRef}
           >
@@ -244,7 +244,7 @@ const Header = () => {
                 className="w-4 h-3"
               />
             </button>
-          </div>
+          </div> */}
 
           <div className="relative" ref={userDropdownRef}>
             <button
