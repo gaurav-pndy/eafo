@@ -67,42 +67,36 @@ const Header = () => {
 
     // subItems: [
     // { label: t("header.awards"), path: "/awards" },
-    { label: t("header.gallery"), path: "/gallery" },
+    // { label: t("header.gallery"), path: "/gallery" },
     // { sectionId: "reviews", label: t("header.reviews") },
-    { label: t("header.organizations"), path: "/organizations" },
+    // { label: t("header.organizations"), path: "/organizations" },
     // { label: t("header.eafo"), path: "/about" },
-    { label: t("header.venue"), path: "/venue" },
-    { label: t("header.accommodation"), path: "/accomodation" },
+    // { label: t("header.venue"), path: "/venue" },
+    // { label: t("header.accommodation"), path: "/accomodation" },
     // { sectionId: "faq", label: t("header.faq") },
-    { label: t("header.contact"), path: "/contact-us" },
     //   ],
     // },
 
     {
       label: t("header.participationTerms"),
-      // path: "/",
-      subItems: [
-        {
-          label: t("header.participationVariants"),
-          path: "/participation-variants",
-        },
-        {
-          label: t("header.competitiveParticipation"),
-          path: "/competitive-participation",
-        },
-        { label: t("header.pricing"), path: "/pricing" },
-        { label: t("header.visa"), path: "/visa" },
-      ],
+      path: "/participation-variants",
     },
-    {
-      label: t("header.submission"),
-      // path: "/",
-      subItems: [
-        { label: t("header.howDoIRegister"), path: "/how-to-register" },
+    { label: t("header.pricing"), path: "/pricing" },
+    { label: t("header.howToApply"), path: "/how-to-apply" },
 
-        { label: t("header.registerNow"), path: "/register" },
-      ],
-    },
+    { label: t("header.visa"), path: "/visa" },
+    { label: t("header.partners"), path: "/partners" },
+    { label: t("header.contact"), path: "/contact-us" },
+
+    // {
+    //   label: t("header.submission"),
+
+    //   subItems: [
+    //     { label: t("header.howDoIRegister"), path: "/how-to-register" },
+
+    //     { label: t("header.registerNow"), path: "/register" },
+    //   ],
+    // },
     // { label: t("header.expertsAndCommittees"), path: "/experts" },
     // { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
     // { label: t("header.sponsors"), path: "/sponsors" },
@@ -292,9 +286,9 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className=" absolute w-full lg:w-[40%] lg:right-0 top-18 md:top-20 z-20 lg:p-10 bg-white px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl pb-10"
+            className=" absolute w-full lg:w-[30%] lg:right-0 top-18 md:top-20 z-20  bg-gradient-to-b from-white to-blue-200 px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl pb-10"
           >
-            <nav className="flex text-lg flex-col gap-6 text-gray-800 font-medium">
+            <nav className="flex text-lg flex-col gap-4 text-gray-800 font-medium">
               <div
                 className="relative mb-5 md:hidden flex justify-end items-center z-30"
                 ref={dropdownRef}
@@ -329,7 +323,7 @@ const Header = () => {
                         setIsMenuOpen(false);
                       }
                     }}
-                    className="w-full flex justify-between items-center text-left"
+                    className="w-full flex justify-between items-center text-left cursor-pointer hover:bg-gray-200 px-4 py-2 rounded-lg"
                   >
                     <span>{item.label}</span>
                     {item.subItems && (

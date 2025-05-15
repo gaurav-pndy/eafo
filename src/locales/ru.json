@@ -7,13 +7,13 @@
   "venue": "Место проведения",
   "accommodation": "Проживание",
   "organizations": "Партнеры",
-  "contact": "КОНТАКТ",
+  "contact": "Контакты",
   "whyUs": "ПОЧЕМУ МЫ?",
   "awards": "Награды",
   "gallery": "Предыдущие мероприятия",
   "reviews": "Отзывы",
   "eafo": "EAFO",
-  "participationTerms": "УСЛОВИЯ УЧАСТИЯ",
+  "participationTerms": "Условия участия",
   "participationOptions": "Варианты участия",
   "participationVariants": "Форматы участия",
   "competitiveParticipation": "Льготное участие",
@@ -30,7 +30,9 @@
   "invitedExperts": "Приглашенные эксперты",
   "successStories": "Истории успеха",
   "contactUs": "СВЯЗАТЬСЯ С НАМИ",
-  "personalAccount": "Личный кабинет"
+  "personalAccount": "Личный кабинет",
+  "howToApply": "Как подать заявку",
+  "partners": "Партнеры"
   
   
  
