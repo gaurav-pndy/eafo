@@ -14,8 +14,11 @@ const CourseSchedule = () => {
           <img
             src="/calendar.png"
             alt="Calendar image"
-            className="w-40 lg:w-[26rem] h-40 lg:h-[26rem]"
+            className="w-40 hidden lg:block lg:w-[26rem] h-40 lg:h-[26rem]"
           />
+          <div className="lg:hidden mb-6">
+            <Timer />
+          </div>
         </div>
 
         {/* Countdown Timer */}
@@ -29,11 +32,11 @@ const CourseSchedule = () => {
           </div>
 
           <div className="lg:w-1/2  rounded-[10%] p-6  text-gray-800 text-center relative">
-            <div className="absolute  left-[50%] translate-x-[-50%]  -top-28 lg:-top-36   scale-50">
+            <div className="absolute  left-[50%] translate-x-[-50%] hidden lg:block -top-28 lg:-top-36   scale-50">
               <Timer />
             </div>
 
-            <div className="mb-5 mt-8 lg:mt-0">
+            <div className="mb-5 mt-0 lg:mt-0">
               <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold  mb-1">
                 {t("schedule.dates.heading")}
               </h3>
