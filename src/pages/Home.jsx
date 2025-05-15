@@ -16,6 +16,8 @@ import { useLocation } from "react-router-dom";
 import Timer from "@/components/HomeComponents/Timer";
 import WhatAwaitsYou from "@/components/HomeComponents/WhatAwaitsYou";
 import ForWhomCourse from "@/components/HomeComponents/ForWhomCourse";
+import Patrons from "@/components/HomeComponents/Patrons";
+import Chairmen from "@/components/HomeComponents/Chairmen";
 const Home = () => {
   const location = useLocation();
 
@@ -42,6 +44,8 @@ const Home = () => {
       {/* <WhyUs /> */}
       <Prizes />
       <WhatAwaitsYou />
+      <Patrons />
+      <Chairmen />
       <ForWhomCourse />
       <FaqSection />
       <Testimonials />
