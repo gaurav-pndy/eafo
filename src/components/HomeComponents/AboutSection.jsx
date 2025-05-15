@@ -80,7 +80,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-[#bddcee] p-3 lg:p-6 rounded-3xl md:h-72 lg:h-80"
+          className="bg-[#bddcee] overflow-hidden p-3 pb-0 lg:p-6 rounded-3xl md:h-80 lg:h-86"
         >
           <div className="flex flex-col h-full justify-between">
             <div>
@@ -92,19 +92,14 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="mt-4 flex justify-end">
-              <div className="w-24 h-20 md:h-24 bg-white rounded-lg relative overflow-hidden shadow-md">
+            <div className=" flex justify-center">
+              <div className="w-24 md:w-32 h-40 md:h-48 relative overflow-hidden ">
                 <div className="absolute inset-0 flex justify-center items-center">
                   <img
-                    src="/api/placeholder/100/140"
+                    src="/generated_image.png"
                     alt="Certificate"
                     className="object-cover w-full h-full"
                   />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 flex justify-center p-1">
-                  <div className="text-xs bg-white bg-opacity-80 px-2 py-0.5 rounded">
-                    ФОТО / Foto
-                  </div>
                 </div>
               </div>
             </div>

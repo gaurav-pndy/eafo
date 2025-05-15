@@ -15,13 +15,13 @@ const Patrons = () => {
       name: t("patrons.patron2.name"),
       details: t("patrons.patron2.details"),
       location: t("patrons.patron2.location"),
-      imageUrl: "/doctors/image3.avif",
+      imageUrl: "/doctors/image2.avif",
     },
     {
       name: t("patrons.patron3.name"),
       details: t("patrons.patron3.details"),
       location: t("patrons.patron3.location"),
-      imageUrl: "/doctors/image2.avif",
+      imageUrl: "/doctors/image3.avif",
     },
   ];
 

@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <Timer />
+      {/* <Timer /> */}
       <AboutSection />
       <CourseContent />
       <CourseSchedule />
