@@ -29,16 +29,16 @@ const Prizes = () => {
       </div>
 
       {/* Award Tiles */}
-      <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex flex-col xl:flex-row gap-6">
         <div
-          className="lg:w-[40%] bg-white  lg:p-6 rounded-lg  text-gray-800 leading-relaxed lg:text-right"
+          className="xl:w-[40%] bg-white  lg:p-6 rounded-lg  text-gray-800 leading-relaxed xl:text-right"
           dangerouslySetInnerHTML={{ __html: t("prizes.desc") }}
         ></div>
-        <div className="lg:w-[60%] grid grid-cols-2 lg:grid-cols-4 items-end max-w-6xl mx-auto gap-6">
+        <div className="xl:w-[60%] grid grid-cols-2 lg:grid-cols-4 items-end max-w-6xl mx-auto gap-6">
           {/* Tile 1 */}
-          <div className="bg-[#f1f4fb] p-6 rounded-lg shadow-lg h-72 lg:h-[22rem] flex flex-col justify-between">
+          <div className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg shadow-lg h-72 lg:h-[22rem] flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-[#1e2939] mb-5">
+              <h3 className="text-2xl lg:text-3xl xl:text-2xl font-bold text-[#1e2939] mb-5">
                 {t("prizes.tile1.title")}
               </h3>
               <p className="text-sm lg:text-base">
@@ -47,7 +47,7 @@ const Prizes = () => {
             </div>
             <Dialog>
               <DialogTrigger asChild>
-                <button className="bg-[#1e3a8a] text-sm lg:text-base text-white px-3 lg:px-6 py-2 rounded-lg mt-4">
+                <button className="bg-[#1e3a8a] hover:bg-blue-800 cursor-pointer transition-all duration-300 text-sm lg:text-base text-white px-3  py-2 rounded-lg mt-4">
                   {t("prizes.more_details")}
                 </button>
               </DialogTrigger>
@@ -103,20 +103,20 @@ const Prizes = () => {
           ].map((tile, index) => (
             <div
               key={index}
-              className={`bg-[#f1f4fb] p-6 rounded-lg shadow-lg ${tile.height} flex flex-col justify-between`}
+              className={`bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg shadow-lg ${tile.height} flex flex-col justify-between`}
             >
               <div>
                 <h3
-                  className={`text-2xl lg:text-3xl font-bold text-[#1e2939]  mb-5 break-words`}
+                  className={`text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl font-bold text-[#1e2939]  mb-5 break-words`}
                 >
                   {t(tile.title)}
                 </h3>
-                <p className="text-sm lg:text-base">{t(tile.subtitle)}</p>
+                <p className="text-sm lg:text-base ">{t(tile.subtitle)}</p>
               </div>
               <Dialog>
                 <DialogTrigger asChild>
                   <button
-                    className={`${tile.textColor} bg-[#1e3a8a] text-sm lg:text-base text-white px-6 py-2 rounded-lg mt-4`}
+                    className={`${tile.textColor} bg-[#1e3a8a] text-sm hover:bg-blue-800 cursor-pointer transition-all duration-300 lg:text-base text-white px-3 py-2 rounded-lg mt-4`}
                   >
                     {t("prizes.more_details")}
                   </button>

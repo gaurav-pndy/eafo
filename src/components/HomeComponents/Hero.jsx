@@ -17,7 +17,7 @@ const Hero = () => {
       className="w-full lg:min-h-[calc(100vh-5.5rem)] flex flex-col "
     >
       {/* Left side - Dark blue section with text */}
-      <div className="w-full min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-5.5rem)]   bg-[#1e3a8a] text-white  flex flex-col-reverse xl:flex-row justify-end items-center lg:[border-radius:0%_0%_10%_10%_/10%_10%_0%_20%]">
+      <div className="w-full min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-5.5rem)]   bg-[#1e3a8a] text-white  flex flex-col-reverse xl:flex-row justify-end items-center xl:[border-radius:0%_0%_10%_10%_/10%_10%_0%_20%]">
         <div className="w-full py-6 md:py-16 px-4 md:px-10 lg:px-20 text-center md:text-left">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight">
             {t("heroSection.title1")}
@@ -35,13 +35,14 @@ const Hero = () => {
           </p>
           {/* <p className="text-xl md:text-3xl mb-8">{t("heroSection.dates")}</p> */}
           <div className="flex  gap-4 flex-wrap">
-            <button
-              onClick={() => setShowForm(true)}
+            <a
+              href="https://www.eafo.info/"
+              target="_blank"
               // to="/register"
               className="bg-white text-[#1e3a8a] hover:text-white px-8 hover:bg-[#1e3a8a] w-full md:w-fit border border-white cursor-pointer md:text-xl  py-3 rounded-full font-semibold transition-all duration-300"
             >
               {t("heroSection.button")}
-            </button>
+            </a>
             <a
               href="https://basic.eafo.info/"
               target="_blank"
@@ -55,9 +56,9 @@ const Hero = () => {
         <div className="w-full h-[35vh] md:h-[40vh] xl:h-[calc(100vh-5.5rem)]  xl:w-[65%] right-0 xl:rounded-tl-[20%] rounded-bl-[20%] rounded-br-[20%] xl:rounded-br-none  overflow-hidden">
           <div className="h-full inset-0  overflow-hidden">
             <img
-              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dfdeaff2e4-f8782245060f665759be.png"
+              src="/heroImg.jpg"
               alt="Woman working on laptop"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-right"
             />
           </div>
         </div>

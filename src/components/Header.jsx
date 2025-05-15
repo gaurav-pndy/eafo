@@ -222,7 +222,7 @@ const Header = () => {
         </nav> */}
 
         <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
-          {/* <div
+          <div
             className="relative  hidden md:flex gap-1 md:gap-2 items-center z-30"
             ref={dropdownRef}
           >
@@ -244,7 +244,7 @@ const Header = () => {
                 className="w-4 h-3"
               />
             </button>
-          </div> */}
+          </div>
 
           <div className="relative" ref={userDropdownRef}>
             <button
@@ -293,7 +293,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className=" absolute w-full top-18 md:top-20 z-20 left-0 bg-white px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl pb-10"
+            className=" absolute w-full lg:w-[40%] lg:right-0 top-18 md:top-20 z-20 lg:p-10 bg-white px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl pb-10"
           >
             <nav className="flex text-lg flex-col gap-6 text-gray-800 font-medium">
               <div

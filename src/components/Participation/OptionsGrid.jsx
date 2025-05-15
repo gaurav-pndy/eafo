@@ -24,7 +24,7 @@ const OptionsGrid = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="max-w-6xl mx-auto px-4 pb-16 grid lg:grid-cols-3 gap-8">
       {options.map((option) => (
         <div
           key={option.id}

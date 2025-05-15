@@ -1,20 +1,20 @@
+import Packages from "@/components/Participation/Packages";
 import ComparisonTable from "../components/Participation/ComparisonTable";
 import CtaSection from "../components/Participation/CtaSection";
 import HeroSection from "../components/Participation/HeroSection";
 import OptionsGrid from "../components/Participation/OptionsGrid";
 import React from "react";
+import Categories from "@/components/Participation/Categories";
 
 const ParticipationPage = () => {
   return (
     <div className="h-full text-base-content">
       <HeroSection />
       <section id="participation-options" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <OptionsGrid />
-            <ComparisonTable />
-          </div>
-        </div>
+        <OptionsGrid />
+        <Packages />
+        <Categories />
+        <ComparisonTable />
       </section>
       <CtaSection />
     </div>

@@ -37,10 +37,9 @@ const ComparisonTable = () => {
   return (
     <motion.div
       id="benefits-comparison"
-      className="mt-16"
+      className="py-16 max-w-6xl mx-auto px-4"
       initial="hidden"
       animate="visible"
-      variants={tableVariants}
     >
       <h2 className="text-3xl font-bold text-center mb-12">
         {comparisonData.title}

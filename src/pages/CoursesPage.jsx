@@ -8,6 +8,7 @@ import StructureSection from "../components/Courses/StructureSection";
 import StatsGrid from "../components/Courses/StatsGrid";
 import OverviewSection from "../components/Courses/OverviewSection";
 import FeaturesGrid from "../components/Courses/FeaturesGrid";
+import FixedButtons from "@/components/Courses/FixedButtons";
 
 const CoursesPage = () => {
   return (
@@ -16,6 +17,7 @@ const CoursesPage = () => {
       <OverviewSection />
       <StructureSection />
       <CTASection />
+      <FixedButtons />
     </>
   );
 };
