@@ -50,34 +50,33 @@ const Header = () => {
 
   // New navigation items with subitems
   const navItems = [
-    {
-      label: t("header.about"),
-      // path: "/",
-      subItems: [
-        { label: t("header.basicCourses"), path: "/courses" },
-        {
-          label: t("header.preCourses"),
-          path: "http://basic.eafo.info",
-          external: true,
-        },
-      ],
-    },
-    {
-      label: t("header.whyUs"),
-      // path: "/",
-      subItems: [
-        // { label: t("header.invitedExperts"), path: "/experts" },
-        { label: t("header.awards"), path: "/awards" },
-        { label: t("header.gallery"), path: "/gallery" },
-        { sectionId: "reviews", label: t("header.reviews") },
-        { label: t("header.organizations"), path: "/organizations" },
-        { label: t("header.eafo"), path: "/about" },
-        { label: t("header.venue"), path: "/venue" },
-        { label: t("header.accommodation"), path: "/accomodation" },
-        { sectionId: "faq", label: t("header.faq") },
-        { label: t("header.contact"), path: "/contact-us" },
-      ],
-    },
+    // {
+    //   label: t("header.about"),
+
+    //   subItems: [
+    //     { label: t("header.basicCourses"), path: "/courses" },
+    //     {
+    //       label: t("header.preCourses"),
+    //       path: "http://basic.eafo.info",
+    //       external: true,
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: t("header.whyUs"),
+
+    // subItems: [
+    // { label: t("header.awards"), path: "/awards" },
+    { label: t("header.gallery"), path: "/gallery" },
+    // { sectionId: "reviews", label: t("header.reviews") },
+    { label: t("header.organizations"), path: "/organizations" },
+    // { label: t("header.eafo"), path: "/about" },
+    { label: t("header.venue"), path: "/venue" },
+    { label: t("header.accommodation"), path: "/accomodation" },
+    // { sectionId: "faq", label: t("header.faq") },
+    { label: t("header.contact"), path: "/contact-us" },
+    //   ],
+    // },
 
     {
       label: t("header.participationTerms"),
@@ -104,9 +103,9 @@ const Header = () => {
         { label: t("header.registerNow"), path: "/register" },
       ],
     },
-    { label: t("header.expertsAndCommittees"), path: "/experts" },
-    { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
-    { label: t("header.sponsors"), path: "/sponsors" },
+    // { label: t("header.expertsAndCommittees"), path: "/experts" },
+    // { label: t("header.scheduleAndProgram"), path: "/schedule-and-program" },
+    // { label: t("header.sponsors"), path: "/sponsors" },
 
     // <- section
   ];
@@ -222,7 +221,7 @@ const Header = () => {
         </nav> */}
 
         <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
-          <div
+          {/* <div
             className="relative  hidden md:flex gap-1 md:gap-2 items-center z-30"
             ref={dropdownRef}
           >
@@ -244,7 +243,7 @@ const Header = () => {
                 className="w-4 h-3"
               />
             </button>
-          </div>
+          </div> */}
 
           <div className="relative" ref={userDropdownRef}>
             <button
