@@ -8,15 +8,15 @@ const CourseSchedule = () => {
 
   return (
     <div className="w-full py-16 lg:py-32 flex justify-center items-center mx-auto bg-gray-100   overflow-hidden">
-      <div className="p-4 lg:p-10 lg:pt-24 lg:w-[90%] xl:w-[70%] flex flex-col rounded-[10%] bg-white relative">
+      <div className="p-4 lg:p-10  lg:w-[90%] xl:w-[70%] flex flex-col rounded-[10%] bg-white relative">
         {/* Calendar animation/image */}
-        <div className="flex lg:absolute -top-25 -left-6  mx-auto">
-          <img
+        <div className="flex lg:absolute top-10 left-10  mx-auto">
+          {/* <img
             src="/calendar.png"
             alt="Calendar image"
             className="w-40 hidden lg:block lg:w-[26rem] h-40 lg:h-[26rem]"
-          />
-          <div className="lg:hidden mb-6">
+          /> */}
+          <div className=" mb-6">
             <Timer />
           </div>
         </div>
@@ -32,9 +32,9 @@ const CourseSchedule = () => {
           </div>
 
           <div className="lg:w-1/2  rounded-[10%] p-6  text-gray-800 text-center relative">
-            <div className="absolute  left-[50%] translate-x-[-50%] hidden lg:block -top-28 lg:-top-36   scale-50">
+            {/* <div className="absolute  left-[50%] translate-x-[-50%] hidden lg:block -top-28 lg:-top-36   scale-50">
               <Timer />
-            </div>
+            </div> */}
 
             <div className="mb-5 mt-0 lg:mt-0">
               <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold  mb-1">
