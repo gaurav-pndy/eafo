@@ -48,7 +48,7 @@ const ContactDialog = () => {
             <span className="bg-black p-1.5 rounded-md text-white ">
               <FaPhoneAlt className="text-2xl" />
             </span>
-            +7 (800) 555-01 23
+            +7 (931) 111-22-55
           </a>
         </div>
       </div>

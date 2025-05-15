@@ -39,7 +39,7 @@ const AboutEAFO = () => {
             dangerouslySetInnerHTML={{ __html: t("aboutEAFO.description") }}
             className="mb-12 lg:text-lg text-white/90"
           ></p>
-          <div className="space-y-5 lg:text-lg">
+          {/* <div className="space-y-5 lg:text-lg">
             <div className="flex items-center gap-3">
               <FaGlobe className="text-2xl text-white" />
               <span>{t("aboutEAFO.features.network")}</span>
@@ -52,7 +52,7 @@ const AboutEAFO = () => {
               <FaUsers className="text-2xl text-white" />
               <span>{t("aboutEAFO.features.patientCare")}</span>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex mt-10 gap-4 flex-wrap">
             <a
@@ -74,7 +74,7 @@ const AboutEAFO = () => {
         {/* Right: Foreground image */}
         <div className="flex justify-center md:justify-end">
           <img
-            src="/drsoma.avif" // replace with your foreground image path
+            src="/aboutEAFO.jpg" // replace with your foreground image path
             alt="EAFO Speaker"
             className="rounded-lg shadow-lg border-4 border-white w-full max-w-xl rotate-3"
           />

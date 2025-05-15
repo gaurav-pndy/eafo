@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import FixedContact from "@/components/FixedContact";
 
 const AppLayout = () => {
   const { pathname } = useLocation();
@@ -18,6 +19,7 @@ const AppLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <FixedContact />
     </div>
   );
 };

@@ -14,14 +14,12 @@ const AboutSection = () => {
       transition={{ duration: 0.8, ease: "easeInOut" }}
       className="py-16 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto"
     >
-      <div className="text-center mb-10">
-        {/* <p className="text-sm text-[#002379] font-semibold">
-          {t("about_course.organized_by")}
-        </p> */}
+      {/* <div className="text-center mb-10">
+       
         <h2 className="text-2xl md:text-4xl font-bold mt-1">
           {t("about_course.about_XI")}
         </h2>
-      </div>
+      </div> */}
       {/* Grid with varying tile heights */}
       <div className="grid grid-cols-2 md:grid-cols-4  items-end gap-4">
         {/* Tile 1 - Short height */}
@@ -93,10 +91,10 @@ const AboutSection = () => {
             </div>
 
             <div className=" flex justify-center">
-              <div className="w-24 md:w-32 h-40 md:h-48 relative overflow-hidden ">
+              <div className="w-full h-32 md:h-48 relative overflow-hidden ">
                 <div className="absolute inset-0 flex justify-center items-center">
                   <img
-                    src="/generated_image.png"
+                    src="/tile4.png"
                     alt="Certificate"
                     className="object-cover w-full h-full"
                   />

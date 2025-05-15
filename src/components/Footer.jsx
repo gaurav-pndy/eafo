@@ -44,7 +44,7 @@ const Footer = () => {
               {/* <p>{t("footer.location")}</p> */}
               {/* <p>{t("footer.country")}</p> */}
               <p className="mt-2">basic@eafo.info</p>
-              <p>+7 (800) 555-0123</p>
+              <p>+7 (931) 111-22-55</p>
             </address>
           </div>
 

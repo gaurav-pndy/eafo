@@ -16,14 +16,14 @@ const ContactInfo = () => {
         <i className="fa-solid fa-phone text-blue-900 mt-1"></i>
         <div>
           <h4 className="font-semibold">{t("contactUs.phone")}</h4>
-          <p className="text-gray-600">+7 (800) 555-01 23</p>
+          <p className="text-gray-600">+7 (931) 111-22-55</p>
         </div>
       </div>
       <div className="flex items-start space-x-4">
         <i className="fa-solid fa-envelope text-blue-900 mt-1"></i>
         <div>
           <h4 className="font-semibold">{t("contactUs.email")}</h4>
-          <p className="text-gray-600">path@eafo.info</p>
+          <p className="text-gray-600">basic@eafo.info</p>
         </div>
       </div>
       <div className="space-y-4">
