@@ -35,14 +35,14 @@ const Hero = () => {
           </p>
           {/* <p className="text-xl md:text-3xl mb-8">{t("heroSection.dates")}</p> */}
           <div className="flex  gap-4 flex-wrap">
-            <a
-              href="https://www.eafo.info/"
+          <button
+              onClick={() => setShowForm(true)}
               target="_blank"
               // to="/register"
               className="bg-white text-[#1e3a8a] hover:text-white px-8 hover:bg-[#1e3a8a] w-full md:w-fit border border-white cursor-pointer md:text-xl  py-3 rounded-full font-semibold transition-all duration-300"
             >
               {t("heroSection.button")}
-            </a>
+            </button>
             <a
               href="https://basic.eafo.info/"
               target="_blank"
