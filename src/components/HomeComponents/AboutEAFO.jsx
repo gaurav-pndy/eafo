@@ -56,7 +56,7 @@ const AboutEAFO = () => {
 
           <div className="flex mt-10 gap-4 flex-wrap">
             <a
-              href="https://basic.eafo.info/"
+              href="https://www.eafo.info/"
               target="_blank"
               className="bg-white text-[#1e3a8a] hover:text-white px-8 hover:bg-[#1e3a8a] w-full md:w-fit border border-white cursor-pointer   py-3 rounded-full font-semibold transition-all duration-300 text-center"
             >
