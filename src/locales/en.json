@@ -266,7 +266,7 @@
       "opening": "23 июля (среда) 2025 года"
     },
     "closing":{
-      "heading": "Закрытие Курсов, церемония награждения, заключительная лекция отъезд",
+      "heading": "Закрытие Курсов, церемония награждения, заключительная лекция, отъезд",
       "closing": "08 августа (пятница) 2025 года в 16:00"
     },
     "checkout": {
@@ -375,6 +375,17 @@
     "button1": "More Details",
     "button2": "Previous Events"
   },
+"feedback": {
+    "title": "Any Questions? We Can Help!",
+    "subtitle": "Ask your question and our manager will contact you.",
+    "disclaimer": "*By clicking Submit, you agree to the terms of the Personal Data Processing Policy.",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "message": "Your Question",
+    "notes": "Notes",
+    "submit": "Submit"
+  },
+
   "footer":{
     "contactUs": "Contact Us",
     "location": "Magas, Republic of Ingushetia",

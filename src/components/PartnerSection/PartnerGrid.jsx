@@ -14,6 +14,8 @@ const PartnerGrid = ({ id, titleKey, logos }) => {
       return "grid grid-cols-2 sm:grid-cols-2 max-w-2xl mx-auto";
     } else if (count === 3) {
       return "grid grid-cols-2 sm:grid-cols-3 max-w-5xl mx-auto";
+    } else if (count === 5) {
+      return "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 max-w-5xl mx-auto";
     } else {
       return "grid grid-cols-2 md:grid-cols-4";
     }

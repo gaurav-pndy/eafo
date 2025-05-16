@@ -19,6 +19,7 @@ import ForWhomCourse from "@/components/HomeComponents/ForWhomCourse";
 import Patrons from "@/components/HomeComponents/Patrons";
 import Chairmen from "@/components/HomeComponents/Chairmen";
 import Advantages from "@/components/HomeComponents/Advantages";
+import FeedbackForm from "@/components/HomeComponents/FeedbackForm";
 const Home = () => {
   const location = useLocation();
 
@@ -44,19 +45,20 @@ const Home = () => {
       <ForWhomCourse />
       <Prizes />
       <WhatAwaitsYou />
-      <CourseSchedule />
+
       {/* <ForumExperts /> */}
       {/* <WhyUs /> */}
 
       <Patrons />
       <Chairmen />
-
-      <FaqSection />
       <Testimonials />
+      <CourseSchedule />
+      <FaqSection />
 
       {/* <Outcome /> */}
       <AboutEAFO />
       <Partners />
+      <FeedbackForm />
     </div>
   );
 };

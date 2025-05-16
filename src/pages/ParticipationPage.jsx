@@ -14,7 +14,7 @@ const ParticipationPage = () => {
         <OptionsGrid />
         <Packages />
         <Categories />
-        <ComparisonTable />
+        {/* <ComparisonTable /> */}
       </section>
       <CtaSection />
     </div>

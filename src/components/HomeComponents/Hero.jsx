@@ -17,7 +17,7 @@ const Hero = () => {
       className="w-full lg:min-h-[calc(100vh-5.5rem)] flex flex-col"
     >
       {/* Left side - Dark blue section with text */}
-      <div className="w-full min-h-[auto] lg:min-h-[calc(100vh-5.5rem)] bg-[#1e3a8a] relative text-white flex flex-col-reverse lg:flex-row justify-end items-center lg:[border-radius:0%_0%_10%_10%_/10%_10%_0%_20%] pt-6 lg:pt-0  overflow-hidden">
+      <div className="w-full min-h-[auto] lg:min-h-[calc(100vh-5.5rem)] bg-[#1e3a8a] relative text-white flex flex-col-reverse lg:flex-row justify-end items-center lg:[border-radius:0%_0%_10%_10%_/10%_10%_0%_20%] pt-0 lg:pt-0  overflow-hidden">
         <div className="w-full py-6 md:py-16 px-4 md:px-10 lg:px-20 text-center md:text-left">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight">
             {t("heroSection.title1")}
@@ -57,7 +57,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute lg:w-[37%] right-3 top-0 overflow-visible h-[102%] rounded-tl-[20%] rounded-bl-[20%] rounded-br-[20%] z-10 lg:rounded-br-none border-2 border-white translate-x-6 translate-y-4 pointer-events-none"></div>
+        <div className="absolute hidden lg:block lg:w-[37%] right-3 top-1/2 translate-y-[-47%] overflow-visible h-[35vh] md:h-[40vh] lg:h-[calc(100vh-4.5rem)] rounded-tl-[20%] rounded-bl-[20%] rounded-br-[20%] z-10 lg:rounded-br-none border-2 border-white translate-x-6  pointer-events-none"></div>
         <div className="w-full h-[35vh] md:h-[40vh] lg:h-[calc(100vh-5.5rem)] lg:w-[65%] right-0 lg:rounded-tl-[20%] rounded-bl-[20%] rounded-br-[20%] lg:rounded-br-none overflow-hidden relative">
           <div className="h-full inset-0 overflow-hidden">
             <img

@@ -25,13 +25,18 @@ const CourseSchedule = () => {
 
         {/* Event Information */}
         <div className=" flex flex-col lg:flex-row justify-around">
-          <div className="lg:w-1/2 pb-14  flex items-end">
+          <div className="lg:w-1/2 flex flex-col lg:pb-14 relative  items-center lg:justify-end">
             <h1 className=" text-3xl lg:text-[3.25rem] lg:leading-14 font-bold text-center lg:text-left">
               {t("schedule.heading")}
             </h1>
+            <img
+              src="/calendar.png"
+              alt="Calendar image"
+              className="w-36 md:w-42 lg:w-36 lg:h-36 xl:w-42 xl:h-42 md:h-42 lg:absolute right-15 xl:right-35 -bottom-12 h-36 "
+            />
           </div>
 
-          <div className="lg:w-1/2  rounded-[10%] p-6  text-gray-800 text-center relative">
+          <div className="lg:w-1/2  rounded-[10%] p-6 pr-0  text-gray-800 text-center relative">
             {/* <div className="absolute  left-[50%] translate-x-[-50%] hidden lg:block -top-28 lg:-top-36   scale-50">
               <Timer />
             </div> */}

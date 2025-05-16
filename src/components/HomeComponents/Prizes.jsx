@@ -41,7 +41,7 @@ const Prizes = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg  h-full md:h-[22rem] flex flex-col justify-between"
+            className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg  h-full md:h-[23rem] flex flex-col justify-between"
           >
             <div>
               <h3 className="text-2xl lg:text-3xl font-bold text-[#1e2939] mb-3 md:mb-5">
@@ -51,11 +51,7 @@ const Prizes = () => {
                 {t("prizes.tile1.subtitle")}
               </p>
 
-              <img
-                src="/gift.png"
-                alt="Gift"
-                className="w-36 lg:w-40 lg:h-40 h-36  mx-auto"
-              />
+              <img src="/gift.png" alt="Gift" className="w-36  h-36  mx-auto" />
             </div>
             <Dialog>
               <DialogTrigger asChild>
@@ -99,7 +95,7 @@ const Prizes = () => {
             {
               title: "prizes.tile3.title",
               subtitle: "prizes.tile3.subtitle",
-              height: "h-full md:h-[18rem]",
+              height: "h-full md:h-[17rem]",
               // bgColor: "bg-[#FFF3E0]",
               // textColor: "text-[#F57C00]",
               content: "prizes.tile3.desc",

@@ -47,7 +47,7 @@ const FaqSection = () => {
               <div className="flex justify-between items-center">
                 <p className="font-medium text-lg">{t(faq.questionKey)}</p>
                 <ChevronDown
-                  className={`w-5 h-5 transition-transform duration-300 ${
+                  className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />

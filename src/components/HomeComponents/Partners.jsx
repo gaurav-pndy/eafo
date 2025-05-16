@@ -7,19 +7,10 @@ const partners = [
     src: "/logos/EAFO.png",
   },
   {
+    src: "/logos/EAFO.jpg",
+  },
+  {
     src: "/logos/ECRC.png",
-  },
-  {
-    src: "/logos/HD.png",
-  },
-  {
-    src: "/logos/FIRMST.png",
-  },
-  {
-    src: "/logos/Pasovit.png",
-  },
-  {
-    src: "/logos/Pathologica.png",
   },
   {
     src: "/logos/EACF.png",
@@ -28,32 +19,50 @@ const partners = [
     src: "/logos/EASHNO.png",
   },
   {
-    src: "/logos/SK.png",
+    src: "/logos/FIRMST.png",
   },
   {
     src: "/logos/SKBiomed.png",
   },
   {
-    src: "/logos/MAHO.jpg",
+    src: "/logos/SK.png",
   },
   {
-    src: "/logos/Mark.png",
+    src: "/logos/HD.png",
   },
   {
-    src: "/logos/Garant.png",
-  },
-  {
-    src: "/logos/Oncology.png",
+    src: "/logos/Pathologica.png",
   },
   {
     src: "/logos/SPLAT.png",
   },
   {
-    src: "/logos/Анастасия.jpg",
+    src: "/logos/Garant.png",
+  },
+  {
+    src: "/logos/Mark.png",
   },
   {
     src: "/logos/Здравствуй!.jpg",
   },
+  {
+    src: "/logos/pemecno.jpg",
+  },
+  {
+    src: "/logos/Pasovit.png",
+  },
+
+  // {
+  //   src: "/logos/MAHO.jpg",
+  // },
+
+  // {
+  //   src: "/logos/Oncology.png",
+  // },
+
+  // {
+  //   src: "/logos/Анастасия.jpg",
+  // },
 ];
 
 const Partners = () => {
