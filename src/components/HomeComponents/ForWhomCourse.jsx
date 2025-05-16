@@ -6,6 +6,8 @@ import {
   FaUserGraduate,
   FaIndustry,
   FaGlobe,
+  FaUserNurse,
+  FaFlask,
 } from "react-icons/fa";
 import { GiCancer } from "react-icons/gi";
 
@@ -17,12 +19,12 @@ const ForWhomCourse = () => {
 
   // Icons to match the categories
   const icons = [
-    <FaUserMd className="text-6xl shrink-0 p-4 rounded-full text-[#0288D1] bg-[#c5ebff]" />, // Doctors
-    <FaMicroscope className="text-6xl shrink-0 p-4 rounded-full text-[#0288D1] bg-[#c5ebff]" />, // Pathologists
-    <GiCancer className="text-6xl shrink-0 p-4 rounded-full text-[#0288D1] bg-[#c5ebff]" />, // Oncologists
-    <FaUserGraduate className="text-6xl shrink-0 p-4 rounded-full text-[#0288D1] bg-[#c5ebff]" />, // Students & Residents
-    <FaIndustry className="text-6xl shrink-0 p-4 rounded-full text-[#0288D1] bg-[#c5ebff]" />, // Pharmaceutical & Medical Industry
-    <FaGlobe className="text-6xl shrink-0 p-4 rounded-full text-[#0288D1] bg-[#c5ebff]" />, // International participants
+    <FaUserMd className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Doctors
+    <FaMicroscope className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Pathologists
+    <FaUserNurse className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Oncologists
+    <FaUserGraduate className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Students & Residents
+    <FaFlask className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Pharmaceutical & Medical Industry
+    <FaGlobe className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // International participants
   ];
 
   return (

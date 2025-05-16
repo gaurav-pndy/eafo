@@ -41,10 +41,11 @@ const PricingOptions = () => {
           ))}
 
           <TableModal
-            isOpen={openModal}
+            isOpen={openModal && !showForm}
             onClose={handleCloseModal}
             tableList={cards.filter((card) => card.tableData)}
             initialIndex={selectedTableIndex}
+            setShowForm={setShowForm}
           />
 
           {showForm && (

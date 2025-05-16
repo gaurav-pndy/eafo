@@ -18,6 +18,7 @@ import WhatAwaitsYou from "@/components/HomeComponents/WhatAwaitsYou";
 import ForWhomCourse from "@/components/HomeComponents/ForWhomCourse";
 import Patrons from "@/components/HomeComponents/Patrons";
 import Chairmen from "@/components/HomeComponents/Chairmen";
+import Advantages from "@/components/HomeComponents/Advantages";
 const Home = () => {
   const location = useLocation();
 
@@ -38,15 +39,18 @@ const Home = () => {
       <Hero />
       {/* <Timer /> */}
       <AboutSection />
+      <Advantages />
       <CourseContent />
+      <ForWhomCourse />
+      <Prizes />
+      <WhatAwaitsYou />
       <CourseSchedule />
       {/* <ForumExperts /> */}
       {/* <WhyUs /> */}
-      <Prizes />
-      <WhatAwaitsYou />
+
       <Patrons />
       <Chairmen />
-      <ForWhomCourse />
+
       <FaqSection />
       <Testimonials />
 

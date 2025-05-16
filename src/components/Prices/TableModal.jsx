@@ -7,8 +7,15 @@ import {
 } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import PreRegisterForm from "../PreRegisterForm";
 
-export function TableModal({ isOpen, onClose, tableList = [], initialIndex }) {
+export function TableModal({
+  isOpen,
+  onClose,
+  tableList = [],
+  initialIndex,
+  setShowForm,
+}) {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
@@ -93,7 +100,10 @@ export function TableModal({ isOpen, onClose, tableList = [], initialIndex }) {
 
         {/* Button */}
         <div className="flex justify-center mt-6">
-          <button className="w-full md:w-auto bg-[#1e3b8b] hover:bg-blue-950 cursor-pointer text-white font-semibold py-3 px-8 rounded-4xl">
+          <button
+            onClick={() => setShowForm(true)}
+            className="w-full md:w-auto bg-[#1e3b8b] hover:bg-blue-950 cursor-pointer text-white font-semibold py-3 px-8 rounded-4xl"
+          >
             {tableData.button}
           </button>
         </div>
