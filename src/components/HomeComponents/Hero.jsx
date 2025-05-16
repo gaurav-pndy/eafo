@@ -17,7 +17,7 @@ const Hero = () => {
       className="w-full lg:min-h-[calc(100vh-5.5rem)] flex flex-col "
     >
       {/* Left side - Dark blue section with text */}
-      <div className="w-full min-h-[calc(100vh-5rem)] lg:h-screen bg-[#1e3a8a] text-white  flex flex-col-reverse lg:flex-row justify-end items-center lg:[border-radius:0%_0%_10%_10%_/10%_10%_0%_20%]">
+      <div className="w-full h-[50vh] min-h-[calc(100vh-5rem)] lg:h-screen bg-[#1e3a8a] text-white  flex flex-col-reverse lg:flex-row justify-end items-center lg:[border-radius:0%_0%_10%_10%_/10%_10%_0%_20%]">
         <div className="w-full py-6 md:py-16 px-4 md:px-10 lg:px-20 text-center md:text-left">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight">
             {t("heroSection.title1")}

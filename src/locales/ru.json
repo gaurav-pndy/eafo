@@ -1842,7 +1842,7 @@
   ,
 
   "preRegister": "Заявка на участие в XI EAFO Базовых медицинских курсах",
-  "name": "Имя",
+  "name": "ФИО",
   "langCode": "ru",
     "firstName": "Имя",
     "middleName": "Отчество",
