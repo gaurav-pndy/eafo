@@ -233,7 +233,7 @@ const PhotoGallery = ({ onImageClick }) => {
           <div
             key={idx}
             className="relative group cursor-pointer"
-            onClick={() => onImageClick(img.src)}
+            onClick={() => onImageClick(idx)}
           >
             <img
               src={img.src}
