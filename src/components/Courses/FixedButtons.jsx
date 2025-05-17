@@ -15,18 +15,18 @@ const FixedButtons = ({ courseId }) => {
       {/* Submit Application Button */}
       <button
         onClick={() => setSubmitOpen(true)}
-        className="fixed max-w-7xl  cursor-pointer w-[98%] xl:w-full bottom-2 left-1/2 transform -translate-x-1/2 bg-blue-900 border-white border text-lg text-white px-6 py-4 rounded-2xl font-bold hover:bg-blue-800 transition duration-300 z-50"
+        className="fixed max-w-7xl  cursor-pointer  2xl:w-full bottom-2 md:bottom-4 left-2 w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] md:left-4 2xl:left-1/2 transform 2xl:-translate-x-1/2 bg-blue-900 border-white border text-lg text-white px-6 py-4 rounded-2xl font-bold hover:bg-blue-800 transition duration-300 z-50"
       >
         {t("courses.submitButton")}
       </button>
 
       {/* Contact Us Button */}
-      <button
+      {/* <button
         onClick={() => setContactOpen(true)}
         className="fixed bottom-20 xl:bottom-2 cursor-pointer right-2 xl:right-8 bg-blue-900 text-white border border-white  rounded-full p-5 hover:bg-blue-800 transition duration-300 z-50"
       >
         <RiMessage2Fill className="text-2xl " />
-      </button>
+      </button> */}
 
       {/* Dialog for Application Form */}
       {isSubmitOpen && (
@@ -37,11 +37,11 @@ const FixedButtons = ({ courseId }) => {
       )}
 
       {/* Dialog for Contact Options */}
-      <Dialog open={isContactOpen} onOpenChange={setContactOpen}>
+      {/* <Dialog open={isContactOpen} onOpenChange={setContactOpen}>
         <DialogContent className="!max-w-xl">
           <ContactDialog />
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </>
   );
 };

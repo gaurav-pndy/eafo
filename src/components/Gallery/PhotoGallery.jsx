@@ -3,11 +3,19 @@ import { useTranslation } from "react-i18next";
 
 const photos = [
   {
-    src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d34bd49d02-9ab1808d660081c395e5.png",
+    src: "/gallery/photo1.jpg",
+    alt: "photo1",
+  },
+  {
+    src: "/gallery/photo2.jpg",
+    alt: "photo2",
+  },
+  {
+    src: "/gallery/photo3.jpg",
     alt: "photo3",
   },
   {
-    src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/65932cbf5e-e657e4dc44d2a4615318.png",
+    src: "/gallery/photo4.jpg",
     alt: "photo4",
   },
   {
@@ -43,6 +51,10 @@ const photos = [
     alt: "photo12",
   },
   {
+    src: "/gallery/photo122.jpg",
+    alt: "photo12",
+  },
+  {
     src: "/gallery/photo13.jpg",
     alt: "photo13",
   },
@@ -53,6 +65,14 @@ const photos = [
   {
     src: "/gallery/photo15.jpg",
     alt: "photo15",
+  },
+  {
+    src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d34bd49d02-9ab1808d660081c395e5.png",
+    alt: "photo3",
+  },
+  {
+    src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/65932cbf5e-e657e4dc44d2a4615318.png",
+    alt: "photo4",
   },
   {
     src: "/gallery/photo16.jpg",
@@ -193,26 +213,6 @@ const photos = [
   {
     src: "/gallery/photo50.jpg",
     alt: "photo50",
-  },
-  {
-    src: "/gallery/photo51.jpg",
-    alt: "photo51",
-  },
-  {
-    src: "/gallery/photo52.jpg",
-    alt: "photo52",
-  },
-  {
-    src: "/gallery/photo53.jpg",
-    alt: "photo53",
-  },
-  {
-    src: "/gallery/photo54.jpg",
-    alt: "photo54",
-  },
-  {
-    src: "/gallery/photo55.jpg",
-    alt: "photo55",
   },
 ];
 

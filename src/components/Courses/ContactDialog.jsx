@@ -2,53 +2,76 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import {
   FaWhatsapp,
-  FaTelegram,
-  FaPhoneAlt,
   FaTelegramPlane,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaTimes,
+  FaTelegram,
 } from "react-icons/fa";
 
-const ContactDialog = () => {
+const ContactDialog = ({ onClose }) => {
   const { t } = useTranslation();
+
   return (
-    <div className="">
-      <h2 className="text-3xl text-center font-bold mb-4">
-        {t("courses.contactUs")}
+    <div className="relative py-3 px-4 md:p-5 rounded-2xl  w-full ">
+      <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6 text-center">
+        Свяжитесь с нами
       </h2>
-      <div className="p-4 pt-2">
-        <p className="mb-10 text-xl">{t("courses.contactText")}</p>
-        <div className="grid  md:grid-cols-2 gap-4">
+
+      <div className="space-y-5">
+        <div className="flex items-center space-x-5">
+          <FaPhoneAlt className="text-[#1e3a8a] text-3xl" />
+          <div>
+            <h3 className="font-bold text-lg text-[#1e3a8a]">Телефон:</h3>
+            <a
+              href="tel:+79311112255"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              +7 (931) 111-22-55
+            </a>
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-5">
+          <FaEnvelope className="text-[#1e3a8a] text-3xl" />
+          <div>
+            <h3 className="font-bold text-lg text-[#1e3a8a]">Задать вопрос:</h3>
+            <a
+              href="mailto:basic@eafo.info"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              basic@eafo.info
+            </a>
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-5">
+          <FaEnvelope className="text-[#1e3a8a] text-3xl" />
+          <div>
+            <h3 className="font-bold text-lg text-[#1e3a8a]">
+              Техническая поддержка:
+            </h3>
+            <a
+              href="mailto:support@eafo.info"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              support@eafo.info
+            </a>
+          </div>
+        </div>
+
+        <div className="flex space-x-6 mt-6 justify-center">
           <a
             href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center border border-gray-400 p-2 rounded-xl gap-3 text-lg  hover:bg-gray-200 transition-all duration-300"
+            className="text-green-600 hover:scale-105 transition-transform"
           >
-            <span className="bg-[#2cd46b] p-1.5 rounded-md text-white ">
-              <FaWhatsapp className="text-2xl" />
-            </span>
-            WhatsApp
+            <FaWhatsapp className="text-5xl" />
           </a>
           <a
             href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center border border-gray-400 p-2 rounded-xl gap-3 text-lg  hover:bg-gray-200 transition-all duration-300"
+            className="text-blue-800 hover:scale-105 transition-transform"
           >
-            <span className="bg-[#29a2da] p-1.5 rounded-md text-white ">
-              <FaTelegramPlane className="text-2xl" />
-            </span>
-            Telegram
-          </a>
-          <a
-            href="tel:+78005550123"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center border border-gray-400 p-2 rounded-xl gap-3 text-lg  hover:bg-gray-200 transition-all duration-300"
-          >
-            <span className="bg-black p-1.5 rounded-md text-white ">
-              <FaPhoneAlt className="text-2xl" />
-            </span>
-            +7 (931) 111-22-55
+            <FaTelegram className="text-5xl" />
           </a>
         </div>
       </div>

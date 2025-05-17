@@ -1,31 +1,54 @@
-import React, { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-
+import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { RiMessage2Fill } from "react-icons/ri";
 import ContactDialog from "./Courses/ContactDialog";
+import { MdHeadsetMic } from "react-icons/md";
 
 const FixedContact = () => {
   const { t } = useTranslation();
-  //   const [isSubmitOpen, setSubmitOpen] = useState(false);
   const [isContactOpen, setContactOpen] = useState(false);
+  const dialogRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Close the dialog if clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // If click is outside both the button and the dialog, close it
+      if (
+        dialogRef.current &&
+        !dialogRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setContactOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
       {/* Contact Us Button */}
       <button
-        onClick={() => setContactOpen(true)}
-        className="fixed bottom-20 xl:bottom-2 cursor-pointer right-2 xl:right-8 bg-blue-900 text-white border border-white  rounded-full p-5 hover:bg-blue-800 transition duration-300 z-50"
+        ref={buttonRef}
+        onClick={() => setContactOpen((prev) => !prev)}
+        className="fixed bottom-2 md:bottom-4 cursor-pointer right-2 md:right-4 xl:right-8 bg-[#ce1815] text-white rounded-full p-5 hover:bg-red-800 transition duration-300 z-50"
       >
-        <RiMessage2Fill className="text-2xl " />
+        <MdHeadsetMic className="text-3xl" />
       </button>
 
       {/* Dialog for Contact Options */}
-      <Dialog open={isContactOpen} onOpenChange={setContactOpen}>
-        <DialogContent className="!max-w-xl">
+      {isContactOpen && (
+        <div
+          ref={dialogRef}
+          className="fixed bottom-20 md:bottom-19 right-4 md:right-23 bg-white shadow-lg rounded-xl p-4 max-w-sm md:max-w-md md:w-full z-50"
+        >
           <ContactDialog />
-        </DialogContent>
-      </Dialog>
+        </div>
+      )}
     </>
   );
 };
