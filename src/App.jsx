@@ -15,7 +15,7 @@ import CompetitiveParticipation from "./pages/CompetitiveParticipation";
 import ScheduleAndProgram from "./pages/ScheduleAndProgram";
 import Venue from "./pages/Venue";
 // import Pricing from "./pages/Pricing";
-import HowToRegister from "./pages/HowToRegister";
+
 import RegisterNow from "./pages/RegisterNow";
 import Organizations from "./pages/Organizations";
 import GalleryPage from "./pages/GalleryPage";
@@ -25,6 +25,7 @@ import PricePage from "./pages/PricePage";
 import SubsidizedPage from "./pages/SubsidizedPage";
 import Accomodation from "./pages/Accomodation";
 import AboutPage from "./pages/AboutPage";
+import HowToApply from "./pages/HowToApply";
 
 function App() {
   useEffect(() => {
@@ -103,8 +104,8 @@ function App() {
           element: <Accomodation />,
         },
         {
-          path: "/how-to-register",
-          element: <HowToRegister />,
+          path: "/how-to-apply",
+          element: <HowToApply />,
         },
         {
           path: "/register",
