@@ -29,7 +29,7 @@ export default function CourseContent2() {
       dialogHead: t("course_content.dialogHead3"),
 
       dialogText: t("course_content.text3"),
-      styles: "absolute  inset-0 h-full   object-cover pointer-events-none ",
+      styles: "absolute  h-full   object-cover pointer-events-none ",
     },
     {
       title: "button4",
@@ -62,7 +62,7 @@ export default function CourseContent2() {
 
       dialogText: t("course_content.text6"),
       styles:
-        " absolute  bottom-0 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
+        " absolute -bottom-5 md:-bottom-10 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
     },
     {
       title: "button7",
@@ -73,7 +73,7 @@ export default function CourseContent2() {
 
       dialogText: t("course_content.text7"),
       styles:
-        " absolute w-full bottom-0 left-1/2 translate-x-[-50%] h-56 md:h-72 object-cover pointer-events-none  ",
+        " absolute w-full bottom-0 left-1/2 translate-x-[-50%] h-52 md:h-60 object-cover pointer-events-none  ",
     },
     {
       title: "button8",
@@ -84,7 +84,7 @@ export default function CourseContent2() {
 
       dialogText: t("course_content.text8"),
       styles:
-        " absolute  bottom-0 h-80 md:h-[25rem] -left-14  object-cover pointer-events-none  ",
+        " absolute  bottom-0 h-72 md:h-90 -left-14  object-cover pointer-events-none  ",
     },
     {
       title: "button9",
@@ -95,7 +95,7 @@ export default function CourseContent2() {
 
       dialogText: t("course_content.text10"),
       styles:
-        " absolute h-72 md:h-90 w-full bottom-0 left-0   object-cover pointer-events-none  ",
+        " absolute h-72 md:h-90 w-full -bottom-14 md:-bottom-20 left-0   object-cover pointer-events-none  ",
     },
     {
       title: "button10",
@@ -106,7 +106,7 @@ export default function CourseContent2() {
 
       dialogText: t("course_content.text10"),
       styles:
-        " absolute  bottom-8 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
+        " absolute  bottom-4 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
     },
   ];
 
@@ -129,7 +129,7 @@ export default function CourseContent2() {
   return (
     <div className="relative overflow-hidden bg-[#f2f3f8] pb-16">
       <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-semibold mb-6 text-[#001554]">
-        Выбери интересующий тебя <br /> тематический семинар
+        Выберите интересующий вас <br /> тематический семинар
       </h2>
 
       <Swiper
@@ -161,10 +161,10 @@ export default function CourseContent2() {
           },
           1280: {
             slidesPerView: 4.1,
-            spaceBetween: 40,
+            spaceBetween: 50,
           },
         }}
-        className=" !py-20 "
+        className=" !py-10 !pb-20 "
       >
         {courses.map((course, index) => {
           const isActive = index === activeIndex % courses.length;
@@ -172,7 +172,7 @@ export default function CourseContent2() {
           return (
             <SwiperSlide key={index}>
               <div
-                className={`rounded-4xl overflow-hidden transition-all  duration-500 ease-in-out cursor-pointer h-90 md:h-[28rem] ${
+                className={`rounded-4xl overflow-hidden transition-all  duration-500 ease-in-out cursor-pointer h-80 md:h-96 ${
                   isActive ? "scale-110 z-10" : "scale-95"
                 }`}
               >
@@ -180,7 +180,7 @@ export default function CourseContent2() {
                   onClick={() =>
                     handleOpenDialog(course.dialogText, course.dialogHead)
                   }
-                  className={`rounded-3xl p-6 px-3 relative ${course.bgcolor} shadow-md overflow-hidden`}
+                  className={`rounded-3xl p-4 px-3 relative ${course.bgcolor} shadow-md overflow-hidden`}
                   style={{
                     height: "100%",
                     textAlign: "center",
@@ -198,13 +198,13 @@ export default function CourseContent2() {
                   />
 
                   {course.bgcolor === "bg-[#a16e30]" && (
-                    <div className="h-20  inset-0 top-32 md:top-40 absolute bottom-0 bg-gradient-to-b from-[#a16e30] from-10%  to-transparent"></div>
+                    <div className="h-20  inset-0 top-28 md:top-36 absolute bottom-0 bg-gradient-to-b from-[#a16e30] from-10%  to-transparent"></div>
                   )}
 
                   {/* Overlay (Text Content) */}
                   <div className="relative z-10">
                     <h3
-                      className="text-white text-lg md:text-2xl mb-2 md:mb-5 font-bold leading-tight"
+                      className="text-white text-lg md:text-2xl mb-2  font-bold leading-tight"
                       dangerouslySetInnerHTML={{
                         __html: t(`course_content.${course.title}`),
                       }}
@@ -221,7 +221,7 @@ export default function CourseContent2() {
           );
         })}
 
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex  z-10 bg-[#ffffff] w-fit mx-auto px-3 py-2 rounded-full gap-3">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex  z-30 bg-[#ffffff] w-fit mx-auto px-3 py-2 rounded-full gap-3">
           <button className="swiper-button-prev-custom2 bg-[#d9d9d9]  p-2 rounded-full hover:bg-gray-400 cursor-pointer text-black transition-all duration-300">
             <FaChevronLeft />
           </button>
