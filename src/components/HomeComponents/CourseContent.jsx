@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { PiStudentBold } from "react-icons/pi";
 import { FaBookBookmark } from "react-icons/fa6";
-
+import "swiper/css";
+import "swiper/css/navigation";
 import {
   Dialog,
   DialogContent,
@@ -9,6 +10,36 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+const cardData = [
+  {
+    button: "button1",
+    content: "oncoTopics",
+    image: "/courses/image1.png",
+    bgcolor: "bg-[#011753]",
+  },
+  {
+    button: "button2",
+    content: "oncoTopics",
+    image: "/courses/image2.png",
+    bgcolor: "bg-[#4e629d]",
+  },
+  {
+    button: "button1",
+    content: "oncoTopics",
+    image: "/courses/image1.png",
+    bgcolor: "bg-[#011753]",
+  },
+  {
+    button: "button2",
+    content: "oncoTopics",
+    image: "/courses/image2.png",
+    bgcolor: "bg-[#4e629d]",
+  },
+];
 
 const CourseContent = () => {
   const { t } = useTranslation();
@@ -25,126 +56,140 @@ const CourseContent = () => {
     setOpen(true);
   };
 
+  const scrollRef = useRef(null);
+
   return (
-    <div className=" px-4 lg:px-10 py-16 rounded-xl">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl lg:text-4xl mb-10 font-bold">
-          {t("course_content.heading")}
-        </h2>
-
-        <div className="flex flex-col  space-y-4 text-[#1e3a8a]">
-          {/* Oncology */}
-          <div
-            onClick={() =>
-              handleOpenDialog(oncoTopics, t("course_content.dialogHead1"))
-            }
-            className="cursor-pointer flex items-center space-x-4 bg-gray-100 hover:bg-gray-200 transition-all duration-300 p-4 rounded-lg"
-          >
-            <FaBookBookmark className="text-3xl " />
-            <span className=" font-semibold ">
-              {t("course_content.button1")}
-            </span>
+    <div className=" lg:pl-6 xl:pl-10 lg:pr-0 py-16 lg:pb-24 rounded-xl bg-[#f2f3f8]">
+      <div className="xl:pl-40 flex flex-col lg:flex-row">
+        <div className="lg:w-1/2 px-4 xl:pr-16 lg:py-10 flex flex-col justify-between">
+          <div>
+            <h1 className="text-2xl md:text-4xl lg:text-[2.5rem] font-bold text-[#9a0104] lg:mb-2">
+              {t("course_content.heading")}
+            </h1>
+            <h1
+              className="text-2xl md:text-4xl lg:text-[2.5rem] lg:leading-14  text-[#011753] mb-6"
+              dangerouslySetInnerHTML={{ __html: t("course_content.subtitle") }}
+            ></h1>
           </div>
 
-          {/* Oncopathology */}
-          <div
-            onClick={() =>
-              handleOpenDialog(oncoTopics, t("course_content.dialogHead1"))
-            }
-            className="cursor-pointer flex items-center space-x-4 bg-gray-100 hover:bg-gray-200 transition-all duration-300 p-4 rounded-lg"
-          >
-            <FaBookBookmark className="text-4xl " />
-            <span className=" font-semibold ">
-              {t("course_content.button2")}
-            </span>
-          </div>
-
-          <div
-            onClick={() =>
-              handleOpenDialog(
-                t("course_content.text"),
-                t("course_content.dialogHead1")
-              )
-            }
-            className="cursor-pointer flex items-center space-x-4 bg-gray-100 hover:bg-gray-200 transition-all duration-300 p-4 rounded-lg"
-          >
-            <FaBookBookmark className="text-4xl " />
-            <span className=" font-semibold ">
-              {t("course_content.button3")}
-            </span>
-          </div>
-
-          <div
-            onClick={() =>
-              handleOpenDialog(
-                t("course_content.text"),
-                t("course_content.dialogHead1")
-              )
-            }
-            className="cursor-pointer flex items-center space-x-4 bg-gray-100 hover:bg-gray-200 transition-all duration-300 p-4 rounded-lg"
-          >
-            <FaBookBookmark className="text-4xl " />
-            <span className=" font-semibold ">
-              {t("course_content.button4")}
-            </span>
-          </div>
-
-          <div
-            onClick={() =>
-              handleOpenDialog(
-                t("course_content.text"),
-                t("course_content.dialogHead1")
-              )
-            }
-            className="cursor-pointer flex items-center space-x-4 bg-gray-100 hover:bg-gray-200 transition-all duration-300 p-4 rounded-lg"
-          >
-            <FaBookBookmark className="text-4xl " />
-            <span className=" font-semibold ">
-              {t("course_content.button5")}
-            </span>
-          </div>
-          <div
-            onClick={() =>
-              handleOpenDialog(
-                t("course_content.text"),
-                t("course_content.dialogHead1")
-              )
-            }
-            className="cursor-pointer flex items-center space-x-4 bg-gray-100 hover:bg-gray-200 transition-all duration-300 p-4 rounded-lg"
-          >
-            <FaBookBookmark className="text-4xl " />
-            <span className=" font-semibold ">
-              {t("course_content.button6")}
-            </span>
+          <div className="hidden lg:flex justify-center lg:justify-start ">
+            <button className="bg-[#001554] text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
+              Выбери курс
+            </button>
           </div>
         </div>
 
-        {/* Modal */}
-        <Dialog open={open} onOpenChange={setOpen}>
-          <DialogContent className="!max-w-4xl">
-            <DialogHeader>
-              <DialogTitle>
-                <h2 dangerouslySetInnerHTML={{ __html: courseTitle }}></h2>
-              </DialogTitle>
-            </DialogHeader>
-            <div className="lg:text-lg text-gray-700  space-y-2 mt-4">
-              {Array.isArray(selectedCourse) ? (
-                selectedCourse.map((topic, index) => (
-                  <div key={index}>
-                    <span dangerouslySetInnerHTML={{ __html: topic }}></span>
+        <div className="relative lg:w-1/2 md:px-4 lg:pr-0 xl:pl-10 overflow-hidden py-10  lg:py-0">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={20}
+            slidesPerView={2} // Show 1.5 cards at a time
+            loop={true}
+            navigation={{
+              nextEl: ".swiper-button-next-custom",
+              prevEl: ".swiper-button-prev-custom",
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 2, // More than 1 card, allows side visibility
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 1.4,
+              },
+
+              1280: {
+                slidesPerView: 1.6,
+                spaceBetween: 50,
+              },
+            }}
+            className=" scale-110 md:scale-100"
+          >
+            {cardData.map((item, idx) => (
+              <SwiperSlide key={idx}>
+                <div
+                  onClick={() =>
+                    handleOpenDialog(
+                      item.content === "oncoTopics"
+                        ? oncoTopics
+                        : t("course_content.text"),
+                      t("course_content.dialogHead1")
+                    )
+                  }
+                  className={`cursor-pointer ${item.bgcolor} transition-all duration-300 p-6 md:p-12 rounded-3xl text-white flex flex-col justify-between items-center space-y-3 h-full`}
+                >
+                  <div className=" ">
+                    <img
+                      src={item.image}
+                      alt="course_image"
+                      className="w-40 md:w-56 h-44 md:h-60 object-cover rounded-3xl "
+                    />
                   </div>
-                ))
-              ) : (
-                <div>
-                  <span
-                    dangerouslySetInnerHTML={{ __html: selectedCourse }}
-                  ></span>
+                  <h3
+                    className="font-bold text-center  md:text-2xl md:mb-5"
+                    dangerouslySetInnerHTML={{
+                      __html: t(`course_content.${item.button}`),
+                    }}
+                  ></h3>
+                  <span className="px-5 py-1 text-xs md:text-base bg-white/20 text-white font-bold rounded-full">
+                    17 дней
+                  </span>
                 </div>
-              )}
-            </div>
-          </DialogContent>
-        </Dialog>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Custom Navigation */}
+          <div className="mt-10 lg:mt-6 justify-center flex gap-4">
+            <button className="swiper-button-prev-custom bg-[#d9d9d9] shadow-md p-2 rounded-full hover:bg-gray-400 cursor-pointer text-gray-600 transition-all duration-300">
+              <FaChevronLeft />
+            </button>
+            <button className="swiper-button-next-custom bg-[#d9d9d9] shadow-md p-2 rounded-full hover:bg-gray-400 cursor-pointer text-gray-600 transition-all duration-300">
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+
+        <div className="flex lg:hidden  justify-center lg:justify-start ">
+          <button className="bg-[#001554] text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
+            Выбери курс
+          </button>
+        </div>
+
+        {/* Modal */}
       </div>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="!max-w-4xl">
+          <DialogHeader>
+            <DialogTitle>
+              <h2 dangerouslySetInnerHTML={{ __html: courseTitle }}></h2>
+            </DialogTitle>
+          </DialogHeader>
+          <div className="lg:text-lg text-gray-700  space-y-2 mt-4">
+            {Array.isArray(selectedCourse) ? (
+              selectedCourse.map((topic, index) => (
+                <div key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: topic }}></span>
+                </div>
+              ))
+            ) : (
+              <div>
+                <span
+                  dangerouslySetInnerHTML={{ __html: selectedCourse }}
+                ></span>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
