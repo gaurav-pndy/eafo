@@ -86,7 +86,7 @@ export default function PreRegisterForm({ courseId, onClose }) {
       }}
       className="modal-overlay text-black text-left"
     >
-      <div className="precourse-modal" ref={modalRef}>
+      <div className="precourse-modal z-50" ref={modalRef}>
         <button className="close-btn" onClick={onClose}>
           <AiOutlineClose size={24} />
         </button>

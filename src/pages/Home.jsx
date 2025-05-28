@@ -20,6 +20,7 @@ import Patrons from "@/components/HomeComponents/Patrons";
 import Chairmen from "@/components/HomeComponents/Chairmen";
 import Advantages from "@/components/HomeComponents/Advantages";
 import FeedbackForm from "@/components/HomeComponents/FeedbackForm";
+import CourseContent2 from "@/components/HomeComponents/CourseContent2";
 const Home = () => {
   const location = useLocation();
 
@@ -42,6 +43,7 @@ const Home = () => {
       <AboutSection />
       <Advantages />
       <CourseContent />
+      <CourseContent2 />
       <ForWhomCourse />
       <Prizes />
       <WhatAwaitsYou />

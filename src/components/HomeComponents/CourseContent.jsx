@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PiStudentBold } from "react-icons/pi";
 import { FaBookBookmark } from "react-icons/fa6";
 import "swiper/css";
@@ -13,42 +13,61 @@ import { useTranslation } from "react-i18next";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-
-const cardData = [
-  {
-    button: "button1",
-    content: "oncoTopics",
-    image: "/courses/image1.png",
-    bgcolor: "bg-[#011753]",
-  },
-  {
-    button: "button2",
-    content: "oncoTopics",
-    image: "/courses/image2.png",
-    bgcolor: "bg-[#4e629d]",
-  },
-  {
-    button: "button1",
-    content: "oncoTopics",
-    image: "/courses/image1.png",
-    bgcolor: "bg-[#011753]",
-  },
-  {
-    button: "button2",
-    content: "oncoTopics",
-    image: "/courses/image2.png",
-    bgcolor: "bg-[#4e629d]",
-  },
-];
+import PreRegisterForm from "../PreRegisterForm";
 
 const CourseContent = () => {
   const { t } = useTranslation();
+  const [showForm, setShowForm] = useState(false);
+
+  const cardData = [
+    {
+      button: "button1",
+      content: "oncoTopics",
+      image: "/courses/image1.png",
+      bgcolor: "bg-[#011753]",
+      dialogHead: t("course_content.dialogHead1"),
+      dialogText: t("course_content.text1"),
+    },
+    {
+      button: "button2",
+      content: "oncoTopics",
+      image: "/courses/image2.png",
+      bgcolor: "bg-[#4e629d]",
+      dialogHead: t("course_content.dialogHead1"),
+
+      dialogText: t("course_content.text2"),
+    },
+    {
+      button: "button1",
+      content: "oncoTopics",
+      image: "/courses/image1.png",
+      bgcolor: "bg-[#011753]",
+      dialogHead: t("course_content.dialogHead1"),
+
+      dialogText: t("course_content.text1"),
+    },
+    {
+      button: "button2",
+      content: "oncoTopics",
+      image: "/courses/image2.png",
+      bgcolor: "bg-[#4e629d]",
+      dialogHead: t("course_content.dialogHead1"),
+
+      dialogText: t("course_content.text2"),
+    },
+  ];
 
   const [open, setOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState([]);
   const [courseTitle, setCourseTitle] = useState("");
 
   const oncoTopics = t("course_content.list", { returnObjects: true });
+
+  useEffect(() => {
+    if (showForm) {
+      setOpen(false);
+    }
+  }, [showForm]);
 
   const handleOpenDialog = (course, title) => {
     setSelectedCourse(course);
@@ -117,12 +136,7 @@ const CourseContent = () => {
               <SwiperSlide key={idx}>
                 <div
                   onClick={() =>
-                    handleOpenDialog(
-                      item.content === "oncoTopics"
-                        ? oncoTopics
-                        : t("course_content.text"),
-                      t("course_content.dialogHead1")
-                    )
+                    handleOpenDialog(item.dialogText, item.dialogHead)
                   }
                   className={`cursor-pointer ${item.bgcolor} transition-all duration-300 p-6 md:p-12 rounded-3xl text-white flex flex-col justify-between items-center space-y-3 h-full`}
                 >
@@ -148,11 +162,11 @@ const CourseContent = () => {
           </Swiper>
 
           {/* Custom Navigation */}
-          <div className="mt-10 lg:mt-6 justify-center flex gap-4">
-            <button className="swiper-button-prev-custom bg-[#d9d9d9] shadow-md p-2 rounded-full hover:bg-gray-400 cursor-pointer text-gray-600 transition-all duration-300">
+          <div className="mt-10 lg:mt-6 justify-center flex bg-[#ffffff] w-fit mx-auto px-3 py-2 rounded-full gap-3">
+            <button className="swiper-button-prev-custom bg-[#d9d9d9]  p-2 rounded-full hover:bg-gray-400 cursor-pointer text-black transition-all duration-300">
               <FaChevronLeft />
             </button>
-            <button className="swiper-button-next-custom bg-[#d9d9d9] shadow-md p-2 rounded-full hover:bg-gray-400 cursor-pointer text-gray-600 transition-all duration-300">
+            <button className="swiper-button-next-custom bg-[#d9d9d9]  p-2 rounded-full hover:bg-gray-400 cursor-pointer text-black transition-all duration-300">
               <FaChevronRight />
             </button>
           </div>
@@ -167,29 +181,32 @@ const CourseContent = () => {
         {/* Modal */}
       </div>
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="!max-w-4xl">
+        <DialogContent className="!max-w-4xl !max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
               <h2 dangerouslySetInnerHTML={{ __html: courseTitle }}></h2>
             </DialogTitle>
           </DialogHeader>
           <div className="lg:text-lg text-gray-700  space-y-2 mt-4">
-            {Array.isArray(selectedCourse) ? (
-              selectedCourse.map((topic, index) => (
-                <div key={index}>
-                  <span dangerouslySetInnerHTML={{ __html: topic }}></span>
-                </div>
-              ))
-            ) : (
-              <div>
-                <span
-                  dangerouslySetInnerHTML={{ __html: selectedCourse }}
-                ></span>
-              </div>
-            )}
+            <span dangerouslySetInnerHTML={{ __html: selectedCourse }}></span>
+            <div className="flex justify-center mt-6">
+              <button
+                onClick={() => setShowForm(true)}
+                className="w-full md:w-auto bg-[#1e3b8b] hover:bg-blue-950 cursor-pointer text-white font-semibold py-3 px-8 rounded-4xl"
+              >
+                {t("course_content.submitButton")}
+              </button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
+
+      {showForm && (
+        <PreRegisterForm
+          courseId="67fb8bc722a71bd3d19d580d"
+          onClose={() => setShowForm(false)}
+        />
+      )}
     </div>
   );
 };
