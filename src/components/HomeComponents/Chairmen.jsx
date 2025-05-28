@@ -44,7 +44,6 @@ const Chairmen = () => {
         gradient={false}
         speed={40}
         // pauseOnHover={true}
-        className="gap-4"
       >
         {doctors.map((doctor, index) => (
           <div

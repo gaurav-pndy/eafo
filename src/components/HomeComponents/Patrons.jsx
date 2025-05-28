@@ -1,4 +1,5 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
 
 const Patrons = () => {
@@ -31,11 +32,16 @@ const Patrons = () => {
         <h2 className="text-4xl font-bold ">Под патронажем:</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <Marquee
+        gradient={false}
+        speed={40}
+        // pauseOnHover={true}
+        className="gap-0"
+      >
         {doctors.map((doctor, index) => (
           <div
             key={index}
-            className="relative rounded-2xl overflow-hidden shadow-lg h-[26rem]"
+            className="w-94 mx-4 relative rounded-2xl overflow-hidden shadow-lg h-[26rem]"
           >
             {/* Doctor Image */}
             <img
@@ -54,9 +60,7 @@ const Patrons = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Course Cards - Similar to the example image */}
+      </Marquee>
     </div>
   );
 };
