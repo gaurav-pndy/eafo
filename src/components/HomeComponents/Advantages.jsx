@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaMedal, FaTeamspeak, FaUsers } from "react-icons/fa";
 import { GiPublicSpeaker } from "react-icons/gi";
 import { LuMicroscope } from "react-icons/lu";
+import { MdRecordVoiceOver } from "react-icons/md";
 import { SiCodementor } from "react-icons/si";
 
 const Advantages = () => {
@@ -12,7 +13,7 @@ const Advantages = () => {
     {
       title: t("advantages.tile1Title"),
       description: t("advantages.tile1Text"),
-      icon: <FaTeamspeak className="text-5xl text-white" />,
+      icon: <MdRecordVoiceOver className="text-5xl text-white" />,
     },
     {
       title: t("advantages.tile2Title"),

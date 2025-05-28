@@ -14,67 +14,87 @@ const Hero = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ amount: 0.3, once: true }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="w-full lg:min-h-[calc(100vh-5.5rem)] flex flex-col"
+      className="w-full lg:max-h-[calc(100vh-5.5rem)] bg-[#f2f3f8] flex flex-col"
     >
-      {/* Left side - Dark blue section with text */}
-      <div className="w-full min-h-[auto] lg:min-h-[calc(100vh-5.5rem)] bg-[#1e3a8a] relative text-white flex flex-col-reverse lg:flex-row justify-end items-center lg:[border-radius:0%_0%_10%_10%_/10%_10%_0%_20%] pt-0 lg:pt-0  overflow-hidden">
-        <div className="w-full py-6 md:py-16 px-4 md:px-10 lg:px-20 text-center md:text-left">
-          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight">
-            {t("heroSection.title1")}
-          </h1>
+      {/* Main container with background image on right for desktop */}
+      <div className="w-full min-h-[auto] lg:max-h-[calc(100vh-5.5rem)]  relative flex flex-col-reverse lg:flex-row  overflow-hidden lg:px-10 lg:gap-6 xl:gap-0 xl:px-32 lg:py-16 xl:py-6 ">
+        {/* Left side - Content section */}
+        <div className="w-full lg:w-[55%] px-4 md:px-10 lg:px-0 py-6 md:py-10 flex flex-col text-center lg:text-left justify-center">
+          {/* Red header */}
+          <div className="lg:mb-2">
+            <p className="text-[#9a0002] font-bold text-lg md:text-3xl lg:text-5xl ">
+              {t("heroSection.title1")}
+            </p>
+          </div>
 
-          <h1 className="text-2xl md:text-5xl font-semibold mb-4 lg:mb-6">
+          {/* Main title */}
+          <h1 className="text-xl md:text-4xl lg:text-6xl font-bold text-[#001554] lg:mb-4">
             {t("heroSection.subtitle")}
           </h1>
+
+          {/* Subtitle with specializations */}
+          <h2 className=" md:text-2xl lg:text-4xl text-[#2b3370] lg:mb-4">
+            {" "}
+            {t("heroSection.subtitle2")}
+          </h2>
+
           <p
-            className="text-lg md:text-xl text-gray-300 mb-2 lg:mb-2"
-            dangerouslySetInnerHTML={{ __html: t("heroSection.subtitle2") }}
-          >
-            {/* {t("heroSection.subtitle2")} */}
-          </p>
-          <p className="text-lg md:text-xl text-gray-300 mb-2 lg:mb-4">
+            className="text-xs md:text-base lg:text-xl text-[#010b54] lg:mb-4"
+            dangerouslySetInnerHTML={{ __html: t("heroSection.subtitle3") }}
+          />
+
+          <p className="text-lg md:text-2xl lg:text-3xl font-[800] text-[#a21a1c] ">
             {t("heroSection.dates")}
           </p>
-
-          <p className="md:text-lg text-gray-300 mb-8 lg:mb-10">
-            {t("heroSection.subtitle3")}
+          <p className="text-lg md:text-2xl lg:text-3xl font-[800] text-[#001353] mb-2">
+            {t("heroSection.location")}
           </p>
-          <div className="flex justify-center gap-4 flex-wrap">
+
+          <h2 className="text-xs md:text-base text-[#010b54] mb-4 lg:mb-8">
+            {" "}
+            {t("heroSection.subtitle4")}
+          </h2>
+
+          {/* CTA Button */}
+          <div className="flex justify-center lg:justify-start ">
             <button
               onClick={() => setShowForm(true)}
-              target="_blank"
-              className="bg-[#E21E28] text-white  px-8 hover:bg-transparent hover:border-white w-full md:w-fit border border-[#E21E28] cursor-pointer md:text-xl py-3 rounded-full font-semibold transition-all duration-300"
+              className="bg-[#8B0000] text-white px-20 py-2 rounded-full font-semibold hover:bg-[#A00000] transition-all duration-300 text-lg"
             >
-              {t("heroSection.button")}
+              Подать заявку
             </button>
-            {/* <a
-              href="https://precourse.eafo.info"
-              target="_blank"
-              className="border border-white px-8 py-3 rounded-full w-full md:w-fit font-semibold hover:bg-white md:text-xl hover:text-[#002379] transition-all duration-300"
-            >
-              {t("heroSection.course")}
-            </a> */}
           </div>
         </div>
-        {/* 
-        <div className="absolute hidden lg:block lg:w-[37%] right-3 top-1/2 translate-y-[-47%] overflow-visible h-[35vh] md:h-[40vh] lg:h-[calc(100vh-4.5rem)] rounded-tl-[20%] rounded-bl-[20%] rounded-br-[20%] z-10 lg:rounded-br-none border-2 border-white translate-x-6  pointer-events-none"></div> */}
-        <div className="w-full h-[35vh] md:h-[40vh] lg:h-[calc(100vh-5.5rem)] lg:w-[65%] right-0 lg:rounded-tl-[20%] rounded-bl-[20%] rounded-br-[20%] lg:rounded-br-none overflow-hidden relative">
-          <div className="h-full inset-0 overflow-hidden">
+
+        {/* Right side - Image section (hidden on mobile, visible on desktop) */}
+        <div className="hidden lg:block lg:w-[45%] relative ">
+          <div className="h-full w-full overflow-hidden flex justify-end">
             <img
-              src="/heroImg.jpg"
-              alt="Woman working on laptop"
-              className="w-full h-full object-cover object-right"
+              src="/hero-image.jpg"
+              alt="City view"
+              className="w-[26rem] xl:w-[32rem] h-full rounded-3xl  object-cover"
             />
           </div>
         </div>
 
-        {showForm && (
-          <PreRegisterForm
-            courseId="67fb8bc722a71bd3d19d580d"
-            onClose={() => setShowForm(false)}
-          />
-        )}
+        {/* Mobile image section - full width below content */}
+        <div className="lg:hidden w-full h-64 md:h-96 relative ">
+          <div className="h-full w-full ">
+            <img
+              src="/hero-image.jpg"
+              alt="City view"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
+
+      {showForm && (
+        <PreRegisterForm
+          courseId="67fb8bc722a71bd3d19d580d"
+          onClose={() => setShowForm(false)}
+        />
+      )}
     </motion.section>
   );
 };

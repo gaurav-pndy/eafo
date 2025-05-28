@@ -12,7 +12,7 @@ const AboutSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ amount: 0.3, once: true }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="py-16 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto"
+      className="py-16 bg-[#f1f1f1]  "
     >
       {/* <div className="text-center mb-10">
        
@@ -20,22 +20,24 @@ const AboutSection = () => {
           {t("about_course.about_XI")}
         </h2>
       </div> */}
-      {/* Grid with varying tile heights */}
-      <div className="grid grid-cols-2 md:grid-cols-4  items-end gap-4">
-        {/* Tile 1 - Short height */}
+
+      <div className="grid max-w-7xl px-4  xl:px-12 mx-auto grid-cols-2 lg:grid-cols-4  items-end gap-3 xl:gap-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-[#8897c1] p-3 xl:p-6 rounded-3xl flex flex-col justify-between h-full md:h-52 lg:h-64"
+          className="bg-[#fbfbfb] px-4 py-6 xl:px-6 rounded-3xl flex flex-col justify-between h-full text-center"
         >
           <div>
-            <h3 className="text-5xl  lg:text-7xl font-bold text-gray-800 mb-2">
+            <h3 className="text-7xl  md:text-[6rem] font-[800] text-[#9a0003] mb-2">
               {t("about_course.stat_1.number")}
             </h3>
-            <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-xl font-semibold ">
-              {t("about_course.stat_1.desc")}
-            </p>
+            <p
+              className="text-[#1c2862] text-sm  md:text-xl md:leading-9 "
+              dangerouslySetInnerHTML={{
+                __html: t("about_course.stat_1.desc"),
+              }}
+            ></p>
           </div>
         </motion.div>
 
@@ -44,32 +46,37 @@ const AboutSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-[#d7dcea] p-3 xl:p-6 rounded-3xl md:h-44 lg:h-56"
+          className="bg-[#fbfbfb] px-4 py-6 xl:px-6 rounded-3xl h-full text-right"
         >
           <div>
-            <h3 className="text-5xl  lg:text-7xl font-bold text-gray-800 mb-2">
+            <h3 className="text-7xl  md:text-[6rem] font-[800] text-[#001554] mb-2">
               {t("about_course.stat_2.number")}
             </h3>
-            <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-xl font-semibold ">
-              {t("about_course.stat_2.desc")}
-            </p>
+            <p
+              className="text-[#001554] text-sm md:text-xl md:leading-9 "
+              dangerouslySetInnerHTML={{
+                __html: t("about_course.stat_2.desc"),
+              }}
+            ></p>
           </div>
         </motion.div>
 
-        {/* Tile 3 - Medium height */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#bdc5dd] p-3 xl:p-6 rounded-3xl flex flex-col  items-center h-full md:h-60 lg:h-72"
+          className="bg-[#fbfbfb] px-4 py-6 xl:px-6  rounded-3xl flex flex-col  items-center h-full text-right"
         >
           <div>
-            <h3 className="text-5xl  lg:text-7xl font-bold text-gray-800 mb-2">
+            <h3 className="text-7xl lg:tracking-tighter xl:tracking-normal md:text-[6rem] font-[800] text-[#001554] mb-2">
               {t("about_course.stat_3.number")}
             </h3>
-            <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-xl font-semibold ">
-              {t("about_course.stat_3.desc")}
-            </p>
+            <p
+              className="text-[#001554] text-sm md:text-xl md:leading-9 text-justify"
+              dangerouslySetInnerHTML={{
+                __html: t("about_course.stat_3.desc"),
+              }}
+            ></p>
           </div>
         </motion.div>
 
@@ -78,29 +85,25 @@ const AboutSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-[#f2f3f8] overflow-hidden p-3 pb-0 xl:p-6 rounded-3xl md:h-72 lg:h-86"
+          className="bg-[#fbfbfb] overflow-hidden px-4 py-6 xl:px-6 rounded-3xl relative h-full text-left"
         >
-          <div className="flex flex-col h-full justify-between">
+          <div className="flex flex-col h-full justify-between relative z-10">
             <div>
-              <div>
-                {/* <h3 className="text-3xl font-bold text-gray-800">+600</h3> */}
-                <p className="text-gray-600 text-sm md:text-[0.9rem] lg:text-xl font-semibold mt-2 mb-2 break-words">
-                  {t("about_course.stat_4")}
-                </p>
-              </div>
+              <p
+                className="text-[#001554] text-sm md:text-xl md:leading-9 mt-2 mb-2 break-words"
+                dangerouslySetInnerHTML={{
+                  __html: t("about_course.stat_4"),
+                }}
+              ></p>
             </div>
+          </div>
 
-            <div className=" flex justify-center">
-              <div className="w-full h-32 md:h-34 lg:h-48 relative overflow-hidden ">
-                <div className="absolute inset-0 flex justify-center items-center">
-                  <img
-                    src="/tile4.png"
-                    alt="Certificate"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="absolute bottom-5 right-5 md:right-12 flex justify-center items-end pointer-events-none">
+            <img
+              src="/certificate.png"
+              alt="Certificate"
+              className="object-contain w-14 md:w-22 rotate-[20deg] "
+            />
           </div>
         </motion.div>
       </div>
