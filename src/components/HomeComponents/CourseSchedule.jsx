@@ -8,83 +8,118 @@ const CourseSchedule = () => {
 
   return (
     <div className="w-full py-16 lg:py-32 flex justify-center items-center mx-auto bg-gray-100   overflow-hidden">
-      <div className="p-4 lg:p-10  lg:w-[90%] xl:w-[70%] flex flex-col rounded-[10%] bg-white relative">
-        {/* Calendar animation/image */}
-        <div className="flex lg:absolute top-10 left-10  mx-auto">
-          {/* <img
-            src="/calendar.png"
-            alt="Calendar image"
-            className="w-40 hidden lg:block lg:w-[26rem] h-40 lg:h-[26rem]"
-          /> */}
-          <div className=" mb-6">
-            <Timer />
-          </div>
+      <div className="p-4 xl:p-10  xl:w-[85%] grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-2 lg:gap-4  rounded-[10%]  relative">
+        <div className="col-span-2 p-3 md:p-5 lg:p-3 xl:p-5 rounded-3xl flex items-center bg-white row-span-1 ">
+          <h1
+            className=" text-3xl text-[#9A0003] md:text-[3.25rem] lg:leading-13 font-[800] text-right"
+            dangerouslySetInnerHTML={{ __html: t("schedule.heading") }}
+          ></h1>
         </div>
 
-        {/* Countdown Timer */}
+        <div className="col-span-1 row-span-1 flex lg:hidden flex-col justify-center p-3 md:p-5 text-[#001554] rounded-3xl bg-white">
+          <h2
+            className=" text-2xl md:text-5xl font-[800] text-left"
+            dangerouslySetInnerHTML={{ __html: t("schedule.venue.heading") }}
+          ></h2>
+          <h2
+            className=" text-2xl md:text-5xl  font-[800] text-left "
+            dangerouslySetInnerHTML={{ __html: t("schedule.venue.venue") }}
+          ></h2>
+        </div>
 
-        {/* Event Information */}
-        <div className=" flex flex-col lg:flex-row justify-around">
-          <div className="lg:w-1/2 flex flex-col lg:pb-14 relative  items-center lg:justify-end">
-            <h1 className=" text-3xl lg:text-[3.25rem] lg:leading-14 font-bold text-center lg:text-left">
-              {t("schedule.heading")}
-            </h1>
-            <img
-              src="/calendar.png"
-              alt="Calendar image"
-              className="w-36 md:w-42 lg:w-36 lg:h-36 xl:w-42 xl:h-42 md:h-42 lg:absolute right-15 xl:right-35 -bottom-12 h-36 "
-            />
+        <div className="col-span-1 row-span-1 lg:hidden rounded-3xl bg-white">
+          <img
+            src="/schedule/artis.png"
+            alt="students image"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+
+        <div className="col-span-1 row-span-2  bg-white rounded-3xl p-3 md:p-5 py-8  text-[#001554] flex flex-col justify-evenly gap-2 relative">
+          <div className="">
+            <h3 className="font-bold md:mb-1 md:text-3xl lg:text-xl">
+              {t("schedule.checkin.heading")}
+            </h3>
+            <p className="text-sm md:text-2xl lg:text-lg">
+              {" "}
+              {t("schedule.checkin.checkin")}
+            </p>
           </div>
 
-          <div className="lg:w-1/2  rounded-[10%] p-6 pr-0  text-gray-800 text-center relative">
-            {/* <div className="absolute  left-[50%] translate-x-[-50%] hidden lg:block -top-28 lg:-top-36   scale-50">
-              <Timer />
-            </div> */}
-
-            <div className="mb-5 mt-0 lg:mt-0">
-              <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold  mb-1">
-                {t("schedule.dates.heading")}
-              </h3>
-              <p> {t("schedule.dates.date")}</p>
-            </div>
-
-            <div className="mb-5">
-              <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold  mb-1">
-                {t("schedule.venue.heading")}
-              </h3>
-              <p
-                dangerouslySetInnerHTML={{ __html: t("schedule.venue.venue") }}
-              ></p>
-            </div>
-
-            <div className="mb-5">
-              <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold mb-1 ">
-                {t("schedule.checkin.heading")}
-              </h3>
-              <p> {t("schedule.checkin.checkin")}</p>
-            </div>
-
-            <div className="mb-5">
-              <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold mb-1 ">
-                {t("schedule.opening.heading")}
-              </h3>
-              <p> {t("schedule.opening.opening")}</p>
-            </div>
-
-            <div className="mb-5">
-              <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold  mb-1">
-                {t("schedule.closing.heading")}
-              </h3>
-              <p> {t("schedule.closing.closing")}</p>
-            </div>
-
-            <div>
-              <h3 className="text-white py-2 rounded-2xl bg-[#1e3a8a] font-bold  mb-1">
-                {t("schedule.checkout.heading")}
-              </h3>
-              <p> {t("schedule.checkout.checkout")}</p>
-            </div>
+          <div className="">
+            <h3 className=" font-bold md:mb-1  md:text-3xl lg:text-xl">
+              {t("schedule.opening.heading")}
+            </h3>
+            <p className="text-sm md:text-2xl lg:text-lg">
+              {" "}
+              {t("schedule.opening.opening")}
+            </p>
           </div>
+
+          <div className="">
+            <h3 className=" font-bold  md:mb-1 md:text-3xl lg:text-xl">
+              {t("schedule.closing.heading")}
+            </h3>
+            <p className="text-sm md:text-2xl lg:text-lg">
+              {" "}
+              {t("schedule.closing.closing")}
+            </p>
+          </div>
+
+          <div>
+            <h3 className=" font-bold md:mb-1 md:text-3xl lg:text-xl">
+              {t("schedule.checkout.heading")}
+            </h3>
+            <p className="text-sm md:text-2xl lg:text-lg">
+              {" "}
+              {t("schedule.checkout.checkout")}
+            </p>
+          </div>
+        </div>
+        <div className="col-span-1 row-span-1  rounded-3xl text-[#9A0003]  bg-white flex lg:hidden flex-col justify-center p-3 md:p-5 ">
+          <h2
+            className="md:text-3xl lg:text-2xl    text-center"
+            dangerouslySetInnerHTML={{ __html: t("schedule.dates.heading") }}
+          ></h2>
+          <h2
+            className=" md:text-3xl lg:text-2xl    font-[800]    text-center"
+            dangerouslySetInnerHTML={{ __html: t("schedule.dates.date") }}
+          ></h2>
+        </div>
+        <div className="col-span-1 row-span-1   rounded-3xl bg-white">
+          <img
+            src="/schedule/students.jpg"
+            alt="students image"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+        <div className="col-span-1 row-span-1 hidden lg:flex flex-col justify-center p-3 xl:p-5 text-[#001554] rounded-3xl bg-white">
+          <h2
+            className=" text-3xl  lg:text-[2.3rem] 4 font-[800] text-center lg:text-left leading-10 break-words"
+            dangerouslySetInnerHTML={{ __html: t("schedule.venue.heading") }}
+          ></h2>
+          <h2
+            className=" text-3xl  lg:text-[2.3rem]  font-[800] text-center lg:text-left leading-10"
+            dangerouslySetInnerHTML={{ __html: t("schedule.venue.venue") }}
+          ></h2>
+        </div>
+
+        <div className="col-span-1  row-span-1 rounded-3xl hidden lg:block bg-white">
+          <img
+            src="/schedule/artis.png"
+            alt="students image"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+        <div className="col-span-1 row-span-1  rounded-3xl text-[#9A0003]  bg-white hidden lg:flex flex-col justify-center p-3 md:p-5 ">
+          <h2
+            className="md:text-3xl lg:text-2xl    text-center"
+            dangerouslySetInnerHTML={{ __html: t("schedule.dates.heading") }}
+          ></h2>
+          <h2
+            className=" md:text-3xl lg:text-2xl    font-[800]    text-center"
+            dangerouslySetInnerHTML={{ __html: t("schedule.dates.date") }}
+          ></h2>
         </div>
       </div>
     </div>

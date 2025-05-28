@@ -301,25 +301,25 @@
     "date2": "Июль 28, 2025",
     "date3": "Август 3, 2025",
     "date4": "Август 8, 2025",
-    "heading": "Даты и место проведения XI EAFO Базовых медицинских курсов",
+    "heading": "Даты и место проведения <br/>XI EAFO Базовых медицинских курсов",
     "dates": {
       "heading": "Даты проведения",
       "date": "с 23 июля (среда) по 08 августа (пятница) 2025 года"
     },
     "venue": {
       "heading": "Место проведения",
-      "venue": "<a href='https://artisplaza.com/' target='_blank'  className='hover:underline' >                  «Artis Plaza», г. Магас                </a>"
+      "venue": "<a href='https://artisplaza.com/' target='_blank'  className='hover:underline' >                  «Artis Plaza» г. Магас                </a>"
     },
     "checkin": {
       "heading": "Заезд",
       "checkin": "в отель 23 июля 2025"
     },
     "opening": {
-      "heading": "Открытие Курсов и приветственные лекции",
+      "heading": "Открытие Курсов",
       "opening": "23 июля (среда) 2025 года"
     },
     "closing":{
-      "heading": "Закрытие Курсов, церемония награждения, заключительная лекция, отъезд",
+      "heading": "Закрытие Курсов, церемония награждения",
       "closing": "08 августа (пятница) 2025 года в 16:00"
     },
     "checkout": {
