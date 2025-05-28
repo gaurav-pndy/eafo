@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import PreRegisterForm from "@/components/PreRegisterForm";
+// import { Link } from "react-router-dom";
 
 const steps = [
   {
