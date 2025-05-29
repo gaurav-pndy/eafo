@@ -43,8 +43,11 @@ const Footer = () => {
             <address className="not-italic text-sm leading-relaxed">
               {/* <p>{t("footer.location")}</p> */}
               {/* <p>{t("footer.country")}</p> */}
-              <p className="mt-2">basic@eafo.info</p>
-              <p>+7 (931) 111-22-55</p>
+              <a href="mailto:basic@eafo.info" className="mt-2">
+                basic@eafo.info
+              </a>{" "}
+              <br />
+              <a href="tel:+79851257788">+7 (985) 125-77-88</a>
             </address>
           </div>
 
@@ -152,7 +155,7 @@ const Footer = () => {
                 <FaLinkedinIn size={20} />
               </a>
               <a
-                href="#"
+                href="https://t.me/+79851257788"
                 className="text-gray-700 hover:text-gray-900 transition-all duration-300 hover:scale-125"
                 aria-label="Telegram"
               >
