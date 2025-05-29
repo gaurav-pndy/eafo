@@ -79,8 +79,8 @@ const CourseContent = () => {
   const scrollRef = useRef(null);
 
   return (
-    <div className=" lg:pl-6 xl:pl-10 lg:pr-0 py-16 lg:pb-24 rounded-xl bg-[#f2f3f8]">
-      <div className="xl:pl-40 flex flex-col lg:flex-row">
+    <div className=" lg:pl-6 xl:pl-[6vw] 2xl:pl-[11vw] lg:pr-0 py-16 lg:pb-24 rounded-xl bg-[#f2f3f8]">
+      <div className=" flex flex-col lg:flex-row">
         <div className="lg:w-1/2 px-4 xl:pr-16 lg:py-10 flex flex-col justify-between">
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-[2.5rem] font-bold text-[#9a0104] lg:mb-2">
@@ -101,7 +101,7 @@ const CourseContent = () => {
           </div>
         </div>
 
-        <div className="relative lg:w-1/2 md:px-4 lg:pr-0 xl:pl-10 overflow-hidden py-10  lg:py-0">
+        <div className="relative rounded-3xl lg:w-1/2 md:mx-4 lg:mr-0 xl:ml-10 overflow-hidden py-10  lg:py-0 lg:pb-20">
           <Swiper
             modules={[Navigation, Autoplay]}
             autoplay={{
@@ -165,7 +165,7 @@ const CourseContent = () => {
           </Swiper>
 
           {/* Custom Navigation */}
-          <div className="mt-10 lg:mt-6 justify-center flex bg-[#ffffff] w-fit mx-auto px-3 py-2 rounded-full gap-3">
+          <div className="mt-10 lg:mt-6 justify-center flex bg-[#ffffff] w-fit lg:absolute left-32 xl:left-36 bottom-0  mx-auto px-3 py-2 rounded-full gap-3 custom-left">
             <button className="swiper-button-prev-custom bg-[#d9d9d9]  p-2 rounded-full hover:bg-gray-400 cursor-pointer text-black transition-all duration-300">
               <FaChevronLeft />
             </button>

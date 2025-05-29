@@ -142,3 +142,15 @@
     /* add any other custom styles here */
   }
 }
+
+@media (min-width: 1110px) {
+  .custom-left {
+    left: 9rem;
+  }
+}
+@media (min-width: 1190px) {
+  .custom-left {
+    left: 10rem;
+  }
+}
+
