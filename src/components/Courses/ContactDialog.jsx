@@ -24,10 +24,10 @@ const ContactDialog = ({ onClose }) => {
           <div>
             <h3 className="font-bold text-lg text-[#1e3a8a]">Телефон:</h3>
             <a
-              href="tel:+79311112255"
+              href="tel:+79851257788"
               className="text-blue-600 font-semibold hover:underline"
             >
-              +7 (931) 111-22-55
+              +7 (985) 125-77-88
             </a>
           </div>
         </div>
@@ -62,13 +62,15 @@ const ContactDialog = ({ onClose }) => {
 
         <div className="flex space-x-6 mt-6 justify-center">
           <a
-            href="#"
+            href="https://wa.me/79851257788"
+            target="_blank"
             className="text-green-600 hover:scale-105 transition-transform"
           >
             <FaWhatsapp className="text-5xl" />
           </a>
           <a
-            href="#"
+            href="https://t.me/+79851257788"
+            target="_blank"
             className="text-blue-800 hover:scale-105 transition-transform"
           >
             <FaTelegram className="text-5xl" />
