@@ -183,7 +183,7 @@ const Header = () => {
               ) : (
                 <button className="  flex items-center gap-1 border rounded-full px-3 py-0.5 border-gray-600 hover:bg-[#d9d9d9] hover:border-[#d9d9d9] transition-all duration-200 cursor-pointer">
                   <IoMdMenu className="text-2xl md:text-3xl" />
-                  <span className="-translate-y-[0.2rem] text-xl md:text-[1.5rem]  flex items-center">
+                  <span className="  md:text-[1.15rem]  flex items-center">
                     {t("header.menu")}
                   </span>
                 </button>
