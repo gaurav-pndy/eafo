@@ -1,6 +1,7 @@
 import AdditionalInfoCard from "@/components/Program/AdditionalInfoCard";
 import CourseModuleCard from "@/components/Program/CourseModuleCard";
 import HeroSection from "@/components/Program/HeroSection";
+import PreviousPrograms from "@/components/Program/PreviousPrograms";
 import ProgramOverview from "@/components/Program/ProgramOverview";
 import TimelineItem from "@/components/Program/TimelineItem";
 import { useTranslation } from "react-i18next";
@@ -15,6 +16,7 @@ const ProgramPage = () => {
   return (
     <>
       <HeroSection />
+      <PreviousPrograms />
       <ProgramOverview />
 
       <section className="bg-white container mx-auto  px-4">

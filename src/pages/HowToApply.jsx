@@ -37,7 +37,7 @@ const steps = [
 
 const HowToApply = () => {
   const { t } = useTranslation();
-  const [showAllSteps, setShowAllSteps] = useState(false);
+  // const [showAllSteps, setShowAllSteps] = useState(false);
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -49,7 +49,7 @@ const HowToApply = () => {
       <div className="relative pl-2 lg:pl-0  ">
         <AnimatePresence>
           {steps
-            .slice(0, showAllSteps ? steps.length : 2)
+            // .slice(0, showAllSteps ? steps.length : 2)
             .map((step, index) => (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -58,11 +58,7 @@ const HowToApply = () => {
                 transition={{ duration: 0.4 }}
                 key={index}
                 className={`relative pl-8 md:pl-16 pb-10  md:pb-16 border-l-3 ${
-                  showAllSteps
-                    ? index !== steps.length - 1
-                      ? " border-[#1e3a8a]"
-                      : " border-transparent"
-                    : index !== 1
+                  index !== steps.length - 1
                     ? " border-[#1e3a8a]"
                     : " border-transparent"
                 }  `}
@@ -90,7 +86,7 @@ const HowToApply = () => {
         </AnimatePresence>
       </div>
 
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <button
           onClick={() => setShowAllSteps(!showAllSteps)}
           className="mt-8 bg-[#1e3a8a] text-white px-16 py-3 rounded-2xl hover:bg-blue-800 cursor-pointer transition-all text-xl duration-300"
@@ -99,7 +95,7 @@ const HowToApply = () => {
             ? t("howToApply.hideButton")
             : t("howToApply.showButton")}
         </button>
-      </div>
+      </div> */}
 
       {showForm && (
         <PreRegisterForm
