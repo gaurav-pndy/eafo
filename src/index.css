@@ -153,4 +153,9 @@
     left: 10rem;
   }
 }
+@media (min-width: 1280px) {
+  .custom-left {
+    left: 9rem;
+  }
+}
 

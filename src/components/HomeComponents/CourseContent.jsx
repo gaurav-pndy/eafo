@@ -165,7 +165,7 @@ const CourseContent = () => {
           </Swiper>
 
           {/* Custom Navigation */}
-          <div className="mt-10 lg:mt-6 justify-center flex bg-[#ffffff] w-fit lg:absolute left-32 xl:left-36 bottom-0  mx-auto px-3 py-2 rounded-full gap-3 custom-left">
+          <div className="mt-10 lg:mt-6 justify-center flex bg-[#ffffff] w-fit lg:absolute left-32 xl:left-32 bottom-0  mx-auto px-3 py-2 rounded-full gap-3 custom-left">
             <button className="swiper-button-prev-custom bg-[#d9d9d9]  p-2 rounded-full hover:bg-gray-400 cursor-pointer text-black transition-all duration-300">
               <FaChevronLeft />
             </button>
