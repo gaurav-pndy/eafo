@@ -14,41 +14,43 @@ import { GiCancer } from "react-icons/gi";
 const ForWhomCourse = () => {
   const { t } = useTranslation();
 
-  // Fetching the list of categories from translations
   const categories = t("for_whom_course.items", { returnObjects: true });
 
-  // Icons to match the categories
   const icons = [
-    <FaUserMd className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Doctors
-    <FaMicroscope className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Pathologists
-    <FaUserNurse className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Oncologists
-    <FaUserGraduate className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Students & Residents
-    <FaFlask className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // Pharmaceutical & Medical Industry
-    <FaGlobe className="text-6xl shrink-0 p-4 rounded-full text-[#bdc5dd] bg-[#f5f6fd]" />, // International participants
+    <FaUserMd className="text-5xl shrink-0  text-white" />,
+    <FaMicroscope className="text-5xl shrink-0 text-white" />,
+    <FaUserNurse className="text-5xl shrink-0  text-white" />,
+    <FaUserGraduate className="text-5xl shrink-0  text-white" />,
+    <FaFlask className="text-5xl shrink-0  text-white" />,
+    <FaGlobe className="text-5xl shrink-0  text-white" />,
   ];
 
   return (
-    <section className="px-4 lg:px-20 py-12 max-w-6xl mx-auto">
-      {/* Main Title */}
-      <div className="mb-10  rounded-lg text-center">
-        <h3 className="text-2xl md:text-4xl font-bold">
-          {t("for_whom_course.title")}
-        </h3>
-      </div>
+    <section className="w-full bg-[#1e3a8a] py-16 px-4 md:px-8 lg:px-12">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-10  rounded-lg text-center">
+          <h3 className="text-2xl md:text-4xl font-bold text-white">
+            {t("for_whom_course.title")}
+          </h3>
+        </div>
 
-      {/* Grid Layout for Tiles */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-        {categories.map((category, index) => (
-          <div
-            key={index}
-            className="bg-white p-6 md:p-10 rounded-lg shadow-lg flex items-start gap-8"
-          >
-            <p className="text-gray-700  md:text-lg leading-relaxed">
-              {category}
-            </p>
-            {icons[index]}
-          </div>
-        ))}
+        {/* Grid Layout for Tiles */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {categories.map((category, index) => (
+            <div
+              key={index}
+              className="border-2 border-white rounded-md p-6 flex flex-col relative bg-transparent"
+            >
+              <div className="absolute top-4 right-4"> {icons[index]}</div>
+
+              <div className="pr-12">
+                {" "}
+                {/* Add padding to right to avoid text overlapping with icon */}
+                <h4 className="text-xl  text-white mb-1">{category}</h4>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
