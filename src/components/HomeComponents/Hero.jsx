@@ -59,7 +59,7 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-start ">
             <button
               onClick={() => setShowForm(true)}
-              className="bg-[#8B0000] text-white px-20 py-2 rounded-full font-semibold hover:bg-[#A00000] transition-all duration-300 text-lg"
+              className="bg-[#8B0000] text-white px-20 cursor-pointer py-2 rounded-full font-semibold hover:bg-[#A00000] transition-all duration-300 text-lg"
             >
               Подать заявку
             </button>

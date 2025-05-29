@@ -44,7 +44,7 @@ const FixedContact = () => {
       {isContactOpen && (
         <div
           ref={dialogRef}
-          className="fixed bottom-20 md:bottom-19 right-4 md:right-23 bg-white shadow-lg rounded-xl p-4 max-w-sm md:max-w-md md:w-full z-50"
+          className="fixed bottom-20 md:bottom-22 right-4 md:right-23 bg-white shadow-lg shadow-black/30 rounded-xl p-4 max-w-sm md:max-w-md md:w-full z-50"
         >
           <ContactDialog />
         </div>

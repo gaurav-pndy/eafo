@@ -14,6 +14,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import PreRegisterForm from "../PreRegisterForm";
+import { Link } from "react-router-dom";
 
 const CourseContent = () => {
   const { t } = useTranslation();
@@ -92,9 +93,11 @@ const CourseContent = () => {
           </div>
 
           <div className="hidden lg:flex justify-center lg:justify-start ">
-            <button className="bg-[#001554] text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
-              Выбери курс
-            </button>
+            <Link to="/participation-variants">
+              <button className="bg-[#001554] cursor-pointer text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
+                Выбери курс
+              </button>
+            </Link>
           </div>
         </div>
 

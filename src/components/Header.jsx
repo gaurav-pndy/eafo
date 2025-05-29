@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import logo from "/EAFO.jpg";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoMdMenu } from "react-icons/io";
 import "../utils/i18n";
 import { FaGlobe, FaUserCircle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { TbListSearch } from "react-icons/tb";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
   const { i18n, t } = useTranslation();
@@ -62,12 +63,22 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
-  const navItems = [
+  const headerItems = [
+    { label: t("header.programs"), path: "/program" },
     {
-      label: t("header.participationTerms"),
+      label: t("header.participationFormats"),
       path: "/participation-variants",
     },
-    { label: t("header.pricing"), path: "/pricing" },
+    { label: t("header.cost"), path: "/pricing" },
+  ];
+  const navItems = [
+    { label: t("header.programs"), path: "/program" },
+
+    {
+      label: t("header.participationFormats"),
+      path: "/participation-variants",
+    },
+    { label: t("header.cost"), path: "/pricing" },
     { label: t("header.howToApply"), path: "/how-to-apply" },
     { label: t("header.visa"), path: "/visa" },
     { label: t("header.partners"), path: "/partners" },
@@ -138,6 +149,7 @@ const Header = () => {
       <header className="w-full fixed top-0 left-0 z-20 bg-white border-b border-purple-200 shadow-sm">
         <div className="mx-auto flex items-center justify-between px-4 lg:px-10 xl:px-12 h-20 lg:h-22">
           {/* Left: Logo & Slogan */}
+
           <div className="flex items-center">
             <Link to="/">
               <img
@@ -147,9 +159,36 @@ const Header = () => {
                 className="h-10 lg:h-11"
               />
             </Link>
+            <div className="hidden ml-10 xl:ml-20 lg:flex items-center gap-4 text-[#001554] lg:gap-6 xl:gap-12">
+              {headerItems.map((item) => (
+                <div key={item.label} className="w-fit ">
+                  <button
+                    onClick={() => handleNavClick(item)}
+                    className="w-fit flex justify-between items-center text-left cursor-pointer  hover:text-blue-800  transition-all duration-200"
+                  >
+                    <span className="font-medium text-lg">{item.label}</span>
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
+            <div
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="pl-4 cursor-pointer md:pl-0 relative z-30"
+            >
+              {isMenuOpen ? (
+                <X className="h-10 w-10" />
+              ) : (
+                <button className="  flex items-center gap-1 border rounded-full px-3 py-0.5 border-gray-600 hover:bg-[#d9d9d9] hover:border-[#d9d9d9] transition-all duration-200 cursor-pointer">
+                  <IoMdMenu className="text-2xl md:text-3xl" />
+                  <span className="-translate-y-[0.2rem] text-xl md:text-[1.5rem]  flex items-center">
+                    {t("header.menu")}
+                  </span>
+                </button>
+              )}
+            </div>
             <div className="relative" ref={userDropdownRef}>
               <button
                 onClick={() => setUserDropdownOpen(!userDropdownOpen)}
@@ -175,17 +214,6 @@ const Header = () => {
                 </div>
               )}
             </div>
-
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="pl-4 cursor-pointer md:pl-0 relative z-30"
-            >
-              {isMenuOpen ? (
-                <X className="h-10 w-10" />
-              ) : (
-                <TbListSearch className="h-10 w-10" />
-              )}
-            </button>
           </div>
         </div>
 
@@ -197,7 +225,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: "-100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="fixed left-[50%] translate-x-[-50%] top-22 md:top-24 z-20 w-full max-w-5xl h-fit bg-gradient-to-b from-blue-50 to-blue-100 shadow-2xl overflow-y-auto  p-5 md:p-10 rounded-2xl"
+              className="fixed left-[50%] translate-x-[-50%] top-22 md:top-24 z-20 w-full max-w-5xl h-fit bg-white shadow-2xl overflow-y-auto  p-5 md:p-10 rounded-2xl"
               // style={{ paddingTop: "5rem" }}
             >
               <nav className="grid md:grid-cols-2  gap-3 md:px-6  text-gray-800">

@@ -15,7 +15,7 @@ const FixedButtons = ({ courseId }) => {
       {/* Submit Application Button */}
       <button
         onClick={() => setSubmitOpen(true)}
-        className="fixed max-w-7xl  cursor-pointer  2xl:w-full bottom-2 md:bottom-4 left-2 w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] md:left-4 2xl:left-1/2 transform 2xl:-translate-x-1/2 bg-blue-900 border-white border text-lg text-white px-6 py-4 rounded-2xl font-bold hover:bg-blue-800 transition duration-300 z-50"
+        className="fixed max-w-7xl  cursor-pointer  2xl:w-full bottom-2 md:bottom-4 left-2 w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] md:left-4 2xl:left-1/2 transform 2xl:-translate-x-1/2 bg-[#001554] text-lg text-white px-6 py-4.5 rounded-2xl font-bold hover:bg-blue-900 transition duration-300 z-50"
       >
         {t("courses.submitButton")}
       </button>
