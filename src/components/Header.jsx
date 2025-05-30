@@ -10,6 +10,7 @@ import { FaGlobe, FaUserCircle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { TbListSearch } from "react-icons/tb";
 import { AiOutlineMenu } from "react-icons/ai";
+import PreRegisterForm from "./PreRegisterForm";
 
 const Header = () => {
   const { i18n, t } = useTranslation();
@@ -20,6 +21,7 @@ const Header = () => {
   const dropdownRef = useRef(null);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   // Refs
   const langDropdownRef = useRef(null);
@@ -147,7 +149,7 @@ const Header = () => {
       </AnimatePresence>
 
       <header className="w-full fixed top-0 left-0 z-20 bg-white border-b border-purple-200 shadow-sm">
-        <div className="mx-auto flex items-center justify-between px-4 lg:px-10 xl:px-12 h-20 lg:h-22">
+        <div className="mx-auto flex items-center justify-between px-4 lg:px-6 xl:px-12 h-20 lg:h-22">
           {/* Left: Logo & Slogan */}
 
           <div className="flex items-center">
@@ -159,21 +161,29 @@ const Header = () => {
                 className="h-10 lg:h-11"
               />
             </Link>
-            <div className="hidden ml-10 xl:ml-20 lg:flex items-center gap-4 text-[#001554] lg:gap-6 xl:gap-12">
+            <div className="hidden ml-5 xl:ml-20 lg:flex items-center gap-4 text-[#001554] lg:gap-4 xl:gap-12">
               {headerItems.map((item) => (
                 <div key={item.label} className="w-fit ">
                   <button
                     onClick={() => handleNavClick(item)}
                     className="w-fit flex justify-between items-center text-left cursor-pointer  hover:text-blue-800  transition-all duration-200"
                   >
-                    <span className="font-medium text-lg">{item.label}</span>
+                    <span className="font-medium xl:text-lg">{item.label}</span>
                   </button>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="flex items-center gap-2 md:gap-8 xl:gap-4 ">
+          <div className="flex items-center gap-2 md:gap-8  lg:gap-4 ">
+            <div className="hidden lg:flex justify-center lg:justify-start ">
+              <button
+                onClick={() => setShowForm(true)}
+                className="bg-[#8B0000] text-white px-5 xl:px-14 cursor-pointer py-1.5 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
+              >
+                Подать заявку
+              </button>
+            </div>
             <div
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="pl-4 cursor-pointer md:pl-0 relative z-30"
@@ -181,7 +191,7 @@ const Header = () => {
               {isMenuOpen ? (
                 <X className="h-10 w-10" />
               ) : (
-                <button className="  flex items-center gap-1 border rounded-full px-3 py-0.5 border-gray-600 hover:bg-[#d9d9d9] hover:border-[#d9d9d9] transition-all duration-200 cursor-pointer">
+                <button className="  flex items-center gap-1 border rounded-full px-3 py-1.5 lg:py-0.5 border-gray-600 hover:bg-[#d9d9d9] hover:border-[#d9d9d9] transition-all duration-200 cursor-pointer">
                   <IoMdMenu className="text-2xl md:text-3xl" />
                   <span className="  md:text-[1.15rem]  flex items-center">
                     {t("header.menu")}
@@ -313,6 +323,13 @@ const Header = () => {
           transition: filter 0.3s ease;
         }
       `}</style> */}
+
+      {showForm && (
+        <PreRegisterForm
+          courseId="67fb8bc722a71bd3d19d580d"
+          onClose={() => setShowForm(false)}
+        />
+      )}
     </>
   );
 };

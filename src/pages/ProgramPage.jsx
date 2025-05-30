@@ -26,7 +26,7 @@ const ProgramPage = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-white max-w-5xl mx-auto">
+        <div className="mt-16  pb-6 max-w-5xl mx-auto">
           <h2 className=" text-3xl font-bold text-blue-900 mb-8">
             {t("Program.timeline.title")}
           </h2>
@@ -38,7 +38,7 @@ const ProgramPage = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50 px-4">
+      <section className="pb-16 bg-gray-50 px-4">
         <div className="container mx-auto  max-w-5xl ">
           <div className="grid md:grid-cols-2 gap-8">
             {Object.values(additional).map((info, idx) => (

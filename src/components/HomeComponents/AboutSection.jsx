@@ -29,7 +29,7 @@ const AboutSection = () => {
           className="bg-[#fbfbfb] px-4 py-6 xl:px-6 rounded-3xl flex flex-col justify-between h-full text-center"
         >
           <div>
-            <h3 className="text-7xl  md:text-[6rem] font-[800] text-[#9a0003] mb-2">
+            <h3 className="text-7xl  md:text-[6rem] font-[800] text-[#001554] mb-2">
               {t("about_course.stat_1.number")}
             </h3>
             <p
@@ -46,7 +46,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-[#fbfbfb] px-4 py-6 xl:px-6 rounded-3xl h-full text-right"
+          className="bg-[#fbfbfb] px-4 py-6 xl:px-6 rounded-3xl h-full text-center"
         >
           <div>
             <h3 className="text-7xl  md:text-[6rem] font-[800] text-[#001554] mb-2">
@@ -65,14 +65,14 @@ const AboutSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#fbfbfb] px-4 py-6 xl:px-6  rounded-3xl flex flex-col  items-center h-full text-right"
+          className="bg-[#fbfbfb] px-4 py-6 xl:px-6  rounded-3xl flex flex-col  items-center h-full text-center"
         >
           <div>
             <h3 className="text-7xl lg:tracking-tighter xl:tracking-normal md:text-[6rem] font-[800] text-[#001554] mb-2">
               {t("about_course.stat_3.number")}
             </h3>
             <p
-              className="text-[#001554] text-sm md:text-xl md:leading-9 text-justify"
+              className="text-[#001554] text-sm md:text-xl md:leading-9 "
               dangerouslySetInnerHTML={{
                 __html: t("about_course.stat_3.desc"),
               }}

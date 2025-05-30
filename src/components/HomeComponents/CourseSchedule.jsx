@@ -16,7 +16,7 @@ const CourseSchedule = () => {
           ></h1>
         </div>
 
-        <div className="col-span-1 row-span-1 flex lg:hidden flex-col justify-center p-3 md:p-5 text-[#001554] rounded-3xl bg-white">
+        <div className="col-span-1 relative row-span-1 flex lg:hidden flex-col justify-center p-3 md:p-5 text-[#001554] rounded-3xl bg-white">
           <h2
             className=" text-2xl md:text-5xl font-[800] text-left"
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.heading") }}
@@ -25,9 +25,17 @@ const CourseSchedule = () => {
             className=" text-2xl md:text-5xl  font-[800] text-left "
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.venue") }}
           ></h2>
+
+          <a
+            href="https://artisplaza.com/"
+            target="_blank"
+            className="text-[#08154E] absolute underline text-sm sm:text-base md:text-lg bottom-2 md:bottom-4 right-4"
+          >
+            Посмотреть
+          </a>
         </div>
 
-        <div className="col-span-1 row-span-1 lg:hidden rounded-3xl bg-white">
+        <div className="col-span-1  row-span-1 lg:hidden rounded-3xl bg-white">
           <img
             src="/schedule/artis.png"
             alt="students image"
@@ -93,7 +101,7 @@ const CourseSchedule = () => {
             className="w-full h-full object-cover rounded-3xl"
           />
         </div>
-        <div className="col-span-1 row-span-1 hidden lg:flex flex-col justify-center p-3 xl:p-5 text-[#001554] rounded-3xl bg-white">
+        <div className="col-span-1 row-span-1 relative hidden lg:flex flex-col justify-center p-3 xl:p-5 text-[#001554] rounded-3xl bg-white">
           <h2
             className=" text-3xl  lg:text-[2.3rem] 4 font-[800] text-center lg:text-left leading-10 break-words"
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.heading") }}
@@ -102,6 +110,14 @@ const CourseSchedule = () => {
             className=" text-3xl  lg:text-[2.3rem]  font-[800] text-center lg:text-left leading-10"
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.venue") }}
           ></h2>
+
+          <a
+            href="https://artisplaza.com/"
+            target="_blank"
+            className="text-[#08154E] absolute bottom-4 right-4 text-lg underline"
+          >
+            Посмотреть
+          </a>
         </div>
 
         <div className="col-span-1  row-span-1 rounded-3xl hidden lg:block bg-white">

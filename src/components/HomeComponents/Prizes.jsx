@@ -41,17 +41,15 @@ const Prizes = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg  h-full md:h-[23rem] flex flex-col justify-between"
+            className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg   h-full md:h-[20rem] flex flex-col justify-between"
           >
             <div>
               <h3 className="text-2xl lg:text-3xl font-bold text-[#1e2939] mb-3 md:mb-5">
-                {t("prizes.tile1.title")}
+                {t("prizes.tile2.title")}
               </h3>
               <p className="text-sm lg:text-base xl:text-lg">
-                {t("prizes.tile1.subtitle")}
+                {t("prizes.tile2.subtitle")}
               </p>
-
-              <img src="/gift.png" alt="Gift" className="w-36  h-36  mx-auto" />
             </div>
             <Dialog>
               <DialogTrigger asChild>
@@ -62,12 +60,12 @@ const Prizes = () => {
               <DialogContent>
                 <DialogHeader>
                   <DialogTitle className="text-2xl mb-5">
-                    {t("prizes.tile1.title")}
+                    {t("prizes.tile2.title")}
                   </DialogTitle>
                   <DialogDescription>
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: t("prizes.tile1.desc"),
+                        __html: t("prizes.tile2.desc"),
                       }}
                       className="text-base"
                     ></div>
@@ -85,17 +83,19 @@ const Prizes = () => {
           {/* Other Tiles */}
           {[
             {
-              title: "prizes.tile2.title",
-              subtitle: "prizes.tile2.subtitle",
-              height: "h-full md:h-[20rem]",
+              id: 1,
+              title: "prizes.tile1.title",
+              subtitle: "prizes.tile1.subtitle",
+              height: "h-full md:h-[24rem]",
               // bgColor: "bg-[#DCEEF2]",
               // textColor: "text-[#0288D1]",
-              content: "prizes.tile2.desc",
+              content: "prizes.tile1.desc",
             },
             {
+              id: 2,
               title: "prizes.tile3.title",
               subtitle: "prizes.tile3.subtitle",
-              height: "h-full md:h-[17rem]",
+              height: "h-full md:h-[16rem]",
               // bgColor: "bg-[#FFF3E0]",
               // textColor: "text-[#F57C00]",
               content: "prizes.tile3.desc",
@@ -106,9 +106,9 @@ const Prizes = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 * (index + 2) }}
               key={index}
-              className={`bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg  ${tile.height} flex gap-5 flex-col justify-between`}
+              className={`bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg  ${tile.height} flex flex-col justify-between`}
             >
-              <div>
+              <div className="">
                 <h3
                   className={`text-2xl lg:text-3xl 2xl:text-3xl font-bold text-[#1e2939] mb-3 md:mb-5 break-words`}
                 >
@@ -117,6 +117,13 @@ const Prizes = () => {
                 <p className="text-sm lg:text-base xl:text-lg">
                   {t(tile.subtitle)}
                 </p>
+                {tile.id === 1 && (
+                  <img
+                    src="/gift.png"
+                    alt="Gift"
+                    className="w-36  h-36  mx-auto"
+                  />
+                )}
               </div>
               <Dialog>
                 <DialogTrigger asChild>
