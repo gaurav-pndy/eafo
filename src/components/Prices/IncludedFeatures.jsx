@@ -26,7 +26,7 @@ const IncludedFeatures = () => {
         <h2 className="text-3xl font-bold text-center mb-12">
           {t("included.title")}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
               <div className="text-blue-900 text-xl mb-4 text-center">
