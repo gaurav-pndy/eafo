@@ -21,7 +21,7 @@ const PricePage = () => {
 
       <PaymentInfo />
       <PricingCTA />
-      <ImportantNotes />
+      {/* <ImportantNotes /> */}
     </div>
   );
 };

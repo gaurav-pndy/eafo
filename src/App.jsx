@@ -100,7 +100,7 @@ function App() {
           element: <Venue />,
         },
         {
-          path: "/accomodation",
+          path: "/accommodation",
           element: <Accomodation />,
         },
         {
