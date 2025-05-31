@@ -66,7 +66,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   const headerItems = [
-    { label: t("header.programs"), path: "/program" },
+    // { label: t("header.programs"), path: "/program" },
     {
       label: t("header.participationFormats"),
       path: "/participation-variants",
@@ -74,7 +74,7 @@ const Header = () => {
     { label: t("header.cost"), path: "/pricing" },
   ];
   const navItems = [
-    { label: t("header.programs"), path: "/program" },
+    // { label: t("header.programs"), path: "/program" },
 
     {
       label: t("header.participationFormats"),
@@ -86,9 +86,10 @@ const Header = () => {
     { label: t("header.partners"), path: "/partners" },
     { label: t("header.contact"), path: "/contact-us" },
     { label: t("header.gallery"), path: "/gallery" },
-    { label: t("header.eafo"), path: "/about" },
+    // { label: t("header.eafo"), path: "/about" },
     { label: t("header.venue"), path: "/venue" },
     { label: t("header.accommodation"), path: "/accommodation" },
+    { label: t("header.aboutCity"), path: "/about-city" },
   ];
 
   const navigate = useNavigate();

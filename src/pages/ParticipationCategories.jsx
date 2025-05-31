@@ -36,6 +36,7 @@ const ParticipationCategories = () => {
         t("participationCategories.tab1.item1.point6"),
         t("participationCategories.tab1.item1.point7"),
       ],
+      note: t("participationCategories.tab2.item1.note"),
     },
     {
       id: 2,
@@ -45,12 +46,13 @@ const ParticipationCategories = () => {
       description: t("participationCategories.dialogText2"),
       list: [
         t("participationCategories.tab1.item2.point1"),
-        t("participationCategories.tab2.item1.point2"),
-        t("participationCategories.tab2.item1.point3"),
-        t("participationCategories.tab2.item1.point4"),
-        t("participationCategories.tab2.item1.point5"),
-        t("participationCategories.tab2.item1.point6"),
+        t("participationCategories.tab1.item2.point2"),
+        t("participationCategories.tab1.item2.point3"),
+        t("participationCategories.tab1.item2.point4"),
+        t("participationCategories.tab1.item2.point5"),
+        t("participationCategories.tab1.item2.point6"),
       ],
+      note: t("participationCategories.tab2.item1.note"),
     },
   ];
 
@@ -67,7 +69,9 @@ const ParticipationCategories = () => {
         t("participationCategories.tab2.item1.point3"),
         t("participationCategories.tab2.item1.point4"),
         t("participationCategories.tab2.item1.point5"),
+        t("participationCategories.tab2.item1.point6"),
       ],
+      note: t("participationCategories.tab2.item1.note"),
     },
     {
       id: 2,
@@ -76,12 +80,14 @@ const ParticipationCategories = () => {
       dialogHead: t("participationCategories.dialogHead2"),
       description: t("participationCategories.dialogText2"),
       list: [
-        t("participationCategories.tab2.item1.point1"),
-        t("participationCategories.tab2.item1.point2"),
-        t("participationCategories.tab2.item1.point3"),
-        t("participationCategories.tab2.item1.point4"),
-        t("participationCategories.tab2.item1.point5"),
+        t("participationCategories.tab2.item2.point1"),
+        t("participationCategories.tab2.item2.point2"),
+        t("participationCategories.tab2.item2.point3"),
+        t("participationCategories.tab2.item2.point4"),
+        t("participationCategories.tab2.item2.point5"),
+        t("participationCategories.tab2.item2.point6"),
       ],
+      note: t("participationCategories.tab2.item2.note"),
     },
   ];
 
@@ -116,7 +122,6 @@ const ParticipationCategories = () => {
         {/* <p className=" text-lg">{t("participationTabs.subtitle")}</p> */}
       </div>
 
-      {/* Tab Navigation */}
       <div className="flex justify-center mb-8">
         <div className="inline-flex bg-[#f1f1f1] border rounded-full overflow-hidden">
           <button
@@ -142,7 +147,6 @@ const ParticipationCategories = () => {
         </div>
       </div>
 
-      {/* Course Cards */}
       {activeTab === "competitive" ? (
         <div className="max-w-7xl p-4 mx-auto">
           <div
@@ -162,7 +166,7 @@ const ParticipationCategories = () => {
 
                   <p>{item.desc}</p>
 
-                  <ul className="  mt-6  ">
+                  <ul className="  my-6   ">
                     {item.list.map((listItem, idx) => (
                       <li key={idx} className="mb-2 flex gap-4 items-start">
                         <FaCheck className="text-green-600 shrink-0 translate-y-2" />
@@ -170,6 +174,7 @@ const ParticipationCategories = () => {
                       </li>
                     ))}
                   </ul>
+                  <p>{item.note}</p>
                 </div>
                 <div className="flex justify-end">
                   <button
@@ -204,7 +209,7 @@ const ParticipationCategories = () => {
 
                   <p>{item.desc}</p>
 
-                  <ul className="  mt-6">
+                  <ul className="  my-6">
                     {item.list.map((listItem, idx) => (
                       <li key={idx} className="mb-2 flex gap-2 items-start">
                         <FaCheck className="text-green-600 shrink-0 translate-y-2" />
@@ -212,6 +217,8 @@ const ParticipationCategories = () => {
                       </li>
                     ))}
                   </ul>
+
+                  <p>{item.note}</p>
                 </div>
                 <div className="flex justify-end">
                   <button
