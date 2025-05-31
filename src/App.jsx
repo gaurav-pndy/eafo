@@ -26,6 +26,7 @@ import SubsidizedPage from "./pages/SubsidizedPage";
 import Accomodation from "./pages/Accomodation";
 import AboutPage from "./pages/AboutPage";
 import HowToApply from "./pages/HowToApply";
+import AboutCityPage from "./pages/AboutCityPage";
 
 function App() {
   useEffect(() => {
@@ -114,6 +115,10 @@ function App() {
         {
           path: "/organizations",
           element: <PartnerPage />,
+        },
+        {
+          path: "/about-city",
+          element: <AboutCityPage />,
         },
       ],
     },

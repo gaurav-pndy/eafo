@@ -1960,7 +1960,74 @@
       "description": "Your participation will be confirmed after payment.",
       "details": "Follow the payment instructions and sign the contract."
     }
-  }
+  },
+
+  "aboutCity": {
+      "hero": {
+        "title": "About the city",
+        "subtitle": "Magas, Republic of Ingushetia",
+        "alt": "View of Magas, the capital of Ingushetia, modern buildings, mountains in the background, clear sky"
+      },
+      "location": {
+        "title": "Where is the city of Magas located?",
+        "description": "Magas is located in the southern part of Russia, in the North Caucasus. This is the administrative center and capital of the Republic of Ingushetia, one of the promising and dynamically developing regions of the Russian Federation...",
+        "imageAlt": "Panoramic view of Magas, mountains on the horizon, modern architecture"
+      },
+      "languagesReligion": {
+        "title": "Languages and religions",
+        "languages": "In Magas and throughout the Republic of Ingushetia, the main languages are Ingush and Russian. Russian is the official language, widely used in business, education and administrative spheres.",
+        "religions": "The main religion of the region is Islam, which has a significant impact on cultural and public life...",
+        "imageAlt": "Cultural center of Magas, traditional Ingush patterns, religious monuments"
+      },
+      "culture": {
+        "title": "Culture",
+        "description1": "The culture of Magas is a reflection of the rich historical, ethnic and religious heritage of Ingushetia...",
+        "description2": "Exhibitions, concerts, festivals and cultural events are regularly held here, popularizing Ingush culture...",
+        "imageAlt": "Cultural center of Magas, traditional Ingush patterns, religious monuments"
+      },
+      "howToReach": {
+        "title": "How to get to the venue?",
+        "intro": "You can get to the Artis Plaza Hotel in Magas in different ways depending on your location and preferences. Here are the main options:",
+        "byPlane": {
+          "title": "By plane",
+          "airports": [
+            {"name": "Vladikavkaz Airport (Beslan, OGZ)", "distance": "~20 minutes by car (23 km)"},
+            {"name": "Magas Airport (Sunzha, IGT)", "distance": "~30 minutes by car (34 km)"}
+          ],
+          "qrCodes": [
+            {"label": "OGZ - Artis Plaza", "src": "./qrcode/OGZ - Artis Plaza.png", "alt": "OGZ route QR"},
+            {"label": "IGT - Artis Plaza", "src": "./qrcode/IGT - Artis Plaza.png", "alt": "IGT route QR"}
+          ],
+          "note": "The time is indicated for a trip by car or taxi. From these airports you can also get to the Artis Plaza Hotel by intercity buses.",
+          "flights": [
+            {
+              "title": "Flights from Moscow:",
+              "description": "Regular direct flights are operated to Magas (IGT), Makhachkala (MCX), Mineralnye Vody (MRV), Vladikavkaz (OGZ), Nalchik (NAL) and Grozny (GRV) airports.",
+              "airlines": "Aeroflot, S7 Airlines, UTair, Nordwind Airlines."
+            }
+          ],
+          "airlines": "Airlines:"
+        },
+        "byTrain": {
+          "title": "By train",
+          "description": "The nearest railway station to Magas is the city of Nazran (10 km from Magas). From Nazran station it is convenient to get to Magas by taxi or intercity bus.",
+          "routes": [
+            "Direct flights: Vladikavkaz - Nazran, Rostov-on-Don - Nazran",
+            "Long-distance trains: Moscow - Vladikavkaz, St. Petersburg - Vladikavkaz"
+          ],
+          "note": "We recommend purchasing tickets in advance through official websites or at station ticket offices."
+        },
+        "byCar": {
+          "title": "By car",
+          "description": "Magas is located in the center of the North Caucasian and Southern federal districts. The city has convenient transport accessibility via federal and regional roads from most cities in these regions."
+        }
+      },
+      "map": {
+        "title": "Map of Magas city",
+        "iframeTitle": "Google Maps view of Magas"
+      }
+    }
+  
    
     
   }
