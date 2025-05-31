@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaWifi, FaConciergeBell, FaGraduationCap } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const facilitiesList = [
   {
@@ -61,6 +62,14 @@ const Facilities = () => {
           />
         </div>
       ))}
+
+      <div className="text-center mt-10">
+        <Link to="/about-city">
+          <button className="bg-white border border-gray-300  px-10 py-3 rounded-full font-bold text-xl hover:bg-gray-200 cursor-pointer transition-all duration-300">
+            Как добраться
+          </button>
+        </Link>
+      </div>
 
       {/* Feature Row */}
       <div className=" bg-[#f9fafb] p-6 grid md:grid-cols-3 gap-6 md:gap-24">
