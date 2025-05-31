@@ -52,9 +52,12 @@ const Hotels = () => {
             <h2 className="text-4xl font-bold text-[#1e3a8a] mb-8">
               {t("accommodation.artisPlaza.title")}
             </h2>
-            <p className="text-gray-600 leading-7 ">
-              {t("accommodation.artisPlaza.description")}
-            </p>
+            <p
+              className="text-gray-600 leading-7 "
+              dangerouslySetInnerHTML={{
+                __html: t("accommodation.artisPlaza.description"),
+              }}
+            ></p>
             <div className="mt-8 grid grid-cols-2 gap-4 text-sm">
               <span className="flex items-center gap-2">
                 <FaBed className="text-xl text-[#1e3a8a]" />{" "}
