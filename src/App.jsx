@@ -27,6 +27,7 @@ import Accomodation from "./pages/Accomodation";
 import AboutPage from "./pages/AboutPage";
 import HowToApply from "./pages/HowToApply";
 import AboutCityPage from "./pages/AboutCityPage";
+import ParticipationCategories from "./pages/ParticipationCategories";
 
 function App() {
   useEffect(() => {
@@ -79,6 +80,10 @@ function App() {
         {
           path: "/competitive-participation",
           element: <SubsidizedPage />,
+        },
+        {
+          path: "/categories-of-participation",
+          element: <ParticipationCategories />,
         },
         {
           path: "/pricing",

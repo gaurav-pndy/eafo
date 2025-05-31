@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import PreRegisterForm from "../PreRegisterForm";
+import { Link } from "react-router-dom";
 
 const ParticipationTabs = () => {
   const [activeTab, setActiveTab] = useState("full-programs");
@@ -322,9 +323,11 @@ const ParticipationTabs = () => {
 
       {/* Categories Button */}
       <div className="text-center mt-14">
-        <button className="bg-white border border-gray-300  px-10 py-3 rounded-full font-bold text-xl hover:bg-gray-200 cursor-pointer transition-all duration-300">
-          Категории участия
-        </button>
+        <Link to="/categories-of-participation">
+          <button className="bg-white border border-gray-300  px-10 py-3 rounded-full font-bold text-xl hover:bg-gray-200 cursor-pointer transition-all duration-300">
+            Категории участия
+          </button>
+        </Link>
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
