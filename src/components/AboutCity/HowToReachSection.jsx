@@ -62,27 +62,41 @@ const HowToReachSection = () => {
         </div>
 
         {/* Train */}
-        <div id="how-to-reach-train">
-          <div className="flex items-center gap-3 mb-2">
-            <i className="fa-solid fa-train-subway text-blue-900 text-xl"></i>
-            <span className="font-semibold text-blue-900 text-lg">
-              {t('aboutCity.howToReach.byTrain.title')}
-            </span>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6 shadow">
-            <p className="text-gray-700 text-base mb-2">
-              {t('aboutCity.howToReach.byTrain.description')}
-            </p>
-            <ul className="ml-6 list-disc text-gray-700 text-base space-y-1">
-              {t('aboutCity.howToReach.byTrain.routes', { returnObjects: true }).map((route, index) => (
-                <li key={index}>{route}</li>
-              ))}
-            </ul>
-            <p className="text-gray-600 text-base mt-2">
-              {t('aboutCity.howToReach.byTrain.note')}
-            </p>
-          </div>
-        </div>
+        {/* Train */}
+<div id="how-to-reach-train">
+  <div className="flex items-center gap-3 mb-2">
+    <i className="fa-solid fa-train-subway text-blue-900 text-xl"></i>
+    <span className="font-semibold text-blue-900 text-lg">
+      {t('aboutCity.howToReach.byTrain.title')}
+    </span>
+  </div>
+  <div className="bg-gray-50 rounded-lg p-6 shadow">
+    <p className="text-gray-700 text-base mb-2">
+      {t('aboutCity.howToReach.byTrain.description')}
+    </p>
+    <ul className="ml-6 list-disc text-gray-700 text-base space-y-1">
+      {t('aboutCity.howToReach.byTrain.routes', { returnObjects: true }).map((route, index) => {
+        if (typeof route === 'string') {
+          return <li key={index}>{route}</li>;
+        } else {
+          return (
+            <React.Fragment key={index}>
+              <li className="font-medium">{route.category}</li>
+              <ul className="ml-6 list-disc">
+                {route.items.map((item, itemIndex) => (
+                  <li key={`${index}-${itemIndex}`}>{item}</li>
+                ))}
+              </ul>
+            </React.Fragment>
+          );
+        }
+      })}
+    </ul>
+    <p className="text-gray-600 text-base mt-2">
+      {t('aboutCity.howToReach.byTrain.note')}
+    </p>
+  </div>
+</div>
 
         {/* Car */}
         <div id="how-to-reach-car">
