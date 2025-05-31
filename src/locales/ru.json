@@ -2160,12 +2160,12 @@
 
           ],
           "qrCodes": [
-            {"label": "OGZ - Artis Plaza", "src": "./qrcode/OGZ - Artis Plaza.png", "alt": "QR маршрут OGZ"},
-            {"label": "IGT - Artis Plaza", "src": "./qrcode/IGT - Artis Plaza.png", "alt": "QR маршрут IGT"},
-            {"label": "IGT - Artis Plaza", "src": "./qrcode/GRV - Artis Plaza.png", "alt": "QR маршрут IGT"},
-            {"label": "OGZ - Artis Plaza", "src": "./qrcode/NAL - Artis Plaza.png", "alt": "QR маршрут OGZ"},
-            {"label": "IGT - Artis Plaza", "src": "./qrcode/MRV - Artis Plaza.png", "alt": "QR маршрут IGT"},
-            {"label": "IGT - Artis Plaza", "src": "./qrcode/MCX - Artis Plaza.png", "alt": "QR маршрут IGT"}
+            {"label": "OGZ - Artis Plaza", "src": "/QR/OGZ - Artis Plaza.png", "alt": "QR маршрут OGZ"},
+            {"label": "IGT - Artis Plaza", "src": "/QR/IGT - Artis Plaza.png", "alt": "QR маршрут IGT"},
+            {"label": "IGT - Artis Plaza", "src": "/QR/GRV - Artis Plaza.png", "alt": "QR маршрут IGT"},
+            {"label": "OGZ - Artis Plaza", "src": "/QR/NAL - Artis Plaza.png", "alt": "QR маршрут OGZ"},
+            {"label": "IGT - Artis Plaza", "src": "/QR/MRV - Artis Plaza.png", "alt": "QR маршрут IGT"},
+            {"label": "IGT - Artis Plaza", "src": "/QR/MCX - Artis Plaza.png", "alt": "QR маршрут IGT"}
 
           ],
           "note": "Время указано для поездки на автомобиле или такси. Из этих аэропортов до гостиницы «Артис Плаза» можно также добраться на междугородних автобусах.",
