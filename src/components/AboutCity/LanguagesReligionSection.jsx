@@ -9,7 +9,7 @@ const LanguagesReligionSection = () => {
       <div className="flex items-center justify-center order-2 md:order-1">
         <img 
           className="w-72 h-72 object-cover rounded-xl border border-blue-100 shadow" 
-          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/eafo-magas-culture.jpg" 
+          src="/2.jpg" 
           alt={t('aboutCity.languagesReligion.imageAlt')} 
         />
       </div>
