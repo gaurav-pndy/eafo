@@ -47,7 +47,7 @@ const Hotels = () => {
     <section className="px-4 py-16 max-w-6xl mx-auto">
       {/* Smart Hotel */}
       <div className="">
-        <div className="grid md:grid-cols-2  gap-6 md:gap-16 ">
+        <div className="grid md:grid-cols-2 items-center gap-6 md:gap-16 ">
           <div>
             <h2 className="text-4xl font-bold text-[#1e3a8a] mb-8">
               {t("accommodation.artisPlaza.title")}
