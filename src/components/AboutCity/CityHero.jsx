@@ -9,7 +9,7 @@ const CityHero = () => {
       <div className="absolute inset-0">
         <img 
           className="w-full h-full object-cover" 
-          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/eafo-magas-city-hero.jpg" 
+          src="/heroCity.jpg" 
           alt={t('aboutCity.hero.alt')} 
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-700/60"></div>
