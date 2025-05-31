@@ -21,7 +21,7 @@ const CultureSection = () => {
       <div className="flex items-center justify-center order-2 md:order-2">
         <img 
           className="w-72 h-72 object-cover rounded-xl border border-blue-100 shadow" 
-          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/eafo-magas-culture.jpg" 
+          src="/3.jpg" 
           alt={t('aboutCity.culture.imageAlt')} 
         />
       </div>
