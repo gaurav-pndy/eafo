@@ -109,7 +109,7 @@ const Hotels = () => {
 
           <p className="mt-6 text-gray-800 "> {tabsDesc[artisTab]}</p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-6">
             {artisPlazaImages[artisTab].map((img, i) => (
               <img
                 key={i}
