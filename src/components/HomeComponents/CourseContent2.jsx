@@ -127,7 +127,7 @@ export default function CourseContent2() {
   }, [showForm]);
 
   return (
-    <div className="relative overflow-hidden bg-[#f2f3f8] pb-16">
+    <div className="relative overflow-hidden bg-[#f2f3f8] py-16">
       <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-semibold mb-6 text-[#001554]">
         Выберите интересующий вас <br /> тематический семинар
       </h2>

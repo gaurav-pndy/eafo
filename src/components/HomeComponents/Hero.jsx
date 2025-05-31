@@ -17,7 +17,7 @@ const Hero = () => {
       className="w-full lg:max-h-[calc(100vh-5.5rem)] bg-[#f2f3f8] flex flex-col"
     >
       {/* Main container with background image on right for desktop */}
-      <div className="w-full min-h-[auto] lg:max-h-[calc(100vh-5.5rem)]  relative flex flex-col-reverse lg:flex-row  overflow-hidden lg:px-10 lg:gap-6 xl:gap-0 xl:px-32 lg:py-16 xl:py-6 ">
+      <div className="w-full min-h-[auto] lg:max-h-[calc(100vh-5.5rem)]  relative flex flex-col-reverse lg:flex-row  overflow-hidden lg:px-6 lg:gap-6 xl:gap-0 xl:px-24 lg:py-16 xl:py-6 ">
         {/* Left side - Content section */}
         <div className="w-full lg:w-[55%] px-4 md:px-10 lg:px-0 py-6 md:py-10 flex flex-col text-center lg:text-left justify-center">
           {/* Red header */}
@@ -50,9 +50,10 @@ const Hero = () => {
             {t("heroSection.location")}
           </p>
 
-          <h2 className="text-xs md:text-base text-[#010b54] mb-4 lg:mb-8" dangerouslySetInnerHTML={{ __html: t("heroSection.subtitle4") }}>
-            
-          </h2>
+          <h2
+            className="text-xs md:text-base text-[#010b54] mb-4 lg:mb-8"
+            dangerouslySetInnerHTML={{ __html: t("heroSection.subtitle4") }}
+          ></h2>
 
           {/* CTA Button */}
           <div className="flex justify-center lg:justify-start ">
