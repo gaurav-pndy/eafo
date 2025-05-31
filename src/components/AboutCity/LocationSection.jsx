@@ -20,7 +20,7 @@ const LocationSection = () => {
           <div className="rounded-xl shadow-lg overflow-hidden border border-blue-100">
             <img 
               className="w-full h-64 object-cover" 
-              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/eafo-magas-location.jpg" 
+              src="/1.jpg" 
               alt={t('aboutCity.location.imageAlt')} 
             />
           </div>
