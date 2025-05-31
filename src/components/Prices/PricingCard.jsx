@@ -21,7 +21,7 @@ const PricingCard = ({
     if (typeof item === "string") {
       return (
         <li key={idx} className="flex items-start">
-          <FaCheck className="text-green-500 mr-2 mt-1" />
+          <FaCheck className="text-green-500 mr-2 mt-1 shrink-0" />
           <span>{item}</span>
         </li>
       );
@@ -29,7 +29,7 @@ const PricingCard = ({
       return (
         <li key={idx} className="flex flex-col items-start">
           <div className="flex items-start">
-            <FaCheck className="text-green-500 mr-2 mt-1" />
+            <FaCheck className="text-green-500 mr-2 mt-1 shrink-0" />
             <span>{item.main}</span>
           </div>
           {item.sub && Array.isArray(item.sub) && (
@@ -68,7 +68,7 @@ const PricingCard = ({
           className="text-xl font-bold mb-2"
           dangerouslySetInnerHTML={{ __html: title }}
         ></h3>
-        <p className="text-sm">{t("pricingOptions.startingFrom")}</p>
+        {/* <p className="text-sm">{t("pricingOptions.startingFrom")}</p> */}
         <div className="text-3xl font-bold text-blue-900">{price}</div>
       </div>
 

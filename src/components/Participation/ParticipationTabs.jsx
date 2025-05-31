@@ -154,7 +154,7 @@ const ParticipationTabs = () => {
     <div className=" mx-auto py-6  min-h-screen">
       {/* Header */}
       <div className="text-center mb-8 px-4">
-        <h2 className="text-3xl  font-bold text-center mb-6">
+        <h2 className="text-4xl  font-bold text-center mb-6">
           {t("participationTabs.title")}
         </h2>
         <p className=" text-lg">{t("participationTabs.subtitle")}</p>

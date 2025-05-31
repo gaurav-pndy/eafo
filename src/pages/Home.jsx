@@ -46,7 +46,7 @@ const Home = () => {
       <CourseContent2 />
       <ForWhomCourse />
       <Prizes />
-      <WhatAwaitsYou />
+      {/* <WhatAwaitsYou /> */}
 
       {/* <ForumExperts /> */}
       {/* <WhyUs /> */}

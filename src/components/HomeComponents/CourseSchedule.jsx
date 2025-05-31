@@ -78,10 +78,12 @@ const CourseSchedule = () => {
             <h3 className=" font-bold md:mb-1 md:text-3xl lg:text-xl">
               {t("schedule.checkout.heading")}
             </h3>
-            <p className="text-sm md:text-2xl lg:text-lg">
-              {" "}
-              {t("schedule.checkout.checkout")}
-            </p>
+            <p
+              className="text-sm md:text-2xl lg:text-lg"
+              dangerouslySetInnerHTML={{
+                __html: t("schedule.checkout.checkout"),
+              }}
+            ></p>
           </div>
         </div>
         <div className="col-span-1 row-span-1  rounded-3xl text-[#9A0003]  bg-white flex lg:hidden flex-col justify-center p-3 md:p-5 ">
@@ -103,11 +105,11 @@ const CourseSchedule = () => {
         </div>
         <div className="col-span-1 row-span-1 relative hidden lg:flex flex-col justify-center p-3 xl:p-5 text-[#001554] rounded-3xl bg-white">
           <h2
-            className=" text-3xl  lg:text-[2.3rem] 4 font-[800] text-center lg:text-left leading-10 break-words"
+            className=" text-3xl lg:text-[2.1rem] xl:text-[2.3rem] 4 font-[800] text-center lg:text-left leading-10 "
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.heading") }}
           ></h2>
           <h2
-            className=" text-3xl  lg:text-[2.3rem]  font-[800] text-center lg:text-left leading-10"
+            className=" text-3xl  lg:text-[2.1rem] xl:text-[2.3rem]  font-[800] text-center lg:text-left leading-10"
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.venue") }}
           ></h2>
 

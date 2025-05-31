@@ -175,12 +175,12 @@ const Prizes = () => {
               <DialogContent>
                 <DialogHeader>
                   <DialogTitle className="text-2xl mb-5">
-                    {t("prizes.tile1.title")}
+                    {t("prizes.tile4.title")}
                   </DialogTitle>
                   <DialogDescription>
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: t("prizes.tile1.desc"),
+                        __html: t("prizes.tile4.desc"),
                       }}
                       className="text-base"
                     ></div>

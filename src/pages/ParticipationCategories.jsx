@@ -25,6 +25,8 @@ const ParticipationCategories = () => {
       id: 1,
       title: t("participationCategories.tab1.item1.heading"),
       desc: t("participationCategories.tab1.item1.desc"),
+      dialogHead: t("participationCategories.dialogHead1"),
+      description: t("participationCategories.dialogText1"),
       list: [
         t("participationCategories.tab1.item1.point1"),
         t("participationCategories.tab1.item1.point2"),
@@ -32,18 +34,22 @@ const ParticipationCategories = () => {
         t("participationCategories.tab1.item1.point4"),
         t("participationCategories.tab1.item1.point5"),
         t("participationCategories.tab1.item1.point6"),
+        t("participationCategories.tab1.item1.point7"),
       ],
     },
     {
       id: 2,
       title: t("participationCategories.tab1.item2.heading"),
       desc: t("participationCategories.tab1.item2.desc"),
+      dialogHead: t("participationCategories.dialogHead2"),
+      description: t("participationCategories.dialogText2"),
       list: [
         t("participationCategories.tab1.item2.point1"),
         t("participationCategories.tab2.item1.point2"),
         t("participationCategories.tab2.item1.point3"),
         t("participationCategories.tab2.item1.point4"),
         t("participationCategories.tab2.item1.point5"),
+        t("participationCategories.tab2.item1.point6"),
       ],
     },
   ];
@@ -53,19 +59,22 @@ const ParticipationCategories = () => {
       id: 1,
       title: t("participationCategories.tab2.item1.heading"),
       desc: t("participationCategories.tab2.item1.desc"),
+      dialogHead: t("participationCategories.dialogHead1"),
+      description: t("participationCategories.dialogText1"),
       list: [
         t("participationCategories.tab2.item1.point1"),
         t("participationCategories.tab2.item1.point2"),
         t("participationCategories.tab2.item1.point3"),
         t("participationCategories.tab2.item1.point4"),
         t("participationCategories.tab2.item1.point5"),
-        t("participationCategories.tab2.item1.point6"),
       ],
     },
     {
       id: 2,
       title: t("participationCategories.tab2.item2.heading"),
       desc: t("participationCategories.tab2.item2.desc"),
+      dialogHead: t("participationCategories.dialogHead2"),
+      description: t("participationCategories.dialogText2"),
       list: [
         t("participationCategories.tab2.item1.point1"),
         t("participationCategories.tab2.item1.point2"),
@@ -163,7 +172,12 @@ const ParticipationCategories = () => {
                   </ul>
                 </div>
                 <div className="flex justify-end">
-                  <button className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full">
+                  <button
+                    onClick={() =>
+                      handleOpenDialog(item.description, item.dialogHead)
+                    }
+                    className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full"
+                  >
                     {t(`participationCategories.moreDetails`)}
                   </button>
                 </div>
@@ -200,7 +214,12 @@ const ParticipationCategories = () => {
                   </ul>
                 </div>
                 <div className="flex justify-end">
-                  <button className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full">
+                  <button
+                    onClick={() =>
+                      handleOpenDialog(item.description, item.dialogHead)
+                    }
+                    className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full"
+                  >
                     {t(`participationCategories.moreDetails`)}
                   </button>
                 </div>

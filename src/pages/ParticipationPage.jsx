@@ -10,15 +10,15 @@ import ParticipationTabs from "@/components/Participation/ParticipationTabs";
 const ParticipationPage = () => {
   return (
     <div className="h-full text-base-content">
-      <HeroSection />
+      {/* <HeroSection /> */}
       <section id="participation-options" className="py-16 bg-white">
         <ParticipationTabs />
-        <OptionsGrid />
+        {/* <OptionsGrid />
         <Packages />
-        <Categories />
+        <Categories /> */}
         {/* <ComparisonTable /> */}
       </section>
-      <CtaSection />
+      {/* <CtaSection /> */}
     </div>
   );
 };
