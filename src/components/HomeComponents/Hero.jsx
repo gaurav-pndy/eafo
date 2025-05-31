@@ -50,9 +50,8 @@ const Hero = () => {
             {t("heroSection.location")}
           </p>
 
-          <h2 className="text-xs md:text-base text-[#010b54] mb-4 lg:mb-8">
-            {" "}
-            {t("heroSection.subtitle4")}
+          <h2 className="text-xs md:text-base text-[#010b54] mb-4 lg:mb-8" dangerouslySetInnerHTML={{ __html: t("heroSection.subtitle4") }}>
+            
           </h2>
 
           {/* CTA Button */}
