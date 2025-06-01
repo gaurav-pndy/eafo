@@ -16,10 +16,10 @@ const ProgramPage = () => {
   return (
     <>
       <HeroSection />
-      <PreviousPrograms />
-      <ProgramOverview />
+      {/* <PreviousPrograms />
+      <ProgramOverview /> */}
 
-      <section className="bg-white container mx-auto  px-4">
+      {/* <section className="bg-white container mx-auto  px-4">
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {modules.map((mod, idx) => (
             <CourseModuleCard key={idx} {...mod} />
@@ -46,6 +46,12 @@ const ProgramPage = () => {
             ))}
           </div>
         </div>
+      </section> */}
+
+      <section className="py-16 max-w-6xl text-center mx-auto px-4">
+        <h3 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] md:leading-14">
+          {t("Program.message")}
+        </h3>
       </section>
     </>
   );

@@ -37,6 +37,50 @@ const Prizes = () => {
         ></div> */}
         <div className=" grid grid-cols-1 md:grid-cols-3 items-end xl:max-w-5xl xl:px-10 mx-auto gap-4 lg:gap-12">
           {/* Tile 1 */}
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg   h-full md:h-[24rem] flex md:hidden flex-col justify-between"
+          >
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#1e2939] mb-3 md:mb-5">
+                {t("prizes.tile1.title")}
+              </h3>
+              <p className="text-sm lg:text-base xl:text-lg">
+                {t("prizes.tile1.subtitle")}
+              </p>
+              <img src="/gift.png" alt="Gift" className="w-36  h-36  mx-auto" />
+            </div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="bg-white hover:bg-gray-200 cursor-pointer transition-all font-semibold duration-300 text-sm lg:text-lg  px-3 h-fit md:px-16 py-3 rounded-full ">
+                  {t("prizes.more_details")}
+                </button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="text-2xl mb-5">
+                    {t("prizes.tile1.title")}
+                  </DialogTitle>
+                  <DialogDescription>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: t("prizes.tile1.desc"),
+                      }}
+                      className="text-base"
+                    ></div>
+                  </DialogDescription>
+                </DialogHeader>
+                {/* <DialogClose asChild>
+                <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg">
+                  Закрыть
+                </button>
+              </DialogClose> */}
+              </DialogContent>
+            </Dialog>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -79,81 +123,91 @@ const Prizes = () => {
               </DialogContent>
             </Dialog>
           </motion.div>
-
-          {/* Other Tiles */}
-          {[
-            {
-              id: 1,
-              title: "prizes.tile1.title",
-              subtitle: "prizes.tile1.subtitle",
-              height: "h-full md:h-[24rem]",
-              // bgColor: "bg-[#DCEEF2]",
-              // textColor: "text-[#0288D1]",
-              content: "prizes.tile1.desc",
-            },
-            {
-              id: 2,
-              title: "prizes.tile3.title",
-              subtitle: "prizes.tile3.subtitle",
-              height: "h-full md:h-[16rem]",
-              // bgColor: "bg-[#FFF3E0]",
-              // textColor: "text-[#F57C00]",
-              content: "prizes.tile3.desc",
-            },
-          ].map((tile, index) => (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 * (index + 2) }}
-              key={index}
-              className={`bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg  ${tile.height} flex flex-col justify-between`}
-            >
-              <div className="">
-                <h3
-                  className={`text-2xl lg:text-3xl 2xl:text-3xl font-bold text-[#1e2939] mb-3 md:mb-5 break-words`}
-                >
-                  {t(tile.title)}
-                </h3>
-                <p className="text-sm lg:text-base xl:text-lg">
-                  {t(tile.subtitle)}
-                </p>
-                {tile.id === 1 && (
-                  <img
-                    src="/gift.png"
-                    alt="Gift"
-                    className="w-36  h-36  mx-auto"
-                  />
-                )}
-              </div>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button
-                    className={`bg-white hover:bg-gray-200 cursor-pointer transition-all font-semibold duration-300 text-sm lg:text-lg  px-3 h-fit md:px-16 py-3 rounded-full `}
-                  >
-                    {t("prizes.more_details")}
-                  </button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle className="text-2xl mb-5">
-                      {t(tile.title)}
-                    </DialogTitle>
-                    <DialogDescription>
-                      <div
-                        dangerouslySetInnerHTML={{ __html: t(tile.content) }}
-                        className="text-base"
-                      ></div>
-                    </DialogDescription>
-                  </DialogHeader>
-                  {/* <DialogClose asChild>
-                  <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg">
-                    Закрыть
-                  </button>
-                </DialogClose> */}
-                </DialogContent>
-              </Dialog>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg   h-full md:h-[24rem] hidden md:flex flex-col justify-between"
+          >
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#1e2939] mb-3 md:mb-5">
+                {t("prizes.tile1.title")}
+              </h3>
+              <p className="text-sm lg:text-base xl:text-lg">
+                {t("prizes.tile1.subtitle")}
+              </p>
+              <img src="/gift.png" alt="Gift" className="w-36  h-36  mx-auto" />
+            </div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="bg-white hover:bg-gray-200 cursor-pointer transition-all font-semibold duration-300 text-sm lg:text-lg  px-3 h-fit md:px-16 py-3 rounded-full ">
+                  {t("prizes.more_details")}
+                </button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="text-2xl mb-5">
+                    {t("prizes.tile1.title")}
+                  </DialogTitle>
+                  <DialogDescription>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: t("prizes.tile1.desc"),
+                      }}
+                      className="text-base"
+                    ></div>
+                  </DialogDescription>
+                </DialogHeader>
+                {/* <DialogClose asChild>
+                <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg">
+                  Закрыть
+                </button>
+              </DialogClose> */}
+              </DialogContent>
+            </Dialog>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-[#f1f4fb] p-6 xl:p-3 2xl:p-6 rounded-lg   h-full md:h-[16rem] flex flex-col justify-between"
+          >
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#1e2939] mb-3 md:mb-5">
+                {t("prizes.tile3.title")}
+              </h3>
+              <p className="text-sm lg:text-base xl:text-lg">
+                {t("prizes.tile3.subtitle")}
+              </p>
+            </div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="bg-white hover:bg-gray-200 cursor-pointer transition-all font-semibold duration-300 text-sm lg:text-lg  px-3 h-fit md:px-16 py-3 rounded-full ">
+                  {t("prizes.more_details")}
+                </button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="text-2xl mb-5">
+                    {t("prizes.tile3.title")}
+                  </DialogTitle>
+                  <DialogDescription>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: t("prizes.tile3.desc"),
+                      }}
+                      className="text-base"
+                    ></div>
+                  </DialogDescription>
+                </DialogHeader>
+                {/* <DialogClose asChild>
+                <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg">
+                  Закрыть
+                </button>
+              </DialogClose> */}
+              </DialogContent>
+            </Dialog>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

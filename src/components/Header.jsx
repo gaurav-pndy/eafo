@@ -66,7 +66,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   const headerItems = [
-    // { label: t("header.programs"), path: "/program" },
+    { label: t("header.programs"), path: "/program" },
     {
       label: t("header.participationFormats"),
       path: "/participation-variants",
@@ -74,7 +74,7 @@ const Header = () => {
     { label: t("header.cost"), path: "/pricing" },
   ];
   const navItems = [
-    // { label: t("header.programs"), path: "/program" },
+    { label: t("header.programs"), path: "/program" },
 
     {
       label: t("header.participationFormats"),
