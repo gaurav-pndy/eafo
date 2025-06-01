@@ -115,9 +115,9 @@ const ParticipationTabs = () => {
       duration: t("course_content.duration9"),
       image: "/courses/image9.png",
       bgcolor: "bg-[#312f2f]",
-      dialogHead: t("course_content.dialogHead10"),
+      dialogHead: t("course_content.dialogHead9"),
 
-      dialogText: t("course_content.text10"),
+      dialogText: t("course_content.text9"),
       styles:
         " absolute h-72 md:h-90 w-full -bottom-14 md:-bottom-20 left-0   object-cover pointer-events-none  ",
     },
