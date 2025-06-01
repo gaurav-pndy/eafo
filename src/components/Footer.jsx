@@ -1,8 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaFacebookF, FaLinkedinIn, FaTelegram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaTelegram,
+  FaTelegramPlane,
+  FaVk,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "/EAFO.jpg";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -33,81 +41,95 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white text-gray-700 py-8 border-t border-gray-200">
-      <div className="container mx-auto px-4 lg:px-24">
+    <footer className="bg-white text-gray-700  ">
+      <div className="container mx-auto  ">
         {/* Responsive Grid */}
-        <div className="grid grid-cols-2 gap-x-10 lg:gap-x-0 sm:grid-cols-2 md:grid-cols-[1.2fr_1fr_1fr_0.8fr] gap-y-8 mb-8">
+        <div className="grid  grid-cols-2 px-4 lg:px-6 xl:px-16 gap-x-10 lg:gap-x-0 md:grid-cols-3 lg:grid-cols-[1.1fr_0.8fr_0.8fr_0.9fr_1.1fr] gap-y-8  border border-gray-200 py-8">
           {/* Contact Us */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">{t("footer.contactUs")}</h3>
-            <address className="not-italic text-sm leading-relaxed">
+          <div className="lg:pr-14 col-span-2 md:col-span-1 text-center md:text-left">
+            <Link to="/">
+              <img
+                onClick={() => setIsMenuOpen(false)}
+                src={logo}
+                alt="EAFO Logo"
+                className="h-8 lg:h-10 mx-auto md:mx-0"
+              />
+            </Link>
+            <p
+              className="not-italic text-xs md:text-[0.7rem]  mt-4"
+              dangerouslySetInnerHTML={{ __html: t("footer.aboutEafo") }}
+            >
               {/* <p>{t("footer.location")}</p> */}
               {/* <p>{t("footer.country")}</p> */}
-              <a href="mailto:basic@eafo.info" className="mt-2">
-                basic@eafo.info
-              </a>{" "}
-              <br />
-              <a href="tel:+79851257788">+7 (985) 125-77-88</a>
-            </address>
+            </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">{t("footer.quickLinks")}</h3>
-            <ul className="text-sm space-y-2">
+          <div className="">
+            {/* <h3 className="font-bold text-lg mb-4">{t("footer.quickLinks")}</h3> */}
+            <ul className="md:text-sm space-y-1 md:space-y-2">
               <li>
-                <button
-                  onClick={() => handleNavClick({ path: "/register" })}
+                <a
+                  href="https://ui.eafo.info/"
+                  target="_blank"
                   className="hover:text-blue-600 cursor-pointer"
                 >
-                  {t("footer.applyNow")}
+                  {t("footer.about")}
+                </a>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick({ path: "/gallery" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
+                  {t("footer.gallery")}
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick({ path: "/program" })}
+                  onClick={() =>
+                    handleNavClick({ path: "/participation-variants" })
+                  }
                   className="hover:text-blue-600 cursor-pointer"
                 >
-                  {t("footer.program")}
+                  {t("footer.participationFormats")}
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick({ path: "/program" })}
+                  onClick={() => handleNavClick({ path: "/accommodation" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
-                  {t("footer.schedule")}
+                  {t("footer.accommodation")}
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick({ sectionId: "faq" })}
+                  onClick={() => handleNavClick({ path: "/venue" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
-                  {t("footer.faq")}
+                  {t("footer.venue")}
                 </button>
               </li>
             </ul>
           </div>
-
-          {/* Resources */}
           <div>
-            <h3 className="font-bold text-lg mb-4">{t("footer.resources")}</h3>
-            <ul className="text-sm space-y-2">
+            {/* <h3 className="font-bold text-lg mb-4">{t("footer.quickLinks")}</h3> */}
+            <ul className="md:text-sm space-y-1 md:space-y-2  text-right md:text-left">
+              <li>
+                <button
+                  onClick={() => handleNavClick({ path: "/how-to-apply" })}
+                  className="hover:text-blue-600 cursor-pointer"
+                >
+                  {t("footer.howToApply")}
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => handleNavClick({ path: "/visa" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
-                  {t("footer.visaInfo")}
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNavClick({ path: "/" })}
-                  className="hover:text-blue-600 cursor-pointer"
-                >
-                  {t("footer.documents")}
+                  {t("footer.visa")}
                 </button>
               </li>
               <li>
@@ -120,71 +142,132 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick({ path: "/" })}
+                  onClick={() => handleNavClick({ path: "/contact-us" })}
                   className="hover:text-blue-600 cursor-pointer"
                 >
-                  {t("footer.support")}
+                  {t("footer.contacts")}
                 </button>
               </li>
             </ul>
           </div>
 
+          {/* Resources */}
+          <div className="">
+            {/* <h3 className="font-bold text-lg mb-4">{t("footer.resources")}</h3> */}
+            <ul className="md:text-sm space-y-1 md:space-y-2 text-blue-700">
+              <li>
+                <a
+                  href="https://workdrive.zohopublic.in/file/u89yj18678a8fa5034857ab19d7b87e95aa1e"
+                  target="_blank"
+                  className="hover:text-blue-600 cursor-pointer"
+                >
+                  {t("footer.agreement")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://workdrive.zohopublic.in/file/u89yj99187d9c61fb40638c9f06322df0698c"
+                  target="_blank"
+                  className="hover:text-blue-600 cursor-pointer"
+                >
+                  {t("footer.privacyPolicy")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://workdrive.zohopublic.in/file/u89yj270d1f43f0c14b6c969ef4b20f0aa61a"
+                  target="_blank"
+                  className="hover:text-blue-600 cursor-pointer"
+                >
+                  {t("footer.personalData")}
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* Follow Us */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">{t("footer.followUs")}</h3>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-700 hover:text-gray-900 transition-all duration-300 hover:scale-125"
-                aria-label="Facebook"
-              >
-                <FaFacebookF size={20} />
+          <div className="flex flex-col justify-between items-end gap-20">
+            <div>
+              <p className="md:text-sm  text-right md:text-left lg:text-right">
+                {t("footer.address")}
+              </p>
+            </div>
+            <div className="lg:flex flex-col hidden  items-end text-black font-bold">
+              <div className="flex space-x-3">
+                <a
+                  href="https://t.me/+79851257788"
+                  target="_blank"
+                  className=" transition-all duration-300 hover:scale-125"
+                  aria-label="Facebook"
+                >
+                  <FaTelegramPlane size={28} />
+                </a>
+                <a
+                  href="https://wa.me/79851257788"
+                  target="_blank"
+                  className="transition-all duration-300 hover:scale-125"
+                >
+                  <IoLogoWhatsapp size={28} />
+                </a>
+                <a
+                  href="https://vk.com/eafo_info"
+                  target="_blank"
+                  className="transition-all duration-300 hover:scale-125"
+                  aria-label="LinkedIn"
+                >
+                  <FaVk size={28} />
+                </a>
+              </div>
+
+              <a href="tel:+79851257788" target="_blank">
+                +7 (985) 125-77-88
               </a>
-              <a
-                href="#"
-                className="text-gray-700 hover:text-gray-900 transition-all duration-300 hover:scale-125"
-                aria-label="Twitter"
-              >
-                <FaXTwitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-700 hover:text-gray-900 transition-all duration-300 hover:scale-125"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn size={20} />
-              </a>
-              <a
-                href="https://t.me/+79851257788"
-                className="text-gray-700 hover:text-gray-900 transition-all duration-300 hover:scale-125"
-                aria-label="Telegram"
-              >
-                <FaTelegram size={22} />
+              <a href="mailto:basic@eafo.info" target="_blank">
+                basic@eafo.info
               </a>
             </div>
+          </div>
+
+          <div className="lg:hidden col-span-2 md:col-span-1 flex flex-col  lg:items-center text-black font-bold">
+            <div className="flex space-x-3">
+              <a
+                href="https://t.me/+79851257788"
+                target="_blank"
+                className=" transition-all duration-300 hover:scale-125"
+                aria-label="Facebook"
+              >
+                <FaTelegramPlane size={28} />
+              </a>
+              <a
+                href="https://wa.me/79851257788"
+                target="_blank"
+                className="transition-all duration-300 hover:scale-125"
+              >
+                <IoLogoWhatsapp size={28} />
+              </a>
+              <a
+                href="https://vk.com/eafo_info"
+                target="_blank"
+                className="transition-all duration-300 hover:scale-125"
+                aria-label="LinkedIn"
+              >
+                <FaVk size={28} />
+              </a>
+            </div>
+
+            <a href="tel:+79851257788" target="_blank">
+              +7 (985) 125-77-88
+            </a>
+            <a href="mailto:basic@eafo.info" target="_blank">
+              basic@eafo.info
+            </a>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-4 border-t border-gray-200 flex flex-col md:flex-row justify-between text-sm text-gray-600">
-          <div className="mb-2 md:mb-0 mx-auto text-center md:mx-0">
+        <div className="py-5 px-4 lg:px-16  flex flex-col md:flex-row items-center text-sm text-gray-600">
+          <div className=" mx-auto text-center md:mx-0">
             {t("footer.copyright")}
-          </div>
-          <div className="flex justify-center md:justify-normal flex-wrap gap-4 text-blue-600 underline">
-            <a
-              href="https://www.eafo.info/privacy-policy"
-              target="_blank"
-              className="hover:text-blue-900 hover:underline"
-            >
-              {t("footer.privacyPolicy")}
-            </a>
-            <a
-              href="https://www.eafo.info/terms-of-use"
-              target="_blank"
-              className="hover:text-blue-900 hover:underline"
-            >
-              {t("footer.termsOfService")}
-            </a>
           </div>
         </div>
       </div>
