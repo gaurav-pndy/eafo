@@ -28,6 +28,7 @@ import AboutPage from "./pages/AboutPage";
 import HowToApply from "./pages/HowToApply";
 import AboutCityPage from "./pages/AboutCityPage";
 import ParticipationCategories from "./pages/ParticipationCategories";
+import Certificates from "./pages/Certificates";
 
 function App() {
   useEffect(() => {
@@ -124,6 +125,10 @@ function App() {
         {
           path: "/about-city",
           element: <AboutCityPage />,
+        },
+        {
+          path: "/certificates",
+          element: <Certificates />,
         },
       ],
     },

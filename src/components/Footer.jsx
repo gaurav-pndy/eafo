@@ -42,9 +42,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-white text-gray-700  ">
-      <div className="container mx-auto  ">
+      <div className=" ">
         {/* Responsive Grid */}
-        <div className="grid  grid-cols-2 px-4 lg:px-6 xl:px-16 gap-x-10 lg:gap-x-0 md:grid-cols-3 lg:grid-cols-[1.1fr_0.8fr_0.8fr_0.9fr_1.1fr] gap-y-8  border border-gray-200 py-8">
+        <div className="grid  grid-cols-2 px-4 lg:px-6 xl:px-16 gap-x-10 lg:gap-x-0 md:grid-cols-3 lg:grid-cols-[1.1fr_0.8fr_0.8fr_0.9fr_1.1fr] gap-y-8  border-t border-b border-gray-200 py-8">
           {/* Contact Us */}
           <div className="lg:pr-14 col-span-2 md:col-span-1 text-center md:text-left">
             <Link to="/">

@@ -90,6 +90,7 @@ const Header = () => {
     { label: t("header.venue"), path: "/venue" },
     { label: t("header.accommodation"), path: "/accommodation" },
     { label: t("header.aboutCity"), path: "/about-city" },
+    { label: t("header.certificates"), path: "/certificates" },
   ];
 
   const navigate = useNavigate();
