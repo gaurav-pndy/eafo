@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaVk, FaYoutube } from "react-icons/fa";
+import { FaTelegramPlane, FaVk, FaYoutube } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const ContactInfo = () => {
   const { t } = useTranslation();
@@ -32,13 +33,30 @@ const ContactInfo = () => {
       </div>
       <div className="space-y-4">
         <h4 className="font-semibold">{t("contactUs.socialMedia")}</h4>
-        <div className="flex space-x-4">
-          <span className="text-blue-900 hover:text-blue-700 cursor-pointer">
-            <FaVk className="text-2xl" />
-          </span>
-          <span className="text-blue-900 hover:text-blue-700 cursor-pointer">
-            <FaYoutube className="text-2xl" />
-          </span>
+        <div className="flex space-x-4  text-blue-900">
+          <a
+            href="https://t.me/+79851257788"
+            target="_blank"
+            className=" transition-all  duration-300 hover:scale-125"
+            aria-label="Facebook"
+          >
+            <FaTelegramPlane size={28} />
+          </a>
+          <a
+            href="https://wa.me/79851257788"
+            target="_blank"
+            className="transition-all duration-300 hover:scale-125"
+          >
+            <IoLogoWhatsapp size={28} />
+          </a>
+          <a
+            href="https://vk.com/eafo_info"
+            target="_blank"
+            className="transition-all duration-300 hover:scale-125"
+            aria-label="LinkedIn"
+          >
+            <FaVk size={28} />
+          </a>
         </div>
       </div>
     </div>

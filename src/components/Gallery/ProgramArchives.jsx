@@ -15,8 +15,8 @@ const ProgramArchives = () => {
         {years.map((year) => (
           <a
             key={year}
+            target="_blank"
             href={`/pdfs/${year}.pdf`}
-            download
             className="flex flex-col items-center group cursor-pointer"
           >
             <div className="w-20 h-20 mb-2 flex items-center justify-center">

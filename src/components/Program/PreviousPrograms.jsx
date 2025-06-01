@@ -19,7 +19,7 @@ const PreviousPrograms = () => {
           <a
             key={year}
             href={`/pdfs/${year}.pdf`}
-            download
+            target="_blank"
             className="flex flex-col items-center group cursor-pointer"
           >
             <div className="w-20 h-20 mb-2 flex items-center justify-center">
