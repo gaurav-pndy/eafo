@@ -31,19 +31,16 @@ const Testimonials = () => {
       userImage: t("testimonials.person3.userImage"),
     },
     {
-      name: t("testimonials.person1.name"),
-      review: t("testimonials.person1.review"),
-      userImage: t("testimonials.person1.userImage"),
+      name: t("testimonials.person4.name"),
+      review: t("testimonials.person4.review"),
+      userImage: t("testimonials.person4.userImage"),
+      regalia: t("testimonials.person4.regalia"),
     },
     {
-      name: t("testimonials.person2.name"),
-      review: t("testimonials.person2.review"),
-      userImage: t("testimonials.person2.userImage"),
-    },
-    {
-      name: t("testimonials.person3.name"),
-      review: t("testimonials.person3.review"),
-      userImage: t("testimonials.person3.userImage"),
+      name: t("testimonials.person5.name"),
+      review: t("testimonials.person5.review"),
+      userImage: t("testimonials.person5.userImage"),
+      regalia: t("testimonials.person4.regalia"),
     },
   ];
 
@@ -91,6 +88,12 @@ const Testimonials = () => {
                   <h3 className="font-bold text-xl text-[#1e3a8a]">
                     {review.name}
                   </h3>
+                  {/* {review.regalia && (
+                    <p className="text-purple-900 text-sm mt-2">
+                      {review.regalia}
+                    </p>
+                  )} */}
+
                   <Button
                     className="mt-2 rounded-full px-5 border border-gray-400 hover:bg-gray-200 cursor-pointer transition-all font-semibold duration-300"
                     variant="outline"
