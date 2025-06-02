@@ -10,6 +10,8 @@ const faqs = [
   { questionKey: "faq.q4", answerKey: "faq.a4" },
   { questionKey: "faq.q5", answerKey: "faq.a5" },
   { questionKey: "faq.q6", answerKey: "faq.a6" },
+  { questionKey: "faq.q7", answerKey: "faq.a7" },
+  { questionKey: "faq.q8", answerKey: "faq.a8" },
   // { questionKey: "faq.q7", answerKey: "faq.a7" },
 ];
 
@@ -61,9 +63,10 @@ const FaqSection = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="pt-4  text-gray-800 overflow-hidden">
-                      {t(faq.answerKey)}
-                    </div>
+                    <div
+                      className="pt-4  text-gray-800 overflow-hidden"
+                      dangerouslySetInnerHTML={{ __html: t(faq.answerKey) }}
+                    ></div>
                   </motion.div>
                 )}
               </AnimatePresence>

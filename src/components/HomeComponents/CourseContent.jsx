@@ -66,10 +66,13 @@ const CourseContent = () => {
         <div className="lg:w-[45%]   flex flex-col justify-between">
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-[2.5rem] font-bold text-[#9a0104] lg:mb-2">
-              {t("course_content.heading")}
+              {t("course_content.title")}
             </h1>
+            {/* <h1 className="text-2xl md:text-4xl lg:text-[2.5rem] font-bold text-[#9a0104] lg:mb-2">
+              {t("course_content.heading")}
+            </h1> */}
             <h1
-              className="text-2xl md:text-4xl lg:text-[2.5rem] lg:leading-14  text-[#011753] mb-6"
+              className="text-2xl md:text-4xl lg:text-[2.5rem]   lg:leading-14  text-[#011753] mb-6"
               dangerouslySetInnerHTML={{ __html: t("course_content.subtitle") }}
             ></h1>
           </div>

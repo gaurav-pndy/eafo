@@ -129,9 +129,15 @@ export default function CourseContent2() {
 
   return (
     <div className="relative overflow-hidden bg-[#f2f3f8] py-16">
-      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-semibold mb-6 text-[#001554]">
-        Выберите интересующий вас <br /> тематический семинар
+      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold mb-6 text-[#001554]">
+        Участие в тематических семинарах
       </h2>
+      <p className="text-center text-[#001554] max-w-6xl mx-auto text-xl mb-6">
+        Для участников, желающих посетить отдельные части полной программы,
+        предоставляется возможность участия в тематических семинарах от 1 дня.
+        Такой формат позволяет гибко планировать свое расписание и участвовать
+        по выгодной цене по интересующим тематикам.
+      </p>
 
       <Swiper
         modules={[Navigation]}

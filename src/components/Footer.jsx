@@ -70,7 +70,7 @@ const Footer = () => {
             <ul className="md:text-sm space-y-1 md:space-y-2">
               <li>
                 <a
-                  href="https://ui.eafo.info/"
+                  href="http://eafo.info"
                   target="_blank"
                   className="hover:text-blue-600 cursor-pointer"
                 >
@@ -266,9 +266,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="py-5 px-4 lg:px-16  flex flex-col md:flex-row items-center text-sm text-gray-600">
-          <div className=" mx-auto text-center md:mx-0">
-            {t("footer.copyright")}
-          </div>
+          <div
+            className=" mx-auto text-center md:mx-0"
+            dangerouslySetInnerHTML={{ __html: t("footer.copyright") }}
+          ></div>
         </div>
       </div>
     </footer>
