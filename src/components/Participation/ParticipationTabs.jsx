@@ -324,7 +324,7 @@ const ParticipationTabs = () => {
         </Swiper>
       )}
 
-      {/* <div className="mt-16 mb-8 px-4 max-w-6xl mx-auto">
+      <div className="mt-16 mb-8 px-4 max-w-6xl mx-auto">
         <h2 className="text-4xl  font-bold text-center mb-6">
           {t("participationTabs.title2")}
         </h2>
@@ -332,7 +332,7 @@ const ParticipationTabs = () => {
           className=" text-lg"
           dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
         ></div>
-      </div> */}
+      </div>
       {/* Categories Button */}
       <div className="text-center mt-14">
         <Link to="/categories-of-participation">
