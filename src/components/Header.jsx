@@ -244,7 +244,7 @@ const Header = () => {
               className="fixed left-[50%] translate-x-[-50%] top-22 md:top-24 z-20 w-full max-w-5xl h-fit bg-white shadow-2xl overflow-y-auto  p-5 md:p-10 rounded-2xl"
               // style={{ paddingTop: "5rem" }}
             >
-              <nav className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:px-6  overflow-y-scroll h-[75vh] md:h-full text-gray-800">
+              <nav className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:px-6  overflow-y-scroll md:overflow-y-auto h-[75vh] md:h-full text-gray-800">
                 {/* <div className="relative mb-6 md:hidden flex justify-end items-center">
                   <button
                     className="cursor-pointer border border-gray-800 font-semibold px-3 py-1 rounded-lg flex items-center gap-2"

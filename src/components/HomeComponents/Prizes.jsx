@@ -61,7 +61,7 @@ const Prizes = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="text-2xl mb-5">
+                  <DialogTitle className="text-2xl font-bold mb-5">
                     {t("prizes.tile1.title")}
                   </DialogTitle>
                   <DialogDescription>
@@ -103,7 +103,7 @@ const Prizes = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="text-2xl mb-5">
+                  <DialogTitle className="text-2xl font-bold mb-5">
                     {t("prizes.tile2.title")}
                   </DialogTitle>
                   <DialogDescription>
@@ -146,7 +146,7 @@ const Prizes = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="text-2xl mb-5">
+                  <DialogTitle className="text-2xl font-bold mb-5">
                     {t("prizes.tile1.title")}
                   </DialogTitle>
                   <DialogDescription>
@@ -188,7 +188,7 @@ const Prizes = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="text-2xl mb-5">
+                  <DialogTitle className="text-2xl font-bold mb-5">
                     {t("prizes.tile3.title")}
                   </DialogTitle>
                   <DialogDescription>
@@ -228,7 +228,7 @@ const Prizes = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="text-2xl mb-5">
+                  <DialogTitle className="text-2xl font-bold mb-5">
                     {t("prizes.tile4.title")}
                   </DialogTitle>
                   <DialogDescription>

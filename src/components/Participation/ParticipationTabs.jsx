@@ -346,7 +346,10 @@ const ParticipationTabs = () => {
         <DialogContent className="!max-w-4xl !max-h-[80vh] md:!max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
-              <h2 dangerouslySetInnerHTML={{ __html: courseTitle }}></h2>
+              <h2
+                className="text-2xl font-bold"
+                dangerouslySetInnerHTML={{ __html: courseTitle }}
+              ></h2>
             </DialogTitle>
           </DialogHeader>
           <div className="lg:text-lg text-gray-700  space-y-2 mt-4">
