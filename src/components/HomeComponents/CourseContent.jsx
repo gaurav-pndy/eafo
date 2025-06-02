@@ -24,7 +24,7 @@ const CourseContent = () => {
     {
       button: "button1",
       content: "oncoTopics",
-      image: "/courses/image1.png",
+      image: "/participation/tab1img1.jpg",
       bgcolor: "bg-[#011753]",
       dialogHead: t("course_content.dialogHead1"),
       dialogText: t("course_content.text1"),
@@ -32,7 +32,7 @@ const CourseContent = () => {
     {
       button: "button2",
       content: "oncoTopics",
-      image: "/courses/image2.png",
+      image: "/participation/tab1img2.jpg",
       bgcolor: "bg-[#4e629d]",
       dialogHead: t("course_content.dialogHead1"),
 
@@ -77,7 +77,7 @@ const CourseContent = () => {
           <div className="hidden lg:flex justify-center lg:justify-start ">
             <Link to="/participation-variants">
               <button className="bg-[#001554] cursor-pointer text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
-                Выбери курс
+                Выберите курс
               </button>
             </Link>
           </div>

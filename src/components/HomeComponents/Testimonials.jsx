@@ -47,7 +47,7 @@ const Testimonials = () => {
           {testimonials.map((review, index) => (
             <Card
               key={index}
-              className="flex flex-col items-center gap-4 p-4 text-center "
+              className="flex flex-col bg-red-100 items-center gap-4 p-4 text-center "
             >
               <img
                 src={review.userImage}

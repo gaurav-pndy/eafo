@@ -148,7 +148,7 @@ const ParticipationCategories = () => {
       </div>
 
       {activeTab === "competitive" ? (
-        <div className="max-w-7xl p-4 mx-auto">
+        <div className="max-w-7xl p-4 mx-auto text-lg">
           <div
             className="bg-[#f6f6f6] rounded-3xl p-4 md:p-8 mb-8"
             dangerouslySetInnerHTML={{
@@ -191,7 +191,7 @@ const ParticipationCategories = () => {
           </div>
         </div>
       ) : (
-        <div className="max-w-7xl p-4 mx-auto">
+        <div className="max-w-7xl p-4 mx-auto text-lg">
           <div
             className="bg-[#f6f6f6] rounded-3xl p-4 md:p-8 mb-8"
             dangerouslySetInnerHTML={{

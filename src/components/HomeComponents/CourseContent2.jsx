@@ -12,6 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Link } from "react-router-dom";
 
 export default function CourseContent2() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -230,6 +231,14 @@ export default function CourseContent2() {
           </button>
         </div>
       </Swiper>
+
+      <div className="text-center mt-14">
+        <Link to="/participation-variants">
+          <button className="bg-white border border-gray-300  px-10 py-3 rounded-full font-bold text-xl hover:bg-gray-200 cursor-pointer transition-all duration-300">
+            {t("course_content.selectButton")}
+          </button>
+        </Link>
+      </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="!max-w-4xl !max-h-[90vh] overflow-y-auto">

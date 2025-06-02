@@ -16,7 +16,7 @@ import PreRegisterForm from "../PreRegisterForm";
 import { Link } from "react-router-dom";
 
 const ParticipationTabs = () => {
-  const [activeTab, setActiveTab] = useState("full-programs");
+  const [activeTab, setActiveTab] = useState("thematic-seminars");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { t } = useTranslation();
@@ -153,11 +153,14 @@ const ParticipationTabs = () => {
   return (
     <div className=" mx-auto py-6  min-h-screen">
       {/* Header */}
-      <div className="text-center mb-8 px-4">
+      <div className=" mb-8 px-4 max-w-6xl mx-auto">
         <h2 className="text-4xl  font-bold text-center mb-6">
           {t("participationTabs.title")}
         </h2>
-        <p className=" text-lg">{t("participationTabs.subtitle")}</p>
+        <div
+          className=" text-lg"
+          dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle1") }}
+        ></div>
       </div>
 
       {/* Tab Navigation */}
@@ -321,6 +324,15 @@ const ParticipationTabs = () => {
         </Swiper>
       )}
 
+      <div className="mt-16 mb-8 px-4 max-w-6xl mx-auto">
+        <h2 className="text-4xl  font-bold text-center mb-6">
+          {t("participationTabs.title2")}
+        </h2>
+        <div
+          className=" text-lg"
+          dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
+        ></div>
+      </div>
       {/* Categories Button */}
       <div className="text-center mt-14">
         <Link to="/categories-of-participation">

@@ -45,41 +45,41 @@ const CourseSchedule = () => {
 
         <div className="col-span-1 row-span-2  bg-white rounded-3xl p-3 md:p-5 py-8  text-[#001554] flex flex-col justify-evenly gap-2 relative">
           <div className="">
-            <h3 className="font-bold md:mb-1 md:text-3xl lg:text-xl">
+            <h3 className="font-bold md:mb-1 md:text-3xl lg:text-xl xl:text-2xl">
               {t("schedule.checkin.heading")}
             </h3>
-            <p className="text-sm md:text-2xl lg:text-lg">
+            <p className="text-sm md:text-2xl lg:text-lg xl:text-xl">
               {" "}
               {t("schedule.checkin.checkin")}
             </p>
           </div>
 
           <div className="">
-            <h3 className=" font-bold md:mb-1  md:text-3xl lg:text-xl">
+            <h3 className=" font-bold md:mb-1  md:text-3xl lg:text-xl xl:text-2xl">
               {t("schedule.opening.heading")}
             </h3>
-            <p className="text-sm md:text-2xl lg:text-lg">
+            <p className="text-sm md:text-2xl lg:text-lg xl:text-xl">
               {" "}
               {t("schedule.opening.opening")}
             </p>
           </div>
 
           <div className="">
-            <h3 className=" font-bold  md:mb-1 md:text-3xl lg:text-xl">
+            <h3 className=" font-bold  md:mb-1 md:text-3xl lg:text-xl xl:text-2xl">
               {t("schedule.closing.heading")}
             </h3>
-            <p className="text-sm md:text-2xl lg:text-lg">
+            <p className="text-sm md:text-2xl lg:text-lg xl:text-xl">
               {" "}
               {t("schedule.closing.closing")}
             </p>
           </div>
 
           <div>
-            <h3 className=" font-bold md:mb-1 md:text-3xl lg:text-xl">
+            <h3 className=" font-bold md:mb-1 md:text-3xl lg:text-xl xl:text-2xl">
               {t("schedule.checkout.heading")}
             </h3>
             <p
-              className="text-sm md:text-2xl lg:text-lg"
+              className="text-sm md:text-2xl lg:text-lg xl:text-xl"
               dangerouslySetInnerHTML={{
                 __html: t("schedule.checkout.checkout"),
               }}
