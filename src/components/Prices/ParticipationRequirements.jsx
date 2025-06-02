@@ -23,7 +23,7 @@ const ParticipationRequirements = () => {
             <ul className="space-y-4">
               {requirements.map((item, idx) => (
                 <li key={idx} className="flex items-start">
-                  <FaCheckCircle className="text-blue-900 mt-1 mr-3" />{" "}
+                  <FaCheckCircle className="text-blue-900 mt-1 mr-3 shrink-0" />{" "}
                   {/* React Icon for check-circle */}
                   <span>{item}</span>
                 </li>

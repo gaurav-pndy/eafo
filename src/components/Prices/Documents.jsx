@@ -27,7 +27,7 @@ const Documents = () => {
               <ul className="space-y-4">
                 {enrollmentDocs.map((doc, idx) => (
                   <li key={idx} className="flex items-start">
-                    <FaFileAlt className="text-blue-900 mt-1 mr-3" />{" "}
+                    <FaFileAlt className="shrink-0 text-blue-900 mt-1 mr-3" />{" "}
                     {/* React Icon */}
                     <span>{doc}</span>
                   </li>
