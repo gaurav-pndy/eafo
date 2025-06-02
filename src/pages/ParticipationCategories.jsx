@@ -37,7 +37,7 @@ const ParticipationCategories = () => {
         t("participationCategories.tab1.item1.point7"),
         t("participationCategories.tab1.item1.point8"),
       ],
-      note: t("participationCategories.tab2.item1.note"),
+      note: t("participationCategories.tab1.item1.note"),
     },
     {
       id: 2,
@@ -53,7 +53,7 @@ const ParticipationCategories = () => {
         t("participationCategories.tab1.item2.point5"),
         t("participationCategories.tab1.item2.point6"),
       ],
-      note: t("participationCategories.tab2.item1.note"),
+      note: t("participationCategories.tab1.item2.note"),
     },
   ];
 
@@ -91,6 +91,20 @@ const ParticipationCategories = () => {
       ],
       note: t("participationCategories.tab2.item2.note"),
     },
+    {
+      id: 3,
+      title: t("participationCategories.tab2.item3.heading"),
+      desc: t("participationCategories.tab2.item3.desc"),
+      dialogHead: t("participationCategories.dialogHead2"),
+      description: t("participationCategories.dialogText2"),
+      list: [
+        t("participationCategories.tab2.item3.point1"),
+        t("participationCategories.tab2.item3.point2"),
+        t("participationCategories.tab2.item3.point3"),
+        t("participationCategories.tab2.item3.point4"),
+      ],
+      note: t("participationCategories.tab2.item2.note"),
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -117,10 +131,14 @@ const ParticipationCategories = () => {
   return (
     <div className=" mx-auto py-16  min-h-screen">
       {/* Header */}
-      <div className="text-center mb-8 px-4">
-        <h2 className="text-4xl  font-bold text-center mb-12">
+      <div className="  px-4 max-w-6xl mx-auto mb-12">
+        <h2 className="text-4xl  font-bold text-center mb-6">
           {t("participationCategories.heading")}
         </h2>
+        <div
+          className=" text-lg"
+          dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
+        ></div>
         {/* <p className=" text-lg">{t("participationTabs.subtitle")}</p> */}
       </div>
 
@@ -180,12 +198,10 @@ const ParticipationCategories = () => {
                 </div>
                 <div className="flex justify-end">
                   <button
-                    onClick={() =>
-                      handleOpenDialog(item.description, item.dialogHead)
-                    }
+                    onClick={() => setShowForm(true)}
                     className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full"
                   >
-                    {t(`participationCategories.moreDetails`)}
+                    Подать заявку
                   </button>
                 </div>
               </div>
@@ -200,11 +216,13 @@ const ParticipationCategories = () => {
               __html: t(`participationCategories.tab2.description`),
             }}
           ></div>
-          <div className="grid  md:grid-cols-2 gap-6 lg:gap-14 mb-8">
+          <div className="grid  md:grid-cols-2  gap-6 lg:gap-14 mb-8">
             {nonCompData.map((item) => (
               <div
                 key={item.id}
-                className="relative flex flex-col gap-5 justify-between overflow-hidden p-4 bg-[#f6f6f6] md:p-8 rounded-3xl shadow-xl group"
+                className={`relative flex flex-col gap-5 justify-between overflow-hidden p-4 bg-[#f6f6f6] md:p-8 rounded-3xl shadow-xl group  ${
+                  item.id === 3 ? "md:col-span-2 md:mx-auto md:w-1/2" : ""
+                }`}
               >
                 <div>
                   <h3 className="font-bold mb-4">{item.title}</h3>
@@ -224,12 +242,10 @@ const ParticipationCategories = () => {
                 </div>
                 <div className="flex justify-end">
                   <button
-                    onClick={() =>
-                      handleOpenDialog(item.description, item.dialogHead)
-                    }
+                    onClick={() => setShowForm(true)}
                     className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full"
                   >
-                    {t(`participationCategories.moreDetails`)}
+                    Подать заявку
                   </button>
                 </div>
               </div>

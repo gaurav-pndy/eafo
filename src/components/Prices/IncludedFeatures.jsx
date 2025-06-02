@@ -13,11 +13,11 @@ const IncludedFeatures = () => {
 
   // Map the icons to the corresponding React Icons
   const iconMap = {
-    "fa-chalkboard-user": <FaChalkboardTeacher className="text-3xl" />,
-    "fa-book": <FaBook className="text-3xl" />,
-    "fa-certificate": <FaCertificate className="text-3xl" />,
-    "fa-passport": <FaPassport className="text-3xl" />,
-    "fa-utensils": <FaUtensils className="text-3xl" />,
+    "fa-chalkboard-user": <FaChalkboardTeacher className="shrink-0 text-3xl" />,
+    "fa-book": <FaBook className="shrink-0 text-3xl" />,
+    "fa-certificate": <FaCertificate className="shrink-0 text-3xl" />,
+    "fa-passport": <FaPassport className="shrink-0 text-3xl" />,
+    "fa-utensils": <FaUtensils className="shrink-0 text-3xl" />,
   };
 
   return (

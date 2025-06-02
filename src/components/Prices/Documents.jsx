@@ -43,7 +43,7 @@ const Documents = () => {
               <ul className="space-y-4">
                 {certificateDocs.map((doc, idx) => (
                   <li key={idx} className="flex items-start">
-                    <FaIdCard className="text-blue-900 mt-1 mr-3" />{" "}
+                    <FaIdCard className="text-blue-900 shrink-0 mt-1 mr-3" />{" "}
                     {/* React Icon */}
                     <span>{doc}</span>
                   </li>

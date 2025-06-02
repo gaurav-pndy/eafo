@@ -20,7 +20,7 @@ const RequiredDocuments = () => {
             <ul className="space-y-4">
               {deadlines.map((date, idx) => (
                 <li key={idx} className="flex items-start">
-                  <FaCalendarCheck className="text-blue-900 mt-1 mr-3" />
+                  <FaCalendarCheck className="text-blue-900 shrink-0 mt-1 mr-3" />
                   <span>{date}</span>
                 </li>
               ))}
@@ -35,7 +35,7 @@ const RequiredDocuments = () => {
             <ul className="space-y-4">
               {importantWarnings.map((warning, idx) => (
                 <li key={idx} className="flex items-start">
-                  <FaExclamationCircle className="text-red-600 mt-1 mr-3" />
+                  <FaExclamationCircle className="text-red-600 shrink-0 mt-1 mr-3" />
                   <span>{warning}</span>
                 </li>
               ))}
