@@ -19,7 +19,7 @@ const PricingHero = () => {
             {" "}
             {t("pricingHero.title")}
           </h1>
-          <p className="text-xl text-blue-100">{t("pricingHero.subtitle")}</p>
+          {/* <p className="text-xl text-blue-100">{t("pricingHero.subtitle")}</p> */}
         </div>
       </div>
     </section>

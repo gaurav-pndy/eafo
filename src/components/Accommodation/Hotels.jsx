@@ -79,7 +79,7 @@ const Hotels = () => {
             </div>
           </div>
           <img
-            src="/accommodation/smart-main.webp"
+            src="/accommodation/artis.jpg"
             alt="Smart Hotel"
             className="rounded-xl w-full md:h-90 object-cover"
           />
