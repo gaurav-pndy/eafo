@@ -80,7 +80,6 @@ const AboutSection = () => {
           </div>
         </motion.div>
 
-        {/* Tile 4 - Tall height */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -90,7 +89,7 @@ const AboutSection = () => {
           <div className="flex flex-col h-full justify-between relative z-10">
             <div>
               <p
-                className="text-[#001554] text-sm md:text-xl md:leading-9 mt-2 mb-2 break-words"
+                className="text-[#001554] text-sm md:text-xl md:leading-8 mt-2 mb-2 break-words"
                 dangerouslySetInnerHTML={{
                   __html: t("about_course.stat_4"),
                 }}
