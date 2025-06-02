@@ -6,10 +6,10 @@ const photos = [
     src: "/gallery/photo1.jpg",
     alt: "photo1",
   },
-  {
-    src: "/gallery/photo2.jpg",
-    alt: "photo2",
-  },
+  // {
+  //   src: "/gallery/photo2.jpg",
+  //   alt: "photo2",
+  // },
   {
     src: "/gallery/photo3.jpg",
     alt: "photo3",
