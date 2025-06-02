@@ -158,14 +158,14 @@ const ParticipationTabs = () => {
           {t("participationTabs.title")}
         </h2>
         <div
-          className=" text-xl"
+          className=" text-2xl"
           dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle1") }}
         ></div>
         <h2 className="text-4xl  mt-8 font-bold text-center mb-6">
           {t("participationTabs.title2")}
         </h2>
         <div
-          className=" text-xl"
+          className=" text-2xl"
           dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
         ></div>
       </div>
