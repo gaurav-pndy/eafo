@@ -254,14 +254,14 @@ const ParticipationCategories = () => {
         </div>
       )}
 
-      <div className="text-center mt-10">
+      {/* <div className="text-center mt-10">
         <button
           onClick={() => setShowForm(true)}
           className="bg-white border border-gray-300  px-10 py-3 rounded-full font-bold text-xl hover:bg-gray-200 cursor-pointer transition-all duration-300"
         >
           Подать заявку
         </button>
-      </div>
+      </div> */}
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="!max-w-4xl !max-h-[80vh] md:!max-h-[90vh] overflow-y-auto">
