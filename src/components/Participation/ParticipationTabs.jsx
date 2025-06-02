@@ -151,15 +151,22 @@ const ParticipationTabs = () => {
   }, [showForm]);
 
   return (
-    <div className=" mx-auto py-6  min-h-screen">
+    <div className=" mx-auto   min-h-screen">
       {/* Header */}
       <div className=" mb-8 px-4 max-w-6xl mx-auto">
         <h2 className="text-4xl  font-bold text-center mb-6">
           {t("participationTabs.title")}
         </h2>
         <div
-          className=" text-lg"
+          className=" text-xl"
           dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle1") }}
+        ></div>
+        <h2 className="text-4xl  mt-8 font-bold text-center mb-6">
+          {t("participationTabs.title2")}
+        </h2>
+        <div
+          className=" text-xl"
+          dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
         ></div>
       </div>
 
@@ -324,15 +331,6 @@ const ParticipationTabs = () => {
         </Swiper>
       )}
 
-      <div className="mt-16 mb-8 px-4 max-w-6xl mx-auto">
-        <h2 className="text-4xl  font-bold text-center mb-6">
-          {t("participationTabs.title2")}
-        </h2>
-        <div
-          className=" text-lg"
-          dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
-        ></div>
-      </div>
       {/* Categories Button */}
       <div className="text-center mt-14">
         <Link to="/categories-of-participation">

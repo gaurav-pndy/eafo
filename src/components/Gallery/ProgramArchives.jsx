@@ -19,7 +19,7 @@ const ProgramArchives = () => {
             href={`/pdfs/${year}.pdf`}
             className="flex flex-col items-center group cursor-pointer"
           >
-            <div className="w-20 h-20 mb-2 flex items-center justify-center">
+            <div className="w-20 h-20 mb-2 flex items-center justify-center hover:scale-[120%] transition-all duration-300">
               <AiFillFilePdf className="text-red-500 text-5xl" />
             </div>
             <span className="text-lg font-semibold text-gray-800">{year}</span>
