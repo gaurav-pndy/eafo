@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaCarSide, FaPlaneDeparture } from "react-icons/fa";
+import { FaCarSide, FaExternalLinkAlt, FaPlaneDeparture } from "react-icons/fa";
 import { FaTrainSubway } from "react-icons/fa6";
 
 const HowToReachSection = () => {
@@ -71,6 +71,28 @@ const HowToReachSection = () => {
                   </span>{" "}
                   {flight.airlines}
                 </p>
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="mt-6">
+            <span className="font-semibold text-lg  text-blue-900">
+              {t("aboutCity.howToReach.byPlane.directFlightTitle")}
+            </span>
+            <p className="text-gray-700 text-lg mt-2 mb-1 ">
+              {t("aboutCity.howToReach.byPlane.directFlightDesc")}
+            </p>
+            {t("aboutCity.howToReach.byPlane.directFlights", {
+              returnObjects: true,
+            }).map((flight, index) => (
+              <React.Fragment key={index}>
+                <p className="font-semibold text-lg text-blue-600 flex gap-2 items-center">
+                  {" "}
+                  <a href={flight.link} target="_blank">
+                    {flight.airline}
+                  </a>{" "}
+                  <FaExternalLinkAlt />
+                </p>{" "}
+                <p className="mb-1 text-gray-700 text-lg ">{flight.cities}</p>
               </React.Fragment>
             ))}
           </div>
