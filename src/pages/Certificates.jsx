@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import image1 from "/certificates/image1.png";
 import image2 from "/certificates/image2.jpg";
+import image3 from "/certificates/image3.jpg";
 
 export default function Certificates() {
   const { t } = useTranslation();
@@ -52,7 +53,7 @@ export default function Certificates() {
             </p>
           </div>
           <img
-            src={image2}
+            src={image3}
             alt="Certificate of Improvement"
             className="w-72  lg:w-90"
           />
