@@ -174,11 +174,11 @@ const ParticipationTabs = () => {
     <div className=" mx-auto   min-h-screen">
       {/* Header */}
       <div className="mx-4 p-4  md:p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl md:mx-auto mb-10">
-        <h2 className="text-3xl md:text-4xl flex gap-4 text-[#1e3a8a]  font-bold  mb-6">
+        <h2 className="text-2xl md:text-3xl flex gap-4 text-[#1e3a8a]  font-bold  mb-6">
           <FaUsers className="text-[#1d4ed8] translate-y-1" />
           {t("participationTabs.title")}
         </h2>
-        <div className="text-xl md:text-2xl ml-2 md:ml-4">
+        <div className="text-lg md:text-xl ml-2 md:ml-4">
           {formats.map((item) => (
             <p key={item.id} className="flex gap-4 items-start mb-4">
               {item.icon}
@@ -188,13 +188,13 @@ const ParticipationTabs = () => {
         </div>
       </div>
       <div className=" mx-4 p-4  md:p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl md:mx-auto mb-10">
-        <h2 className="text-3xl md:text-4xl flex gap-4 text-[#1e3a8a]  font-bold  mb-6">
+        <h2 className="text-2xl md:text-3xl flex gap-4 text-[#1e3a8a]  font-bold  mb-6">
           {" "}
-          <BsStack className="text-[#1d4ed8]" />
+          <BsStack className="text-[#1d4ed8] translate-y-1" />
           {t("participationTabs.title2")}
         </h2>
         <div
-          className=" text-xl md:text-2xl ml-2 md:ml-4"
+          className=" text-lg md:text-xl ml-2 md:ml-4"
           dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
         ></div>
         <div className="text-center mt-10">

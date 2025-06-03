@@ -14,14 +14,14 @@ const RequiredDocuments = () => {
         <div className="max-w-4xl mx-auto">
           {/* Deadlines Section */}
           <div className="bg-blue-50 p-8 rounded-xl mb-8">
-            <h3 className="text-xl font-bold mb-6">
+            <h3 className="text-2xl font-bold mb-6">
               {t("requiredDocuments.importantDeadlines")}
             </h3>
             <ul className="space-y-4">
               {deadlines.map((date, idx) => (
-                <li key={idx} className="flex items-start">
+                <li key={idx} className="flex items-start text-lg">
                   <FaCalendarCheck className="text-blue-900 shrink-0 mt-1 mr-3" />
-                  <span>{date}</span>
+                  <span dangerouslySetInnerHTML={{ __html: date }}></span>
                 </li>
               ))}
             </ul>
@@ -29,12 +29,12 @@ const RequiredDocuments = () => {
 
           {/* Warnings Section with a red background */}
           <div className="bg-red-50 p-8 rounded-xl mb-8">
-            <h3 className="text-xl font-bold mb-6">
+            <h3 className="text-2xl font-bold mb-6">
               {t("importantNotes.warningsTitle")}
             </h3>
             <ul className="space-y-4">
               {importantWarnings.map((warning, idx) => (
-                <li key={idx} className="flex items-start">
+                <li key={idx} className="flex items-start text-lg">
                   <FaExclamationCircle className="text-red-600 shrink-0 mt-1 mr-3" />
                   <span>{warning}</span>
                 </li>

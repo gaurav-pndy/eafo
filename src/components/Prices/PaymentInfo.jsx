@@ -19,7 +19,10 @@ const PaymentInfo = () => {
               <div key={idx} className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold mb-4">{type.title}</h3>
                 <div className="space-y-4">
-                  <p className="text-gray-700">{type.description}</p>
+                  <div
+                    className="text-gray-700"
+                    dangerouslySetInnerHTML={{ __html: type.description }}
+                  ></div>
                   <ul className="space-y-3">
                     {type.points.map((point, pidx) => (
                       <li key={pidx} className="flex items-center">
@@ -29,6 +32,7 @@ const PaymentInfo = () => {
                       </li>
                     ))}
                   </ul>
+                  <p className="font-semibold">{type.note}</p>
                 </div>
               </div>
             ))}

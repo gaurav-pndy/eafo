@@ -11,7 +11,9 @@ const ProgramArchives = () => {
       <h2 className="text-3xl font-bold text-blue-900 ">
         {t("archives.title")}
       </h2>
-      <h5 className="mb-8 text-2xl mt-1  italic">{t("gallery.subtitle1")}</h5>
+      <h5 className="mb-8 text-2xl mt-1 text-red-700 italic">
+        {t("gallery.subtitle1")}
+      </h5>
       <div className="flex flex-wrap justify-center gap-8">
         {years.map((year) => (
           <a

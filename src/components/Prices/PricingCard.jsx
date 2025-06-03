@@ -20,7 +20,7 @@ const PricingCard = ({
   const renderDetail = (item, idx) => {
     if (typeof item === "string") {
       return (
-        <li key={idx} className="flex items-start">
+        <li key={idx} className="flex text-base items-start">
           <FaCheck className="text-green-500 mr-2 mt-1 shrink-0" />
           <span>{item}</span>
         </li>
@@ -28,12 +28,15 @@ const PricingCard = ({
     } else if (typeof item === "object" && item.main) {
       return (
         <li key={idx} className="flex flex-col items-start">
-          <div className="flex items-start">
+          <div
+            className={`flex text-base items-start border-t pt-2 w-full border-[#1c398e] border-dashed`}
+          >
             <FaCheck className="text-green-500 mr-2 mt-1 shrink-0" />
             <span>{item.main}</span>
           </div>
+          {/* <p className="border-b mt-1 w-full border-black border-dashed"></p> */}
           {item.sub && Array.isArray(item.sub) && (
-            <ul className="list-disc list-inside ml-6 mt-1 text-gray-600 text-sm">
+            <ul className="list-disc list-inside ml-6 text-gray-600 text-base">
               {item.sub.map((subItem, subIdx) => (
                 <li key={subIdx}>{subItem}</li>
               ))}
@@ -65,7 +68,7 @@ const PricingCard = ({
       {/* Title and Price Section */}
       <div className="text-center mb-6">
         <h3
-          className="text-xl font-bold mb-2"
+          className="text-2xl font-bold mb-2"
           dangerouslySetInnerHTML={{ __html: title }}
         ></h3>
         {/* <p className="text-sm">{t("pricingOptions.startingFrom")}</p> */}
