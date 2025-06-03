@@ -26,17 +26,17 @@ const ParticipationTabs = () => {
   const formats = [
     {
       id: 1,
-      icon: <FaHotel className="text-[#1d4ed8]" />,
+      icon: <FaHotel className="text-[#1d4ed8] translate-y-1" />,
       text: t("participationTabs.point1"),
     },
     {
       id: 2,
-      icon: <FaUserCheck className="text-[#1d4ed8]" />,
+      icon: <FaUserCheck className="text-[#1d4ed8] translate-y-1" />,
       text: t("participationTabs.point2"),
     },
     {
       id: 3,
-      icon: <FaLaptop className="text-[#1d4ed8]" />,
+      icon: <FaLaptop className="text-[#1d4ed8] translate-y-1" />,
       text: t("participationTabs.point3"),
     },
   ];
@@ -173,31 +173,31 @@ const ParticipationTabs = () => {
   return (
     <div className=" mx-auto   min-h-screen">
       {/* Header */}
-      <div className=" p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl mx-auto mb-10">
-        <h2 className="text-4xl flex gap-4 text-[#1e3a8a] items-center font-bold  mb-6">
-          <FaUsers className="text-[#1d4ed8]" />
+      <div className="mx-4 p-4  md:p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl md:mx-auto mb-10">
+        <h2 className="text-3xl md:text-4xl flex gap-4 text-[#1e3a8a]  font-bold  mb-6">
+          <FaUsers className="text-[#1d4ed8] translate-y-1" />
           {t("participationTabs.title")}
         </h2>
-        <div className=" text-2xl ml-4">
+        <div className="text-xl md:text-2xl ml-2 md:ml-4">
           {formats.map((item) => (
-            <p key={item.id} className="flex gap-4 items-center mb-4">
+            <p key={item.id} className="flex gap-4 items-start mb-4">
               {item.icon}
               {item.text}
             </p>
           ))}
         </div>
       </div>
-      <div className=" p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl mx-auto">
-        <h2 className="text-4xl flex gap-4 text-[#1e3a8a] items-center font-bold  mb-6">
+      <div className=" mx-4 p-4  md:p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl md:mx-auto mb-10">
+        <h2 className="text-3xl md:text-4xl flex gap-4 text-[#1e3a8a]  font-bold  mb-6">
           {" "}
           <BsStack className="text-[#1d4ed8]" />
           {t("participationTabs.title2")}
         </h2>
         <div
-          className=" text-2xl"
+          className=" text-xl md:text-2xl ml-2 md:ml-4"
           dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
         ></div>
-        <div className="text-center mt-14">
+        <div className="text-center mt-10">
           <Link to="/categories-of-participation">
             <button className="bg-[#9a0003] border text-white  px-10 py-3 rounded-full font-bold text-xl hover:bg-red-700 cursor-pointer transition-all duration-300">
               {t("participationTabs.moreDetails")}

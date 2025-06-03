@@ -52,7 +52,7 @@ const Hotels = () => {
   };
 
   return (
-    <section className="px-4 py-16 max-w-6xl mx-auto">
+    <section className="px-4 pt-16 pb-10 max-w-6xl mx-auto">
       {/* Smart Hotel */}
       <div className="">
         <div className="grid md:grid-cols-2 items-center gap-6 md:gap-16 ">
@@ -132,7 +132,7 @@ const Hotels = () => {
       <div className="mt-24 md:mt-28">
         <div className="grid md:grid-cols-2  gap-6 md:gap-16 ">
           <img
-            src="/accommodation/smart-main.webp"
+            src="/accommodation/smart-hotel.webp"
             alt="Smart Hotel"
             className="rounded-xl w-full md:h-90 object-cover"
           />
@@ -197,6 +197,11 @@ const Hotels = () => {
           </div>
         </div>
       </div>
+
+      <div
+        className="mt-14 text-xl md:text-2xl p-4 md:p-8 shadow-lg rounded-xl bg-[#e3effe] "
+        dangerouslySetInnerHTML={{ __html: t("accommodation.additional") }}
+      ></div>
     </section>
   );
 };
