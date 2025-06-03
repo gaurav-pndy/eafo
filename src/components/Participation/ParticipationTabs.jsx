@@ -14,12 +14,32 @@ import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import PreRegisterForm from "../PreRegisterForm";
 import { Link } from "react-router-dom";
+import { FaHotel, FaLaptop, FaUserCheck, FaUsers } from "react-icons/fa6";
+import { BsStack } from "react-icons/bs";
 
 const ParticipationTabs = () => {
   const [activeTab, setActiveTab] = useState("thematic-seminars");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { t } = useTranslation();
+
+  const formats = [
+    {
+      id: 1,
+      icon: <FaHotel className="text-[#1d4ed8]" />,
+      text: t("participationTabs.point1"),
+    },
+    {
+      id: 2,
+      icon: <FaUserCheck className="text-[#1d4ed8]" />,
+      text: t("participationTabs.point2"),
+    },
+    {
+      id: 3,
+      icon: <FaLaptop className="text-[#1d4ed8]" />,
+      text: t("participationTabs.point3"),
+    },
+  ];
 
   const coursesData = [
     {
@@ -153,25 +173,41 @@ const ParticipationTabs = () => {
   return (
     <div className=" mx-auto   min-h-screen">
       {/* Header */}
-      <div className=" mb-12 px-4 max-w-6xl mx-auto">
-        <h2 className="text-4xl  font-bold text-center mb-6">
+      <div className=" p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl mx-auto mb-10">
+        <h2 className="text-4xl flex gap-4 text-[#1e3a8a] items-center font-bold  mb-6">
+          <FaUsers className="text-[#1d4ed8]" />
           {t("participationTabs.title")}
         </h2>
-        <div
-          className=" text-2xl"
-          dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle1") }}
-        ></div>
-        <h2 className="text-4xl  mt-8 font-bold text-center mb-6">
+        <div className=" text-2xl ml-4">
+          {formats.map((item) => (
+            <p key={item.id} className="flex gap-4 items-center mb-4">
+              {item.icon}
+              {item.text}
+            </p>
+          ))}
+        </div>
+      </div>
+      <div className=" p-8 shadow-lg rounded-xl bg-[#e3effe] max-w-6xl mx-auto">
+        <h2 className="text-4xl flex gap-4 text-[#1e3a8a] items-center font-bold  mb-6">
+          {" "}
+          <BsStack className="text-[#1d4ed8]" />
           {t("participationTabs.title2")}
         </h2>
         <div
           className=" text-2xl"
           dangerouslySetInnerHTML={{ __html: t("participationTabs.subtitle2") }}
         ></div>
+        <div className="text-center mt-14">
+          <Link to="/categories-of-participation">
+            <button className="bg-[#9a0003] border text-white  px-10 py-3 rounded-full font-bold text-xl hover:bg-red-700 cursor-pointer transition-all duration-300">
+              {t("participationTabs.moreDetails")}
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex justify-center mb-12">
+      <div className="flex justify-center my-12">
         <div className="inline-flex bg-[#f1f1f1] border rounded-full overflow-hidden">
           <button
             onClick={() => setActiveTab("full-programs")}
@@ -332,13 +368,6 @@ const ParticipationTabs = () => {
       )}
 
       {/* Categories Button */}
-      <div className="text-center mt-14">
-        <Link to="/categories-of-participation">
-          <button className="bg-white border border-gray-300  px-10 py-3 rounded-full font-bold text-xl hover:bg-gray-200 cursor-pointer transition-all duration-300">
-            Категории участия
-          </button>
-        </Link>
-      </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="!max-w-4xl !max-h-[80vh] md:!max-h-[90vh] overflow-y-auto">

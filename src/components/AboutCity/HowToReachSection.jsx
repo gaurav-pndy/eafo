@@ -26,12 +26,12 @@ const HowToReachSection = () => {
           </div>
           <div className="bg-gray-50 rounded-lg p-6  shadow flex flex-col md:flex-row gap-8">
             <div className="flex-1">
-              <ul className="space-y-2 text-gray-700 text-base">
+              <ul className="space-y-2 text-gray-700 text-lg">
                 {t("aboutCity.howToReach.byPlane.airports", {
                   returnObjects: true,
                 }).map((airport, index) => (
                   <li key={index}>
-                    <span className="font-medium">{airport.name}:</span>{" "}
+                    <span className="font-bold">{airport.name}:</span>{" "}
                     {airport.distance}
                   </li>
                 ))}
