@@ -231,6 +231,13 @@ const ParticipationTabs = () => {
           </button>
         </div>
       </div>
+      {activeTab === "thematic-seminars" && (
+        <p className="text-center text-[#001554] max-w-6xl mx-auto text-xl mb-6">
+          Вы можете выбрать отдельные блоки программы и подать заявку на
+          тематические семинары, соответствующие вашим профессиональным целям и
+          интересам.
+        </p>
+      )}
 
       {/* Course Cards */}
       {activeTab === "full-programs" ? (

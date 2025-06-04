@@ -16,7 +16,7 @@ const PricePage = () => {
       <PricingOptions />
       <RequiredDocuments />
       <ParticipationRequirements />
-      <Documents />
+      {/* <Documents /> */}
       <IncludedFeatures />
 
       <PaymentInfo />

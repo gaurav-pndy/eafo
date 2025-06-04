@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaCheckCircle } from "react-icons/fa"; // Importing the React icon for check-circle
+import { Link } from "react-router-dom";
 
 const ParticipationRequirements = () => {
   const { t } = useTranslation();
@@ -47,6 +48,14 @@ const ParticipationRequirements = () => {
                 <p className="text-center">{stage.seats}</p>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link to="/categories-of-participation">
+              <button className="bg-[#9a0003] border text-white  px-10 py-3 rounded-full font-bold text-xl hover:bg-red-700 cursor-pointer transition-all duration-300">
+                {t("participationTabs.moreDetails")}
+              </button>
+            </Link>
           </div>
         </div>
       </div>

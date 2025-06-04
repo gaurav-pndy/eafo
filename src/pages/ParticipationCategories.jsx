@@ -199,7 +199,7 @@ const ParticipationCategories = () => {
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowForm(true)}
-                    className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full"
+                    className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
                   >
                     Подать заявку
                   </button>
@@ -243,7 +243,7 @@ const ParticipationCategories = () => {
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowForm(true)}
-                    className="bg-[#d9d9d9] border border-gray-400 hover:bg-gray-300 cursor-pointer transition-all duration-300 px-5 py-2 text-gray-800 rounded-full"
+                    className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
                   >
                     Подать заявку
                   </button>
