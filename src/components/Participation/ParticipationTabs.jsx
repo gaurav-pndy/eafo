@@ -120,6 +120,17 @@ const ParticipationTabs = () => {
         " absolute w-full bottom-0 left-1/2 translate-x-[-50%] h-52 md:h-60 object-cover pointer-events-none  ",
     },
     {
+      title: "button11",
+      duration: t("course_content.duration11"),
+      image: "/courses/image11.png",
+      bgcolor: "bg-[#ddae8c]",
+      dialogHead: t("course_content.dialogHead11"),
+
+      dialogText: t("course_content.text11"),
+      styles:
+        " absolute  bottom-0 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
+    },
+    {
       title: "button8",
       duration: t("course_content.duration8"),
       image: "/courses/image8.png",
@@ -149,6 +160,29 @@ const ParticipationTabs = () => {
       dialogHead: t("course_content.dialogHead10"),
 
       dialogText: t("course_content.text10"),
+      styles:
+        " absolute  bottom-4 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
+    },
+
+    {
+      title: "button12",
+      duration: t("course_content.duration12"),
+      // image: "/courses/image12.png",
+      bgcolor: "bg-[#bbbdbf]",
+      dialogHead: t("course_content.dialogHead12"),
+
+      dialogText: t("course_content.text12"),
+      styles:
+        " absolute  bottom-4 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
+    },
+    {
+      title: "button13",
+      duration: t("course_content.duration13"),
+      // image: "/courses/image13.png",
+      bgcolor: "bg-[#fde01e]",
+      dialogHead: t("course_content.dialogHead13"),
+
+      dialogText: t("course_content.text13"),
       styles:
         " absolute  bottom-4 left-1/2 translate-x-[-50%]  object-cover pointer-events-none  ",
     },
@@ -330,15 +364,16 @@ const ParticipationTabs = () => {
                     }}
                   >
                     {/* Background Image */}
-                    <img
-                      src={course.image}
-                      alt={course.title}
-                      className={course.styles}
-                      style={{
-                        zIndex: 0,
-                      }}
-                    />
-
+                    {course.image && (
+                      <img
+                        src={course.image}
+                        alt={course.title}
+                        className={course.styles}
+                        style={{
+                          zIndex: 0,
+                        }}
+                      />
+                    )}
                     {course.bgcolor === "bg-[#a16e30]" && (
                       <div className="h-20  inset-0 top-28 md:top-36 absolute bottom-0 bg-gradient-to-b from-[#a16e30] from-10%  to-transparent"></div>
                     )}

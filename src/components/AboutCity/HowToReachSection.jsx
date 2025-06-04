@@ -55,7 +55,11 @@ const HowToReachSection = () => {
           <p className="text-gray-600 text-lg mt-3">
             {t("aboutCity.howToReach.byPlane.note")}
           </p>
-          <div className="mt-6">
+          <div className="mt-10">
+            <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
+              {t("aboutCity.howToReach.byPlane.sectionTitle1")}
+            </h2>
+
             {t("aboutCity.howToReach.byPlane.flights", {
               returnObjects: true,
             }).map((flight, index) => (
@@ -74,10 +78,10 @@ const HowToReachSection = () => {
               </React.Fragment>
             ))}
           </div>
-          <div className="mt-6">
-            <span className="font-semibold text-lg  text-blue-900">
+          <div className="mt-10">
+            <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
               {t("aboutCity.howToReach.byPlane.directFlightTitle")}
-            </span>
+            </h2>
             <p className="text-gray-700 text-lg mt-2 mb-1 ">
               {t("aboutCity.howToReach.byPlane.directFlightDesc")}
             </p>
