@@ -11,14 +11,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { FaCheck, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  FaCheck,
+  FaChevronLeft,
+  FaChevronRight,
+  FaMinus,
+  FaPlus,
+} from "react-icons/fa";
 import PreRegisterForm from "@/components/PreRegisterForm";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const ParticipationCategories = () => {
   const [activeTab, setActiveTab] = useState("competitive");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { t } = useTranslation();
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const compData = [
     {
@@ -176,34 +189,58 @@ const ParticipationCategories = () => {
             }}
           ></div>
           <div className="grid  pt-5 md:grid-cols-2 gap-6 lg:gap-14 mb-8">
-            {compData.map((item) => (
+            {compData.map((item, index) => (
               <div
                 key={item.id}
-                className="relative flex flex-col gap-5 justify-between overflow-hidden p-4 md:p-8 rounded-3xl shadow-xl bg-[#f6f6f6] group"
+                className=" mb-4  h-fit  cursor-pointer relative flex flex-col gap-5 justify-between overflow-hidden p-4 bg-[#f6f6f6] md:p-8 rounded-3xl shadow-xl group"
+                onClick={() => toggle(index)}
               >
-                <div>
-                  <h3 className="font-bold mb-4">{item.title}</h3>
-
-                  <p>{item.desc}</p>
-
-                  <ul className="  my-6   ">
-                    {item.list.map((listItem, idx) => (
-                      <li key={idx} className="mb-2 flex gap-4 items-start">
-                        <FaCheck className="text-green-600 shrink-0 translate-y-2" />
-                        <span>{listItem}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p>{item.note}</p>
+                <div className="flex justify-between items-center">
+                  <h3 className={`font-bold `}>{item.title}</h3>
+                  {openIndex === index ? (
+                    <FaMinus className=" " />
+                  ) : (
+                    <FaPlus className="" />
+                  )}
                 </div>
-                <div className="flex justify-end">
-                  <button
-                    onClick={() => setShowForm(true)}
-                    className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
-                  >
-                    Подать заявку
-                  </button>
-                </div>
+                <AnimatePresence initial={false}>
+                  {openIndex === index && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="pt-4  text-gray-800 overflow-hidden">
+                        <div>
+                          <p>{item.desc}</p>
+
+                          <ul className="  my-6   ">
+                            {item.list.map((listItem, idx) => (
+                              <li
+                                key={idx}
+                                className="mb-2 flex gap-4 items-start"
+                              >
+                                <FaCheck className="text-green-600 shrink-0 translate-y-2" />
+                                <span>{listItem}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <p>{item.note}</p>
+                        </div>
+                        <div className="flex justify-end">
+                          <button
+                            onClick={() => setShowForm(true)}
+                            className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
+                          >
+                            Подать заявку
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
@@ -217,37 +254,58 @@ const ParticipationCategories = () => {
             }}
           ></div>
           <div className="grid  md:grid-cols-2  gap-6 lg:gap-14 mb-8">
-            {nonCompData.map((item) => (
+            {nonCompData.map((item, index) => (
               <div
                 key={item.id}
-                className={`relative flex flex-col gap-5 justify-between overflow-hidden p-4 bg-[#f6f6f6] md:p-8 rounded-3xl shadow-xl group  ${
-                  item.id === 3 ? "md:col-span-2 md:mx-auto md:w-1/2" : ""
-                }`}
+                className=" mb-4  h-fit  cursor-pointer relative flex flex-col gap-5 justify-between overflow-hidden p-4 bg-[#f6f6f6] md:p-8 rounded-3xl shadow-xl group"
+                onClick={() => toggle(index)}
               >
-                <div>
-                  <h3 className="font-bold mb-4">{item.title}</h3>
-
-                  <p>{item.desc}</p>
-
-                  <ul className="  my-6">
-                    {item.list.map((listItem, idx) => (
-                      <li key={idx} className="mb-2 flex gap-2 items-start">
-                        <FaCheck className="text-green-600 shrink-0 translate-y-2" />
-                        <span>{listItem}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <p>{item.note}</p>
+                <div className="flex justify-between items-center">
+                  <h3 className={`font-bold `}>{item.title}</h3>
+                  {openIndex === index ? (
+                    <FaMinus className=" " />
+                  ) : (
+                    <FaPlus className="" />
+                  )}
                 </div>
-                <div className="flex justify-end">
-                  <button
-                    onClick={() => setShowForm(true)}
-                    className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
-                  >
-                    Подать заявку
-                  </button>
-                </div>
+                <AnimatePresence initial={false}>
+                  {openIndex === index && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="pt-4  text-gray-800 overflow-hidden">
+                        <div>
+                          <p>{item.desc}</p>
+
+                          <ul className="  my-6   ">
+                            {item.list.map((listItem, idx) => (
+                              <li
+                                key={idx}
+                                className="mb-2 flex gap-4 items-start"
+                              >
+                                <FaCheck className="text-green-600 shrink-0 translate-y-2" />
+                                <span>{listItem}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <p>{item.note}</p>
+                        </div>
+                        <div className="flex justify-end">
+                          <button
+                            onClick={() => setShowForm(true)}
+                            className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
+                          >
+                            Подать заявку
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>

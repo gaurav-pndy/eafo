@@ -1,10 +1,17 @@
-import React from "react";
+import { ChevronDown } from "lucide-react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaCarSide, FaExternalLinkAlt, FaPlaneDeparture } from "react-icons/fa";
 import { FaTrainSubway } from "react-icons/fa6";
+import { motion, AnimatePresence } from "framer-motion";
 
 const HowToReachSection = () => {
   const { t } = useTranslation();
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <section id="section-how-to-reach" className="mb-20">
@@ -88,16 +95,41 @@ const HowToReachSection = () => {
             {t("aboutCity.howToReach.byPlane.directFlights", {
               returnObjects: true,
             }).map((flight, index) => (
-              <React.Fragment key={index}>
-                <p className="font-semibold text-lg text-blue-600 flex gap-2 items-center">
-                  {" "}
-                  <a href={flight.link} target="_blank">
-                    {flight.airline}
-                  </a>{" "}
-                  <FaExternalLinkAlt />
-                </p>{" "}
-                <p className="mb-1 text-gray-700 text-lg ">{flight.cities}</p>
-              </React.Fragment>
+              <div
+                key={index}
+                className="bg-gray-50 mb-4 px-4 py-3 rounded-md shadow-sm cursor-pointer"
+                onClick={() => toggle(index)}
+              >
+                <div className="flex justify-between items-center">
+                  <p className="font-semibold text-lg text-blue-600 flex gap-2 items-center">
+                    {" "}
+                    <a href={flight.link} target="_blank">
+                      {flight.airline}
+                    </a>{" "}
+                    <FaExternalLinkAlt />
+                  </p>{" "}
+                  <ChevronDown
+                    className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+                <AnimatePresence initial={false}>
+                  {openIndex === index && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="pt-4 text-lg text-gray-800 overflow-hidden">
+                        {flight.cities}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             ))}
           </div>
         </div>
