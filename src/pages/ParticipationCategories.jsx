@@ -229,7 +229,7 @@ const ParticipationCategories = () => {
                           </ul>
                           <p>{item.note}</p>
                         </div>
-                        <div className="flex justify-end">
+                        <div className="flex mt-2 justify-end">
                           <button
                             onClick={() => setShowForm(true)}
                             className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
@@ -294,7 +294,7 @@ const ParticipationCategories = () => {
                           </ul>
                           <p>{item.note}</p>
                         </div>
-                        <div className="flex justify-end">
+                        <div className="flex mt-2 justify-end">
                           <button
                             onClick={() => setShowForm(true)}
                             className="bg-[#8B0000] text-white px-5  cursor-pointer py-2 rounded-full font-bold hover:bg-[#A00000] transition-all duration-300 "
