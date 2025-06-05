@@ -104,7 +104,7 @@ export const partnerSections = [
       {
         src: "/logos/pemecno.jpg",
         alt: "Ремесло Добра logo",
-        url: "https://www.remeslodobra.ru/",
+        url: "http://remeslodobra.ru/",
       },
     ],
   },
