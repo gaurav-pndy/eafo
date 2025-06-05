@@ -29,7 +29,7 @@ const PartnerGrid = ({ id, titleKey, logos }) => {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="bg-white px-4 py-8 md:p-8 rounded-xl shadow-sm hover:shadow-md hover:scale-110 transition-shadow duration-300"
+              className="bg-white px-4 py-8 md:p-8 rounded-xl shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300"
             >
               <a href={logo.url} target="_blank">
                 <img
