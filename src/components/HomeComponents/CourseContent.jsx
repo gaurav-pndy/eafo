@@ -34,7 +34,7 @@ const CourseContent = () => {
       content: "oncoTopics",
       image: "/participation/tab1img2.jpg",
       bgcolor: "bg-[#4e629d]",
-      dialogHead: t("course_content.dialogHead1"),
+      dialogHead: t("course_content.dialogHead2"),
 
       dialogText: t("course_content.text2"),
     },

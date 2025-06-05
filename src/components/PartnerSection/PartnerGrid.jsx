@@ -31,11 +31,13 @@ const PartnerGrid = ({ id, titleKey, logos }) => {
               key={index}
               className="bg-white px-4 py-8 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="w-full h-24 object-contain"
-              />
+              <a href={logo.url} target="_blank">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="w-full h-24 object-contain"
+                />
+              </a>
             </div>
           ))}
         </div>
