@@ -38,7 +38,7 @@ const VisaHero = () => {
             {" "}
             {t("visaHero.title")}
           </h1>
-          <p className="text-xl text-blue-100">{t("visaHero.subtitle")}</p>
+          <p className="text-3xl text-blue-100">{t("visaHero.subtitle")}</p>
         </div>
       </div>
     </section>

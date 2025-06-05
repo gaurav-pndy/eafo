@@ -18,8 +18,8 @@ const HeroSection = () => {
           <h1 className="text-5xl font-bold text-white mb-6">
             {t("Program.hero.title")}
           </h1>
-          <p className="text-xl text-blue-100">{t("Program.hero.subtitle")}</p>
-          <p className="text-lg text-blue-200 mt-4">{t("Program.hero.date")}</p>
+          <p className="text-3xl text-blue-100">{t("Program.hero.subtitle")}</p>
+          <p className="text-xl text-blue-200 mt-4">{t("Program.hero.date")}</p>
         </div>
       </div>
     </section>

@@ -20,7 +20,7 @@ const HeroSection = () => {
             {" "}
             {t("courses.heroTitle")}
           </h1>
-          <p className="text-xl text-blue-100">{t("courses.heroSubtitle")}</p>
+          <p className="text-3xl text-blue-100">{t("courses.heroSubtitle")}</p>
         </div>
       </div>
     </section>

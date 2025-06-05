@@ -19,7 +19,7 @@ const SponsorsHero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             {t("sponsors.hero.title")}
           </h1>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-3xl text-blue-100 mb-8">
             {t("sponsors.hero.subtitle")}
           </p>
           <div className="flex gap-4">

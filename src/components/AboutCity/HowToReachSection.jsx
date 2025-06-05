@@ -19,9 +19,9 @@ const HowToReachSection = () => {
         <i className="fa-solid fa-route text-blue-700"></i>
         {t("aboutCity.howToReach.title")}
       </h2>
-      <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+      {/* <p className="text-gray-700 text-lg mb-8 leading-relaxed">
         {t("aboutCity.howToReach.intro")}
-      </p>
+      </p> */}
       <div className="space-y-10">
         {/* Plane */}
         <div id="how-to-reach-plane">

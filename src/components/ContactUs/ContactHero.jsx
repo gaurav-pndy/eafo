@@ -20,7 +20,7 @@ const ContactHero = () => {
             {" "}
             {t("contactUs.contactTitle")}
           </h1>
-          <p className="text-xl text-blue-100">
+          <p className="text-3xl text-blue-100">
             {" "}
             {t("contactUs.contactSubtitle")}
           </p>

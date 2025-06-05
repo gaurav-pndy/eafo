@@ -18,10 +18,10 @@ const SubsidizedHero = () => {
           <h1 className="text-[2.5rem] leading-none sm:text-5xl  font-bold text-white mb-6">
             {t("Subsidized.hero.title")}
           </h1>
-          <p className="text-xl text-blue-100">
+          <p className="text-3xl text-blue-100">
             {t("Subsidized.hero.subtitle")}
           </p>
-          <p className="text-lg text-blue-200 mt-4">
+          <p className="text-xl text-blue-200 mt-4">
             {t("Subsidized.hero.tagline")}
           </p>
         </div>

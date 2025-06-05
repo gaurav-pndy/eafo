@@ -22,7 +22,7 @@ export default function Certificates() {
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div>
-            <p className=" lg:pr-20 lg:text-lg text-justify md:text-left lg:leading-10 ">
+            <p className=" lg:pr-20 lg:text-lg  lg:leading-10 ">
               {t("certificates.eafoText")}
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function Certificates() {
         <div className="flex flex-col-reverse md:flex-row items-center gap-8">
           <img src={image2} alt="Winner Diploma" className="w-72  lg:w-90" />
           <div>
-            <p className="lg:pl-20 lg:text-lg text-justify md:text-left lg:leading-10">
+            <p className="lg:pl-20 lg:text-lg  lg:leading-10">
               {t("certificates.winnersText")}
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function Certificates() {
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div>
-            <p className="lg:pr-20 lg:text-lg text-justify md:text-left lg:leading-10 ">
+            <p className="lg:pr-20 lg:text-lg  lg:leading-10 ">
               {t("certificates.improvementText")}
             </p>
           </div>

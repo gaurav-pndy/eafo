@@ -21,7 +21,10 @@ const SectionHero = () => {
             {" "}
             {t("partners.heroTitle")}
           </h1>
-          <p className="text-xl text-blue-100"> {t("partners.heroSubtitle")}</p>
+          <p className="text-3xl text-blue-100">
+            {" "}
+            {t("partners.heroSubtitle")}
+          </p>
         </div>
       </div>
     </section>
