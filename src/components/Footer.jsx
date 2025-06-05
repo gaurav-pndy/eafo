@@ -166,7 +166,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://workdrive.zohopublic.in/file/u89yj99187d9c61fb40638c9f06322df0698c"
+                  href="https://workdrive.zohopublic.in/file/qu1w11a771891a97f4a4d9f0b56dfe4ad0393"
                   target="_blank"
                   className="hover:text-blue-600 cursor-pointer"
                 >
