@@ -148,6 +148,15 @@ const Footer = () => {
                   {t("footer.contacts")}
                 </button>
               </li>
+              <li>
+                <a
+                  href="/pricing.pdf"
+                  download
+                  className="hover:text-blue-600 cursor-pointer"
+                >
+                  {t("footer.priceList")}
+                </a>
+              </li>
             </ul>
           </div>
 
