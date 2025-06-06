@@ -72,9 +72,10 @@ const CourseContent = () => {
               className="text-2xl md:text-4xl lg:text-[2.5rem]   lg:leading-14  text-[#011753] lg:mb-2 "
               dangerouslySetInnerHTML={{ __html: t("course_content.subtitle") }}
             ></h1>
-            <h1 className="text-xl md:text-3xl lg:text-[2rem] font-bold text-[#9a0104] mb-6">
-              {t("course_content.title")}
-            </h1>
+            <h1
+              className="text-xl md:text-3xl lg:text-[2rem] font-bold text-[#9a0104] mb-6"
+              dangerouslySetInnerHTML={{ __html: t("course_content.title") }}
+            ></h1>
           </div>
           <div className="hidden lg:flex  justify-center lg:justify-start ">
             <Link to="/participation-variants">
