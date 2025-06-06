@@ -151,7 +151,7 @@ const Footer = () => {
               <li>
                 <a
                   href="/pricing.pdf"
-                  download
+                  target="_blank"
                   className="hover:text-blue-600 cursor-pointer"
                 >
                   {t("footer.priceList")}
