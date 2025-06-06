@@ -1,11 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { FaMedal, FaTeamspeak, FaUsers } from "react-icons/fa";
+import { FaMedal, FaShuttleVan, FaTeamspeak } from "react-icons/fa";
 import { GiPublicSpeaker } from "react-icons/gi";
 import { LuMicroscope } from "react-icons/lu";
 import { MdRecordVoiceOver } from "react-icons/md";
+import { PiChatsCircle } from "react-icons/pi";
 import { SiCodementor } from "react-icons/si";
+import { FaComments, FaHandshake, FaUsers } from "react-icons/fa6";
 
 const Advantages = () => {
   const { t } = useTranslation();
@@ -13,7 +15,7 @@ const Advantages = () => {
     {
       title: t("advantages.tile1Title"),
       description: t("advantages.tile1Text"),
-      icon: <MdRecordVoiceOver className="text-5xl text-white" />,
+      icon: <FaComments className="text-5xl text-white" />,
     },
     {
       title: t("advantages.tile2Title"),
@@ -23,17 +25,17 @@ const Advantages = () => {
     {
       title: t("advantages.tile3Title"),
       description: t("advantages.tile3Text"),
-      icon: <SiCodementor className="text-5xl text-white" />,
+      icon: <FaUsers className="text-5xl text-white" />,
     },
     {
       title: t("advantages.tile4Title"),
       description: t("advantages.tile4Text"),
-      icon: <LuMicroscope className="text-5xl text-white" />,
+      icon: <FaHandshake className="text-5xl text-white" />,
     },
     {
       title: t("advantages.tile5Title"),
       description: t("advantages.tile5Text"),
-      icon: <FaUsers className="text-5xl text-white" />,
+      icon: <FaShuttleVan className="text-5xl text-white" />,
     },
     {
       title: t("advantages.tile6Title"),

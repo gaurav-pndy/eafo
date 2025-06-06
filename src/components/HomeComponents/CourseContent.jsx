@@ -63,9 +63,23 @@ const CourseContent = () => {
   return (
     <div className="  py-16   bg-[#f2f3f8]">
       <div className=" flex max-w-7xl px-4 md:px-6 mx-auto  gap-4 flex-col lg:flex-row">
+        <div className="flex lg:hidden mb-6 lg:mt-0 justify-center lg:justify-start ">
+          <Link to="/participation-variants">
+            <button className="bg-[#001554] text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
+              Выбери курс
+            </button>
+          </Link>
+        </div>
         <div className="lg:w-[45%]   flex flex-col justify-between">
+          <div className="hidden lg:flex mb-6 justify-center lg:justify-start ">
+            <Link to="/participation-variants">
+              <button className="bg-[#001554] cursor-pointer text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
+                Выберите курс
+              </button>
+            </Link>
+          </div>
           <div>
-            <h1 className="text-2xl md:text-4xl lg:text-[2.5rem] font-bold text-[#9a0104] lg:mb-2">
+            <h1 className="text-2xl md:text-4xl lg:text-[2.3rem] font-bold text-[#9a0104] lg:mb-2">
               {t("course_content.title")}
             </h1>
             {/* <h1 className="text-2xl md:text-4xl lg:text-[2.5rem] font-bold text-[#9a0104] lg:mb-2">
@@ -75,14 +89,6 @@ const CourseContent = () => {
               className="text-2xl md:text-4xl lg:text-[2.5rem]   lg:leading-14  text-[#011753] mb-6"
               dangerouslySetInnerHTML={{ __html: t("course_content.subtitle") }}
             ></h1>
-          </div>
-
-          <div className="hidden lg:flex justify-center lg:justify-start ">
-            <Link to="/participation-variants">
-              <button className="bg-[#001554] cursor-pointer text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
-                Выберите курс
-              </button>
-            </Link>
           </div>
         </div>
 
@@ -121,14 +127,6 @@ const CourseContent = () => {
               <FaChevronRight />
             </button>
           </div> */}
-        </div>
-
-        <div className="flex lg:hidden mt-10 lg:mt-0 justify-center lg:justify-start ">
-          <Link to="/participation-variants">
-            <button className="bg-[#001554] text-white px-20 py-2.5 rounded-full font-semibold hover:bg-[#001554] transition-all duration-300 text-xl">
-              Выбери курс
-            </button>
-          </Link>
         </div>
 
         {/* Modal */}

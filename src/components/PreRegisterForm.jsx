@@ -198,9 +198,7 @@ export default function PreRegisterForm({ courseId, onClose }) {
           <button
             className="cursor-pointer"
             type="submit"
-            disabled={
-              !(agreements.terms && agreements.data && agreements.promotions)
-            }
+            disabled={!(agreements.terms && agreements.data)}
           >
             {t("submit")}
           </button>
