@@ -18,11 +18,11 @@ const CourseSchedule = () => {
 
         <div className="col-span-1 relative row-span-1 flex lg:hidden flex-col justify-center p-3 md:p-5 text-[#001554] rounded-3xl bg-white">
           <h2
-            className=" text-2xl md:text-5xl font-[800] text-left"
+            className=" text-[1.3rem] md:text-5xl font-[800] text-left"
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.heading") }}
           ></h2>
           <h2
-            className=" text-2xl md:text-5xl  font-[800] text-left "
+            className=" text-[1.3rem] md:text-5xl  font-[800] text-left "
             dangerouslySetInnerHTML={{ __html: t("schedule.venue.venue") }}
           ></h2>
 

@@ -59,13 +59,13 @@ const Advantages = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="border-2 border-white rounded-md p-6 flex flex-col relative bg-transparent"
+              className="border-2 border-white rounded-md p-4 md:p-6 flex flex-row-reverse  md:flex-col gap-2 items-center md:items-start md:gap-0 relative bg-transparent"
             >
               {/* Icon in upper right corner */}
-              <div className="absolute top-4 right-4">{benefit.icon}</div>
+              <div className="md:absolute top-4 right-4">{benefit.icon}</div>
 
               {/* Content */}
-              <div className="pr-12">
+              <div className="md:pr-12">
                 {" "}
                 {/* Add padding to right to avoid text overlapping with icon */}
                 <h4 className="text-2xl font-bold text-white mb-1">
