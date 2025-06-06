@@ -278,8 +278,11 @@ const ParticipationTabs = () => {
         <div className="grid max-w-6xl p-4 mx-auto md:grid-cols-2 gap-6 mb-8">
           {coursesData.map((course) => (
             <div
+              onClick={() =>
+                handleOpenDialog(course.description, course.dialogHead)
+              }
               key={course.id}
-              className="relative overflow-hidden rounded-3xl shadow-lg group"
+              className="relative hover:scale-[103%] transition-all duration-300 cursor-pointer overflow-hidden rounded-3xl shadow-lg group"
             >
               <div className=" relative">
                 {/* Simulated image with medical professional */}
@@ -292,12 +295,7 @@ const ParticipationTabs = () => {
                   <h3 className="text-white text-lg lg:text-2xl font-bold ">
                     {course.title}
                   </h3>
-                  <button
-                    onClick={() =>
-                      handleOpenDialog(course.description, course.dialogHead)
-                    }
-                    className="bg-white cursor-pointer px-5 lg:text-lg py-1.5 rounded-full"
-                  >
+                  <button className="bg-white cursor-pointer px-5 lg:text-lg py-1.5 rounded-full">
                     {t("participationTabs.moreDetails")}
                   </button>
                 </div>
