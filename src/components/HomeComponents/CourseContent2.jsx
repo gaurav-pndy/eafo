@@ -136,7 +136,7 @@ export default function CourseContent2() {
       title: "button13",
       duration: t("course_content.duration13"),
       // image: "/courses/image13.png",
-      bgcolor: "bg-[#fde01e]",
+      bgcolor: "bg-[#ffda03]",
       dialogHead: t("course_content.dialogHead13"),
 
       dialogText: t("course_content.text13"),
