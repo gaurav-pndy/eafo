@@ -67,11 +67,11 @@ export default function Certificates() {
             </p>
           </div>
 
-          <img
+          {/* <img
             src={image3}
             alt="Certificate of Improvement"
             className="w-72  lg:w-90"
-          />
+          /> */}
         </div>
       </div>
 
