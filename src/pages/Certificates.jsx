@@ -21,12 +21,21 @@ export default function Certificates() {
           {t("certificates.eafoTitle")}
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div>
-            <p className=" lg:pr-20 lg:text-lg  lg:leading-10 ">
+          <div className="w-full">
+            <p className="  lg:text-lg  lg:leading-10 ">
               {t("certificates.eafoText")}
             </p>
           </div>
-          <img src={image1} alt="EAFO Certificate" className="w-72  lg:w-90" />
+          <div className="w-full flex flex-col items-center md:items-end">
+            <img
+              src={image1}
+              alt="EAFO Certificate"
+              className="w-72  lg:w-90"
+            />
+            <p className="text-gray-700 mt-4 text-center">
+              {t("certificates.caption1")}
+            </p>
+          </div>
         </div>
 
         {/* Block 2 */}
@@ -34,9 +43,14 @@ export default function Certificates() {
           {t("certificates.winnersTitle")}
         </h2>
         <div className="flex flex-col-reverse md:flex-row items-center gap-8">
-          <img src={image2} alt="Winner Diploma" className="w-72  lg:w-90" />
-          <div>
-            <p className="lg:pl-20 lg:text-lg  lg:leading-10">
+          <div className="w-full flex flex-col items-center md:items-start">
+            <img src={image2} alt="Winner Diploma" className="w-72  lg:w-90" />
+            <p className="text-gray-700 mt-4 text-center md:text-left">
+              {t("certificates.caption2")}
+            </p>
+          </div>
+          <div className="w-full">
+            <p className=" lg:text-lg  lg:leading-10">
               {t("certificates.winnersText")}
             </p>
           </div>
@@ -52,6 +66,7 @@ export default function Certificates() {
               {t("certificates.improvementText")}
             </p>
           </div>
+
           <img
             src={image3}
             alt="Certificate of Improvement"
