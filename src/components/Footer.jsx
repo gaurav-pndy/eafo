@@ -166,7 +166,7 @@ const Footer = () => {
             <ul className="md:text-sm space-y-1 md:space-y-2 text-blue-700">
               <li>
                 <a
-                  href="https://workdrive.zohopublic.in/file/u89yj18678a8fa5034857ab19d7b87e95aa1e"
+                  href="https://workdrive.zoho.in/file/oqy7r27f65be808294a979a22b8dce7cdaa42"
                   target="_blank"
                   className="hover:text-blue-600 cursor-pointer"
                 >
@@ -184,7 +184,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://workdrive.zohopublic.in/file/u89yj270d1f43f0c14b6c969ef4b20f0aa61a"
+                  href="https://workdrive.zohopublic.in/file/oqy7rcd4c77b3623f4edcbc322e7756d301fa"
                   target="_blank"
                   className="hover:text-blue-600 cursor-pointer"
                 >
